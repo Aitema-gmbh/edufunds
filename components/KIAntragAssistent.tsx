@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Loader2, Copy, Check, FileText, RefreshCw, Download, Wand2 } from "lucide-react";
+import { Sparkles, Loader2, Copy, Check, FileText, RefreshCw, Download, Wand2, FileDown } from "lucide-react";
 import type { Förderprogramm } from "@/types/foerderprogramm";
 import { generateAntrag, type ProjektDaten } from "@/lib/ki-antrag-generator";
+import html2pdf from "html2pdf.js";
 
 interface KIAntragAssistentProps {
   programm: Förderprogramm;
@@ -87,6 +88,36 @@ export function KIAntragAssistent({ programm, onClose }: KIAntragAssistentProps)
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+  };
+
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  const downloadAsPDF = async () => {
+    if (!resultRef.current) return;
+    
+    const element = resultRef.current;
+    const opt = {
+      margin: [20, 20, 20, 20],
+      filename: `Foerderantrag_${projektDaten.projekttitel.replace(/\s+/g, "_")}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+        logging: false
+      },
+      jsPDF: { 
+        unit: 'mm', 
+        format: 'a4', 
+        orientation: 'portrait' 
+      }
+    };
+
+    try {
+      await html2pdf().set(opt).from(element).save();
+    } catch (error) {
+      console.error('PDF generation error:', error);
+      alert('PDF konnte nicht generiert werden. Bitte versuchen Sie es erneut.');
+    }
   };
 
   const isFormValid = () => {
@@ -180,19 +211,28 @@ export function KIAntragAssistent({ programm, onClose }: KIAntragAssistentProps)
                 Word
               </Button>
               <Button
-                variant="default"
+                variant="outline"
                 size="sm"
                 onClick={downloadAsTxt}
-                className="gap-2 bg-orange-500 hover:bg-orange-600"
+                className="gap-2"
               >
                 <Download className="h-4 w-4" />
-                Download
+                Text
+              </Button>
+              <Button
+                variant="default"
+                size="sm"
+                onClick={downloadAsPDF}
+                className="gap-2 bg-red-600 hover:bg-red-700"
+              >
+                <FileDown className="h-4 w-4" />
+                PDF
               </Button>
             </div>
           </div>
         </CardHeader>
         <CardContent className="pt-6">
-          <div className="bg-slate-900/50 rounded-lg p-6 font-mono text-sm text-slate-300 whitespace-pre-wrap border border-slate-700/50 max-h-[600px] overflow-y-auto">
+          <div ref={resultRef} className="bg-slate-900/50 rounded-lg p-6 font-mono text-sm text-slate-300 whitespace-pre-wrap border border-slate-700/50 max-h-[600px] overflow-y-auto">
             {generatedText}
           </div>
           
