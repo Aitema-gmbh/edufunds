@@ -1,0 +1,32 @@
+name: Deploy to Staging (Hetzner)
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Hetzner Staging
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Generate static files
+        run: node export-static.js
+      
+      - name: Deploy to Hetzner Staging via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HETZNER_HOST_STAGING }}
+          username: ${{ secrets.HETZNER_USER }}
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          source: "dist/*"
+          target: ${{ secrets.HETZNER_PATH_STAGING }}
+          strip_components: 1
+          rm: true
