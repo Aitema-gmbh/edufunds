@@ -20,13 +20,37 @@ jobs:
       - name: Generate static files
         run: node export-static.js
       
-      - name: Deploy to Hetzner Staging via SSH
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HETZNER_HOST_STAGING }}
-          username: ${{ secrets.HETZNER_USER }}
-          key: ${{ secrets.HETZNER_SSH_KEY }}
-          source: "dist/*"
-          target: ${{ secrets.HETZNER_PATH_STAGING }}
-          strip_components: 1
-          rm: true
+      - name: Check dist folder
+        run: |
+          echo "📁 Checking dist folder..."
+          ls -la dist/
+          echo "📊 File count: $(find dist -type f | wc -l)"
+      
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HETZNER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.HETZNER_HOST }} >> ~/.ssh/known_hosts
+      
+      - name: Deploy to Staging via rsync
+        run: |
+          echo "🚀 Starting deployment to Staging on ${{ secrets.HETZNER_HOST }}..."
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            dist/ \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:/opt/edufunds-staging/html/
+          echo "✅ Staging deployment completed!"
+      
+      - name: Restart Staging Container
+        run: |
+          echo "🔄 Restarting staging container..."
+          ssh -i ~/.ssh/deploy_key \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }} \
+            "docker stop edufunds-staging 2>/dev/null; docker rm edufunds-staging 2>/dev/null; docker run -d --name edufunds-staging --network hetzner-stack_web --label 'traefik.enable=true' --label 'traefik.http.routers.edufunds-staging.rule=Host(\`staging.edufunds.org\`)' --label 'traefik.http.routers.edufunds-staging.entrypoints=websecure' --label 'traefik.http.routers.edufunds-staging.tls.certresolver=letsencrypt' --label 'traefik.http.services.edufunds-staging.loadbalancer.server.port=80' --restart unless-stopped -v /opt/edufunds-staging/html:/usr/share/nginx/html:ro nginx:alpine && echo 'Staging container restarted!'"
+      
+      - name: Verify deployment
+        run: |
+          echo "🔍 Verifying staging deployment..."
+          sleep 5
+          curl -s -o /dev/null -w "%{http_code}" https://staging.edufunds.org || echo "Note: DNS may need to propagate"
