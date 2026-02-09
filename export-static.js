@@ -215,6 +215,113 @@ const notFoundContent = `
 if (!fs.existsSync('./dist')) fs.mkdirSync('./dist', { recursive: true });
 if (!fs.existsSync('./dist/ueber-uns')) fs.mkdirSync('./dist/ueber-uns', { recursive: true });
 if (!fs.existsSync('./dist/kontakt')) fs.mkdirSync('./dist/kontakt', { recursive: true });
+if (!fs.existsSync('./dist/antrag')) fs.mkdirSync('./dist/antrag', { recursive: true });
+
+// Generate Antrag pages for all programs
+programme.forEach(p => {
+  const antragDir = `./dist/antrag/${p.id}`;
+  if (!fs.existsSync(antragDir)) fs.mkdirSync(antragDir, { recursive: true });
+  
+  const isKiGeeignet = p.kiAntragGeeignet !== false;
+  const kiBadge = isKiGeeignet 
+    ? '<span class="px-2 py-1 rounded-full text-xs font-medium bg-orange-500/20 text-orange-400">KI-geeignet</span>' 
+    : '<span class="px-2 py-1 rounded-full text-xs font-medium bg-slate-600/20 text-slate-400">KI nicht verfügbar</span>';
+  
+  const typeColor = p.foerdergeberTyp === 'bund' ? 'cyan' : 
+                   p.foerdergeberTyp === 'land' ? 'purple' : 
+                   p.foerdergeberTyp === 'stiftung' ? 'green' : 'blue';
+  
+  const antragContent = `
+    <div class="max-w-4xl mx-auto">
+      <a href="/programme" class="inline-flex items-center gap-2 text-slate-400 hover:text-orange-400 mb-6 transition-colors">
+        ← Zurück zur Übersicht
+      </a>
+      
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Antrag erstellen</h1>
+      <p class="text-slate-400 mb-6">Für: <span class="text-orange-400 font-medium">${p.name}</span></p>
+      
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="px-2 py-1 rounded-full text-xs font-medium bg-${typeColor}-500/20 text-${typeColor}-400">${p.foerdergeberTyp.toUpperCase()}</span>
+        ${kiBadge}
+      </div>
+      
+      <div class="glass rounded-xl p-6 mb-8">
+        <h2 class="text-xl font-bold mb-4">${p.name}</h2>
+        <p class="text-slate-400 mb-4">${p.foerdergeber}</p>
+        <p class="text-slate-300 mb-4">${p.kurzbeschreibung}</p>
+        <div class="flex flex-wrap gap-4 text-sm text-slate-400 mb-4">
+          <span>💰 ${p.foerdersummeText}</span>
+          <span>📅 ${p.bewerbungsfristText}</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          ${p.kategorien.slice(0, 4).map(k => `<span class="px-2 py-1 rounded text-xs bg-slate-800 text-slate-400">${k}</span>`).join('')}
+        </div>
+      </div>
+      
+      ${isKiGeeignet ? `
+      <div class="glass rounded-xl p-8 mb-8 border-orange-500/30">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+          <span class="text-orange-400">🤖</span>
+          KI-Antragsassistent
+        </h2>
+        <p class="text-slate-300 mb-6">
+          Der KI-Antragsassistent hilft Ihnen bei der Erstellung eines professionellen Antrags.
+          Die KI erstellt einen Entwurf basierend auf Ihren Angaben.
+        </p>
+        <div class="bg-slate-900/50 rounded-lg p-6">
+          <h3 class="font-semibold text-slate-200 mb-4">Antrag starten</h3>
+          <p class="text-slate-400 text-sm mb-4">
+            Der KI-Antragsassistent ist in der vollständigen Anwendung verfügbar.
+          </p>
+          <a href="${p.infoLink}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500 text-white font-medium hover:bg-orange-600 transition-all">
+            Zum offiziellen Antragsformular →
+          </a>
+        </div>
+      </div>
+      ` : `
+      <div class="glass rounded-xl p-8 mb-8 border-yellow-500/30">
+        <div class="text-center max-w-lg mx-auto">
+          <div class="text-5xl mb-4">⚠️</div>
+          <h2 class="text-xl font-semibold text-slate-100 mb-2">KI-Assistent nicht verfügbar</h2>
+          <p class="text-slate-400 mb-6">
+            Für dieses Programm steht der KI-Antragsassistent derzeit nicht zur Verfügung. 
+            Bitte nutzen Sie das offizielle Antragsformular des Fördergebers.
+          </p>
+          <a href="${p.infoLink}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500 text-white font-medium hover:bg-orange-600 transition-all">
+            Zum offiziellen Antragsformular →
+          </a>
+        </div>
+      </div>
+      `}
+      
+      <div class="glass rounded-xl p-6 border-slate-700/50 bg-slate-800/30">
+        <h3 class="font-semibold text-slate-200 mb-4">📋 Hinweise zur Antragstellung</h3>
+        <ul class="text-sm text-slate-400 space-y-2">
+          <li class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            Prüfen Sie die aktuellen Antragsrichtlinien des Fördergebers
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            Bereiten Sie alle erforderlichen Unterlagen vor
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            Beachten Sie die Bewerbungsfristen
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            Bei erfolgreicher Förderung: Melden Sie sich gerne bei uns!
+          </li>
+        </ul>
+      </div>
+    </div>
+  `;
+  
+  fs.writeFileSync(`${antragDir}/index.html`, template(`Antrag - ${p.name}`, antragContent));
+});
+
+console.log(`📝 ${programme.length} Antragsseiten erstellt`);
 
 // Write main pages
 fs.writeFileSync('./dist/index.html', template('Startseite', indexContent));
