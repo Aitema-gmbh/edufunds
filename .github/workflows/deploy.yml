@@ -20,13 +20,31 @@ jobs:
       - name: Generate static files
         run: node export-static.js
       
-      - name: Deploy to Hetzner via SSH
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HETZNER_HOST }}
-          username: ${{ secrets.HETZNER_USER }}
-          key: ${{ secrets.HETZNER_SSH_KEY }}
-          source: "dist/*"
-          target: ${{ secrets.HETZNER_PATH }}
-          strip_components: 1
-          rm: true
+      - name: Check dist folder
+        run: |
+          echo "📁 Checking dist folder..."
+          ls -la dist/
+          echo "📊 File count: $(find dist -type f | wc -l)"
+      
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HETZNER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.HETZNER_HOST }} >> ~/.ssh/known_hosts
+      
+      - name: Deploy via rsync
+        run: |
+          echo "🚀 Starting deployment to ${{ secrets.HETZNER_HOST }}..."
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            dist/ \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:${{ secrets.HETZNER_PATH }}
+          echo "✅ Deployment completed!"
+      
+      - name: Verify deployment
+        run: |
+          echo "🔍 Verifying deployment..."
+          ssh -i ~/.ssh/deploy_key \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }} \
+            "ls -la ${{ secrets.HETZNER_PATH }} && echo 'Deployment verified!'"
