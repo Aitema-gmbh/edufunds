@@ -2,7 +2,7 @@
 
 > **Diese Datei wird nach JEDER Session aktualisiert**
 > 
-> Letzte Aktualisierung: 9. Februar 2026, 15:22 UTC
+> Letzte Aktualisierung: 9. Februar 2026, 18:10 UTC
 
 ---
 
@@ -27,6 +27,7 @@
 - [ ] HTTPS/SSL Zertifikat (Let's Encrypt Rate-Limit)
 - [ ] Traefik-Konfiguration stabilisieren
 - [ ] Staging-Umgebung einrichten
+- [x] ~~Footer-Links testen (Über uns, Kontakt)~~ ✅ Behoben
 
 ### ❌ Bekannte Probleme
 1. **Gateway Timeout** bei edufunds.org (Traefik-Problem)
@@ -34,6 +35,16 @@
    - Lösung: Traefik neu konfigurieren oder certbot nutzen
 2. **Let's Encrypt Rate-Limit** (api.edufunds.org versucht Zertifikat)
    - Löst sich in ~1 Stunde
+
+### ✅ Behobene Probleme
+- **URL-Routing** - Alle URLs ohne `.html` funktionieren jetzt korrekt
+  - /impressum → /impressum.html
+  - /datenschutz → /datenschutz.html
+  - /agb → /agb.html
+  - /programme → /programme.html
+  - /ueber-uns → /ueber-uns/index.html
+  - /kontakt → /kontakt/index.html
+  - 404 Seite wird korrekt angezeigt
 
 ---
 
@@ -67,10 +78,14 @@
 ## 📝 Offene TODOs
 
 ### Hochpriorität
+- [ ] Backend implementieren (siehe docs/BACKEND-PLAN.md)
+  - [ ] API Routes einrichten (Next.js)
+  - [ ] Newsletter-Endpunkt (+ Double Opt-in)
+  - [ ] Kontaktformular-Endpunkt (+ E-Mail)
+  - [ ] KI-Assistant API (OpenAI Integration)
 - [ ] Staging-Branch erstellen
 - [ ] Traefik stabilisieren oder ersetzen
 - [ ] HTTPS/SSL einrichten
-- [ ] Footer-Links testen (Über uns, Kontakt)
 
 ### Mittelpriorität
 - [ ] KI-Antragsassistent mit echter API verbinden
@@ -95,6 +110,14 @@
 ---
 
 ## 📚 Letzte Änderungen
+
+### 9. Februar 2026, 18:10 UTC
+- ✅ **URL-Routing Problem behoben**
+  - nginx.conf mit Rewrite-Regeln für saubere URLs
+  - Alle URLs ohne `.html` funktionieren korrekt
+  - Schöne 404-Seite erstellt
+  - Docker-Build optimiert (kein npm install nötig)
+  - Alle 8 Test-URLs erfolgreich getestet
 
 ### 9. Februar 2026, 15:22 UTC
 - ✅ 68 neue Dateien zu GitHub gepusht
@@ -125,10 +148,13 @@ traefik         - Reverse Proxy (gestoppt)
 ```
 
 ### Wichtige Dateien
-- `rules.md` - Arbeitsregeln (neu)
-- `current_state.md` - Diese Datei (neu)
+- `rules.md` - Arbeitsregeln
+- `current_state.md` - Diese Datei
 - `MEMORY.md` - Langzeit-Gedächtnis
 - `DEPLOY.md` - Deployment-Guide
+- `docs/BACKEND-PLAN.md` - Backend Architektur & Plan
+- `docs/API-SCHEMAS.md` - API Zod Schemas
+- `docs/QUICK-REFERENCE.md` - Backend Quick Reference
 
 ### Git Status
 - Branch: `main`

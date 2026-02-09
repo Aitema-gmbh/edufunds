@@ -12,7 +12,7 @@ const path = require('path');
 const programme = JSON.parse(fs.readFileSync('./data/foerderprogramme.json', 'utf8'));
 
 // HTML Template
-const template = (title, content) => `<!DOCTYPE html>
+const template = (title, content, extraBodyClass = '') => `<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -23,15 +23,18 @@ const template = (title, content) => `<!DOCTYPE html>
         body { background: #0f172a; color: #f8fafc; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
         .gradient-text { background: linear-gradient(to right, #f97316, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-bg { background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%); }
     </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen ${extraBodyClass}">
     <nav class="glass fixed w-full z-50 top-0">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold gradient-text">EduFunds</a>
+            <a href="/" class="text-2xl font-bold gradient-text">EduFunds</a>
             <div class="flex gap-6">
-                <a href="index.html" class="text-slate-300 hover:text-orange-400">Start</a>
-                <a href="programme.html" class="text-slate-300 hover:text-orange-400">Förderfinder</a>
+                <a href="/" class="text-slate-300 hover:text-orange-400">Start</a>
+                <a href="/programme" class="text-slate-300 hover:text-orange-400">Förderfinder</a>
+                <a href="/ueber-uns" class="text-slate-300 hover:text-orange-400">Über uns</a>
+                <a href="/kontakt" class="text-slate-300 hover:text-orange-400">Kontakt</a>
             </div>
         </div>
     </nav>
@@ -45,8 +48,9 @@ const template = (title, content) => `<!DOCTYPE html>
     <footer class="border-t border-slate-800 py-8 mt-12">
         <div class="container mx-auto px-4 text-center text-slate-500 text-sm">
             © 2025 EduFunds | 
-            <a href="impressum.html" class="hover:text-orange-400">Impressum</a> | 
-            <a href="datenschutz.html" class="hover:text-orange-400">Datenschutz</a>
+            <a href="/impressum" class="hover:text-orange-400">Impressum</a> | 
+            <a href="/datenschutz" class="hover:text-orange-400">Datenschutz</a> |
+            <a href="/agb" class="hover:text-orange-400">AGB</a>
         </div>
     </footer>
 </body>
@@ -59,7 +63,7 @@ const indexContent = `
         <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
             Finden und beantragen Sie Förderungen – unterstützt durch KI.
         </p>
-        <a href="programme.html" class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium text-white">
+        <a href="/programme" class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium text-white">
             Förderfinder öffnen
         </a>
     </div>
@@ -141,18 +145,96 @@ const datenschutzContent = `
     </div>
 `;
 
-// Create dist directory
-if (!fs.existsSync('./dist')) fs.mkdirSync('./dist', { recursive: true });
+// Generate AGB
+const agbContent = `
+    <h1 class="text-3xl font-bold mb-8">Allgemeine Geschäftsbedingungen</h1>
+    <div class="glass rounded-xl p-8 space-y-4">
+        <h2 class="text-xl font-bold">§ 1 Geltungsbereich</h2>
+        <p>Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung der EduFunds-Plattform.</p>
+        <h2 class="text-xl font-bold">§ 2 Vertragsschluss</h2>
+        <p>Mit der Registrierung auf unserer Plattform kommt ein Nutzungsvertrag zustande.</p>
+        <h2 class="text-xl font-bold">§ 3 Leistungen</h2>
+        <p>EduFunds stellt eine Plattform zur Recherche von Förderprogrammen bereit.</p>
+    </div>
+`;
 
-// Write files
+// Generate Über uns
+const ueberUnsContent = `
+    <h1 class="text-3xl font-bold mb-8">Über EduFunds</h1>
+    <div class="glass rounded-xl p-8 space-y-4">
+        <h2 class="text-xl font-bold">Unsere Mission</h2>
+        <p>Wir helfen Schulen dabei, Fördermittel einfacher zu finden und zu beantragen.</p>
+        <h2 class="text-xl font-bold">Unser Team</h2>
+        <p>Ein engagiertes Team aus Bildungsexperten und Tech-Enthusiasten.</p>
+        <h2 class="text-xl font-bold">KI-Unterstützung</h2>
+        <p>Mit modernster KI-Technologie unterstützen wir Sie bei der Antragstellung.</p>
+    </div>
+`;
+
+// Generate Kontakt
+const kontaktContent = `
+    <h1 class="text-3xl font-bold mb-8">Kontakt</h1>
+    <div class="glass rounded-xl p-8 space-y-4">
+        <h2 class="text-xl font-bold">Schreiben Sie uns</h2>
+        <p>Haben Sie Fragen oder Anregungen? Wir freuen uns auf Ihre Nachricht!</p>
+        <p class="mt-4"><strong>E-Mail:</strong> info@edufunds.de</p>
+        <p><strong>Telefon:</strong> +49 123 456789</p>
+        <p><strong>Adresse:</strong><br>EduFunds<br>Musterstraße 123<br>12345 Musterstadt</p>
+    </div>
+`;
+
+// Generate 404 Page
+const notFoundContent = `
+    <div class="text-center py-20">
+        <div class="text-8xl font-bold gradient-text mb-6">404</div>
+        <h1 class="text-3xl font-bold mb-4">Seite nicht gefunden</h1>
+        <p class="text-xl text-slate-400 mb-8 max-w-xl mx-auto">
+            Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="inline-block px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium text-white">
+                ← Zurück zur Startseite
+            </a>
+            <a href="/programme" class="inline-block px-8 py-4 glass hover:bg-slate-700 rounded-lg font-medium">
+                Förderfinder öffnen
+            </a>
+        </div>
+        <div class="mt-12 p-6 glass rounded-xl max-w-lg mx-auto">
+            <h3 class="font-bold mb-2">Hilfreiche Links:</h3>
+            <ul class="space-y-2 text-slate-400">
+                <li><a href="/" class="text-orange-400 hover:underline">Startseite</a></li>
+                <li><a href="/programme" class="text-orange-400 hover:underline">Förderfinder</a></li>
+                <li><a href="/ueber-uns" class="text-orange-400 hover:underline">Über uns</a></li>
+                <li><a href="/kontakt" class="text-orange-400 hover:underline">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+`;
+
+// Create directories
+if (!fs.existsSync('./dist')) fs.mkdirSync('./dist', { recursive: true });
+if (!fs.existsSync('./dist/ueber-uns')) fs.mkdirSync('./dist/ueber-uns', { recursive: true });
+if (!fs.existsSync('./dist/kontakt')) fs.mkdirSync('./dist/kontakt', { recursive: true });
+
+// Write main pages
 fs.writeFileSync('./dist/index.html', template('Startseite', indexContent));
 fs.writeFileSync('./dist/programme.html', template('Förderprogramme', programmeContent));
 fs.writeFileSync('./dist/impressum.html', template('Impressum', impressumContent));
 fs.writeFileSync('./dist/datenschutz.html', template('Datenschutz', datenschutzContent));
+fs.writeFileSync('./dist/agb.html', template('AGB', agbContent));
+fs.writeFileSync('./dist/404.html', template('Seite nicht gefunden', notFoundContent));
+
+// Write subdirectory pages
+fs.writeFileSync('./dist/ueber-uns/index.html', template('Über uns', ueberUnsContent));
+fs.writeFileSync('./dist/kontakt/index.html', template('Kontakt', kontaktContent));
 
 console.log('✅ Statische HTML-Dateien erstellt:');
 console.log('   - dist/index.html');
 console.log('   - dist/programme.html');
 console.log('   - dist/impressum.html');
 console.log('   - dist/datenschutz.html');
+console.log('   - dist/agb.html');
+console.log('   - dist/404.html');
+console.log('   - dist/ueber-uns/index.html');
+console.log('   - dist/kontakt/index.html');
 console.log(`\n📊 ${programme.length} Förderprogramme exportiert`);
