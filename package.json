@@ -6,7 +6,17 @@
     "dev": "next dev -p 3101",
     "build": "next build",
     "start": "next start -p 3101",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup:db": "npx ts-node scripts/setup-db.ts",
+    "db:backup": "./scripts/backup.sh",
+    "docker:dev": "docker-compose up -d",
+    "docker:dev:logs": "docker-compose logs -f nextjs",
+    "docker:dev:stop": "docker-compose down",
+    "docker:prod:build": "docker-compose -f docker-compose.prod.yml build",
+    "docker:prod:start": "docker-compose -f docker-compose.prod.yml up -d",
+    "docker:prod:stop": "docker-compose -f docker-compose.prod.yml down",
+    "docker:prod:logs": "docker-compose -f docker-compose.prod.yml logs -f",
+    "health:check": "curl http://localhost:3101/api/health"
   },
   "dependencies": {
     "html2pdf.js": "^0.10.1",

@@ -1,0 +1,220 @@
+version: '3.8'
+
+# =============================================================================
+# EduFunds Production Stack
+# =============================================================================
+# Diese Konfiguration ist für Production-Deployment mit Traefik optimiert.
+#
+# Features:
+# - Next.js im Production Mode (standalone)
+# - PostgreSQL mit persistentem Volume
+# - Traefik Reverse Proxy mit Let's Encrypt
+# - Health Checks und Auto-Restart
+# - Logging und Monitoring
+#
+# Requirements:
+# - Traefik Network muss existieren: docker network create traefik-network
+# - .env.production Datei mit Secrets
+# - DNS Records für Domain eingerichtet
+#
+# Usage:
+#   docker-compose -f docker-compose.prod.yml up -d
+#   docker-compose -f docker-compose.prod.yml logs -f
+#   docker-compose -f docker-compose.prod.yml down
+# =============================================================================
+
+services:
+  # ===========================================================================
+  # Next.js Application (Production)
+  # ===========================================================================
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    container_name: edufunds-nextjs
+    restart: unless-stopped
+    
+    environment:
+      # Next.js
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      
+      # Database
+      DATABASE_URL: ${DATABASE_URL}
+      
+      # API Keys
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-office@aitema.de}
+      FROM_EMAIL: ${FROM_EMAIL:-noreply@edufunds.org}
+      
+      # Security
+      NEXT_TELEMETRY_DISABLED: 1
+    
+    networks:
+      - traefik-network
+      - edufunds-internal
+    
+    depends_on:
+      postgres:
+        condition: service_healthy
+    
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    
+    labels:
+      # Traefik Enable
+      - "traefik.enable=true"
+      
+      # Router: HTTPS
+      - "traefik.http.routers.edufunds.rule=Host(`${DOMAIN:-edufunds.org}`) || Host(`www.${DOMAIN:-edufunds.org}`)"
+      - "traefik.http.routers.edufunds.entrypoints=websecure"
+      - "traefik.http.routers.edufunds.tls=true"
+      - "traefik.http.routers.edufunds.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.edufunds.service=edufunds"
+      
+      # Router: HTTP -> HTTPS Redirect
+      - "traefik.http.routers.edufunds-http.rule=Host(`${DOMAIN:-edufunds.org}`) || Host(`www.${DOMAIN:-edufunds.org}`)"
+      - "traefik.http.routers.edufunds-http.entrypoints=web"
+      - "traefik.http.routers.edufunds-http.middlewares=redirect-to-https"
+      
+      # Service
+      - "traefik.http.services.edufunds.loadbalancer.server.port=3000"
+      - "traefik.http.services.edufunds.loadbalancer.healthcheck.path=/api/health"
+      - "traefik.http.services.edufunds.loadbalancer.healthcheck.interval=30s"
+      
+      # Middleware: Redirect to HTTPS
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      
+      # Security Headers
+      - "traefik.http.middlewares.security-headers.headers.customFrameOptionsValue=DENY"
+      - "traefik.http.middlewares.security-headers.headers.contentTypeNosniff=true"
+      - "traefik.http.middlewares.security-headers.headers.referrerPolicy=strict-origin-when-cross-origin"
+      
+      # Apply security headers to router
+      - "traefik.http.routers.edufunds.middlewares=security-headers"
+      
+      # Compression
+      - "traefik.http.middlewares.compress.compress=true"
+      - "traefik.http.routers.edufunds.middlewares=compress"
+    
+    # Resource Limits (anpassen je nach Server)
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # ===========================================================================
+  # PostgreSQL Database (Production)
+  # ===========================================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: edufunds-postgres
+    restart: unless-stopped
+    
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-edufunds}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-edufunds}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+      - ./backups:/backups  # Für manuelle Backups
+    
+    networks:
+      - edufunds-internal
+    
+    # Nicht nach außen exponiert - nur intern über Netzwerk
+    # ports:
+    #   - "127.0.0.1:5432:5432"  # Nur für lokale Administration
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-edufunds} -d ${POSTGRES_DB:-edufunds}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    
+    # Sicherheit
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/run/postgresql
+
+  # ===========================================================================
+  # Database Backup Service (Optional)
+  # ===========================================================================
+  backup:
+    image: postgres:16-alpine
+    container_name: edufunds-backup
+    restart: unless-stopped
+    
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-edufunds}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-edufunds}
+      POSTGRES_HOST: postgres
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-7}
+    
+    volumes:
+      - ./backups:/backups
+      - ./scripts/backup.sh:/backup.sh:ro
+    
+    networks:
+      - edufunds-internal
+    
+    depends_on:
+      - postgres
+    
+    # Tägliches Backup um 2 Uhr
+    command: >
+      sh -c "
+        echo '0 2 * * * /backup.sh' | crontab - &&
+        crond -f
+      "
+    
+    profiles:
+      - backup  # Nur starten mit: docker-compose --profile backup up -d
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  postgres_prod_data:
+    driver: local
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  # Externes Traefik Network (muss vorher erstellt werden)
+  traefik-network:
+    external: true
+  
+  # Internes Netzwerk für App-Datenbank Kommunikation
+  edufunds-internal:
+    driver: bridge
+    internal: false
