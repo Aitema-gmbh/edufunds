@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { v4 as uuidv4 } from 'uuid';
 import { NextResponse } from 'next/server';
+import { getConfirmationEmailTemplate } from '@/lib/newsletter-templates';
 
 // E-Mail Validation Schema
 export const newsletterSchema = z.object({
@@ -109,7 +110,7 @@ async function sendConfirmationEmail(email: string, token: string): Promise<bool
         from: 'EduFunds <newsletter@edufunds.de>',
         to: email,
         subject: 'Bestätigen Sie Ihre Newsletter-Anmeldung',
-        html: getConfirmationEmailTemplate(confirmationUrl),
+        html: getConfirmationEmailTemplate({ confirmationUrl }),
       });
       
       if (error) {
@@ -133,112 +134,6 @@ async function sendConfirmationEmail(email: string, token: string): Promise<bool
   console.log('===========================================================\n');
   
   return true;
-}
-
-// Email template
-function getConfirmationEmailTemplate(confirmationUrl: string): string {
-  return `
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsletter-Anmeldung bestätigen</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo h1 {
-            color: #2563eb;
-            margin: 0;
-            font-size: 28px;
-        }
-        .content {
-            margin-bottom: 30px;
-        }
-        .button {
-            display: inline-block;
-            background-color: #2563eb;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 6px;
-            font-weight: 600;
-            margin: 20px 0;
-        }
-        .button:hover {
-            background-color: #1d4ed8;
-        }
-        .footer {
-            text-align: center;
-            font-size: 14px;
-            color: #6b7280;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e7eb;
-        }
-        .url-fallback {
-            word-break: break-all;
-            color: #6b7280;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="logo">
-            <h1>📚 EduFunds</h1>
-        </div>
-        
-        <div class="content">
-            <h2>Fast geschafft!</h2>
-            <p>Vielen Dank für Ihr Interesse an unserem Newsletter. Um Ihre Anmeldung abzuschließen, bestätigen Sie bitte Ihre E-Mail-Adresse.</p>
-            
-            <center>
-                <a href="${confirmationUrl}" class="button">Anmeldung bestätigen</a>
-            </center>
-            
-            <p class="url-fallback">
-                Falls der Button nicht funktioniert, kopieren Sie diesen Link in Ihren Browser:<br>
-                ${confirmationUrl}
-            </p>
-            
-            <p style="margin-top: 30px;">
-                <strong>Was erwartet Sie?</strong>
-            </p>
-            <ul>
-                <li>Exklusive Förderprogramme für Schulen</li>
-                <li>Tipps zur Antragsstellung</li>
-                <li>Neuigkeiten aus der Bildungsförderung</li>
-                <li>Einmal monatlich, kein Spam</li>
-            </ul>
-        </div>
-        
-        <div class="footer">
-            <p>Falls Sie sich nicht für unseren Newsletter angemeldet haben, ignorieren Sie diese E-Mail einfach.</p>
-            <p>&copy; ${new Date().getFullYear()} EduFunds. Alle Rechte vorbehalten.</p>
-        </div>
-    </div>
-</body>
-</html>
-  `;
 }
 
 // Success page HTML

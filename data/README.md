@@ -1,12 +1,44 @@
-# EduFunds Datenbank
+# EduFunds Datenbank (PostgreSQL)
 
-Diese Dokumentation beschreibt die Datenbank-Integration für EduFunds.
+Diese Dokumentation beschreibt die PostgreSQL-Datenbank-Integration für EduFunds.
 
 ## Überblick
 
-- **Datenbank**: SQLite (better-sqlite3)
-- **Speicherort**: `data/edufunds.db`
+- **Datenbank**: PostgreSQL 16
+- **Driver**: pg (node-postgres)
+- **Connection**: Umgebungsvariable `DATABASE_URL`
 - **Schema**: `data/schema.sql`
+
+## Umgebungsvariablen
+
+```bash
+# Lokal
+DATABASE_URL=postgresql://localhost:5432/edufunds
+
+# Mit Docker
+DATABASE_URL=postgresql://edufunds:edufunds_secret@localhost:5432/edufunds
+
+# Produktion (Render, Railway, etc.)
+DATABASE_URL=postgresql://user:password@host:5432/dbname?sslmode=require
+```
+
+## Docker Compose
+
+PostgreSQL läuft im Docker Container (siehe `docker-compose.yml`):
+
+```bash
+# Starten
+docker compose up -d postgres
+
+# Logs ansehen
+docker compose logs -f postgres
+
+# Datenbank-Backup
+docker exec edufunds-postgres pg_dump -U edufunds edufunds > backup.sql
+
+# Datenbank wiederherstellen
+docker exec -i edufunds-postgres psql -U edufunds edufunds < backup.sql
+```
 
 ## Tabellen
 
@@ -16,14 +48,14 @@ Speichert Newsletter-Abonnenten mit Double-Opt-In Verfahren.
 
 | Feld | Typ | Beschreibung |
 |------|-----|--------------|
-| id | INTEGER | Primärschlüssel, Auto-Increment |
-| email | TEXT | Email-Adresse (UNIQUE) |
-| confirmed | BOOLEAN | Bestätigungsstatus (0/1) |
-| confirmation_token | TEXT | Token für Email-Bestätigung |
-| unsubscribe_token | TEXT | Token für Austragen |
-| created_at | DATETIME | Erstellungszeitpunkt |
-| updated_at | DATETIME | Letzte Änderung |
-| ip_address | TEXT | IP-Adresse des Nutzers |
+| id | SERIAL | Primärschlüssel |
+| email | VARCHAR(255) | Email-Adresse (UNIQUE) |
+| confirmed | BOOLEAN | Bestätigungsstatus |
+| confirmation_token | VARCHAR(64) | Token für Email-Bestätigung |
+| unsubscribe_token | VARCHAR(64) | Token für Austragen |
+| created_at | TIMESTAMP | Erstellungszeitpunkt |
+| updated_at | TIMESTAMP | Letzte Änderung |
+| ip_address | INET | IP-Adresse des Nutzers |
 | user_agent | TEXT | Browser-Info |
 
 ### contact_requests
@@ -32,15 +64,15 @@ Speichert Kontaktformular-Einträge.
 
 | Feld | Typ | Beschreibung |
 |------|-----|--------------|
-| id | INTEGER | Primärschlüssel, Auto-Increment |
-| name | TEXT | Name des Absenders |
-| email | TEXT | Email-Adresse |
-| subject | TEXT | Betreff |
+| id | SERIAL | Primärschlüssel |
+| name | VARCHAR(255) | Name des Absenders |
+| email | VARCHAR(255) | Email-Adresse |
+| subject | VARCHAR(500) | Betreff |
 | message | TEXT | Nachricht |
-| status | TEXT | Status: new, in_progress, answered, archived |
-| created_at | DATETIME | Erstellungszeitpunkt |
-| updated_at | DATETIME | Letzte Änderung |
-| ip_address | TEXT | IP-Adresse |
+| status | VARCHAR(20) | Status: new, in_progress, answered, archived |
+| created_at | TIMESTAMP | Erstellungszeitpunkt |
+| updated_at | TIMESTAMP | Letzte Änderung |
+| ip_address | INET | IP-Adresse |
 | user_agent | TEXT | Browser-Info |
 | referrer | TEXT | Herkunftsseite |
 
@@ -51,8 +83,8 @@ Speichert Kontaktformular-Einträge.
 ```typescript
 import { initializeDatabase } from '@/lib/db';
 
-// Beim Server-Start aufrufen
-initializeDatabase();
+// Beim Server-Start aufrufen (async!)
+await initializeDatabase();
 ```
 
 ### Newsletter abonnieren
@@ -60,7 +92,7 @@ initializeDatabase();
 ```typescript
 import { createNewsletterEntry, generateToken } from '@/lib/db';
 
-const entry = createNewsletterEntry({
+const entry = await createNewsletterEntry({
   email: 'user@example.com',
   confirmed: false,
   confirmation_token: generateToken(),
@@ -75,7 +107,7 @@ const entry = createNewsletterEntry({
 ```typescript
 import { confirmNewsletterEntry } from '@/lib/db';
 
-const success = confirmNewsletterEntry(token);
+const success = await confirmNewsletterEntry(token);
 ```
 
 ### Kontaktanfrage erstellen
@@ -83,7 +115,7 @@ const success = confirmNewsletterEntry(token);
 ```typescript
 import { createContactRequest } from '@/lib/db';
 
-const request = createContactRequest({
+const request = await createContactRequest({
   name: 'Max Mustermann',
   email: 'max@example.com',
   subject: 'Frage',
@@ -93,22 +125,45 @@ const request = createContactRequest({
 });
 ```
 
-## API Routes Beispiele
+## Wichtig: Async/Await
 
-Siehe `app/api/newsletter/route.ts` und `app/api/contact/route.ts` für vollständige Implementierungen.
+Alle Datenbank-Funktionen sind **asynchron** (Promise-basiert):
 
-## Backup
+```typescript
+// ❌ Falsch (SQLite war sync)
+const entry = getNewsletterEntryById(1);
 
-Die Datenbank-Datei `data/edufunds.db` kann einfach kopiert werden:
-
-```bash
-cp data/edufunds.db data/backups/edufunds-$(date +%Y%m%d).db
+// ✅ Richtig (PostgreSQL ist async)
+const entry = await getNewsletterEntryById(1);
 ```
 
-## Migration zu PostgreSQL
+## Pool Management
 
-Für Produktionsumgebungen kann später auf PostgreSQL migriert werden:
+Der Pool wird automatisch verwaltet. Bei Server-Shutdown:
 
-1. `pg` statt `better-sqlite3` installieren
-2. Connection-String in `lib/db.ts` anpassen
-3. SQL-Schema leicht anpassen (SQLite-spezifische Syntax)
+```typescript
+import { closePool } from '@/lib/db';
+
+// Cleanup beim Beenden
+process.on('SIGTERM', async () => {
+  await closePool();
+});
+```
+
+## Migration von SQLite
+
+1. Daten exportieren: `npm run db:export`
+2. PostgreSQL starten
+3. `DATABASE_URL` setzen
+4. `await initializeDatabase()` aufrufen
+5. Daten importieren
+
+## Backup & Restore
+
+```bash
+# Backup
+pg_dump $DATABASE_URL > backup_$(date +%Y%m%d).sql
+
+# Restore
+psql $DATABASE_URL < backup_20240209.sql
+```

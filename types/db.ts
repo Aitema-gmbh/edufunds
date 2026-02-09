@@ -9,7 +9,7 @@
 // =============================================================================
 
 /**
- * Newsletter-Eintrag in der Datenbank
+ * Newsletter-Eintrag in der Datenbank (PostgreSQL)
  */
 export interface NewsletterEntry {
   id: number;
@@ -17,8 +17,8 @@ export interface NewsletterEntry {
   confirmed: boolean;
   confirmation_token: string | null;
   unsubscribe_token: string;
-  created_at: string;
-  updated_at: string;
+  created_at: Date;
+  updated_at: Date;
   ip_address: string | null;
   user_agent: string | null;
 }
@@ -42,7 +42,7 @@ export interface NewsletterEntryPublic {
   id: number;
   email: string;
   confirmed: boolean;
-  created_at: string;
+  created_at: Date;
 }
 
 // =============================================================================
@@ -50,7 +50,7 @@ export interface NewsletterEntryPublic {
 // =============================================================================
 
 /**
- * Kontaktanfrage in der Datenbank
+ * Kontaktanfrage in der Datenbank (PostgreSQL)
  */
 export interface ContactRequest {
   id: number;
@@ -59,8 +59,8 @@ export interface ContactRequest {
   subject: string;
   message: string;
   status: ContactStatus;
-  created_at: string;
-  updated_at: string;
+  created_at: Date;
+  updated_at: Date;
   ip_address: string | null;
   user_agent: string | null;
   referrer: string | null;

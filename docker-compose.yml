@@ -1,6 +1,26 @@
 version: '3.8'
 
 services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: edufunds-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: edufunds
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-edufunds_secret}
+      POSTGRES_DB: edufunds
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - traefik-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edufunds"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   traefik:
     image: traefik:v2.11
     container_name: traefik
@@ -49,6 +69,9 @@ services:
       - "traefik.http.routers.edufunds-http.rule=Host(`edufunds.org`) || Host(`www.edufunds.org`)"
       - "traefik.http.routers.edufunds-http.entrypoints=web"
       - "traefik.http.services.edufunds.loadbalancer.server.port=80"
+
+volumes:
+  postgres_data:
 
 networks:
   traefik-network:

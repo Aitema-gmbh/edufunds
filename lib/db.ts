@@ -1,13 +1,11 @@
 /**
  * Datenbank-Modul für EduFunds Backend
  * 
- * Nutzt better-sqlite3 für synchronen, schnellen Datenzugriff.
- * SQLite-Datenbank wird im data/-Verzeichnis gespeichert.
+ * Nutzt pg (node-postgres) für PostgreSQL Verbindung.
+ * Connection String aus Umgebungsvariable DATABASE_URL.
  */
 
-import Database from 'better-sqlite3';
-import path from 'path';
-import fs from 'fs';
+import { Pool, PoolClient, QueryResult } from 'pg';
 import type {
   NewsletterEntry,
   NewsletterEntryCreate,
@@ -23,41 +21,65 @@ import type {
 // Konfiguration
 // =============================================================================
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DB_PATH = path.join(DATA_DIR, 'edufunds.db');
+const DEFAULT_DATABASE_URL = 'postgresql://localhost:5432/edufunds';
+const DATABASE_URL = process.env.DATABASE_URL || DEFAULT_DATABASE_URL;
 
 // =============================================================================
-// Verbindungs-Management
+// Pool Management
 // =============================================================================
 
-let db: Database.Database | null = null;
+let pool: Pool | null = null;
 
 /**
- * Gibt die Datenbank-Instanz zurück (Singleton-Pattern)
- * Erstellt die Verbindung bei Bedarf
+ * Gibt den PostgreSQL Pool zurück (Singleton-Pattern)
  */
-export function getDatabase(): Database.Database {
-  if (!db) {
-    // Stelle sicher, dass das data-Verzeichnis existiert
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
+export function getPool(): Pool {
+  if (!pool) {
+    pool = new Pool({
+      connectionString: DATABASE_URL,
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    });
 
-    db = new Database(DB_PATH);
-    db.pragma('journal_mode = WAL'); // Write-Ahead Logging für bessere Performance
-    db.pragma('foreign_keys = ON'); // Foreign Keys aktivieren
+    pool.on('error', (err) => {
+      console.error('[DB] Unerwarteter Pool-Fehler:', err);
+    });
   }
-  return db;
+  return pool;
 }
 
 /**
- * Schließt die Datenbank-Verbindung
- * Sollte beim Herunterfahren des Servers aufgerufen werden
+ * Führt eine Query aus und gibt das Ergebnis zurück
  */
-export function closeDatabase(): void {
-  if (db) {
-    db.close();
-    db = null;
+export async function query<T = unknown>(
+  text: string,
+  params?: unknown[]
+): Promise<QueryResult<T>> {
+  const pool = getPool();
+  return pool.query<T>(text, params);
+}
+
+/**
+ * Führt eine Query mit einem Client aus (für Transaktionen)
+ */
+export async function withClient<T>(
+  callback: (client: PoolClient) => Promise<T>
+): Promise<T> {
+  const pool = getPool();
+  const client = await pool.connect();
+  try {
+    return await callback(client);
+  } finally {
+    client.release();
+  }
+}
+
+/**
+ * Schließt den Pool (sollte beim Herunterfahren aufgerufen werden)
+ */
+export async function closePool(): Promise<void> {
+  if (pool) {
+    await pool.end();
+    pool = null;
   }
 }
 
@@ -67,81 +89,80 @@ export function closeDatabase(): void {
 
 /**
  * Initialisiert die Datenbank und erstellt alle Tabellen
- * Sollte beim Server-Start aufgerufen werden
  */
-export function initializeDatabase(): void {
-  const database = getDatabase();
-
+export async function initializeDatabase(): Promise<void> {
   // Newsletter-Tabelle
-  database.exec(`
+  await query(`
     CREATE TABLE IF NOT EXISTS newsletter_entries (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      email TEXT UNIQUE NOT NULL,
-      confirmed BOOLEAN DEFAULT 0,
-      confirmation_token TEXT,
-      unsubscribe_token TEXT NOT NULL,
-      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      ip_address TEXT,
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      confirmed BOOLEAN DEFAULT FALSE,
+      confirmation_token VARCHAR(64),
+      unsubscribe_token VARCHAR(64) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      ip_address INET,
       user_agent TEXT
     );
   `);
 
-  // Index für schnelle Email-Suche
-  database.exec(`
+  // Index für Email
+  await query(`
     CREATE INDEX IF NOT EXISTS idx_newsletter_email ON newsletter_entries(email);
   `);
 
   // Index für Confirmation Token
-  database.exec(`
+  await query(`
     CREATE INDEX IF NOT EXISTS idx_newsletter_confirmation ON newsletter_entries(confirmation_token);
   `);
 
   // Index für Unsubscribe Token
-  database.exec(`
+  await query(`
     CREATE INDEX IF NOT EXISTS idx_newsletter_unsubscribe ON newsletter_entries(unsubscribe_token);
   `);
 
   // Kontaktanfragen-Tabelle
-  database.exec(`
+  await query(`
     CREATE TABLE IF NOT EXISTS contact_requests (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT NOT NULL,
-      email TEXT NOT NULL,
-      subject TEXT NOT NULL,
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      email VARCHAR(255) NOT NULL,
+      subject VARCHAR(500) NOT NULL,
       message TEXT NOT NULL,
-      status TEXT DEFAULT 'new' CHECK(status IN ('new', 'in_progress', 'answered', 'archived')),
-      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      ip_address TEXT,
+      status VARCHAR(20) DEFAULT 'new' CHECK(status IN ('new', 'in_progress', 'answered', 'archived')),
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      ip_address INET,
       user_agent TEXT,
       referrer TEXT
     );
   `);
 
-  // Index für Status (für Admin-Panel Filter)
-  database.exec(`
+  // Index für Status
+  await query(`
     CREATE INDEX IF NOT EXISTS idx_contact_status ON contact_requests(status);
   `);
 
-  // Index für Erstellungsdatum (für Sortierung)
-  database.exec(`
+  // Index für Erstellungsdatum
+  await query(`
     CREATE INDEX IF NOT EXISTS idx_contact_created ON contact_requests(created_at);
   `);
 
-  console.log('[DB] Datenbank initialisiert:', DB_PATH);
+  console.log('[DB] Datenbank initialisiert:', DATABASE_URL.replace(/:[^:@]*@/, ':****@'));
 }
 
 /**
- * Prüft ob die Datenbank initialisiert ist und die Tabellen existieren
+ * Prüft ob die Datenbank initialisiert ist
  */
-export function isDatabaseInitialized(): boolean {
+export async function isDatabaseInitialized(): Promise<boolean> {
   try {
-    const database = getDatabase();
-    const tables = database
-      .prepare("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('newsletter_entries', 'contact_requests')")
-      .all() as { name: string }[];
-    return tables.length === 2;
+    const result = await query<{ name: string }>(`
+      SELECT table_name as name 
+      FROM information_schema.tables 
+      WHERE table_schema = 'public' 
+      AND table_name IN ('newsletter_entries', 'contact_requests')
+    `);
+    return result.rows.length === 2;
   } catch {
     return false;
   }
@@ -154,28 +175,27 @@ export function isDatabaseInitialized(): boolean {
 /**
  * Fügt einen neuen Newsletter-Eintrag hinzu
  */
-export function createNewsletterEntry(entry: NewsletterEntryCreate): NewsletterEntry | null {
-  const database = getDatabase();
-
+export async function createNewsletterEntry(
+  entry: NewsletterEntryCreate
+): Promise<NewsletterEntry | null> {
   try {
-    const stmt = database.prepare(`
-      INSERT INTO newsletter_entries (email, confirmed, confirmation_token, unsubscribe_token, ip_address, user_agent)
-      VALUES (@email, @confirmed, @confirmation_token, @unsubscribe_token, @ip_address, @user_agent)
-    `);
+    const result = await query<NewsletterEntry>(`
+      INSERT INTO newsletter_entries 
+        (email, confirmed, confirmation_token, unsubscribe_token, ip_address, user_agent)
+      VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING *
+    `, [
+      entry.email.toLowerCase().trim(),
+      entry.confirmed || false,
+      entry.confirmation_token || null,
+      entry.unsubscribe_token,
+      entry.ip_address || null,
+      entry.user_agent || null,
+    ]);
 
-    const result = stmt.run({
-      email: entry.email.toLowerCase().trim(),
-      confirmed: entry.confirmed ? 1 : 0,
-      confirmation_token: entry.confirmation_token || null,
-      unsubscribe_token: entry.unsubscribe_token,
-      ip_address: entry.ip_address || null,
-      user_agent: entry.user_agent || null,
-    });
-
-    return getNewsletterEntryById(Number(result.lastInsertRowid));
+    return result.rows[0] || null;
   } catch (error) {
-    // Duplicate email Fehler abfangen
-    if (error instanceof Error && error.message.includes('UNIQUE constraint failed')) {
+    if (error instanceof Error && error.message.includes('unique constraint')) {
       throw new Error('EMAIL_ALREADY_EXISTS');
     }
     console.error('[DB] Fehler beim Erstellen des Newsletter-Eintrags:', error);
@@ -186,122 +206,133 @@ export function createNewsletterEntry(entry: NewsletterEntryCreate): NewsletterE
 /**
  * Holt einen Newsletter-Eintrag anhand der ID
  */
-export function getNewsletterEntryById(id: number): NewsletterEntry | null {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM newsletter_entries WHERE id = ?');
-  const row = stmt.get(id) as NewsletterEntry | undefined;
-  return row || null;
+export async function getNewsletterEntryById(id: number): Promise<NewsletterEntry | null> {
+  const result = await query<NewsletterEntry>(
+    'SELECT * FROM newsletter_entries WHERE id = $1',
+    [id]
+  );
+  return result.rows[0] || null;
 }
 
 /**
  * Holt einen Newsletter-Eintrag anhand der Email
  */
-export function getNewsletterEntryByEmail(email: string): NewsletterEntry | null {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM newsletter_entries WHERE email = ?');
-  const row = stmt.get(email.toLowerCase().trim()) as NewsletterEntry | undefined;
-  return row || null;
+export async function getNewsletterEntryByEmail(email: string): Promise<NewsletterEntry | null> {
+  const result = await query<NewsletterEntry>(
+    'SELECT * FROM newsletter_entries WHERE email = $1',
+    [email.toLowerCase().trim()]
+  );
+  return result.rows[0] || null;
 }
 
 /**
  * Holt einen Newsletter-Eintrag anhand des Confirmation Tokens
  */
-export function getNewsletterEntryByConfirmationToken(token: string): NewsletterEntry | null {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM newsletter_entries WHERE confirmation_token = ?');
-  const row = stmt.get(token) as NewsletterEntry | undefined;
-  return row || null;
+export async function getNewsletterEntryByConfirmationToken(
+  token: string
+): Promise<NewsletterEntry | null> {
+  const result = await query<NewsletterEntry>(
+    'SELECT * FROM newsletter_entries WHERE confirmation_token = $1',
+    [token]
+  );
+  return result.rows[0] || null;
 }
 
 /**
  * Holt einen Newsletter-Eintrag anhand des Unsubscribe Tokens
  */
-export function getNewsletterEntryByUnsubscribeToken(token: string): NewsletterEntry | null {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM newsletter_entries WHERE unsubscribe_token = ?');
-  const row = stmt.get(token) as NewsletterEntry | undefined;
-  return row || null;
+export async function getNewsletterEntryByUnsubscribeToken(
+  token: string
+): Promise<NewsletterEntry | null> {
+  const result = await query<NewsletterEntry>(
+    'SELECT * FROM newsletter_entries WHERE unsubscribe_token = $1',
+    [token]
+  );
+  return result.rows[0] || null;
 }
 
 /**
- * Bestätigt einen Newsletter-Eintrag anhand des Confirmation Tokens
+ * Bestätigt einen Newsletter-Eintrag
  */
-export function confirmNewsletterEntry(token: string): boolean {
-  const database = getDatabase();
-  const stmt = database.prepare(`
+export async function confirmNewsletterEntry(token: string): Promise<boolean> {
+  const result = await query(`
     UPDATE newsletter_entries 
-    SET confirmed = 1, confirmation_token = NULL, updated_at = CURRENT_TIMESTAMP 
-    WHERE confirmation_token = ?
-  `);
-  const result = stmt.run(token);
-  return result.changes > 0;
+    SET confirmed = TRUE, confirmation_token = NULL, updated_at = CURRENT_TIMESTAMP 
+    WHERE confirmation_token = $1
+  `, [token]);
+  return (result.rowCount ?? 0) > 0;
 }
 
 /**
- * Löscht einen Newsletter-Eintrag anhand des Unsubscribe Tokens (Austragen)
+ * Löscht einen Newsletter-Eintrag anhand des Unsubscribe Tokens
  */
-export function unsubscribeNewsletterEntry(token: string): boolean {
-  const database = getDatabase();
-  const stmt = database.prepare('DELETE FROM newsletter_entries WHERE unsubscribe_token = ?');
-  const result = stmt.run(token);
-  return result.changes > 0;
+export async function unsubscribeNewsletterEntry(token: string): Promise<boolean> {
+  const result = await query(
+    'DELETE FROM newsletter_entries WHERE unsubscribe_token = $1',
+    [token]
+  );
+  return (result.rowCount ?? 0) > 0;
 }
 
 /**
  * Löscht einen Newsletter-Eintrag anhand der ID
  */
-export function deleteNewsletterEntry(id: number): boolean {
-  const database = getDatabase();
-  const stmt = database.prepare('DELETE FROM newsletter_entries WHERE id = ?');
-  const result = stmt.run(id);
-  return result.changes > 0;
+export async function deleteNewsletterEntry(id: number): Promise<boolean> {
+  const result = await query(
+    'DELETE FROM newsletter_entries WHERE id = $1',
+    [id]
+  );
+  return (result.rowCount ?? 0) > 0;
 }
 
 /**
  * Holt alle Newsletter-Einträge (mit Pagination)
  */
-export function getNewsletterEntries(options: QueryOptions = {}): PaginatedResult<NewsletterEntry> {
-  const database = getDatabase();
+export async function getNewsletterEntries(
+  options: QueryOptions = {}
+): Promise<PaginatedResult<NewsletterEntry>> {
   const { limit = 50, offset = 0, orderBy = 'created_at', orderDirection = 'DESC' } = options;
 
-  // Validiere orderBy um SQL Injection zu verhindern
+  // SQL Injection Schutz
   const allowedColumns = ['id', 'email', 'confirmed', 'created_at', 'updated_at'];
   const safeOrderBy = allowedColumns.includes(orderBy) ? orderBy : 'created_at';
   const safeDirection = orderDirection === 'ASC' ? 'ASC' : 'DESC';
 
-  const countStmt = database.prepare('SELECT COUNT(*) as total FROM newsletter_entries');
-  const { total } = countStmt.get() as { total: number };
+  const countResult = await query<{ count: string }>(
+    'SELECT COUNT(*) as count FROM newsletter_entries'
+  );
+  const total = parseInt(countResult.rows[0].count, 10);
 
-  const dataStmt = database.prepare(`
+  const dataResult = await query<NewsletterEntry>(`
     SELECT * FROM newsletter_entries 
     ORDER BY ${safeOrderBy} ${safeDirection} 
-    LIMIT ? OFFSET ?
-  `);
-  const data = dataStmt.all(limit, offset) as NewsletterEntry[];
+    LIMIT $1 OFFSET $2
+  `, [limit, offset]);
 
-  return { data, total, limit, offset };
+  return { data: dataResult.rows, total, limit, offset };
 }
 
 /**
- * Holt alle bestätigten Newsletter-Einträge (für Versand)
+ * Holt alle bestätigten Newsletter-Einträge
  */
-export function getConfirmedNewsletterEntries(): NewsletterEntry[] {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM newsletter_entries WHERE confirmed = 1 ORDER BY created_at ASC');
-  return stmt.all() as NewsletterEntry[];
+export async function getConfirmedNewsletterEntries(): Promise<NewsletterEntry[]> {
+  const result = await query<NewsletterEntry>(`
+    SELECT * FROM newsletter_entries 
+    WHERE confirmed = TRUE 
+    ORDER BY created_at ASC
+  `);
+  return result.rows;
 }
 
 /**
  * Zählt die Newsletter-Einträge
  */
-export function countNewsletterEntries(confirmedOnly = false): number {
-  const database = getDatabase();
+export async function countNewsletterEntries(confirmedOnly = false): Promise<number> {
   const sql = confirmedOnly 
-    ? 'SELECT COUNT(*) as count FROM newsletter_entries WHERE confirmed = 1'
+    ? 'SELECT COUNT(*) as count FROM newsletter_entries WHERE confirmed = TRUE'
     : 'SELECT COUNT(*) as count FROM newsletter_entries';
-  const stmt = database.prepare(sql);
-  const result = stmt.get() as { count: number };
-  return result.count;
+  const result = await query<{ count: string }>(sql);
+  return parseInt(result.rows[0].count, 10);
 }
 
 // =============================================================================
@@ -311,27 +342,27 @@ export function countNewsletterEntries(confirmedOnly = false): number {
 /**
  * Erstellt eine neue Kontaktanfrage
  */
-export function createContactRequest(request: ContactRequestCreate): ContactRequest | null {
-  const database = getDatabase();
-
+export async function createContactRequest(
+  request: ContactRequestCreate
+): Promise<ContactRequest | null> {
   try {
-    const stmt = database.prepare(`
-      INSERT INTO contact_requests (name, email, subject, message, status, ip_address, user_agent, referrer)
-      VALUES (@name, @email, @subject, @message, @status, @ip_address, @user_agent, @referrer)
-    `);
+    const result = await query<ContactRequest>(`
+      INSERT INTO contact_requests 
+        (name, email, subject, message, status, ip_address, user_agent, referrer)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      RETURNING *
+    `, [
+      request.name.trim(),
+      request.email.toLowerCase().trim(),
+      request.subject.trim(),
+      request.message.trim(),
+      request.status || 'new',
+      request.ip_address || null,
+      request.user_agent || null,
+      request.referrer || null,
+    ]);
 
-    const result = stmt.run({
-      name: request.name.trim(),
-      email: request.email.toLowerCase().trim(),
-      subject: request.subject.trim(),
-      message: request.message.trim(),
-      status: request.status || 'new',
-      ip_address: request.ip_address || null,
-      user_agent: request.user_agent || null,
-      referrer: request.referrer || null,
-    });
-
-    return getContactRequestById(Number(result.lastInsertRowid));
+    return result.rows[0] || null;
   } catch (error) {
     console.error('[DB] Fehler beim Erstellen der Kontaktanfrage:', error);
     return null;
@@ -341,23 +372,23 @@ export function createContactRequest(request: ContactRequestCreate): ContactRequ
 /**
  * Holt eine Kontaktanfrage anhand der ID
  */
-export function getContactRequestById(id: number): ContactRequest | null {
-  const database = getDatabase();
-  const stmt = database.prepare('SELECT * FROM contact_requests WHERE id = ?');
-  const row = stmt.get(id) as ContactRequest | undefined;
-  return row || null;
+export async function getContactRequestById(id: number): Promise<ContactRequest | null> {
+  const result = await query<ContactRequest>(
+    'SELECT * FROM contact_requests WHERE id = $1',
+    [id]
+  );
+  return result.rows[0] || null;
 }
 
 /**
  * Holt alle Kontaktanfragen (mit Pagination und Filter)
  */
-export function getContactRequests(
+export async function getContactRequests(
   options: QueryOptions & { status?: ContactStatus } = {}
-): PaginatedResult<ContactRequest> {
-  const database = getDatabase();
+): Promise<PaginatedResult<ContactRequest>> {
   const { limit = 50, offset = 0, orderBy = 'created_at', orderDirection = 'DESC', status } = options;
 
-  // Validiere orderBy um SQL Injection zu verhindern
+  // SQL Injection Schutz
   const allowedColumns = ['id', 'name', 'email', 'subject', 'status', 'created_at', 'updated_at'];
   const safeOrderBy = allowedColumns.includes(orderBy) ? orderBy : 'created_at';
   const safeDirection = orderDirection === 'ASC' ? 'ASC' : 'DESC';
@@ -366,65 +397,64 @@ export function getContactRequests(
   const params: (string | number)[] = [];
 
   if (status) {
-    whereClause = 'WHERE status = ?';
+    whereClause = 'WHERE status = $3';
     params.push(status);
   }
 
-  const countSql = `SELECT COUNT(*) as total FROM contact_requests ${whereClause}`;
-  const countStmt = database.prepare(countSql);
-  const { total } = (status ? countStmt.get(status) : countStmt.get()) as { total: number };
+  const countSql = `SELECT COUNT(*) as count FROM contact_requests ${whereClause}`;
+  const countResult = await query<{ count: string }>(countSql, status ? [status] : []);
+  const total = parseInt(countResult.rows[0].count, 10);
 
   const dataSql = `
     SELECT * FROM contact_requests ${whereClause}
     ORDER BY ${safeOrderBy} ${safeDirection}
-    LIMIT ? OFFSET ?
+    LIMIT $1 OFFSET $2
   `;
-  const dataStmt = database.prepare(dataSql);
-  const data = dataStmt.all(...(status ? [status, limit, offset] : [limit, offset])) as ContactRequest[];
+  const dataResult = await query<ContactRequest>(dataSql, [limit, offset, ...params]);
 
-  return { data, total, limit, offset };
+  return { data: dataResult.rows, total, limit, offset };
 }
 
 /**
  * Aktualisiert den Status einer Kontaktanfrage
  */
-export function updateContactRequestStatus(id: number, status: ContactStatus): boolean {
-  const database = getDatabase();
-  const stmt = database.prepare(`
+export async function updateContactRequestStatus(
+  id: number,
+  status: ContactStatus
+): Promise<boolean> {
+  const result = await query(`
     UPDATE contact_requests 
-    SET status = ?, updated_at = CURRENT_TIMESTAMP 
-    WHERE id = ?
-  `);
-  const result = stmt.run(status, id);
-  return result.changes > 0;
+    SET status = $1, updated_at = CURRENT_TIMESTAMP 
+    WHERE id = $2
+  `, [status, id]);
+  return (result.rowCount ?? 0) > 0;
 }
 
 /**
  * Löscht eine Kontaktanfrage
  */
-export function deleteContactRequest(id: number): boolean {
-  const database = getDatabase();
-  const stmt = database.prepare('DELETE FROM contact_requests WHERE id = ?');
-  const result = stmt.run(id);
-  return result.changes > 0;
+export async function deleteContactRequest(id: number): Promise<boolean> {
+  const result = await query(
+    'DELETE FROM contact_requests WHERE id = $1',
+    [id]
+  );
+  return (result.rowCount ?? 0) > 0;
 }
 
 /**
- * Zählt die Kontaktanfragen (optional gefiltert nach Status)
+ * Zählt die Kontaktanfragen
  */
-export function countContactRequests(status?: ContactStatus): number {
-  const database = getDatabase();
+export async function countContactRequests(status?: ContactStatus): Promise<number> {
   let sql = 'SELECT COUNT(*) as count FROM contact_requests';
   const params: string[] = [];
 
   if (status) {
-    sql += ' WHERE status = ?';
+    sql += ' WHERE status = $1';
     params.push(status);
   }
 
-  const stmt = database.prepare(sql);
-  const result = stmt.get(...params) as { count: number };
-  return result.count;
+  const result = await query<{ count: string }>(sql, params);
+  return parseInt(result.rows[0].count, 10);
 }
 
 // =============================================================================
@@ -446,42 +476,51 @@ export function generateToken(length = 32): string {
 /**
  * Gibt den Status der Datenbank zurück
  */
-export function getDatabaseStatus(): DatabaseStatus {
-  const database = getDatabase();
+export async function getDatabaseStatus(): Promise<DatabaseStatus> {
+  const tablesResult = await query<{ table_name: string }>(`
+    SELECT table_name 
+    FROM information_schema.tables 
+    WHERE table_schema = 'public'
+    ORDER BY table_name
+  `);
 
-  const tablesStmt = database.prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
-  const tables = tablesStmt.all() as { name: string }[];
-  const tableNames = tables.map(t => t.name);
-
+  const tableNames = tablesResult.rows.map(r => r.table_name);
   const recordCounts: Record<string, number> = {};
+
   for (const table of tableNames) {
-    if (!table.startsWith('sqlite_')) {
-      const countStmt = database.prepare(`SELECT COUNT(*) as count FROM "${table}"`);
-      const result = countStmt.get() as { count: number };
-      recordCounts[table] = result.count;
+    if (!table.startsWith('pg_') && !table.startsWith('sql_')) {
+      const countResult = await query<{ count: string }>(
+        `SELECT COUNT(*) as count FROM "${table}"`
+      );
+      recordCounts[table] = parseInt(countResult.rows[0].count, 10);
     }
   }
 
   return {
     connected: true,
-    databasePath: DB_PATH,
+    databasePath: DATABASE_URL.replace(/:[^:@]*@/, ':****@'),
     tables: tableNames,
     recordCounts,
   };
 }
 
 /**
- * Exportiert alle Daten als JSON (für Backups)
+ * Exportiert alle Daten als JSON
  */
-export function exportDatabaseData(): { newsletter: NewsletterEntry[]; contacts: ContactRequest[] } {
-  const database = getDatabase();
-
-  const newsletterStmt = database.prepare('SELECT * FROM newsletter_entries ORDER BY created_at DESC');
-  const contactsStmt = database.prepare('SELECT * FROM contact_requests ORDER BY created_at DESC');
+export async function exportDatabaseData(): Promise<{
+  newsletter: NewsletterEntry[];
+  contacts: ContactRequest[];
+}> {
+  const newsletterResult = await query<NewsletterEntry>(`
+    SELECT * FROM newsletter_entries ORDER BY created_at DESC
+  `);
+  const contactsResult = await query<ContactRequest>(`
+    SELECT * FROM contact_requests ORDER BY created_at DESC
+  `);
 
   return {
-    newsletter: newsletterStmt.all() as NewsletterEntry[],
-    contacts: contactsStmt.all() as ContactRequest[],
+    newsletter: newsletterResult.rows,
+    contacts: contactsResult.rows,
   };
 }
 
@@ -491,8 +530,12 @@ export function exportDatabaseData(): { newsletter: NewsletterEntry[]; contacts:
 
 export default {
   // Verbindung
-  getDatabase,
-  closeDatabase,
+  getPool,
+  query,
+  withClient,
+  closePool,
+  
+  // Initialisierung
   initializeDatabase,
   isDatabaseInitialized,
   

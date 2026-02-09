@@ -1,6 +1,5 @@
 -- =============================================================================
--- EduFunds Datenbank Schema
--- SQLite Datenbank für Newsletter und Kontaktanfragen
+-- EduFunds Datenbank Schema (PostgreSQL)
 -- =============================================================================
 
 -- =============================================================================
@@ -9,14 +8,14 @@
 -- =============================================================================
 
 CREATE TABLE IF NOT EXISTS newsletter_entries (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  email TEXT UNIQUE NOT NULL,
-  confirmed BOOLEAN DEFAULT 0,
-  confirmation_token TEXT,
-  unsubscribe_token TEXT NOT NULL,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  ip_address TEXT,
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  confirmed BOOLEAN DEFAULT FALSE,
+  confirmation_token VARCHAR(64),
+  unsubscribe_token VARCHAR(64) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  ip_address INET,
   user_agent TEXT
 );
 
@@ -35,15 +34,15 @@ CREATE INDEX IF NOT EXISTS idx_newsletter_unsubscribe ON newsletter_entries(unsu
 -- =============================================================================
 
 CREATE TABLE IF NOT EXISTS contact_requests (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  email TEXT NOT NULL,
-  subject TEXT NOT NULL,
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  subject VARCHAR(500) NOT NULL,
   message TEXT NOT NULL,
-  status TEXT DEFAULT 'new' CHECK(status IN ('new', 'in_progress', 'answered', 'archived')),
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  ip_address TEXT,
+  status VARCHAR(20) DEFAULT 'new' CHECK(status IN ('new', 'in_progress', 'answered', 'archived')),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  ip_address INET,
   user_agent TEXT,
   referrer TEXT
 );
@@ -53,16 +52,3 @@ CREATE INDEX IF NOT EXISTS idx_contact_status ON contact_requests(status);
 
 -- Index für Erstellungsdatum (für Sortierung)
 CREATE INDEX IF NOT EXISTS idx_contact_created ON contact_requests(created_at);
-
--- =============================================================================
--- Datenbank-Einstellungen
--- =============================================================================
-
--- Aktiviere Foreign Keys
-PRAGMA foreign_keys = ON;
-
--- Write-Ahead Logging für bessere Performance bei gleichzeitigen Zugriffen
-PRAGMA journal_mode = WAL;
-
--- Synchronisation für Datensicherheit (FULL = sicherster Modus)
-PRAGMA synchronous = NORMAL;
