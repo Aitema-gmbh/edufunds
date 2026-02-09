@@ -41,10 +41,10 @@
 
 | Branch | Status | Letzte Änderung |
 |--------|--------|-----------------|
-| `main` | Production (aktuell) | 9. Feb 2026: 68 Dateien hinzugefügt |
-| `staging` | ❌ Existiert noch nicht | Muss erstellt werden |
+| `main` | Production | 9. Feb 2026: Regeln dokumentiert |
+| `staging` | ✅ Aktiv | 9. Feb 2026: Branch erstellt |
 
-**Wichtig:** `staging` Branch muss noch erstellt werden!
+**Workflow:** staging → testen → main → Production
 
 ---
 
