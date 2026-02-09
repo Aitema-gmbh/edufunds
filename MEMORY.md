@@ -1,5 +1,23 @@
 # MEMORY.md - Langzeitgedächtnis
 
+> **⚠️ WICHTIG: Lies `rules.md` bei jedem Session-Start!**
+> 
+> **Aktueller Stand: `current_state.md`**
+
+---
+
+## Arbeitsregeln (Verbindlich)
+
+**→ Siehe `rules.md` für alle verbindlichen Arbeitsregeln**
+
+**Kurzfassung:**
+- Staging-first (immer)
+- Git commit + push (immer)
+- Dokumentation aktualisieren (immer)
+- GDrive-Sync nach jedem Push
+
+---
+
 ## Deployment-Workflow (WICHTIG)
 
 ### Ab 2026-02-06: Staging → Production
