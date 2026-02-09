@@ -69,6 +69,39 @@
 - Statischer Export nach `dist/`, dann Upload zu Hetzner
 - GitHub Actions für CI/CD (Deployment zu Hetzner)
 
+### 2026-02-09: **KRITISCHER VORFALL - Docker Port-Binding**
+**Was passiert ist:**
+- `docker run -p 80:80` blockierte Port 80
+- Traefik konnte nicht starten
+- **ALLE Websites down** (edufunds, sailhub, demo, supabase, etc.)
+- Kompletter Server-Ausfall für alle Kunden
+
+**Fehlerursache:**
+- Unwissenheit über Server-Infrastruktur
+- Traefik ist zentraler Reverse Proxy für ALLE Sites
+- Port 80/443 gehören EXKLUSIV Traefik
+- Keine Prüfung vor dem Deployment
+
+**Konsequenzen:**
+- Systemausfall für alle Kunden
+- SSL-Zertifikate gefährdet
+- Vertrauensverlust
+
+**Lösung:**
+- Immer `--network hetzner-stack_web` verwenden
+- Immer Traefik-Labels verwenden
+- NIE `docker run -p 80:80` 
+- Vorher `/root/hetzner-stack/docker-compose.yml` lesen
+
+**Neue strikte Regeln:**
+1. Docker-Regeln haben höchste Priorität
+2. Port 80/443 sind TABU für direkte Bindings
+3. Bei Unsicherheit: FRAGEN, nicht raten
+4. Vor Docker-Änderungen: Traefik-Status prüfen
+
+**Dokumentation:**
+- Siehe `rules.md` Abschnitt 0: Docker-Regeln
+
 ---
 
 ## TODOs

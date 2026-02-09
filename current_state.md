@@ -51,10 +51,11 @@
 ## 🌐 Deployment-Status
 
 ### Production (edufunds.org)
-- **Status:** ⚠️ HTTP funktioniert, HTTPS hat Probleme
-- **URL:** http://edufunds.org (funktioniert)
-- **Letztes Deploy:** 9. Feb 2026, ~14:55 UTC
-- **Container:** eduFunds auf Port 80 (direkt, ohne Traefik)
+- **Status:** ✅ **BEHOBEN** - läuft wieder korrekt
+- **URL:** https://edufunds.org ✅
+- **Letztes Deploy:** 9. Feb 2026, ~17:00 UTC (korrektur)
+- **Container:** eduFunds über Traefik (kein Port-Binding!)
+- **Fix:** Kolja hat Traefik wiederhergestellt und eduFunds korrekt eingerichtet
 
 ### Staging
 - **Status:** ❌ Nicht eingerichtet

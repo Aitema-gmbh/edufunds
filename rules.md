@@ -1,9 +1,52 @@
 # EduFunds - Arbeitsregeln
 
-> **Verbindliche Regeln für alle Arbeitssessions**
+> **VERBINDLICHE REGELN - Stand: 9. Februar 2026 (Update nach schwerem Vorfall)**
 > 
-> Stand: 9. Februar 2026
-> Letzte Aktualisierung: 9. Februar 2026
+> **⚠️ WICHTIG: Docker-Regeln haben höchste Priorität! Fehler können ALLE Websites down bringen!**
+
+---
+
+## 0. DOCKER-REGELN - ABSOLUTES VERBOT
+
+### ❌ VERBOTEN - NIEMALS TUN:
+```bash
+# DAS DARFST DU NIEMALS MACHEN:
+docker run -p 80:80 ...        # BLOCKIERT TRAEFIK = ALLE SITES DOWN
+docker run -p 443:443 ...      # BLOCKIERT TRAEFIK SSL
+docker-compose ports: - "80:80" # GLEICHES PROBLEM
+
+# AUCH VERBOTEN:
+docker stop traefik            # SSL-ZERTIFIKATE WEG
+systemctl restart docker       # ALLE CONTAINER NEU STARTEN
+```
+
+### ✅ RICHTIG - IMMER SO:
+```bash
+# KORREKTE VORGEHENSWEISE:
+docker run -d \
+  --name edufunds \
+  --network hetzner-stack_web \
+  --label 'traefik.enable=true' \
+  --label 'traefik.http.routers.edufunds.rule=Host(`edufunds.org`) || Host(`www.edufunds.org`)' \
+  --label 'traefik.http.routers.edufunds.entrypoints=websecure' \
+  --label 'traefik.http.routers.edufunds.tls.certresolver=letsencrypt' \
+  --label 'traefik.http.services.edufunds.loadbalancer.server.port=80' \
+  --restart unless-stopped \
+  edufunds:latest
+```
+
+### 🔴 VOR JEDEM DOCKER-COMMAND PRÜFEN:
+```bash
+# 1. Läuft Traefik?
+docker ps | grep traefik
+
+# 2. Wer hat Port 80/443?
+ss -tlnp | grep -E ':80|:443'
+# ERGEBNIS MUSS SEIN: docker-proxy (Traefik)
+
+# 3. docker-compose.yml lesen
+cat /root/hetzner-stack/docker-compose.yml
+```
 
 ---
 
@@ -88,55 +131,97 @@ Damit Dateien über Google Drive zugänglich bleiben.
 
 Bei jedem Session-Start:
 
-- [ ] `rules.md` lesen
+- [ ] `rules.md` lesen (besonders Docker-Regeln!)
 - [ ] `current_state.md` lesen
 - [ ] `git status` + `git pull` (auf neuestem Stand?)
 - [ ] Branch prüfen (sollte `staging` sein für Entwicklung)
-- [ ] `MEMORY.md` prüfen (falls im Main Session)
+- [ ] Bei Docker-Änderungen: `/root/hetzner-stack/docker-compose.yml` lesen
 
 ---
 
-## 6. CONVENTIONAL COMMITS
+## 6. SERVER-INFRASTRUKTUR
 
-**Format:** `<type>: <beschreibung>`
+### Traefik (Zentrale Steuerung)
+- **Container:** traefik
+- **Netzwerk:** hetzner-stack_web
+- **Ports:** 80, 443 (EXKLUSIV!)
+- **Config:** /root/hetzner-stack/docker-compose.yml
 
-| Type | Verwendung |
-|------|-----------|
-| `feat:` | Neue Features |
-| `fix:` | Bugfixes |
-| `docs:` | Dokumentation |
-| `refactor:` | Code-Refactoring |
-| `test:` | Tests hinzufügen/ändern |
-| `chore:` | Wartung, Dependencies |
+### Services auf dem Server:
+| Service | Container | URL |
+|---------|-----------|-----|
+| EduFunds | edufunds | edufunds.org |
+| SailHub TSC | sailhub | tsc-berlin.sail-hub.de |
+| SailHub Demo | (in Traefik) | demo.sail-hub.de |
+| Supabase | supabase-kong | supabase.aitema.de |
+| ... | ... | ... |
 
-**Beispiele:**
-- `feat: Add PDF export functionality`
-- `fix: Repair broken footer links`
-- `docs: Update deployment guide`
-
----
-
-## 7. BRANCH-STRATEGIE
-
-| Branch | Zweck |
-|--------|-------|
-| `main` | Production (nur getestete Staging-Änderungen) |
-| `staging` | Entwicklung, Tests |
-
-**Keine Feature-Branches** ohne Absprache.
+### Netzwerk-Regel:
+- **Immer:** `--network hetzner-stack_web`
+- **Niemals:** Andere Netzwerke für Web-Services
 
 ---
 
-## 8. DEPLOYMENT-REGELN
+## 7. LERNING AUS DEM VORFALL (9. Feb 2026)
 
-1. **Staging:** Automatisch oder manuell nach push auf `staging`
-2. **Production:** Nur nach erfolgreichem Staging-Test
-3. **Nie direkt:** Keine Ausnahmen von Staging → Production
+### Was passiert ist:
+- `docker run -p 80:80` blockierte Port 80
+- Traefik konnte nicht starten
+- **ALLE Websites waren down** (nicht nur edufunds)
+- SailHub, Demo, Supabase - alles offline
+
+### Konsequenzen:
+- **Vertrauensverlust** bei Kolja
+- **Systemausfall** für alle Kunden
+- **Datenverlust-Risiko** bei SSL-Zertifikaten
+
+### Maßnahmen:
+- Docker-Regeln haben höchste Priorität
+- Vor jedem Docker-Command 3x prüfen
+- Bei Unsicherheit: FRAGEN, nicht raten
 
 ---
 
-*Diese Regeln sind verbindlich. Bei Unklarheiten fragen — aber Regeln nicht ignorieren.*
+## 8. NOTFALL-PLAN
+
+### Falls doch Port 80 blockiert:
+```bash
+# 1. Übeltäter finden
+docker ps | grep -E '80|443'
+ss -tlnp | grep ':80'
+
+# 2. Container stoppen (nicht Traefik!)
+docker stop <falscher-container>
+docker rm <falscher-container>
+
+# 3. Traefik prüfen
+docker ps | grep traefik
+# Falls nicht läuft: docker start traefik
+
+# 4. Warten (SSL-Zertifikate laden)
+sleep 30
+
+# 5. Testen
+curl -I https://edufunds.org
+```
+
+---
+
+## 9. KONTAKT BEI PROBLEMEN
+
+**Wenn du unsicher bist:**
+1. STOPP - nichts machen
+2. Frage Kolja vorher
+3. Warte auf Antwort
+4. Dann erst handeln
+
+**Besser warten als alles kaputt machen.**
+
+---
+
+*Diese Regeln sind verbindlich. Verstöße können Systemausfälle verursachen.*
 
 *Erstellt am: 9. Februar 2026*
+*Letzte Aktualisierung: 9. Februar 2026 (nach Vorfall)*
 *Ersteller: Kolja Schumann*
-*Akzeptiert von: Milo (AI Assistant)*
+*Akzeptiert von: Milo (AI Assistant) - mit tiefer Entschuldigung für den Vorfall*
