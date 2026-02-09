@@ -44,7 +44,7 @@ export default function ContactPage() {
                 Nachricht senden
               </h2>
               
-              <form className="space-y-6" action="mailto:info@edu-funds.org" method="post" encType="text/plain">
+              <form className="space-y-6" action="mailto:office@aitema.de" method="post" encType="text/plain">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
@@ -147,10 +147,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-slate-100 mb-1">E-Mail</h3>
                       <a 
-                        href="mailto:info@edu-funds.org" 
+                        href="mailto:office@aitema.de" 
                         className="text-slate-400 hover:text-orange-400 transition-colors"
                       >
-                        info@edu-funds.org
+                        office@aitema.de
                       </a>
                       <p className="text-sm text-slate-500 mt-1">
                         Für allgemeine Anfragen und Support

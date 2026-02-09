@@ -134,8 +134,8 @@ export default function AboutPage() {
                   </p>
                   <p className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-slate-500 shrink-0" />
-                    <a href="mailto:info@edu-funds.org" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      info@edu-funds.org
+                    <a href="mailto:office@aitema.de" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      office@aitema.de
                     </a>
                   </p>
                 </div>
