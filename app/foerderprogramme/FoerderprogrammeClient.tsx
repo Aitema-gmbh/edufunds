@@ -412,7 +412,7 @@ export default function FoerderprogrammePage() {
                         Details ansehen
                         <ArrowRight className="h-4 w-4" />
                       </Link>
-                      {(programm as any).antragsLink && (
+                      {programm.antragsLink && (
                         <Link
                           href={`/antrag/${programm.id}`}
                           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-outline text-sm font-medium whitespace-nowrap"
