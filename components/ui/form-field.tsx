@@ -32,8 +32,9 @@ export function FormField({
 
   return (
     <div className={`space-y-2 ${className}`}>
-      <Label htmlFor={id} required={required}>
+      <Label htmlFor={id}>
         {label}
+        {required && <span className="text-red-500 ml-1">*</span>}
       </Label>
       {React.cloneElement(children as React.ReactElement, {
         id,
@@ -80,8 +81,9 @@ export function InputField({
 
   return (
     <div className={`space-y-2 ${className}`}>
-      <Label htmlFor={id} required={required}>
+      <Label htmlFor={id}>
         {label}
+        {required && <span className="text-red-500 ml-1">*</span>}
       </Label>
       <Input
         id={id}
@@ -129,8 +131,9 @@ export function TextareaField({
 
   return (
     <div className={`space-y-2 ${className}`}>
-      <Label htmlFor={id} required={required}>
+      <Label htmlFor={id}>
         {label}
+        {required && <span className="text-red-500 ml-1">*</span>}
       </Label>
       <Textarea
         id={id}

@@ -8,12 +8,12 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Loader2, Copy, Check, FileText, RefreshCw, Download, Wand2, FileDown } from "lucide-react";
-import type { Förderprogramm } from "@/types/foerderprogramm";
+import type { Foerderprogramm } from "@/lib/foerderSchema";
 import { generateAntrag, type ProjektDaten } from "@/lib/ki-antrag-generator";
 import html2pdf from "html2pdf.js";
 
 interface KIAntragAssistentProps {
-  programm: Förderprogramm;
+  programm: Foerderprogramm;
   onClose?: () => void;
 }
 

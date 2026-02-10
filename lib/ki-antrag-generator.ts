@@ -17,6 +17,19 @@ export interface ProjektDaten {
   foerderbetrag: string;
 }
 
+// Custom error class for KI-Antrag generation
+export class KIAntragError extends Error {
+  code: string;
+  recoverable: boolean;
+
+  constructor(message: string, code: string = "KI_ERROR", recoverable: boolean = false) {
+    super(message);
+    this.code = code;
+    this.recoverable = recoverable;
+    this.name = "KIAntragError";
+  }
+}
+
 // OpenAI-API-Struktur (vorbereitet für echte Integration)
 interface OpenAIConfig {
   apiKey: string;

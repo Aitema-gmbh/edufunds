@@ -1,30 +1,102 @@
-# EduFunds Docker Image
-# Statischer Export mit nginx (optimiert ohne npm install)
+# =============================================================================
+# EduFunds Production Dockerfile
+# =============================================================================
+# Multi-Stage Build für optimierte Production-Images
+#
+# Features:
+# - Separater Build-Stage mit allen Dev-Dependencies
+# - Production-Stage nur mit notwendigen Dateien
+# - Standalone Output für optimiertes Deployment
+# - Nicht-root User für Sicherheit
+#
+# Build:
+#   docker build -t edufunds:latest .
+#
+# Run:
+#   docker run -p 3000:3000 --env-file .env.production edufunds:latest
+# =============================================================================
 
+# =============================================================================
+# Stage 1: Dependencies
+# =============================================================================
+FROM node:20-alpine AS deps
+
+# Installiere notwendige System-Pakete
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+# Kopiere Package Files
+COPY package.json package-lock.json* ./
+
+# Installiere Dependencies (inkl. Dev für Build)
+RUN npm ci --only=production && npm cache clean --force
+
+# =============================================================================
+# Stage 2: Builder
+# =============================================================================
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Nur die notwendigen Dateien kopieren
-COPY data/ ./data/
-COPY export-static.js ./
+# Kopiere Dependencies von deps Stage
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json package-lock.json* ./
 
-# Statischen Export erstellen (kein npm install nötig)
-RUN node export-static.js
+# Kopiere Source Code
+COPY . .
 
-# Production Stage mit nginx
-FROM nginx:alpine
+# Build Argumente
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# nginx Konfiguration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Build
+RUN npm run build
 
-# Statische Dateien kopieren
-COPY --from=builder /app/dist /usr/share/nginx/html
+# =============================================================================
+# Stage 3: Production Runner
+# =============================================================================
+FROM node:20-alpine AS runner
 
-# Gesundheitscheck
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/ || exit 1
+WORKDIR /app
 
-EXPOSE 80
+# Environment
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
-CMD ["nginx", "-g", "daemon off;"]
+# Installiere wget für Healthcheck
+RUN apk add --no-cache wget
+
+# Erstelle nicht-root User
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Kopiere standalone build
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+
+# Kopiere package.json (für npm start)
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./
+
+# Kopiere node_modules (nur Production-Dependencies)
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
+
+# Rechte setzen
+RUN chown -R nextjs:nodejs /app
+
+# Wechsle zu nicht-root User
+USER nextjs
+
+# Port exponieren
+EXPOSE 3000
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD wget -q --spider http://localhost:3000/api/health || exit 1
+
+# Starte Next.js
+CMD ["node", "server.js"]

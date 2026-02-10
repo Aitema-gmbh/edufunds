@@ -688,9 +688,9 @@
       "gesamtschule"
     ],
     "bundeslaender": [
-      "Niedersachsen",
-      "Bremen",
-      "Hamburg"
+      "DE-NI",
+      "DE-HB",
+      "DE-HH"
     ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 150000,

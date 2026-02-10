@@ -1,55 +1,142 @@
 version: '3.8'
 
+# =============================================================================
+# EduFunds Development Stack
+# =============================================================================
+# Diese Konfiguration ist für die lokale Entwicklung optimiert.
+# 
+# Features:
+# - Next.js im Development Mode mit Hot Reload
+# - PostgreSQL mit persistentem Volume
+# - pgAdmin für Datenbank-Management (optional)
+#
+# Usage:
+#   docker-compose up -d          # Starten
+#   docker-compose logs -f nextjs # Logs ansehen
+#   docker-compose down           # Stoppen
+#   docker-compose down -v        # Stoppen + Volumes löschen
+# =============================================================================
+
 services:
-  traefik:
-    image: traefik:v2.11
-    container_name: traefik
+  # ===========================================================================
+  # Next.js Application
+  # ===========================================================================
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        - NODE_ENV=development
+    container_name: edufunds-nextjs-dev
     restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
+    
+    environment:
+      # Next.js
+      NODE_ENV: development
+      PORT: 3000
+      
+      # Database
+      DATABASE_URL: postgresql://edufunds:${POSTGRES_PASSWORD:-dev_password}@postgres:5432/edufunds
+      
+      # API Keys (from .env.local)
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-office@aitema.de}
+      FROM_EMAIL: ${FROM_EMAIL:-noreply@edufunds.org}
+    
+    volumes:
+      # Hot Reload: Code-Änderungen sofort sichtbar
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    
     ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./letsencrypt:/letsencrypt
-      - ./traefik.yml:/traefik.yml:ro
+      - "${NEXTJS_PORT:-3101}:3000"
+    
     networks:
-      - traefik-network
-    command:
-      - "--api.dashboard=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.network=traefik-network"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
-      - "--certificatesresolvers.letsencrypt.acme.email=office@aitema.de"
-      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
-      - "--log.level=INFO"
-      - "--accesslog=true"
+      - edufunds-dev
+    
+    depends_on:
+      postgres:
+        condition: service_healthy
+    
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
-  edufunds:
-    image: nginx:alpine
-    container_name: edufunds
+  # ===========================================================================
+  # PostgreSQL Database
+  # ===========================================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: edufunds-postgres-dev
     restart: unless-stopped
+    
+    environment:
+      POSTGRES_USER: edufunds
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password}
+      POSTGRES_DB: edufunds
+      PGDATA: /var/lib/postgresql/data/pgdata
+    
     volumes:
-      - ./html:/usr/share/nginx/html:ro
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    
     networks:
-      - traefik-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.edufunds.rule=Host(`edufunds.org`) || Host(`www.edufunds.org`)"
-      - "traefik.http.routers.edufunds.entrypoints=websecure"
-      - "traefik.http.routers.edufunds.tls=true"
-      - "traefik.http.routers.edufunds.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.edufunds-http.rule=Host(`edufunds.org`) || Host(`www.edufunds.org`)"
-      - "traefik.http.routers.edufunds-http.entrypoints=web"
-      - "traefik.http.services.edufunds.loadbalancer.server.port=80"
+      - edufunds-dev
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edufunds -d edufunds"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
+  # ===========================================================================
+  # pgAdmin (Optional - für Datenbank-Management)
+  # ===========================================================================
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: edufunds-pgadmin-dev
+    restart: unless-stopped
+    
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@edufunds.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    
+    volumes:
+      - pgadmin_dev_data:/var/lib/pgadmin
+    
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    
+    networks:
+      - edufunds-dev
+    
+    depends_on:
+      - postgres
+    
+    profiles:
+      - pgadmin  # Nur starten mit: docker-compose --profile pgadmin up -d
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  postgres_dev_data:
+    driver: local
+  pgadmin_dev_data:
+    driver: local
+
+# =============================================================================
+# Networks
+# =============================================================================
 networks:
-  traefik-network:
-    external: true
+  edufunds-dev:
+    driver: bridge

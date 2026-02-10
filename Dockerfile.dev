@@ -1,0 +1,35 @@
+# =============================================================================
+# EduFunds Development Dockerfile
+# =============================================================================
+# Für lokale Entwicklung mit Hot Reload
+#
+# Features:
+# - Volume-Mount für Live-Code-Änderungen
+# - Node Modules als named volume (Performance)
+# - Root User (für Dev-Tools)
+#
+# Usage:
+#   docker-compose up -d
+# =============================================================================
+
+FROM node:20-alpine
+
+# Installiere notwendige Tools
+RUN apk add --no-cache \
+    git \
+    wget \
+    curl
+
+WORKDIR /app
+
+# Package Files kopieren (für caching)
+COPY package.json package-lock.json* ./
+
+# Alle Dependencies installieren (inkl. Dev)
+RUN npm install
+
+# Port
+EXPOSE 3000
+
+# Development Server mit Hot Reload
+CMD ["npm", "run", "dev"]

@@ -25,7 +25,9 @@ import {
   Wand2,
   X
 } from "lucide-react";
-import foerderprogramme from "@/data/foerderprogramme.json";
+import type { Foerderprogramm } from '@/lib/foerderSchema';
+import foerderprogrammeData from '@/data/foerderprogramme.json';
+const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 import { useEffect, useState } from "react";
 import { KIAntragAssistent } from "@/components/KIAntragAssistent";
 import {
@@ -108,7 +110,7 @@ function useCountdown(targetDate: string | null) {
 }
 
 // Share Function
-function shareProgram(programm: typeof foerderprogramme[0]) {
+function shareProgram(programm: Foerderprogramm) {
   if (navigator.share) {
     navigator.share({
       title: programm.name,
@@ -144,7 +146,7 @@ export default function FoerderprogrammDetailPage() {
     notFound();
   }
 
-  const countdown = useCountdown(programm.bewerbungsfristEnde);
+  const countdown = useCountdown(programm.bewerbungsfristEnde ?? null);
   const similarPrograms = getSimilarPrograms(programm.id, programm.kategorien);
 
   const foerdergeberStyle = FOERDERGEBER_STYLES[programm.foerdergeberTyp as keyof typeof FOERDERGEBER_STYLES];

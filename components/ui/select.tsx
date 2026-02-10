@@ -1,3 +1,7 @@
+"use client";
+
+import * as React from "react";
+
 interface SelectProps {
   value: string;
   onChange: (value: string) => void;
