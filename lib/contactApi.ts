@@ -66,16 +66,9 @@ export async function submitContactForm(
  * Prüft, ob ein Feld valide ist (für Echtzeit-Validierung)
  */
 export function validateField(
-  field: keyof ContactFormData,
-  value: unknown
+  _field: keyof ContactFormData,
+  _value: unknown
 ): string | null {
-  const fieldSchemas: Record<string, import('zod').ZodTypeAny> = {
-    name: import('./contactSchema').then((m) => m.contactFormSchema.shape.name),
-    email: import('./contactSchema').then((m) => m.contactFormSchema.shape.email),
-    subject: import('./contactSchema').then((m) => m.contactFormSchema.shape.subject),
-    message: import('./contactSchema').then((m) => m.contactFormSchema.shape.message),
-    datenschutz: import('./contactSchema').then((m) => m.contactFormSchema.shape.datenschutz),
-  };
-
-  return null; // Wird bei Bedarf implementiert
+  // TODO: Implement validation logic
+  return null;
 }
