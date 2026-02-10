@@ -5,11 +5,6 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Target, Heart, Lightbulb, Users, Award, BookOpen } from "lucide-react";
 
-export const metadata = {
-  title: "Über uns | EduFunds",
-  description: "Erfahren Sie mehr über EduFunds - Ihre Plattform für Fördermittel an Grundschulen.",
-};
-
 const values = [
   {
     icon: Heart,

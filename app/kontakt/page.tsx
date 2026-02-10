@@ -6,11 +6,6 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Kontakt | EduFunds",
-  description: "Kontaktieren Sie das EduFunds-Team. Wir helfen Ihnen bei Fragen zu Fördermitteln.",
-};
-
 export default function KontaktPage() {
   return (
     <>
