@@ -228,7 +228,7 @@ export default function FoerderprogrammDetailPage() {
                     KI-Antrag generieren
                   </button>
                 )}
-                {programm.antragsLink && (
+                {(programm as any).antragsLink && (
                   <Link
                     href={`/antrag/${programm.id}`}
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base font-semibold"
