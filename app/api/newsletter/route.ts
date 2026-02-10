@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import { getConfirmationEmailTemplate } from '@/lib/newsletter-templates';
 
 // E-Mail Validation Schema
-export const newsletterSchema = z.object({
+const newsletterSchema = z.object({
   email: z
     .string()
     .min(1, 'E-Mail ist erforderlich')
