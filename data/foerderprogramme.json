@@ -4,15 +4,23 @@
     "name": "Kultur und Digitale Kommunikation",
     "foerdergeber": "Bundesministerium für Kultur und Medien (BKM)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["digitalisierung", "kultur", "oeffentlichkeitsarbeit"],
+    "kategorien": [
+      "digitalisierung",
+      "kultur",
+      "oeffentlichkeitsarbeit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bkm.de/",
+    "infoLink": "https://www.bkm.de/de/foerderung/kultur-digitale-kommunikation-0",
     "kurzbeschreibung": "Förderung für digitale Kommunikations- und Vermittlungsangebote an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -25,17 +33,25 @@
     "name": "Digitalisierung in Schulen",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 25000,
     "foerdersummeMax": 200000,
     "foerdersummeText": "25.000€ - 200.000€",
-    "kategorien": ["digitalisierung", "ki", "innovation"],
+    "kategorien": [
+      "digitalisierung",
+      "ki",
+      "innovation"
+    ],
     "bewerbungsfristStart": "2025-04-01",
     "bewerbungsfristEnde": "2025-06-30",
     "bewerbungsfristText": "01.04. - 30.06.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/digitalisierung-in-schulen.html",
     "kurzbeschreibung": "Modellprojekte zur Digitalisierung des Unterrichts an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -48,15 +64,23 @@
     "name": "Zivile Sicherheit an Grundschulen",
     "foerdergeber": "Bundesministerium des Innern (BMI)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "10.000€ - 50.000€",
-    "kategorien": ["sicherheit", "praevention", "bevoelkerungsschutz"],
+    "kategorien": [
+      "sicherheit",
+      "praevention",
+      "bevoelkerungsschutz"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmi.bund.de/",
+    "infoLink": "https://www.bmi.bund.de/DE/themen/bevoelkerungsschutz/zivile-sicherheit/zivile-sicherheit-node.html",
     "kurzbeschreibung": "Förderung für Brandschutz, Evakuierungskonzepte und Notfalltraining an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -69,15 +93,23 @@
     "name": "Klimaschutz an Grundschulen",
     "foerdergeber": "Bundesministerium für Umwelt (BMUV)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 80000,
     "foerdersummeText": "15.000€ - 80.000€",
-    "kategorien": ["klimaschutz", "nachhaltigkeit", "energie"],
+    "kategorien": [
+      "klimaschutz",
+      "nachhaltigkeit",
+      "energie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmuv.de/",
+    "infoLink": "https://www.bmuv.de/themen/nachhaltigkeit-bildung/klimaschutz-an-schulen",
     "kurzbeschreibung": "Förderung für klimafreundliche Grundschulen und Umweltbildung.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -90,15 +122,23 @@
     "name": "Inklusion in der Grundschule",
     "foerdergeber": "Bundesministerium für Arbeit und Soziales (BMAS)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "20.000€ - 100.000€",
-    "kategorien": ["inklusion", "barrierefreiheit", "teilhabe"],
+    "kategorien": [
+      "inklusion",
+      "barrierefreiheit",
+      "teilhabe"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmas.de/",
+    "infoLink": "https://www.bmas.de/DE/Themen/Arbeitswelt/inklusion/inklusion-node.html",
     "kurzbeschreibung": "Förderung für inklusive Bildungsprojekte und Barrierefreiheit in Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -111,15 +151,23 @@
     "name": "Gesunde Grundschulen",
     "foerdergeber": "Bundesministerium für Gesundheit (BMG)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 60000,
     "foerdersummeText": "10.000€ - 60.000€",
-    "kategorien": ["gesundheit", "praevention", "bewegung"],
+    "kategorien": [
+      "gesundheit",
+      "praevention",
+      "bewegung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bundesgesundheitsministerium.de/",
+    "infoLink": "https://www.bundesgesundheitsministerium.de/gesunde-schulen.html",
     "kurzbeschreibung": "Förderung für Gesundheitsförderung und Prävention an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -132,12 +180,20 @@
     "name": "Demokratie leben! Grundschule",
     "foerdergeber": "BMFSFJ",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["demokratie", "partizipation", "toleranz"],
+    "kategorien": [
+      "demokratie",
+      "partizipation",
+      "toleranz"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.demokratie-leben.de/",
@@ -153,17 +209,26 @@
     "name": "MINT-Förderung Grundschule",
     "foerdergeber": "Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["mint", "mathematik", "informatik", "naturwissenschaften"],
+    "kategorien": [
+      "mint",
+      "mathematik",
+      "informatik",
+      "naturwissenschaften"
+    ],
     "bewerbungsfristStart": "2025-09-01",
     "bewerbungsfristEnde": "2025-10-31",
     "bewerbungsfristText": "01.09. - 31.10.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.telekom-stiftung.de/",
+    "infoLink": "https://www.telekom-stiftung.de/bildung",
     "kurzbeschreibung": "MINT-Bildung in der Grundschule: Experimentieren und Forschen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -176,17 +241,25 @@
     "name": "Leseförderung Grundschule",
     "foerdergeber": "Deutsche Bank Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 20000,
     "foerdersummeText": "2.000€ - 20.000€",
-    "kategorien": ["lesen", "sprache", "literatur"],
+    "kategorien": [
+      "lesen",
+      "sprache",
+      "literatur"
+    ],
     "bewerbungsfristStart": "2025-03-01",
     "bewerbungsfristEnde": "2025-05-31",
     "bewerbungsfristText": "01.03. - 31.05.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.deutsche-bank-stiftung.de/",
+    "infoLink": "https://www.deutsche-bank-stiftung.de/foerderung/lesen",
     "kurzbeschreibung": "Leseförderung und Literaturprojekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -199,15 +272,23 @@
     "name": "Bildungsinnovation Grundschule",
     "foerdergeber": "Bertelsmann Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["innovation", "digitalisierung", "schulentwicklung"],
+    "kategorien": [
+      "innovation",
+      "digitalisierung",
+      "schulentwicklung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bertelsmann-stiftung.de/",
+    "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/bildung",
     "kurzbeschreibung": "Innovation und Reform in der Grundschulbildung.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -220,15 +301,23 @@
     "name": "Umweltbildung Grundschule",
     "foerdergeber": "Robert Bosch Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["umwelt", "nachhaltigkeit", "klimaschutz"],
+    "kategorien": [
+      "umwelt",
+      "nachhaltigkeit",
+      "klimaschutz"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bosch-stiftung.de/",
+    "infoLink": "https://www.bosch-stiftung.de/de/foerderung/themen/umwelt",
     "kurzbeschreibung": "Umweltbildung und Nachhaltigkeitsprojekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -241,15 +330,23 @@
     "name": "MINT und Naturwissenschaften Grundschule",
     "foerdergeber": "Klaus Tschira Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 70000,
     "foerdersummeText": "10.000€ - 70.000€",
-    "kategorien": ["mint", "naturwissenschaften", "mathematik"],
+    "kategorien": [
+      "mint",
+      "naturwissenschaften",
+      "mathematik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.klaus-tschira-stiftung.de/",
+    "infoLink": "https://www.klaus-tschira-stiftung.de/foerderung",
     "kurzbeschreibung": "Naturwissenschaftliche Bildung und MINT-Förderung in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -262,15 +359,23 @@
     "name": "Soziales Engagement Grundschule",
     "foerdergeber": "Deutsche Postcode Lotterie",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["soziales", "engagement", "inklusion"],
+    "kategorien": [
+      "soziales",
+      "engagement",
+      "inklusion"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.postcode-lotterie.de/",
+    "infoLink": "https://www.postcode-lotterie.de/projekte/bildung",
     "kurzbeschreibung": "Soziales Engagement und gemeinnützige Projekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -283,15 +388,23 @@
     "name": "Inklusion an Grundschulen",
     "foerdergeber": "Aktion Mensch",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 60000,
     "foerdersummeText": "10.000€ - 60.000€",
-    "kategorien": ["inklusion", "barrierefreiheit", "teilhabe"],
+    "kategorien": [
+      "inklusion",
+      "barrierefreiheit",
+      "teilhabe"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.aktion-mensch.de/",
+    "infoLink": "https://www.aktion-mensch.de/foerderung/inklusion-bildung",
     "kurzbeschreibung": "Inklusion und Teilhabe für Menschen mit Behinderung an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -304,17 +417,25 @@
     "name": "Erasmus+ Grundschulbildung",
     "foerdergeber": "Europäische Kommission",
     "foerdergeberTyp": "eu",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 300000,
     "foerdersummeText": "5.000€ - 300.000€",
-    "kategorien": ["international", "austausch", "sprachen"],
+    "kategorien": [
+      "international",
+      "austausch",
+      "sprachen"
+    ],
     "bewerbungsfristStart": "2025-02-01",
     "bewerbungsfristEnde": "2025-03-15",
     "bewerbungsfristText": "01.02. - 15.03.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.erasmus-plus.de/",
+    "infoLink": "https://www.erasmus-plus.de/schulen",
     "kurzbeschreibung": "Schulpartnerschaften und Austauschprogramme für Grundschulen in Europa.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -327,15 +448,23 @@
     "name": "Horizon Europe Grundschulen",
     "foerdergeber": "Europäische Kommission",
     "foerdergeberTyp": "eu",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 25000,
     "foerdersummeMax": 150000,
     "foerdersummeText": "25.000€ - 150.000€",
-    "kategorien": ["forschung", "innovation", "mint"],
+    "kategorien": [
+      "forschung",
+      "innovation",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://research-and-innovation.ec.europa.eu/",
+    "infoLink": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities",
     "kurzbeschreibung": "Forschungsprojekte und Innovation an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -348,15 +477,23 @@
     "name": "DigitalPakt Bayern Grundschulen",
     "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BY"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BY"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "10.000€ - 500.000€",
-    "kategorien": ["digitalisierung", "infrastruktur", "ausstattung"],
+    "kategorien": [
+      "digitalisierung",
+      "infrastruktur",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.km.bayern.de/",
+    "infoLink": "https://www.km.bayern.de/digitalpakt.html",
     "kurzbeschreibung": "Digitale Infrastruktur und Ausstattung für bayerische Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -369,15 +506,23 @@
     "name": "Grundschulbau und Sanierung Berlin",
     "foerdergeber": "Senatsverwaltung für Bildung, Jugend und Familie",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BE"
+    ],
     "foerdersummeMin": 100000,
     "foerdersummeMax": 5000000,
     "foerdersummeText": "100.000€ - 5.000.000€",
-    "kategorien": ["sanierung", "schulbau", "energie"],
+    "kategorien": [
+      "sanierung",
+      "schulbau",
+      "energie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "schriftlich",
-    "infoLink": "https://www.berlin.de/sen/bildung/",
+    "infoLink": "https://www.berlin.de/sen/bildung/investitionen/schulbau",
     "kurzbeschreibung": "Investitionsprogramm für Grundschulbau und Sanierung in Berlin.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -390,15 +535,23 @@
     "name": "Digital.Schule.NRW Grundschulen",
     "foerdergeber": "Ministerium für Schule und Bildung NRW",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NW"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "5.000€ - 100.000€",
-    "kategorien": ["digitalisierung", "medienkompetenz", "ausstattung"],
+    "kategorien": [
+      "digitalisierung",
+      "medienkompetenz",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.schulministerium.nrw.de/",
+    "infoLink": "https://www.schulministerium.nrw.de/digitalisierung",
     "kurzbeschreibung": "Digitale Transformation und Medienbildung in NRW-Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -411,15 +564,23 @@
     "name": "Sportförderung Niedersachsen Grundschulen",
     "foerdergeber": "Niedersächsisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NI"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NI"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 40000,
     "foerdersummeText": "3.000€ - 40.000€",
-    "kategorien": ["sport", "bewegung", "gesundheit"],
+    "kategorien": [
+      "sport",
+      "bewegung",
+      "gesundheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.mk.niedersachsen.de/",
+    "infoLink": "https://www.mk.niedersachsen.de/bildung/schulsport",
     "kurzbeschreibung": "Förderung für Sportstätten und Bewegungsangebote an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -432,15 +593,23 @@
     "name": "Energie und Naturwissenschaften Grundschule",
     "foerdergeber": "Siemens Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 8000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "8.000€ - 50.000€",
-    "kategorien": ["energie", "naturwissenschaften", "mint"],
+    "kategorien": [
+      "energie",
+      "naturwissenschaften",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.siemens-stiftung.de/",
+    "infoLink": "https://www.siemens-stiftung.de/foerderung/energie",
     "kurzbeschreibung": "Energiebildung und naturwissenschaftliche Projekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -453,15 +622,23 @@
     "name": "Informatik und Programmierung Grundschule",
     "foerdergeber": "SAP Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 35000,
     "foerdersummeText": "5.000€ - 35.000€",
-    "kategorien": ["informatik", "programmierung", "digitalisierung"],
+    "kategorien": [
+      "informatik",
+      "programmierung",
+      "digitalisierung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.sap-stiftung.de/",
+    "infoLink": "https://www.sap-stiftung.de/foerderung/informatik",
     "kurzbeschreibung": "Informatikbildung und Programmierkurse für Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -474,12 +651,20 @@
     "name": "Kultur macht stark - Bündnisse für Bildung",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 150000,
     "foerdersummeText": "20.000€ - 150.000€",
-    "kategorien": ["kultur", "bildung", "inklusion"],
+    "kategorien": [
+      "kultur",
+      "bildung",
+      "inklusion"
+    ],
     "bewerbungsfristStart": "2025-03-01",
     "bewerbungsfristEnde": "2025-05-15",
     "bewerbungsfristText": "01.03. - 15.05.2025",
@@ -497,15 +682,23 @@
     "name": "SPIELEND LERNEN - Lernen durch Spielen",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "15.000€ - 100.000€",
-    "kategorien": ["spiel", "bildung", "innovation"],
+    "kategorien": [
+      "spiel",
+      "bildung",
+      "innovation"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/spielend-lernen.html",
     "kurzbeschreibung": "Innovative Projekte zum Lernen durch Spielen in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -518,15 +711,24 @@
     "name": "MINT Zukunft schaffen",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 25000,
     "foerdersummeMax": 200000,
     "foerdersummeText": "25.000€ - 200.000€",
-    "kategorien": ["mint", "mathematik", "informatik", "naturwissenschaften"],
+    "kategorien": [
+      "mint",
+      "mathematik",
+      "informatik",
+      "naturwissenschaften"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/mint-foerderung.html",
     "kurzbeschreibung": "Nachhaltige MINT-Förderung und frühe Begeisterung für Naturwissenschaften.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -539,17 +741,25 @@
     "name": "Sprache und Integration in der Grundschule",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 120000,
     "foerdersummeText": "20.000€ - 120.000€",
-    "kategorien": ["sprache", "integration", "inklusion"],
+    "kategorien": [
+      "sprache",
+      "integration",
+      "inklusion"
+    ],
     "bewerbungsfristStart": "2025-04-15",
     "bewerbungsfristEnde": "2025-06-30",
     "bewerbungsfristText": "15.04. - 30.06.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/sprachfoerderung.html",
     "kurzbeschreibung": "Förderung von Sprachkompetenz und Integration für Kinder mit Migrationshintergrund.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -562,15 +772,24 @@
     "name": "Zukunftslabor Grundschule",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 30000,
     "foerdersummeMax": 250000,
     "foerdersummeText": "30.000€ - 250.000€",
-    "kategorien": ["innovation", "zukunft", "digitalisierung", "mint"],
+    "kategorien": [
+      "innovation",
+      "zukunft",
+      "digitalisierung",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/zukunftslabore.html",
     "kurzbeschreibung": "Schaffung von Zukunftslaboren für experimentelles Lernen an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -583,15 +802,24 @@
     "name": "KI in der Grundschule",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 40000,
     "foerdersummeMax": 300000,
     "foerdersummeText": "40.000€ - 300.000€",
-    "kategorien": ["ki", "digitalisierung", "informatik", "innovation"],
+    "kategorien": [
+      "ki",
+      "digitalisierung",
+      "informatik",
+      "innovation"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/ki-in-der-schule.html",
     "kurzbeschreibung": "Pilotprojekte für den Einsatz von KI in der Grundschulbildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -604,15 +832,24 @@
     "name": "Lesen und Schreiben - Grundkompetenzen sichern",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 80000,
     "foerdersummeText": "15.000€ - 80.000€",
-    "kategorien": ["lesen", "schreiben", "grundkompetenzen", "sprache"],
+    "kategorien": [
+      "lesen",
+      "schreiben",
+      "grundkompetenzen",
+      "sprache"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/lesefoerderung.html",
     "kurzbeschreibung": "Förderung von Leseförderprogrammen und Schreibkompetenz in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -625,15 +862,23 @@
     "name": "Naturwissenschaftliche Grundbildung",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 120000,
     "foerdersummeText": "20.000€ - 120.000€",
-    "kategorien": ["naturwissenschaften", "experimentieren", "mint"],
+    "kategorien": [
+      "naturwissenschaften",
+      "experimentieren",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/naturwissenschaften.html",
     "kurzbeschreibung": "Förderung naturwissenschaftlicher Grundbildung und experimentellen Lernens.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -646,12 +891,20 @@
     "name": "DigitalPakt Schule 2.0",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "50.000€ - 500.000€",
-    "kategorien": ["digitalisierung", "infrastruktur", "medienkompetenz"],
+    "kategorien": [
+      "digitalisierung",
+      "infrastruktur",
+      "medienkompetenz"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.digitalpaktschule.de/",
@@ -667,15 +920,23 @@
     "name": "Inklusive Bildung in der Grundschule",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 25000,
     "foerdersummeMax": 150000,
     "foerdersummeText": "25.000€ - 150.000€",
-    "kategorien": ["inklusion", "sonderpaedagogik", "barrierefreiheit"],
+    "kategorien": [
+      "inklusion",
+      "sonderpaedagogik",
+      "barrierefreiheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/",
+    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/inklusion.html",
     "kurzbeschreibung": "Förderung inklusiver Unterrichtskonzepte und barrierefreier Lernumgebungen.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -688,15 +949,24 @@
     "name": "Mobilität und Verkehr Grundschule",
     "foerdergeber": "Volkswagen Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 80000,
     "foerdersummeText": "10.000€ - 80.000€",
-    "kategorien": ["mobilitaet", "verkehr", "nachhaltigkeit", "technik"],
+    "kategorien": [
+      "mobilitaet",
+      "verkehr",
+      "nachhaltigkeit",
+      "technik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/",
+    "infoLink": "https://www.volkswagenstiftung.de/foerderung/mobilitaet",
     "kurzbeschreibung": "Bildungsprojekte zu Mobilität, Verkehr und nachhaltiger Fortbewegung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -709,15 +979,24 @@
     "name": "Klimawandel und Bildung",
     "foerdergeber": "Volkswagen Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 150000,
     "foerdersummeText": "20.000€ - 150.000€",
-    "kategorien": ["klimaschutz", "umwelt", "nachhaltigkeit", "naturwissenschaften"],
+    "kategorien": [
+      "klimaschutz",
+      "umwelt",
+      "nachhaltigkeit",
+      "naturwissenschaften"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/",
+    "infoLink": "https://www.volkswagenstiftung.de/foerderung/klima",
     "kurzbeschreibung": "Förderung von Bildungsprojekten zum Klimawandel und nachhaltiger Entwicklung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -730,15 +1009,24 @@
     "name": "MINT Bildung mit ZEISS",
     "foerdergeber": "Carl-Zeiss-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "15.000€ - 100.000€",
-    "kategorien": ["mint", "optik", "technik", "naturwissenschaften"],
+    "kategorien": [
+      "mint",
+      "optik",
+      "technik",
+      "naturwissenschaften"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.carl-zeiss-stiftung.de/",
+    "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/mint",
     "kurzbeschreibung": "MINT-Förderung mit Fokus auf Optik, Photonik und technische Bildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -751,15 +1039,23 @@
     "name": "Wissenschaft erleben in der Grundschule",
     "foerdergeber": "Carl-Zeiss-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 60000,
     "foerdersummeText": "10.000€ - 60.000€",
-    "kategorien": ["wissenschaft", "forschung", "experimentieren"],
+    "kategorien": [
+      "wissenschaft",
+      "forschung",
+      "experimentieren"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.carl-zeiss-stiftung.de/",
+    "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/wissenschaft",
     "kurzbeschreibung": "Frühe naturwissenschaftliche Bildung und Experimentierangebote.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -772,15 +1068,23 @@
     "name": "Digitale Bildung Grundschule",
     "foerdergeber": "Stiftung Mercator",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 150000,
     "foerdersummeText": "20.000€ - 150.000€",
-    "kategorien": ["digitalisierung", "medienkompetenz", "informatik"],
+    "kategorien": [
+      "digitalisierung",
+      "medienkompetenz",
+      "informatik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stiftung-mercator.de/",
+    "infoLink": "https://www.stiftung-mercator.de/foerderung/digitalisierung",
     "kurzbeschreibung": "Förderung digitaler Bildung und Medienkompetenz in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -793,15 +1097,23 @@
     "name": "Integration durch Bildung",
     "foerdergeber": "Stiftung Mercator",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 25000,
     "foerdersummeMax": 180000,
     "foerdersummeText": "25.000€ - 180.000€",
-    "kategorien": ["integration", "sprache", "inklusion"],
+    "kategorien": [
+      "integration",
+      "sprache",
+      "inklusion"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stiftung-mercator.de/",
+    "infoLink": "https://www.stiftung-mercator.de/foerderung/integration",
     "kurzbeschreibung": "Bildungsgerechtigkeit und Integration durch innovative Bildungsangebote.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -814,15 +1126,23 @@
     "name": "Demokratie und Partizipation Grundschule",
     "foerdergeber": "BMW Stiftung Herbert Quandt",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "15.000€ - 100.000€",
-    "kategorien": ["demokratie", "partizipation", "gesellschaft"],
+    "kategorien": [
+      "demokratie",
+      "partizipation",
+      "gesellschaft"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmw-stiftung.de/",
+    "infoLink": "https://www.bmw-stiftung.de/foerderung/demokratie",
     "kurzbeschreibung": "Förderung demokratischer Kultur und aktiver Partizipation in der Schule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -835,15 +1155,23 @@
     "name": "Nachhaltige Zukunft gestalten",
     "foerdergeber": "BMW Stiftung Herbert Quandt",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 120000,
     "foerdersummeText": "20.000€ - 120.000€",
-    "kategorien": ["nachhaltigkeit", "klimaschutz", "umweltbildung"],
+    "kategorien": [
+      "nachhaltigkeit",
+      "klimaschutz",
+      "umweltbildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmw-stiftung.de/",
+    "infoLink": "https://www.bmw-stiftung.de/foerderung/nachhaltigkeit",
     "kurzbeschreibung": "Bildung für nachhaltige Entwicklung und globale Verantwortung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -856,15 +1184,23 @@
     "name": "Bildung für nachhaltige Entwicklung",
     "foerdergeber": "Heinrich-Böll-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 8000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "8.000€ - 50.000€",
-    "kategorien": ["nachhaltigkeit", "oekologie", "demokratie"],
+    "kategorien": [
+      "nachhaltigkeit",
+      "oekologie",
+      "demokratie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.boell.de/",
+    "infoLink": "https://www.boell.de/foerderung/bildung",
     "kurzbeschreibung": "Förderung ökologischer Bildung und nachhaltigen Handelns in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -877,15 +1213,24 @@
     "name": "Innovation in der Grundschule",
     "foerdergeber": "Stifterverband",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 15000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "15.000€ - 100.000€",
-    "kategorien": ["innovation", "bildung", "wissenschaft", "mint"],
+    "kategorien": [
+      "innovation",
+      "bildung",
+      "wissenschaft",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stifterverband.org/",
+    "infoLink": "https://www.stifterverband.org/foerderung/bildung",
     "kurzbeschreibung": "Förderung innovativer Bildungsprojekte und wissenschaftlicher Grundbildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -898,15 +1243,23 @@
     "name": "Sport und Bewegung in der Grundschule",
     "foerdergeber": "Deutsches Kinder- und Jugendhilfswerk (DKJS)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 40000,
     "foerdersummeText": "5.000€ - 40.000€",
-    "kategorien": ["sport", "bewegung", "gesundheit"],
+    "kategorien": [
+      "sport",
+      "bewegung",
+      "gesundheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.dkjs.de/",
+    "infoLink": "https://www.dkjs.de/foerderung/sport",
     "kurzbeschreibung": "Förderung von Bewegung, Sport und gesunder Lebensführung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
