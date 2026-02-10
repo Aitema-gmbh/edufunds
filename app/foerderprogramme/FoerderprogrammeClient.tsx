@@ -4,7 +4,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Search, Filter, Building2, Euro, Calendar, MapPin, ArrowRight, School, X } from "lucide-react";
 import Link from "next/link";
-import foerderprogramme from "@/data/foerderprogramme.json";
+import type { Foerderprogramm } from '@/lib/foerderSchema';
+import foerderprogrammeData from '@/data/foerderprogramme.json';
+const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
+
+// Schulform Typ
+ type Schulform = "grundschule" | "hauptschule" | "realschule" | "gymnasium" | "gesamtschule" | "foerderschule" | "berufsschule";
 import { useState, useMemo } from "react";
 
 // Schulformen-Optionen
@@ -68,7 +73,7 @@ const stats = {
 export default function FoerderprogrammePage() {
   // Filter-States
   const [suchbegriff, setSuchbegriff] = useState("");
-  const [schulform, setSchulform] = useState("");
+  const [schulform, setSchulform] = useState<"" | Schulform>("");
   const [bundesland, setBundesland] = useState("");
   const [foerdergeberTyp, setFoerdergeberTyp] = useState("");
   const [kategorie, setKategorie] = useState("");
@@ -88,7 +93,7 @@ export default function FoerderprogrammePage() {
       }
 
       // Schulform-Filter
-      if (schulform && !programm.schulformen.includes(schulform)) {
+      if (schulform && !programm.schulformen.includes(schulform as Schulform)) {
         return false;
       }
 
@@ -226,7 +231,7 @@ export default function FoerderprogrammePage() {
                 <label className="block text-xs text-slate-500 mb-1.5">Schulform</label>
                 <select
                   value={schulform}
-                  onChange={(e) => setSchulform(e.target.value)}
+                  onChange={(e) => setSchulform(e.target.value as "" | Schulform)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
                   style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
                 >

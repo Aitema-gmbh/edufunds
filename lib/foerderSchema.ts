@@ -1,6 +1,6 @@
 // EduFunds Förderdatenbank - Schema
 
-export interface Foerderprogramm {
+export type Foerderprogramm = {
   id: string;                    // UUID
   name: string;                  // Programmname
   foerdergeber: string;          // z.B. "BKM", "DAAD", "Stiftung XY"

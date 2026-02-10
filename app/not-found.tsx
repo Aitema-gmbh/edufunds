@@ -45,26 +45,24 @@ export default function NotFoundPage() {
         </CardContent>
 
         <CardFooter className="flex flex-col sm:flex-row gap-3">
-          <Button
-            asChild
-            className="w-full sm:flex-1 bg-gradient-to-r from-[#d4a853] to-[#c49b4a] hover:from-[#e4b860] hover:to-[#d4ab5a] text-[#0f1419] font-semibold"
-          >
-            <Link href="/">
+          <Link href="/" className="w-full sm:flex-1">
+            <Button
+              className="w-full bg-gradient-to-r from-[#d4a853] to-[#c49b4a] hover:from-[#e4b860] hover:to-[#d4ab5a] text-[#0f1419] font-semibold"
+            >
               <Home className="w-4 h-4 mr-2" />
               Zur Startseite
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           
-          <Button
-            asChild
-            variant="outline"
-            className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-          >
-            <Link href="/foerderprogramme">
+          <Link href="/foerderprogramme" className="w-full sm:w-auto">
+            <Button
+              variant="outline"
+              className="w-full border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
+            >
               <Search className="w-4 h-4 mr-2" />
               Programme suchen
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           
           <Button
             variant="ghost"
