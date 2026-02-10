@@ -50,7 +50,7 @@ const FOERDERGEBER_TYPEN = [
 ];
 
 // Kategorien aus den Daten sammeln
-const ALLE_KATEGORIEN = [...new Set(foerderprogramme.flatMap(p => p.kategorien))].sort();
+const ALLE_KATEGORIEN = Array.from(new Set(foerderprogramme.flatMap(p => p.kategorien))).sort();
 const KATEGORIEN = [
   { value: "", label: "Alle Kategorien" },
   ...ALLE_KATEGORIEN.map(kat => ({ value: kat, label: kat.charAt(0).toUpperCase() + kat.slice(1).replace(/-/g, " ") }))
