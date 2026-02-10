@@ -1,7 +1,13 @@
 import { z } from 'zod';
-import { v4 as uuidv4 } from 'uuid';
 import { NextResponse } from 'next/server';
 import { getConfirmationEmailTemplate } from '@/lib/newsletter-templates';
+import {
+  createNewsletterEntry,
+  getNewsletterEntryByEmail,
+  getNewsletterEntryByConfirmationToken,
+  confirmNewsletterEntry,
+  generateToken,
+} from '@/lib/db';
 
 // E-Mail Validation Schema
 const newsletterSchema = z.object({
@@ -13,26 +19,6 @@ const newsletterSchema = z.object({
 });
 
 export type NewsletterInput = z.infer<typeof newsletterSchema>;
-
-// Database interface
-interface NewsletterSubscription {
-  id: string;
-  email: string;
-  confirmed: boolean;
-  token: string;
-  createdAt: string;
-  confirmedAt?: string;
-  ipAddress?: string;
-}
-
-// Simple in-memory store (replace with DB in production)
-// Using global to persist across hot reloads in development
-const getStore = () => {
-  if (!(global as any).__newsletterStore) {
-    (global as any).__newsletterStore = new Map<string, NewsletterSubscription>();
-  }
-  return (global as any).__newsletterStore as Map<string, NewsletterSubscription>;
-};
 
 // Rate limiting store
 interface RateLimitEntry {
@@ -262,12 +248,9 @@ export async function POST(request: Request) {
     }
 
     const { email } = result.data;
-    const store = getStore();
 
     // Check for duplicates
-    const existing = Array.from(store.values()).find(
-      (sub) => sub.email === email
-    );
+    const existing = await getNewsletterEntryByEmail(email);
 
     if (existing) {
       if (existing.confirmed) {
@@ -280,7 +263,9 @@ export async function POST(request: Request) {
         );
       } else {
         // Resend confirmation email if not confirmed yet
-        await sendConfirmationEmail(email, existing.token);
+        if (existing.confirmation_token) {
+          await sendConfirmationEmail(email, existing.confirmation_token);
+        }
         return NextResponse.json(
           {
             success: true,
@@ -291,25 +276,33 @@ export async function POST(request: Request) {
       }
     }
 
-    // Create new subscription
-    const token = uuidv4();
-    const subscription: NewsletterSubscription = {
-      id: uuidv4(),
+    // Create new subscription with tokens
+    const confirmationToken = generateToken(32);
+    const unsubscribeToken = generateToken(32);
+    
+    const entry = await createNewsletterEntry({
       email,
       confirmed: false,
-      token,
-      createdAt: new Date().toISOString(),
-      ipAddress: clientIP,
-    };
+      confirmation_token: confirmationToken,
+      unsubscribe_token: unsubscribeToken,
+      ip_address: clientIP,
+      user_agent: request.headers.get('user-agent') || undefined,
+    });
 
-    store.set(token, subscription);
+    if (!entry) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
+        },
+        { status: 500 }
+      );
+    }
 
     // Send confirmation email
-    const emailSent = await sendConfirmationEmail(email, token);
+    const emailSent = await sendConfirmationEmail(email, confirmationToken);
 
     if (!emailSent) {
-      // Remove from store if email failed
-      store.delete(token);
       return NextResponse.json(
         {
           success: false,
@@ -333,6 +326,18 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     console.error('Newsletter subscription error:', error);
+    
+    // Handle specific error for duplicate email
+    if (error instanceof Error && error.message === 'EMAIL_ALREADY_EXISTS') {
+      return NextResponse.json(
+        {
+          success: true,
+          message: 'Sie sind bereits für unseren Newsletter angemeldet.',
+        },
+        { status: 200 }
+      );
+    }
+    
     return NextResponse.json(
       {
         success: false,
@@ -356,8 +361,7 @@ export async function GET(request: Request) {
       });
     }
 
-    const store = getStore();
-    const subscription = store.get(token);
+    const subscription = await getNewsletterEntryByConfirmationToken(token);
 
     if (!subscription) {
       return new Response(getSuccessPageHtml('Dieser Bestätigungslink ist ungültig oder bereits abgelaufen.', false), {
@@ -374,9 +378,14 @@ export async function GET(request: Request) {
     }
 
     // Confirm subscription
-    subscription.confirmed = true;
-    subscription.confirmedAt = new Date().toISOString();
-    store.set(token, subscription);
+    const confirmed = await confirmNewsletterEntry(token);
+
+    if (!confirmed) {
+      return new Response(getSuccessPageHtml('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.', false), {
+        status: 500,
+        headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      });
+    }
 
     // Optional: Send welcome email
     console.log(`Newsletter subscription confirmed: ${subscription.email}`);

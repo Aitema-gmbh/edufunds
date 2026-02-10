@@ -10,7 +10,12 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Loader2, Copy, Check, FileText, RefreshCw, Download, Wand2, FileDown } from "lucide-react";
 import type { Foerderprogramm } from "@/lib/foerderSchema";
 import { generateAntrag, type ProjektDaten } from "@/lib/ki-antrag-generator";
-import html2pdf from "html2pdf.js";
+
+// Dynamischer Import für html2pdf (nur im Browser)
+const loadHtml2pdf = async () => {
+  const html2pdf = (await import("html2pdf.js")).default;
+  return html2pdf;
+};
 
 interface KIAntragAssistentProps {
   programm: Foerderprogramm;
@@ -113,6 +118,7 @@ export function KIAntragAssistent({ programm, onClose }: KIAntragAssistentProps)
     };
 
     try {
+      const html2pdf = await loadHtml2pdf();
       await html2pdf().set(opt).from(element).save();
     } catch (error) {
       console.error('PDF generation error:', error);
