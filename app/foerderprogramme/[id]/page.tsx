@@ -231,13 +231,15 @@ export default function FoerderprogrammDetailPage() {
                   </button>
                 )}
                 {programm.antragsLink && (
-                  <Link
-                    href={`/antrag/${programm.id}`}
+                  <a
+                    href={programm.antragsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base font-semibold"
                   >
                     <FileText className="h-5 w-5" />
                     Antrag starten
-                  </Link>
+                  </a>
                 )}
                 {programm.infoLink && (
                   <a

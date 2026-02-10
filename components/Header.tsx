@@ -17,22 +17,17 @@ const navItems = [
   {
     href: "/foerderprogramme",
     label: "Förderprogramme",
-    badge: "40+",
+    badge: "50+",
     icon: Search,
   },
   {
-    href: "/dashboard",
-    label: "Dashboard",
-    icon: LayoutDashboard,
-  },
-  {
-    href: "/wie-es-funktioniert",
-    label: "So funktioniert's",
+    href: "/ueber-uns",
+    label: "Über uns",
     icon: Info,
   },
   {
-    href: "/preise",
-    label: "Preise",
+    href: "/kontakt",
+    label: "Kontakt",
     icon: CreditCard,
   },
 ];
@@ -107,17 +102,17 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:gap-3">
             <Link
-              href="/login"
+              href="/kontakt"
               className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-slate-100 transition-colors"
             >
-              Anmelden
+              Kontakt
             </Link>
             <Link
-              href="/registrieren"
+              href="/foerderprogramme"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-primary text-sm font-semibold"
             >
               <Sparkles className="w-4 h-4" />
-              Kostenlos starten
+              Programme entdecken
             </Link>
           </div>
 
@@ -189,20 +184,20 @@ export function Header() {
                 className="mt-6 space-y-3"
               >
                 <Link
-                  href="/login"
+                  href="/kontakt"
                   onClick={() => setIsOpen(false)}
                   className="block w-full text-center p-4 rounded-xl border border-slate-600 text-slate-300 hover:border-orange-500 hover:text-orange-400 transition-colors"
                 >
-                  Anmelden
+                  Kontakt
                 </Link>
                 <Link
-                  href="/registrieren"
+                  href="/foerderprogramme"
                   onClick={() => setIsOpen(false)}
                   className="block w-full text-center p-4 rounded-xl btn-primary"
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Sparkles className="w-4 h-4" />
-                    Kostenlos starten
+                    Programme entdecken
                   </span>
                 </Link>
               </motion.div>

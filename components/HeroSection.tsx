@@ -147,7 +147,7 @@ export function HeroSection() {
             </Link>
 
             <Link
-              href="/antrag"
+              href="/foerderprogramme"
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg transition-all duration-300"
               style={{ 
                 border: '2px solid #0a1628',

@@ -1,186 +1,197 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { 
-  Rocket, 
-  Users, 
-  Target, 
-  Heart,
-  Lightbulb,
-  Award,
-  Building2,
-  Mail,
-  MapPin
-} from "lucide-react";
+"use client";
 
-export const metadata = {
-  title: "Über uns | EduFunds",
-  description: "Lernen Sie das Team hinter EduFunds kennen. Wir helfen Schulen, Fördermittel zu finden und erfolgreich zu beantragen.",
-};
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { Target, Heart, Lightbulb, Users, Award, BookOpen } from "lucide-react";
 
-export default function AboutPage() {
+const values = [
+  {
+    icon: Heart,
+    title: "Leidenschaft für Bildung",
+    description: "Wir glauben an die Kraft von Bildung und wollen Schulen dabei unterstützen, das Beste aus ihren Möglichkeiten zu machen."
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    description: "Mit modernster Technologie machen wir Fördermittel einfach und zugänglich. KI-gestützte Antragstellung spart Zeit und Ressourcen."
+  },
+  {
+    icon: Users,
+    title: "Gemeinschaft",
+    description: "Wir verstehen die Herausforderungen von Schulen und entwickeln Lösungen, die wirklich gebraucht werden."
+  },
+  {
+    icon: Award,
+    title: "Qualität",
+    description: "Wir setzen auf höchste Standards bei Datenqualität und Datenschutz. Ihre Daten sind bei uns sicher."
+  }
+];
+
+export default function UeberUnsPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen pt-24 pb-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          {/* Hero */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 mb-6">
-              <Heart className="h-4 w-4 text-orange-400" />
-              <span className="text-sm font-medium text-orange-400">Unser Team</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6">
-              Wir machen <span className="text-gradient">Fördermittel</span> zugänglich
-            </h1>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              EduFunds ist ein Projekt der AITEMA GmbH mit dem Ziel, Bildungseinrichtungen 
-              bei der Suche und Beantragung von Fördermitteln zu unterstützen.
-            </p>
+      <main className="min-h-screen" style={{ backgroundColor: "#0a1628" }}>
+        {/* Hero */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 80% 20%, rgba(201, 162, 39, 0.15) 0%, transparent 50%)`,
+            }} />
           </div>
-
-          {/* Mission */}
-          <section className="grid md:grid-cols-2 gap-8 mb-20">
-            <div className="glass-strong rounded-2xl p-8">
-              <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-6">
-                <Rocket className="h-6 w-6 text-orange-400" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-100 mb-4">Unsere Mission</h2>
-              <p className="text-slate-400 leading-relaxed">
-                Wir glauben, dass jede Schule Zugang zu Fördermitteln haben sollte, 
-                um Bildungsprojekte zu realisieren. Unsere KI-gestützte Plattform 
-                macht den Antragsprozess einfacher, schneller und erfolgreicher.
-              </p>
-            </div>
-
-            <div className="glass-strong rounded-2xl p-8">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-6">
-                <Target className="h-6 w-6 text-cyan-400" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-100 mb-4">Unsere Vision</h2>
-              <p className="text-slate-400 leading-relaxed">
-                Wir möchten Deutschlands führende Plattform für schulische Fördermittel werden 
-                und jährlich Tausenden von Schulen helfen, ihre Projekte zu finanzieren.
-              </p>
-            </div>
-          </section>
-
-          {/* Werte */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-slate-100 text-center mb-12">Unsere Werte</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mx-auto mb-6">
-                  <Lightbulb className="h-7 w-7 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-100 mb-3">Innovation</h3>
-                <p className="text-slate-400">
-                  Wir nutzen modernste KI-Technologie, um den Antragsprozess zu revolutionieren.
-                </p>
-              </div>
-
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center mx-auto mb-6">
-                  <Users className="h-7 w-7 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-100 mb-3">Kundennähe</h3>
-                <p className="text-slate-400">
-                  Wir verstehen die Bedürfnisse von Schulen und entwickeln unsere Lösungen 
-                  eng mit ihnen zusammen.
-                </p>
-              </div>
-
-              <div className="glass rounded-2xl p-8 text-center">
-                <div className="w-14 h-14 rounded-xl bg-orange-500/20 flex items-center justify-center mx-auto mb-6">
-                  <Award className="h-7 w-7 text-orange-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-100 mb-3">Qualität</h3>
-                <p className="text-slate-400">
-                  Wir setzen höchste Standards für unsere Daten, unsere Software 
-                  und unseren Support.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Team */}
-          <section className="glass-strong rounded-3xl p-8 md:p-12 mb-20">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-100 mb-6">
-                  Ein starkes Team
-                </h2>
-                <p className="text-slate-400 leading-relaxed mb-6">
-                  Hinter EduFunds steht ein erfahrenes Team aus Bildungsexperten, 
-                  Softwareentwicklern und Fördermittelspezialisten. Gemeinsam bringen 
-                  wir digitale Innovation in den Bildungssektor.
-                </p>
-                <p className="text-slate-400 leading-relaxed">
-                  Unser Team vereint langjährige Erfahrung in der Arbeit mit Schulen, 
-                  tiefe Kenntnisse des Fördermittel-Ökosystems und technologische Expertise.
-                </p>
-              </div>
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-slate-100 mb-6 flex items-center gap-3">
-                  <Building2 className="h-6 w-6 text-orange-400" />
-                  Ein Unternehmen der AITEMA GmbH
-                </h3>
-                <div className="space-y-4 text-slate-400">
-                  <p className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-slate-500 shrink-0 mt-0.5" />
-                    <span>
-                      Prenzlauer Allee 229<br />
-                      10405 Berlin
-                    </span>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-slate-500 shrink-0" />
-                    <a href="mailto:office@aitema.de" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      office@aitema.de
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Zahlen */}
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-            <div className="glass rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">50+</div>
-              <div className="text-slate-500 text-sm">Förderprogramme</div>
-            </div>
-            <div className="glass rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-slate-500 text-sm">Schulen unterstützt</div>
-            </div>
-            <div className="glass rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-slate-500 text-sm">Erfolgsquote</div>
-            </div>
-            <div className="glass rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-slate-500 text-sm">Verfügbarkeit</div>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="glass-strong rounded-3xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-slate-100 mb-4">
-              Möchten Sie mehr erfahren?
-            </h2>
-            <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-              Haben Sie Fragen zu EduFunds oder möchten Sie mehr über unser Team erfahren? 
-              Wir freuen uns auf Ihre Nachricht.
-            </p>
-            <a 
-              href="/kontakt"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-medium hover:opacity-90 transition-opacity"
+          
+          <div className="container mx-auto px-6 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-3xl mx-auto"
             >
-              <Mail className="h-5 w-5" />
-              Kontaktieren Sie uns
-            </a>
-          </section>
-        </div>
+              <span className="inline-block px-4 py-2 rounded-full text-xs font-medium tracking-wider uppercase mb-6"
+                style={{ backgroundColor: "rgba(201, 162, 39, 0.1)", color: "#c9a227" }}>
+                Über uns
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#f8f5f0" }}>
+                Wir machen <span style={{ color: "#c9a227" }}>Fördermittel</span> einfach
+              </h1>
+              <p className="text-lg" style={{ color: "#94a3b8" }}>
+                EduFunds ist die führende Plattform für Fördermittel an Grundschulen in Deutschland. 
+                Wir helfen Schulen, die passenden Förderprogramme zu finden und Anträge erfolgreich zu stellen.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Mission */}
+        <section className="py-20" style={{ backgroundColor: "#f8f5f0" }}>
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold mb-6" style={{ color: "#0a1628" }}>
+                  Unsere Mission
+                </h2>
+                <p className="text-lg mb-6" style={{ color: "#1e3a61" }}>
+                  Jede Grundschule verdient Zugang zu Fördermitteln. Doch der Weg bis zum Zuschuss 
+                  ist oft steinig und kompliziert. Wir verändern das.
+                </p>
+                <p className="text-lg" style={{ color: "#1e3a61" }}>
+                  Mit EduFunds machen wir Fördermittel transparent, zugänglich und nutzbar. 
+                  Unsere KI-gestützte Plattform unterstützt Schulen bei der Suche nach passenden 
+                  Programmen und der Erstellung überzeugender Anträge.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="grid grid-cols-2 gap-6"
+              >
+                <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: "rgba(201, 162, 39, 0.1)" }}>
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#c9a227" }}>50+</div>
+                  <div className="text-sm" style={{ color: "#0a1628" }}>Förderprogramme</div>
+                </div>
+                <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: "rgba(10, 22, 40, 0.05)" }}>
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#0a1628" }}>16</div>
+                  <div className="text-sm" style={{ color: "#1e3a61" }}>Bundesländer</div>
+                </div>
+                <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: "rgba(10, 22, 40, 0.05)" }}>
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#0a1628" }}>100%</div>
+                  <div className="text-sm" style={{ color: "#1e3a61" }}>Grundschulen</div>
+                </div>
+                <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: "rgba(201, 162, 39, 0.1)" }}>
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#c9a227" }}>KI</div>
+                  <div className="text-sm" style={{ color: "#0a1628" }}>Unterstützung</div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#f8f5f0" }}>
+                Unsere Werte
+              </h2>
+              <p style={{ color: "#94a3b8" }}>
+                Diese Prinzipien leiten unsere Arbeit jeden Tag.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {values.map((value, index) => (
+                <motion.div
+                  key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="p-6 rounded-2xl"
+                  style={{ backgroundColor: "rgba(30, 58, 97, 0.3)", border: "1px solid rgba(201, 162, 39, 0.2)" }}
+                >
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                    style={{ backgroundColor: "rgba(201, 162, 39, 0.1)" }}>
+                    <value.icon className="w-6 h-6" style={{ color: "#c9a227" }} />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: "#f8f5f0" }}>
+                    {value.title}
+                  </h3>
+                  <p className="text-sm" style={{ color: "#94a3b8" }}>
+                    {value.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Team */}
+        <section className="py-20" style={{ backgroundColor: "rgba(201, 162, 39, 0.05)" }}>
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#f8f5f0" }}>
+                Hinter EduFunds
+              </h2>
+              <p style={{ color: "#94a3b8" }}>
+                EduFunds ist ein Projekt der Aitema GmbH - Ihr Partner für digitale Bildungslösungen.
+              </p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-2xl mx-auto p-8 rounded-2xl text-center"
+              style={{ backgroundColor: "rgba(30, 58, 97, 0.3)", border: "1px solid rgba(201, 162, 39, 0.2)" }}
+            >
+              <div className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
+                style={{ backgroundColor: "rgba(201, 162, 39, 0.2)" }}>
+                <BookOpen className="w-10 h-10" style={{ color: "#c9a227" }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: "#f8f5f0" }}>
+                Aitema GmbH
+              </h3>
+              <p style={{ color: "#94a3b8" }} className="mb-4">
+                Wir entwickeln innovative Lösungen für Bildungseinrichtungen. 
+                Mit technologischer Expertise und pädagogischem Verständnis schaffen 
+                wir Werkzeuge, die den Schulalltag erleichtern.
+              </p>
+              <p style={{ color: "#c9a227" }} className="font-medium">
+                Ein Unternehmen mit Herz für Bildung
+              </p>
+            </motion.div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -9,27 +9,20 @@ const footerLinks = {
   product: {
     title: "Produkt",
     links: [
-      { label: "Förderprogramme", href: "/foerderprogramme" },
-      { label: "KI-Antragsassistent", href: "/ki-antragsassistent" },
-      { label: "Dashboard", href: "/dashboard" },
-      { label: "Preise", href: "/preise" }
+      { label: "Förderprogramme", href: "/foerderprogramme" }
     ]
   },
   resources: {
     title: "Ressourcen",
     links: [
-      { label: "So funktioniert's", href: "/wie-es-funktioniert" },
-      { label: "Hilfe-Center", href: "/hilfe" },
-      { label: "Blog", href: "/blog" },
-      { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" }
+      { label: "Über uns", href: "/ueber-uns" },
+      { label: "Kontakt", href: "/kontakt" }
     ]
   },
   company: {
     title: "Unternehmen",
     links: [
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Karriere", href: "/karriere" },
-      { label: "Presse", href: "/presse" },
       { label: "Kontakt", href: "/kontakt" }
     ]
   },
@@ -44,7 +37,7 @@ const footerLinks = {
 };
 
 const stats = [
-  { value: "40+", label: "Förderprogramme" },
+  { value: "50+", label: "Förderprogramme" },
   { value: "500+", label: "Schulen" },
   { value: "90%", label: "Erfolgsquote" },
   { value: "24h", label: "Support" }
@@ -137,18 +130,24 @@ export function Footer() {
               </div>
             </div>
             <div className="flex gap-3">
-              {["twitter", "linkedin", "github"].map((social) => (
-                <a
-                  key={social}
-                  href={`https://${social}.com/edufunds`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social}
-                  className="w-10 h-10 rounded-xl glass hover:bg-orange-500/20 hover:border-orange-500/30 border border-slate-700/50 flex items-center justify-center transition-all duration-300"
-                >
-                  <span className="text-slate-400 hover:text-orange-400 text-xs font-bold uppercase">{social[0]}</span>
-                </a>
-              ))}
+              <a
+                href="https://twitter.com/aitema_de"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="w-10 h-10 rounded-xl glass hover:bg-orange-500/20 hover:border-orange-500/30 border border-slate-700/50 flex items-center justify-center transition-all duration-300"
+              >
+                <span className="text-slate-400 hover:text-orange-400 text-xs font-bold uppercase">T</span>
+              </a>
+              <a
+                href="https://linkedin.com/company/aitema"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-xl glass hover:bg-orange-500/20 hover:border-orange-500/30 border border-slate-700/50 flex items-center justify-center transition-all duration-300"
+              >
+                <span className="text-slate-400 hover:text-orange-400 text-xs font-bold uppercase">L</span>
+              </a>
             </div>
           </motion.div>
 
