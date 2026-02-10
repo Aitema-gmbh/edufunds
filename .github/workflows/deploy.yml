@@ -1,4 +1,4 @@
-name: Deploy to Production (Hetzner)
+name: Deploy to Production (Hetzner Docker)
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy to Hetzner Production
+    name: Build and Deploy Docker to Hetzner
     steps:
       - uses: actions/checkout@v4
       
@@ -17,34 +17,79 @@ jobs:
         with:
           node-version: '20'
       
-      - name: Generate static files
-        run: node export-static.js
+      - name: Install dependencies
+        run: npm ci
       
-      - name: Check dist folder
+      - name: Build Next.js app
+        run: npm run build
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Build Docker image
         run: |
-          echo "📁 Checking dist folder..."
-          ls -la dist/
-          echo "📊 File count: $(find dist -type f | wc -l)"
+          docker build -t edufunds:latest .
+          docker save edufunds:latest | gzip > edufunds-image.tar.gz
       
-      - name: Setup SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.HETZNER_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H ${{ secrets.HETZNER_HOST }} >> ~/.ssh/known_hosts
       
-      - name: Deploy via rsync
+      - name: Deploy to Hetzner
         run: |
-          echo "🚀 Starting deployment to ${{ secrets.HETZNER_HOST }}..."
-          rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-            dist/ \
-            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:${{ secrets.HETZNER_PATH }}
-          echo "✅ Deployment completed!"
-      
-      - name: Verify deployment
-        run: |
-          echo "🔍 Verifying deployment..."
+          echo "🚀 Deploying Docker image to Hetzner..."
+          
+          # Copy image to server
+          scp -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=no \
+            edufunds-image.tar.gz \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:/tmp/
+          
+          # Load and deploy on server
           ssh -i ~/.ssh/deploy_key \
-            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }} \
-            "ls -la ${{ secrets.HETZNER_PATH }} && echo 'Deployment verified!'"
+            -o StrictHostKeyChecking=no \
+            ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }} << 'EOF'
+            echo "📦 Loading Docker image..."
+            docker load < /tmp/edufunds-image.tar.gz
+            
+            echo "🛑 Stopping old container..."
+            docker stop edufunds 2>/dev/null || true
+            docker rm edufunds 2>/dev/null || true
+            
+            echo "🚀 Starting new container..."
+            docker run -d --name edufunds \
+              --network hetzner-stack_web \
+              -e NODE_ENV=production \
+              -e DATABASE_URL="${{ secrets.DATABASE_URL }}" \
+              -l 'traefik.enable=true' \
+              -l 'traefik.docker.network=hetzner-stack_web' \
+              -l 'traefik.http.routers.edufunds.rule=Host(`edufunds.org`) || Host(`www.edufunds.org`)' \
+              -l 'traefik.http.routers.edufunds.entrypoints=websecure' \
+              -l 'traefik.http.routers.edufunds.tls=true' \
+              -l 'traefik.http.routers.edufunds.tls.certresolver=letsencrypt' \
+              -l 'traefik.http.routers.edufunds.service=edufunds-service' \
+              -l 'traefik.http.services.edufunds-service.loadbalancer.server.port=3000' \
+              --restart unless-stopped \
+              edufunds:latest
+            
+            echo "⏳ Waiting for container to be healthy..."
+            sleep 10
+            
+            echo "🔍 Checking container status..."
+            docker ps | grep edufunds
+            docker logs edufunds --tail 5
+            
+            echo "🧹 Cleaning up..."
+            rm /tmp/edufunds-image.tar.gz
+            
+            echo "✅ Deployment completed!"
+          EOF
+      
+      - name: Health Check
+        run: |
+          echo "🏥 Running health check..."
+          sleep 5
+          curl -sI https://edufunds.org | head -3 || echo "⚠️ Health check warning"
