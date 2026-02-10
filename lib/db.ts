@@ -5,7 +5,7 @@
  * Connection String aus Umgebungsvariable DATABASE_URL.
  */
 
-import { Pool, PoolClient, QueryResult } from 'pg';
+import { Pool, PoolClient, QueryResult, QueryResultRow } from 'pg';
 import type {
   NewsletterEntry,
   NewsletterEntryCreate,
@@ -50,7 +50,7 @@ export function getPool(): Pool {
 /**
  * Führt eine Query aus und gibt das Ergebnis zurück
  */
-export async function query<T extends pg.QueryResultRow = pg.QueryResultRow>(
+export async function query<T extends QueryResultRow = QueryResultRow>(
   text: string,
   params?: unknown[]
 ): Promise<QueryResult<T>> {

@@ -5,7 +5,8 @@
  * npx ts-node --esm app/api/contact/test.ts
  */
 
-import { contactSchema, type ContactFormData } from '../../../lib/contactSchema';
+import { contactFormSchema, type ContactFormData } from '../../../lib/contactSchema';
+import type { z } from 'zod';
 
 // Test 1: Validierung - Gültige Daten
 function testValidData() {
@@ -18,7 +19,7 @@ function testValidData() {
     timestamp: Date.now() - 5000, // 5 Sekunden alt
   };
 
-  const result = contactSchema.safeParse(validData);
+  const result = contactFormSchema.safeParse(validData);
   console.log('Test 1 - Gültige Daten:', result.success ? '✓ PASS' : '✗ FAIL');
   if (!result.success) {
     console.log('  Fehler:', result.error.errors);
@@ -37,8 +38,8 @@ function testNameTooShort() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(invalidData);
-  const hasNameError = !result.success && result.error.errors.some(e => e.path[0] === 'name');
+  const result = contactFormSchema.safeParse(invalidData);
+  const hasNameError = !result.success && result.error.errors.some((e: z.ZodIssue) => e.path[0] === 'name');
   console.log('Test 2 - Name zu kurz:', hasNameError ? '✓ PASS' : '✗ FAIL');
   return hasNameError;
 }
@@ -54,8 +55,8 @@ function testInvalidEmail() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(invalidData);
-  const hasEmailError = !result.success && result.error.errors.some(e => e.path[0] === 'email');
+  const result = contactFormSchema.safeParse(invalidData);
+  const hasEmailError = !result.success && result.error.errors.some((e: z.ZodIssue) => e.path[0] === 'email');
   console.log('Test 3 - Ungültige E-Mail:', hasEmailError ? '✓ PASS' : '✗ FAIL');
   return hasEmailError;
 }
@@ -71,8 +72,8 @@ function testSubjectTooShort() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(invalidData);
-  const hasSubjectError = !result.success && result.error.errors.some(e => e.path[0] === 'subject');
+  const result = contactFormSchema.safeParse(invalidData);
+  const hasSubjectError = !result.success && result.error.errors.some((e: z.ZodIssue) => e.path[0] === 'subject');
   console.log('Test 4 - Betreff zu kurz:', hasSubjectError ? '✓ PASS' : '✗ FAIL');
   return hasSubjectError;
 }
@@ -88,8 +89,8 @@ function testMessageTooShort() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(invalidData);
-  const hasMessageError = !result.success && result.error.errors.some(e => e.path[0] === 'message');
+  const result = contactFormSchema.safeParse(invalidData);
+  const hasMessageError = !result.success && result.error.errors.some((e: z.ZodIssue) => e.path[0] === 'message');
   console.log('Test 5 - Nachricht zu kurz:', hasMessageError ? '✓ PASS' : '✗ FAIL');
   return hasMessageError;
 }
@@ -105,8 +106,8 @@ function testDatenschutzNotAccepted() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(invalidData);
-  const hasDatenschutzError = !result.success && result.error.errors.some(e => e.path[0] === 'datenschutz');
+  const result = contactFormSchema.safeParse(invalidData);
+  const hasDatenschutzError = !result.success && result.error.errors.some((e: z.ZodIssue) => e.path[0] === 'datenschutz');
   console.log('Test 6 - Datenschutz nicht akzeptiert:', hasDatenschutzError ? '✓ PASS' : '✗ FAIL');
   return hasDatenschutzError;
 }
@@ -123,7 +124,7 @@ function testHoneypotOptional() {
     timestamp: Date.now() - 5000,
   };
 
-  const result = contactSchema.safeParse(validData);
+  const result = contactFormSchema.safeParse(validData);
   console.log('Test 7 - Honeypot akzeptiert:', result.success ? '✓ PASS' : '✗ FAIL');
   return result.success;
 }
