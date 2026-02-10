@@ -227,14 +227,14 @@ export default function ContactPage() {
               Häufig gestellte Fragen
             </h2>
             <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-              Vielleicht finden Sie die Antwort auf Ihre Frage bereits in unseren FAQ.
+              Haben Sie Fragen? Kontaktieren Sie uns direkt – wir helfen Ihnen gerne weiter.
             </p>
             <a 
-              href="/hilfe"
+              href="mailto:office@aitema.de"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-700 text-slate-300 hover:border-orange-500 hover:text-orange-400 transition-colors"
             >
               <MessageSquare className="h-5 w-5" />
-              FAQ ansehen
+              E-Mail schreiben
             </a>
           </section>
         </div>

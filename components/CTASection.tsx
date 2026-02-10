@@ -177,7 +177,7 @@ export function CTASection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <Link
-              href="/registrieren"
+              href="/foerderprogramme"
               className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg overflow-hidden"
               style={{ 
                 background: 'linear-gradient(135deg, #c9a227 0%, #b08d1f 100%)',
@@ -185,7 +185,7 @@ export function CTASection() {
               }}
             >
               <Sparkles className="w-5 h-5" />
-              <span className="font-semibold">Jetzt kostenlos starten</span>
+              <span className="font-semibold">Jetzt Programme entdecken</span>
               <ArrowRight 
                 className="w-5 h-5 transition-transform duration-300" 
               />
@@ -197,14 +197,14 @@ export function CTASection() {
             </Link>
 
             <Link
-              href="/wie-es-funktioniert"
+              href="/ueber-uns"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg transition-all duration-300"
               style={{ 
                 border: '2px solid #0a1628',
                 color: '#0a1628',
               }}
             >
-              <span className="font-semibold">Demo ansehen</span>
+              <span className="font-semibold">Mehr erfahren</span>
             </Link>
           </motion.div>
 
