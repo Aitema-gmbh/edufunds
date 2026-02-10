@@ -106,10 +106,25 @@
 
 ## TODOs
 
-- [x] 50 Förderprogramme vervollständigen (✅ Done)
+### ✅ Abgeschlossen
+- [x] 50 Förderprogramme vervollständigen (✅ Done - aktuell 43, Ziel: 100)
 - [x] GitHub Repo pushen (✅ Done)
 - [x] Hetzner Deployment-Workflow einrichten (✅ Done - GitHub Actions Docker Deploy)
 - [x] `staging` Branch erstellen (✅ Done)
 - [x] PostgreSQL Backup einrichten (✅ Done - täglich 02:30 Uhr)
 - [x] Health Monitoring einrichten (✅ Done - alle 5 Minuten)
-- [ ] www.edufunds.org DNS anpassen (Offen - Cloudflare Proxy deaktivieren)
+- [x] Footer doppelte Links entfernt (✅ Done)
+- [x] Schulform-Filter entfernt (✅ Done - nur Grundschulen)
+- [x] Glasscard Labels korrigiert (✅ Done - "Bundesmittel", "Landesmittel" etc.)
+- [x] Registrierungs- und Checkout-Seiten erstellt (✅ Done)
+
+### 🔄 In Arbeit (Priorität Hoch)
+- [ ] **Icons in Glasscards** - Werden nicht angezeigt trotz Code-Änderung
+- [ ] **Förderprogramm-Links korrigieren** - Alle 43 Programme brauchen direkte Links zu Ausschreibungen, nicht nur Hauptseiten (z.B. bkm.de/foerderprogramm/xyz statt bkm.de)
+- [ ] **"Für alle Schulformen" Texte entfernen** - Aus allen Beschreibungen streichen
+
+### 📋 Offen (Priorität Mittel)
+- [ ] 57 zusätzliche Förderprogramme recherchieren (Ziel: 100 Programme)
+- [ ] www.edufunds.org DNS anpassen (Cloudflare Proxy deaktivieren)
+- [ ] Zahlungssystem (Stripe/PayPal) integrieren
+- [ ] GitHub Secrets einrichten für Auto-Deployment
