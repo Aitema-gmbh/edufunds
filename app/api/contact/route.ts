@@ -13,7 +13,7 @@ const ADMIN_EMAIL = 'office@aitema.de';
 const FROM_EMAIL = 'EduFunds <noreply@aitema.de>';
 
 // Zod Schema für Validierung
-export const contactSchema = z.object({
+const contactSchema = z.object({
   name: z.string().min(2, 'Name muss mindestens 2 Zeichen lang sein'),
   email: z.string().email('Bitte geben Sie eine gültige E-Mail-Adresse ein'),
   subject: z.string().min(5, 'Betreff muss mindestens 5 Zeichen lang sein'),
