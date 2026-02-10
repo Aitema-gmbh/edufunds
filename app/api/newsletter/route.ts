@@ -110,7 +110,7 @@ async function sendConfirmationEmail(email: string, token: string): Promise<bool
         from: 'EduFunds <newsletter@edufunds.de>',
         to: email,
         subject: 'Bestätigen Sie Ihre Newsletter-Anmeldung',
-        html: getConfirmationEmailTemplate({ confirmationUrl }),
+        html: getConfirmationEmailTemplate({ confirmationUrl, email }),
       });
       
       if (error) {
