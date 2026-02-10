@@ -17,8 +17,13 @@ const navItems = [
   {
     href: "/foerderprogramme",
     label: "Förderprogramme",
-    badge: "50+",
+    badge: "20+",
     icon: Search,
+  },
+  {
+    href: "/preise",
+    label: "Preise",
+    icon: CreditCard,
   },
   {
     href: "/ueber-uns",

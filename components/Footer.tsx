@@ -9,7 +9,8 @@ const footerLinks = {
   product: {
     title: "Produkt",
     links: [
-      { label: "Förderprogramme", href: "/foerderprogramme" }
+      { label: "Förderprogramme", href: "/foerderprogramme" },
+      { label: "Preise", href: "/preise" }
     ]
   },
   resources: {
@@ -37,8 +38,7 @@ const footerLinks = {
 };
 
 const stats = [
-  { value: "50+", label: "Förderprogramme" },
-  { value: "500+", label: "Schulen" },
+  { value: "20+", label: "Förderprogramme" },
   { value: "90%", label: "Erfolgsquote" },
   { value: "24h", label: "Support" }
 ];
@@ -71,7 +71,7 @@ export function Footer() {
       {/* Stats Bar */}
       <div className="relative border-b border-slate-800/50">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}

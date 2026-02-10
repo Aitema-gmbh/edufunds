@@ -12,16 +12,9 @@ const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
  type Schulform = "grundschule" | "hauptschule" | "realschule" | "gymnasium" | "gesamtschule" | "foerderschule" | "berufsschule";
 import { useState, useMemo } from "react";
 
-// Schulformen-Optionen
+// Schulformen-Optionen (nur Grundschule für EduFunds)
 const SCHULFORMEN = [
-  { value: "", label: "Alle Schulformen" },
   { value: "grundschule", label: "Grundschule" },
-  { value: "hauptschule", label: "Hauptschule" },
-  { value: "realschule", label: "Realschule" },
-  { value: "gymnasium", label: "Gymnasium" },
-  { value: "gesamtschule", label: "Gesamtschule" },
-  { value: "foerderschule", label: "Förderschule" },
-  { value: "berufsschule", label: "Berufsschule" },
 ];
 
 // Bundesländer-Optionen
@@ -146,10 +139,10 @@ export default function FoerderprogrammePage() {
               <span className="text-sm font-medium text-orange-400">Förderfinder</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
-              Förderprogramme für Schulen
+              Förderprogramme für Grundschulen
             </h1>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Finden Sie passende Förderungen für Ihre Schule. 
+              Finden Sie passende Förderungen für Ihre Grundschule. 
               Aktuell {stats.total} Programme im Überblick.
             </p>
           </div>

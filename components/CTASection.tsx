@@ -134,8 +134,7 @@ export function CTASection() {
             className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed"
             style={{ color: '#1e3a61' }}
           >
-            Schließen Sie sich über 500 Schulen an, die bereits mit EduFunds 
-            ihre Förderanträge optimiert haben.
+            Nutzen Sie EduFunds, um Förderanträge für Ihre Grundschule professionell zu erstellen.
           </motion.p>
 
           {/* Benefits */}
@@ -240,9 +239,9 @@ export function CTASection() {
           className="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto"
         >
           {[
-            { value: "500+", label: "Schulen" },
-            { value: "90%", label: "Erfolgsquote" },
-            { value: "€50M+", label: "Vermittelt" },
+            { value: "50+", label: "Förderprogramme" },
+            { value: "100%", label: "Grundschulen" },
+            { value: "16", label: "Bundesländer" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

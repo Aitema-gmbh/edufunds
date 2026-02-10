@@ -3,25 +3,17 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Search, Filter, Building2, Euro, Calendar, MapPin, ArrowRight, School, X } from "lucide-react";
+
 import Link from "next/link";
 import type { Foerderprogramm } from '@/lib/foerderSchema';
 import foerderprogrammeData from '@/data/foerderprogramme.json';
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 
-// Schulform Typ
- type Schulform = "grundschule" | "hauptschule" | "realschule" | "gymnasium" | "gesamtschule" | "foerderschule" | "berufsschule";
 import { useState, useMemo } from "react";
 
-// Schulformen-Optionen
+// Schulformen-Optionen (nur Grundschule)
 const SCHULFORMEN = [
-  { value: "", label: "Alle Schulformen" },
-  { value: "grundschule", label: "Grundschule" },
-  { value: "hauptschule", label: "Hauptschule" },
-  { value: "realschule", label: "Realschule" },
-  { value: "gymnasium", label: "Gymnasium" },
-  { value: "gesamtschule", label: "Gesamtschule" },
-  { value: "foerderschule", label: "Förderschule" },
-  { value: "berufsschule", label: "Berufsschule" },
+  { value: "", label: "Grundschule" },
 ];
 
 // Bundesländer-Optionen
@@ -71,12 +63,11 @@ const stats = {
 };
 
 export default function FoerderprogrammePage() {
-  // Filter-States
+  // Filter-States (nur Bundesland, Kategorie, Fördersumme)
   const [suchbegriff, setSuchbegriff] = useState("");
-  const [schulform, setSchulform] = useState<"" | Schulform>("");
   const [bundesland, setBundesland] = useState("");
-  const [foerdergeberTyp, setFoerdergeberTyp] = useState("");
   const [kategorie, setKategorie] = useState("");
+  const [foerdersumme, setFoerdersumme] = useState("");
 
   // Gefilterte Programme berechnen
   const gefilterteProgramme = useMemo(() => {
@@ -92,11 +83,6 @@ export default function FoerderprogrammePage() {
         }
       }
 
-      // Schulform-Filter
-      if (schulform && !programm.schulformen.includes(schulform as Schulform)) {
-        return false;
-      }
-
       // Bundesland-Filter
       if (bundesland) {
         const bundeslaenderArray = programm.bundeslaender;
@@ -105,34 +91,37 @@ export default function FoerderprogrammePage() {
         }
       }
 
-      // Fördergeber-Typ-Filter
-      if (foerdergeberTyp && programm.foerdergeberTyp !== foerdergeberTyp) {
-        return false;
-      }
-
       // Kategorie-Filter
       if (kategorie && !programm.kategorien.includes(kategorie)) {
         return false;
       }
 
+      // Fördersumme-Filter
+      if (foerdersumme) {
+        const maxSumme = programm.foerdersummeMax || 0;
+        if (foerdersumme === "bis-10000" && maxSumme > 10000) return false;
+        if (foerdersumme === "10000-50000" && (maxSumme <= 10000 || maxSumme > 50000)) return false;
+        if (foerdersumme === "50000-100000" && (maxSumme <= 50000 || maxSumme > 100000)) return false;
+        if (foerdersumme === "ueber-100000" && maxSumme <= 100000) return false;
+      }
+
       return true;
     });
-  }, [suchbegriff, schulform, bundesland, foerdergeberTyp, kategorie]);
+  }, [suchbegriff, bundesland, kategorie, foerdersumme]);
 
   // Reset-Funktion
   const resetFilter = () => {
     setSuchbegriff("");
-    setSchulform("");
     setBundesland("");
-    setFoerdergeberTyp("");
     setKategorie("");
+    setFoerdersumme("");
   };
 
   // Prüfen ob Filter aktiv sind
-  const hatAktiveFilter = suchbegriff || schulform || bundesland || foerdergeberTyp || kategorie;
+  const hatAktiveFilter = suchbegriff || bundesland || kategorie || foerdersumme;
 
   // Anzahl aktiver Filter
-  const aktiveFilterCount = [suchbegriff, schulform, bundesland, foerdergeberTyp, kategorie].filter(Boolean).length;
+  const aktiveFilterCount = [suchbegriff, bundesland, kategorie, foerdersumme].filter(Boolean).length;
 
   return (
     <>
@@ -146,10 +135,10 @@ export default function FoerderprogrammePage() {
               <span className="text-sm font-medium text-orange-400">Förderfinder</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
-              Förderprogramme für Schulen
+              Förderprogramme für Grundschulen
             </h1>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Finden Sie passende Förderungen für Ihre Schule. 
+              Finden Sie passende Förderungen für Ihre Grundschule. 
               Aktuell {stats.total} Programme im Überblick.
             </p>
           </div>
@@ -201,8 +190,8 @@ export default function FoerderprogrammePage() {
               )}
             </div>
 
-            {/* Filter-Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {/* Filter-Grid - Nur Bundesland, Kategorie, Fördersumme */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Suchfeld */}
               <div className="relative">
                 <label className="block text-xs text-slate-500 mb-1.5">Suche</label>
@@ -226,23 +215,6 @@ export default function FoerderprogrammePage() {
                 </div>
               </div>
 
-              {/* Schulform-Dropdown */}
-              <div>
-                <label className="block text-xs text-slate-500 mb-1.5">Schulform</label>
-                <select
-                  value={schulform}
-                  onChange={(e) => setSchulform(e.target.value as "" | Schulform)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                >
-                  {SCHULFORMEN.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
               {/* Bundesland-Dropdown */}
               <div>
                 <label className="block text-xs text-slate-500 mb-1.5">Bundesland</label>
@@ -260,26 +232,9 @@ export default function FoerderprogrammePage() {
                 </select>
               </div>
 
-              {/* Fördergeber-Typ-Dropdown */}
+              {/* Förderkategorie-Dropdown */}
               <div>
-                <label className="block text-xs text-slate-500 mb-1.5">Fördergeber</label>
-                <select
-                  value={foerdergeberTyp}
-                  onChange={(e) => setFoerdergeberTyp(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                >
-                  {FOERDERGEBER_TYPEN.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Kategorie-Dropdown */}
-              <div>
-                <label className="block text-xs text-slate-500 mb-1.5">Kategorie</label>
+                <label className="block text-xs text-slate-500 mb-1.5">Förderkategorie</label>
                 <select
                   value={kategorie}
                   onChange={(e) => setKategorie(e.target.value)}
@@ -291,6 +246,23 @@ export default function FoerderprogrammePage() {
                       {option.label}
                     </option>
                   ))}
+                </select>
+              </div>
+
+              {/* Fördersumme-Dropdown */}
+              <div>
+                <label className="block text-xs text-slate-500 mb-1.5">Fördersumme</label>
+                <select
+                  value={foerdersumme}
+                  onChange={(e) => setFoerdersumme(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                >
+                  <option value="">Alle Beträge</option>
+                  <option value="bis-10000">Bis 10.000 €</option>
+                  <option value="10000-50000">10.000 € - 50.000 €</option>
+                  <option value="50000-100000">50.000 € - 100.000 €</option>
+                  <option value="ueber-100000">Über 100.000 €</option>
                 </select>
               </div>
             </div>
