@@ -1,11 +1,11 @@
 "use client";
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ArrowLeft, FileText, Shield, CheckCircle, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { KIAntragAssistent } from "@/components/KIAntragAssistent";
+import KIAntragAssistent from "@/components/KIAntragAssistent";
 import foerderprogramme from "@/data/foerderprogramme.json";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
