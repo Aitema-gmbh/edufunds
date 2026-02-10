@@ -270,7 +270,7 @@ export default function FoerderprogrammDetailPage() {
                   Beschreibung
                 </h2>
                 <p className="text-slate-300 leading-relaxed text-lg">
-                  {programm.beschreibung || programm.kurzbeschreibung}
+                  {(programm as any).beschreibung || programm.kurzbeschreibung}
                 </p>
               </section>
 
