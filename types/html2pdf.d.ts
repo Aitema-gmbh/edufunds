@@ -14,7 +14,7 @@ declare module 'html2pdf.js' {
     jsPDF?: {
       unit?: string;
       format?: string | [number, number];
-      orientation?: 'portrait' | 'landscape';
+      orientation?: string;
     };
   }
 
