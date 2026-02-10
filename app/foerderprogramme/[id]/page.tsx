@@ -144,7 +144,7 @@ export default function FoerderprogrammDetailPage() {
     notFound();
   }
 
-  const countdown = useCountdown(programm.bewerbungsfristEnde);
+  const countdown = useCountdown(programm.bewerbungsfristEnde ?? null);
   const similarPrograms = getSimilarPrograms(programm.id, programm.kategorien);
 
   const foerdergeberStyle = FOERDERGEBER_STYLES[programm.foerdergeberTyp as keyof typeof FOERDERGEBER_STYLES];
