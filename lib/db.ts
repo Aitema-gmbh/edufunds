@@ -50,7 +50,7 @@ export function getPool(): Pool {
 /**
  * Führt eine Query aus und gibt das Ergebnis zurück
  */
-export async function query<T = unknown>(
+export async function query<T extends pg.QueryResultRow = pg.QueryResultRow>(
   text: string,
   params?: unknown[]
 ): Promise<QueryResult<T>> {
