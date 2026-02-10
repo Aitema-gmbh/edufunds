@@ -107,6 +107,9 @@
 ## TODOs
 
 - [x] 50 Förderprogramme vervollständigen (✅ Done)
-- [ ] GitHub Repo pushen (sauberes Reset)
-- [ ] Hetzner Deployment-Workflow einrichten
-- [ ] `staging` Branch erstellen
+- [x] GitHub Repo pushen (✅ Done)
+- [x] Hetzner Deployment-Workflow einrichten (✅ Done - GitHub Actions Docker Deploy)
+- [x] `staging` Branch erstellen (✅ Done)
+- [x] PostgreSQL Backup einrichten (✅ Done - täglich 02:30 Uhr)
+- [x] Health Monitoring einrichten (✅ Done - alle 5 Minuten)
+- [ ] www.edufunds.org DNS anpassen (Offen - Cloudflare Proxy deaktivieren)
