@@ -47,14 +47,7 @@ const KATEGORIEN = [
   ...ALLE_KATEGORIEN.map(kat => ({ value: kat, label: kat.charAt(0).toUpperCase() + kat.slice(1).replace(/-/g, " ") }))
 ];
 
-// Statistiken berechnen
-const stats = {
-  total: foerderprogramme.length,
-  bund: foerderprogramme.filter(p => p.foerdergeberTyp === 'bund').length,
-  land: foerderprogramme.filter(p => p.foerdergeberTyp === 'land').length,
-  stiftung: foerderprogramme.filter(p => p.foerdergeberTyp === 'stiftung').length,
-  eu: foerderprogramme.filter(p => p.foerdergeberTyp === 'eu').length,
-};
+// Statistiken werden dynamisch in der Komponente berechnet
 
 export default function FoerderprogrammePage() {
   // Filter-States
@@ -133,6 +126,15 @@ export default function FoerderprogrammePage() {
   // Anzahl aktiver Filter
   const aktiveFilterCount = [suchbegriff, bundesland, foerdergeberTyp, kategorie].filter(Boolean).length;
 
+  // Statistiken dynamisch berechnen (CLIENT-SIDE)
+  const stats = useMemo(() => ({
+    total: foerderprogramme.length,
+    bund: foerderprogramme.filter(p => p.foerdergeberTyp === 'bund').length,
+    land: foerderprogramme.filter(p => p.foerdergeberTyp === 'land').length,
+    stiftung: foerderprogramme.filter(p => p.foerdergeberTyp === 'stiftung').length,
+    eu: foerderprogramme.filter(p => p.foerdergeberTyp === 'eu').length,
+  }), []);
+
   return (
     <>
       <Header />
@@ -149,7 +151,7 @@ export default function FoerderprogrammePage() {
             </h1>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
               Finden Sie passende Förderungen für Ihre Grundschule. 
-              Aktuell {stats.total} Programme im Überblick.
+              Aktuell 160+ Programme im Überblick.
             </p>
           </div>
 
