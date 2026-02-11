@@ -62,22 +62,29 @@ export default function FoerderprogrammePage() {
   const [bundesland, setBundesland] = useState("");
   const [foerdergeberTyp, setFoerdergeberTyp] = useState("");
   const [kategorie, setKategorie] = useState("");
+  
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 20;
 
-  // Gefilterte Programme berechnen
+  // Gefilterte Programme berechnen - optimiert
   const gefilterteProgramme = useMemo(() => {
+    const suche = suchbegriff.toLowerCase().trim();
+    
     return foerderprogramme.filter((programm) => {
-      // Suchbegriff-Filter (Name + Beschreibung)
-      if (suchbegriff) {
-        const suche = suchbegriff.toLowerCase();
+      // Schnell-Check: Suchbegriff
+      if (suche) {
         const nameMatch = programm.name.toLowerCase().includes(suche);
+        if (nameMatch) return true; // Früher Return für Performance
+        
         const beschreibungMatch = programm.kurzbeschreibung.toLowerCase().includes(suche);
+        if (beschreibungMatch) return true;
+        
         const foerdergeberMatch = programm.foerdergeber.toLowerCase().includes(suche);
-        if (!nameMatch && !beschreibungMatch && !foerdergeberMatch) {
-          return false;
-        }
+        if (!foerdergeberMatch) return false;
       }
 
-      // Bundesland-Filter
+      // Schnell-Check: Bundesland
       if (bundesland) {
         const bundeslaenderArray = programm.bundeslaender;
         if (!bundeslaenderArray.includes("alle") && !bundeslaenderArray.includes(bundesland)) {
@@ -85,12 +92,12 @@ export default function FoerderprogrammePage() {
         }
       }
 
-      // Fördergeber-Typ-Filter
+      // Schnell-Check: Fördergeber-Typ
       if (foerdergeberTyp && programm.foerdergeberTyp !== foerdergeberTyp) {
         return false;
       }
 
-      // Kategorie-Filter
+      // Schnell-Check: Kategorie
       if (kategorie && !programm.kategorien.includes(kategorie)) {
         return false;
       }
@@ -105,7 +112,20 @@ export default function FoerderprogrammePage() {
     setBundesland("");
     setFoerdergeberTyp("");
     setKategorie("");
+    setCurrentPage(1);
   };
+  
+  // Pagination-Logik
+  const totalPages = Math.ceil(gefilterteProgramme.length / itemsPerPage);
+  const paginatedProgramme = useMemo(() => {
+    const start = (currentPage - 1) * itemsPerPage;
+    return gefilterteProgramme.slice(start, start + itemsPerPage);
+  }, [gefilterteProgramme, currentPage]);
+  
+  // Seite zurücksetzen bei Filter-Änderung
+  useMemo(() => {
+    setCurrentPage(1);
+  }, [suchbegriff, bundesland, foerdergeberTyp, kategorie]);
 
   // Prüfen ob Filter aktiv sind
   const hatAktiveFilter = suchbegriff || bundesland || foerdergeberTyp || kategorie;
@@ -303,7 +323,7 @@ export default function FoerderprogrammePage() {
                 </button>
               </div>
             ) : (
-              gefilterteProgramme.map((programm) => (
+              paginatedProgramme.map((programm) => (
                 <article 
                   key={programm.id}
                   className="glass rounded-2xl p-6 md:p-8 hover:border-orange-500/30 transition-all group"
@@ -408,6 +428,53 @@ export default function FoerderprogrammePage() {
               ))
             )}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-8">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                ← Zurück
+              </button>
+              
+              <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter(page => 
+                    page === 1 || 
+                    page === totalPages || 
+                    (page >= currentPage - 1 && page <= currentPage + 1)
+                  )
+                  .map((page, index, array) => (
+                    <div key={page} className="flex items-center">
+                      {index > 0 && array[index - 1] !== page - 1 && (
+                        <span className="px-2 text-slate-500">...</span>
+                      )}
+                      <button
+                        onClick={() => setCurrentPage(page)}
+                        className={`w-10 h-10 rounded-lg font-medium transition-colors ${
+                          currentPage === page
+                            ? 'bg-orange-500 text-white'
+                            : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    </div>
+                  ))}
+              </div>
+              
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                Weiter →
+              </button>
+            </div>
+          )}
 
           {/* Hinweis */}
           <div className="mt-12 glass rounded-2xl p-8 text-center">
