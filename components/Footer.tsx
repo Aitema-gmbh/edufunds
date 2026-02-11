@@ -33,7 +33,7 @@ const footerLinks = {
 };
 
 const stats = [
-  { value: "20+", label: "Förderprogramme" },
+  { value: "160+", label: "Förderprogramme" },
   { value: "90%", label: "Erfolgsquote" },
   { value: "24h", label: "Support" }
 ];
