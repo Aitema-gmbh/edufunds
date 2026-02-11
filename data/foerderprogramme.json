@@ -20,7 +20,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bkm.de/de/foerderung/kultur-digitale-kommunikation-0",
+    "infoLink": "https://www.kulturstaatsminister.de/",
     "kurzbeschreibung": "Förderung für digitale Kommunikations- und Vermittlungsangebote an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -51,7 +51,7 @@
     "bewerbungsfristEnde": "2025-06-30",
     "bewerbungsfristText": "01.04. - 30.06.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/digitalisierung-in-schulen.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Modellprojekte zur Digitalisierung des Unterrichts an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -80,7 +80,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmi.bund.de/DE/themen/bevoelkerungsschutz/zivile-sicherheit/zivile-sicherheit-node.html",
+    "infoLink": "https://www.bmi.bund.de/DE/themen/sicherheit/forschung-fuer-ihre-sicherheit/forschung-fuer-ihre-sicherheit-node.html",
     "kurzbeschreibung": "Förderung für Brandschutz, Evakuierungskonzepte und Notfalltraining an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -109,7 +109,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmuv.de/themen/nachhaltigkeit-bildung/klimaschutz-an-schulen",
+    "infoLink": "https://www.bmuv.de/themen/energie-klima/nationale-klimaschutzinitiative",
     "kurzbeschreibung": "Förderung für klimafreundliche Grundschulen und Umweltbildung.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -138,7 +138,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmas.de/DE/Themen/Arbeitswelt/inklusion/inklusion-node.html",
+    "infoLink": "https://www.bmas.de/DE/Soziales/Teilhabe-und-Inklusion/teilhabe-und-inklusion.html",
     "kurzbeschreibung": "Förderung für inklusive Bildungsprojekte und Barrierefreiheit in Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -167,7 +167,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bundesgesundheitsministerium.de/gesunde-schulen.html",
+    "infoLink": "https://www.bundesgesundheitsministerium.de/themen/praevention/kindergesundheit/kindergesundheit.html",
     "kurzbeschreibung": "Förderung für Gesundheitsförderung und Prävention an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -228,7 +228,7 @@
     "bewerbungsfristEnde": "2025-10-31",
     "bewerbungsfristText": "01.09. - 31.10.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.telekom-stiftung.de/bildung",
+    "infoLink": "https://www.telekom-stiftung.de/foerderung",
     "kurzbeschreibung": "MINT-Bildung in der Grundschule: Experimentieren und Forschen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -259,7 +259,7 @@
     "bewerbungsfristEnde": "2025-05-31",
     "bewerbungsfristText": "01.03. - 31.05.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.deutsche-bank-stiftung.de/foerderung/lesen",
+    "infoLink": "https://www.deutsche-bank-stiftung.de/foerderung",
     "kurzbeschreibung": "Leseförderung und Literaturprojekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -288,7 +288,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/bildung",
+    "infoLink": "https://www.bertelsmann-stiftung.de/de",
     "kurzbeschreibung": "Innovation und Reform in der Grundschulbildung.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -317,7 +317,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bosch-stiftung.de/de/foerderung/themen/umwelt",
+    "infoLink": "https://www.bosch-stiftung.de/de",
     "kurzbeschreibung": "Umweltbildung und Nachhaltigkeitsprojekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -375,7 +375,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.postcode-lotterie.de/projekte/bildung",
+    "infoLink": "https://www.postcode-lotterie.de/",
     "kurzbeschreibung": "Soziales Engagement und gemeinnützige Projekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -404,7 +404,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.aktion-mensch.de/foerderung/inklusion-bildung",
+    "infoLink": "https://www.aktion-mensch.de/foerderung.html",
     "kurzbeschreibung": "Inklusion und Teilhabe für Menschen mit Behinderung an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -435,7 +435,7 @@
     "bewerbungsfristEnde": "2025-03-15",
     "bewerbungsfristText": "01.02. - 15.03.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.erasmus-plus.de/schulen",
+    "infoLink": "https://www.erasmus-plus.de/",
     "kurzbeschreibung": "Schulpartnerschaften und Austauschprogramme für Grundschulen in Europa.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -493,7 +493,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.km.bayern.de/digitalpakt.html",
+    "infoLink": "https://www.km.bayern.de/",
     "kurzbeschreibung": "Digitale Infrastruktur und Ausstattung für bayerische Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -522,7 +522,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "schriftlich",
-    "infoLink": "https://www.berlin.de/sen/bildung/investitionen/schulbau",
+    "infoLink": "https://www.berlin.de/sen/bildung/",
     "kurzbeschreibung": "Investitionsprogramm für Grundschulbau und Sanierung in Berlin.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -580,7 +580,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.mk.niedersachsen.de/bildung/schulsport",
+    "infoLink": "https://www.mk.niedersachsen.de/",
     "kurzbeschreibung": "Förderung für Sportstätten und Bewegungsangebote an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -609,7 +609,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.siemens-stiftung.de/foerderung/energie",
+    "infoLink": "https://www.siemens-stiftung.org/",
     "kurzbeschreibung": "Energiebildung und naturwissenschaftliche Projekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -638,7 +638,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.sap-stiftung.de/foerderung/informatik",
+    "infoLink": "https://www.sap-stiftung.de/",
     "kurzbeschreibung": "Informatikbildung und Programmierkurse für Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
@@ -698,7 +698,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/spielend-lernen.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Innovative Projekte zum Lernen durch Spielen in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -728,7 +728,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/mint-foerderung.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Nachhaltige MINT-Förderung und frühe Begeisterung für Naturwissenschaften.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -759,7 +759,7 @@
     "bewerbungsfristEnde": "2025-06-30",
     "bewerbungsfristText": "15.04. - 30.06.2025",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/sprachfoerderung.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Förderung von Sprachkompetenz und Integration für Kinder mit Migrationshintergrund.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -789,7 +789,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/zukunftslabore.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Schaffung von Zukunftslaboren für experimentelles Lernen an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -819,7 +819,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/ki-in-der-schule.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Pilotprojekte für den Einsatz von KI in der Grundschulbildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -849,7 +849,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/lesefoerderung.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Förderung von Leseförderprogrammen und Schreibkompetenz in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -878,7 +878,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/naturwissenschaften.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Förderung naturwissenschaftlicher Grundbildung und experimentellen Lernens.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -936,7 +936,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/bildung/inklusion.html",
+    "infoLink": "https://www.bmftr.bund.de/",
     "kurzbeschreibung": "Förderung inklusiver Unterrichtskonzepte und barrierefreier Lernumgebungen.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -966,7 +966,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/foerderung/mobilitaet",
+    "infoLink": "https://www.volkswagenstiftung.de/",
     "kurzbeschreibung": "Bildungsprojekte zu Mobilität, Verkehr und nachhaltiger Fortbewegung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -996,7 +996,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/foerderung/klima",
+    "infoLink": "https://www.volkswagenstiftung.de/",
     "kurzbeschreibung": "Förderung von Bildungsprojekten zum Klimawandel und nachhaltiger Entwicklung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1026,7 +1026,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/mint",
+    "infoLink": "https://www.carl-zeiss-stiftung.de/",
     "kurzbeschreibung": "MINT-Förderung mit Fokus auf Optik, Photonik und technische Bildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1055,7 +1055,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/wissenschaft",
+    "infoLink": "https://www.carl-zeiss-stiftung.de/",
     "kurzbeschreibung": "Frühe naturwissenschaftliche Bildung und Experimentierangebote.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1084,7 +1084,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stiftung-mercator.de/foerderung/digitalisierung",
+    "infoLink": "https://www.stiftung-mercator.de/",
     "kurzbeschreibung": "Förderung digitaler Bildung und Medienkompetenz in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1113,7 +1113,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stiftung-mercator.de/foerderung/integration",
+    "infoLink": "https://www.stiftung-mercator.de/",
     "kurzbeschreibung": "Bildungsgerechtigkeit und Integration durch innovative Bildungsangebote.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1142,7 +1142,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmw-stiftung.de/foerderung/demokratie",
+    "infoLink": "https://www.bmw-stiftung.de/",
     "kurzbeschreibung": "Förderung demokratischer Kultur und aktiver Partizipation in der Schule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1171,7 +1171,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bmw-stiftung.de/foerderung/nachhaltigkeit",
+    "infoLink": "https://www.bmw-stiftung.de/",
     "kurzbeschreibung": "Bildung für nachhaltige Entwicklung und globale Verantwortung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1200,7 +1200,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.boell.de/foerderung/bildung",
+    "infoLink": "https://www.boell.de/",
     "kurzbeschreibung": "Förderung ökologischer Bildung und nachhaltigen Handelns in der Grundschule.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1230,7 +1230,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.stifterverband.org/foerderung/bildung",
+    "infoLink": "https://www.stifterverband.org/",
     "kurzbeschreibung": "Förderung innovativer Bildungsprojekte und wissenschaftlicher Grundbildung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1259,7 +1259,7 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.dkjs.de/foerderung/sport",
+    "infoLink": "https://www.dkjs.de/",
     "kurzbeschreibung": "Förderung von Bewegung, Sport und gesunder Lebensführung.",
     "status": "aktiv",
     "createdAt": "2025-06-15T00:00:00Z",
@@ -1272,15 +1272,24 @@
     "name": "NABU-Schulprojekte Natur und Umwelt",
     "foerdergeber": "NABU - Naturschutzbund Deutschland",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "1.000€ - 15.000€",
-    "kategorien": ["umwelt", "natur", "biologie", "oekologie"],
+    "kategorien": [
+      "umwelt",
+      "natur",
+      "biologie",
+      "oekologie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.nabu.de/foerderung/schulen",
+    "infoLink": "https://www.nabu.de/",
     "kurzbeschreibung": "Förderung von Natur- und Umweltbildungsprojekten an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1293,15 +1302,24 @@
     "name": "Projekte für Artenvielfalt",
     "foerdergeber": "Bundesamt für Naturschutz (BfN)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "3.000€ - 25.000€",
-    "kategorien": ["biologie", "umwelt", "artenvielfalt", "natur"],
+    "kategorien": [
+      "biologie",
+      "umwelt",
+      "artenvielfalt",
+      "natur"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.bfn.de/foerderung/projekte-artenvielfalt",
+    "infoLink": "https://www.bfn.de/",
     "kurzbeschreibung": "Förderung von Schulprojekten zum Schutz der biologischen Vielfalt.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1314,15 +1332,24 @@
     "name": "DOSB Schul- und Jugendsport",
     "foerdergeber": "Deutscher Olympischer Sportbund (DOSB)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["sport", "bewegung", "gesundheit", "integration"],
+    "kategorien": [
+      "sport",
+      "bewegung",
+      "gesundheit",
+      "integration"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.dosb.de/foerderung/schulsport",
+    "infoLink": "https://www.dosb.de/",
     "kurzbeschreibung": "Förderung von Bewegungs- und Sportprojekten an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1335,15 +1362,24 @@
     "name": "Gesunde Schule",
     "foerdergeber": "AOK-Bundesverband",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 20000,
     "foerdersummeText": "2.000€ - 20.000€",
-    "kategorien": ["gesundheit", "praevention", "bewegung", "ernaehrung"],
+    "kategorien": [
+      "gesundheit",
+      "praevention",
+      "bewegung",
+      "ernaehrung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.aok.de/foerderung/gesunde-schule",
+    "infoLink": "https://www.aok.de/",
     "kurzbeschreibung": "Förderung gesundheitsfördernder Maßnahmen und Präventionsprojekte an Schulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1356,15 +1392,24 @@
     "name": "Wissenschaft im Dialog",
     "foerdergeber": "Wissenschaft im Dialog (WiD)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "3.000€ - 30.000€",
-    "kategorien": ["wissenschaft", "mint", "forschung", "bildung"],
+    "kategorien": [
+      "wissenschaft",
+      "mint",
+      "forschung",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.wissenschaft-im-dialog.de/foerderung",
+    "infoLink": "https://www.wissenschaft-im-dialog.de/",
     "kurzbeschreibung": "Förderung von Projekten zur Wissenschaftskommunikation und MINT-Bildung.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1377,15 +1422,24 @@
     "name": "Chemie-Fonds der Chemischen Industrie",
     "foerdergeber": "Fonds der Chemischen Industrie",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "2.000€ - 25.000€",
-    "kategorien": ["chemie", "mint", "naturwissenschaft", "experiment"],
+    "kategorien": [
+      "chemie",
+      "mint",
+      "naturwissenschaft",
+      "experiment"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.fondsderchemischenindustrie.de/foerderung/schulen",
+    "infoLink": "https://www.fondsderchemischenindustrie.de/",
     "kurzbeschreibung": "Förderung chemischer Experimentierräume und MINT-Projekte an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1398,15 +1452,24 @@
     "name": "Science Talents - Volkswagen Stiftung",
     "foerdergeber": "VolkswagenStiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["mint", "wissenschaft", "talentfoerderung", "bildung"],
+    "kategorien": [
+      "mint",
+      "wissenschaft",
+      "talentfoerderung",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/foerderung/bildung",
+    "infoLink": "https://www.volkswagenstiftung.de/",
     "kurzbeschreibung": "Förderung wissenschaftlicher Bildung und Talentförderung in MINT-Bereichen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1419,15 +1482,24 @@
     "name": "Digitale Bildung - Telekom Stiftung",
     "foerdergeber": "Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["digitalisierung", "ki", "informatik", "bildung"],
+    "kategorien": [
+      "digitalisierung",
+      "ki",
+      "informatik",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.telekom-stiftung.de/foerderung/digitale-bildung",
+    "infoLink": "https://www.telekom-stiftung.de/",
     "kurzbeschreibung": "Förderung digitaler Bildungsprojekte und Informatik-Initiativen an Schulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1440,12 +1512,21 @@
     "name": "Kulturelle Bildung - Kulturstiftung der Länder",
     "foerdergeber": "Kulturstiftung der Länder",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 40000,
     "foerdersummeText": "5.000€ - 40.000€",
-    "kategorien": ["kultur", "kunst", "musik", "theater"],
+    "kategorien": [
+      "kultur",
+      "kunst",
+      "musik",
+      "theater"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.kulturstiftung.de/foerderung/bildung",
@@ -1461,15 +1542,24 @@
     "name": "Inklusion in der Grundschule",
     "foerdergeber": "Deutsches Kinder- und Jugendhilfswerk (DKJS)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 35000,
     "foerdersummeText": "3.000€ - 35.000€",
-    "kategorien": ["inklusion", "integration", "barrierefreiheit", "teilhabe"],
+    "kategorien": [
+      "inklusion",
+      "integration",
+      "barrierefreiheit",
+      "teilhabe"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.dkjs.de/foerderung/inklusion",
+    "infoLink": "https://www.dkjs.de/",
     "kurzbeschreibung": "Förderung inklusiver Bildungsprojekte und barrierefreier Schulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1482,15 +1572,24 @@
     "name": "Inklusion gewinnt - Aktion Mensch",
     "foerdergeber": "Aktion Mensch",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["inklusion", "behinderung", "teilhabe", "integration"],
+    "kategorien": [
+      "inklusion",
+      "behinderung",
+      "teilhabe",
+      "integration"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.aktion-mensch.de/foerderung/inklusion",
+    "infoLink": "https://www.aktion-mensch.de/foerderung.html",
     "kurzbeschreibung": "Förderung inklusiver Projekte zur Teilhabe von Menschen mit Behinderung.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1503,15 +1602,24 @@
     "name": "Kinderschutz in der Schule",
     "foerdergeber": "Deutscher Kinderschutzbund",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 20000,
     "foerdersummeText": "2.000€ - 20.000€",
-    "kategorien": ["kinderschutz", "praevention", "gewaltpraevention", "beratung"],
+    "kategorien": [
+      "kinderschutz",
+      "praevention",
+      "gewaltpraevention",
+      "beratung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.kinderschutzbund.de/foerderung/schulen",
+    "infoLink": "https://www.kinderschutzbund.de/",
     "kurzbeschreibung": "Förderung von Kinderschutzprojekten und Gewaltprävention an Grundschulen.",
     "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
@@ -1524,12 +1632,21 @@
     "name": "Deutscher Schulpreis",
     "foerdergeber": "Robert Bosch Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "5.000€ - 100.000€",
-    "kategorien": ["innovation", "bildung", "qualitaet", "schulentwicklung"],
+    "kategorien": [
+      "innovation",
+      "bildung",
+      "qualitaet",
+      "schulentwicklung"
+    ],
     "bewerbungsfristText": "jährlich (Januar)",
     "bewerbungsart": "online",
     "infoLink": "https://www.bosch-stiftung.de/de/foerdergebiet/bildung",
@@ -1545,12 +1662,21 @@
     "name": "Siemens Partnerschulprogramm",
     "foerdergeber": "Siemens Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["mint", "technik", "berufsorientierung", "innovation"],
+    "kategorien": [
+      "mint",
+      "technik",
+      "berufsorientierung",
+      "innovation"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.siemens-stiftung.org/medien/aktuelles/werkstatt-schulentwicklung-digital-stiftungen-suchen-schulen-fuer-gemeinsames-lernen-im-forum-bildung-digitalisierung/",
@@ -1566,12 +1692,21 @@
     "name": "Schulen im Team",
     "foerdergeber": "Stiftung Mercator",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["kooperation", "uebergang", "bildungsgerechtigkeit", "netzwerk"],
+    "kategorien": [
+      "kooperation",
+      "uebergang",
+      "bildungsgerechtigkeit",
+      "netzwerk"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftung-mercator.de/de/pressemitteilungen/schulen-im-team-geht-fuer-mehr-bildungsgerechtigkeit-in-eine-neue-runde/",
@@ -1587,12 +1722,21 @@
     "name": "Post und Schule",
     "foerdergeber": "Deutsche Post AG",
     "foerdergeberTyp": "sonstige",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 10000,
     "foerdersummeText": "500€ - 10.000€",
-    "kategorien": ["lesen", "sprache", "medienbildung", "kommunikation"],
+    "kategorien": [
+      "lesen",
+      "sprache",
+      "medienbildung",
+      "kommunikation"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.deutschepost.de/de/p/post-und-schule.html",
@@ -1608,12 +1752,21 @@
     "name": "Town & Country Stiftungspreis",
     "foerdergeber": "Town & Country Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "1.000€ - 10.000€",
-    "kategorien": ["soziales", "bildung", "integration", "jugend"],
+    "kategorien": [
+      "soziales",
+      "bildung",
+      "integration",
+      "jugend"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.town-country.de/stiftung/stiftungspreis",
@@ -1629,12 +1782,21 @@
     "name": "Hob-Preis für kreative Schulen",
     "foerdergeber": "Stiftung Kinderförderung Playmobil",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 250000,
     "foerdersummeText": "5.000€ - 250.000€ (Gesamtpool)",
-    "kategorien": ["innovation", "inklusion", "kreativitaet", "bildung"],
+    "kategorien": [
+      "innovation",
+      "inklusion",
+      "kreativitaet",
+      "bildung"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.foerdermittelbuero.de/aktuelles-2026/aktuelles-2025/",
@@ -1650,12 +1812,21 @@
     "name": "Startchancen-Programm L-Bank",
     "foerdergeber": "L-Bank (Baden-Württemberg)",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "10.000€ - 500.000€",
-    "kategorien": ["schulbau", "sanierung", "ausstattung", "bildungsgerechtigkeit"],
+    "kategorien": [
+      "schulbau",
+      "sanierung",
+      "ausstattung",
+      "bildungsgerechtigkeit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.l-bank.de/produkte/finanzhilfen/startchancen.html",
@@ -1671,12 +1842,22 @@
     "name": "Lernen mit Rückenwind",
     "foerdergeber": "Kultusministerium Baden-Württemberg",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["nachhilfe", "foerderung", "deutsch", "mathematik", "englisch"],
+    "kategorien": [
+      "nachhilfe",
+      "foerderung",
+      "deutsch",
+      "mathematik",
+      "englisch"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://km.baden-wuerttemberg.de/de/schule/programme-und-foerderprogramme",
@@ -1692,12 +1873,20 @@
     "name": "Startchancenprogramm GLS",
     "foerdergeber": "GLS Zukunftsstiftung Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["bildungsgerechtigkeit", "schulentwicklung", "begleitung"],
+    "kategorien": [
+      "bildungsgerechtigkeit",
+      "schulentwicklung",
+      "begleitung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://zukunftsstiftung-bildung.de/startchancenprogramm",
@@ -1713,12 +1902,21 @@
     "name": "SCHOTT Schule und Nachhaltigkeit",
     "foerdergeber": "SCHOTT AG",
     "foerdergeberTyp": "sonstige",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "5.000€ - 15.000€ (Gesamt: 170.000€)",
-    "kategorien": ["nachhaltigkeit", "klimaschutz", "umwelt", "sdg"],
+    "kategorien": [
+      "nachhaltigkeit",
+      "klimaschutz",
+      "umwelt",
+      "sdg"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.schott.com/de-de/news-and-media/pressemitteilungen",
@@ -1734,12 +1932,21 @@
     "name": "Inklusive Bildung",
     "foerdergeber": "Fritz Henkel Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "3.000€ - 25.000€",
-    "kategorien": ["inklusion", "barrierenabbau", "teilhabe", "bildung"],
+    "kategorien": [
+      "inklusion",
+      "barrierenabbau",
+      "teilhabe",
+      "bildung"
+    ],
     "bewerbungsfristText": "jährlich (Oktober)",
     "bewerbungsart": "online",
     "infoLink": "https://www.fritz-henkel-stiftung.de",
@@ -1755,12 +1962,21 @@
     "name": "Erziehung und Bildung",
     "foerdergeber": "Reinhold-Beitlich-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 20000,
     "foerdersummeText": "2.000€ - 20.000€",
-    "kategorien": ["erziehung", "bildung", "jugendarbeit", "soziales"],
+    "kategorien": [
+      "erziehung",
+      "bildung",
+      "jugendarbeit",
+      "soziales"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.reinhold-beitlich-stiftung.de",
@@ -1776,12 +1992,21 @@
     "name": "Ferry Porsche Challenge",
     "foerdergeber": "Porsche AG",
     "foerdergeberTyp": "sonstige",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 5000,
     "foerdersummeText": "1.000€ - 5.000€",
-    "kategorien": ["bildung", "freizeit", "benachteiligung", "jugend"],
+    "kategorien": [
+      "bildung",
+      "freizeit",
+      "benachteiligung",
+      "jugend"
+    ],
     "bewerbungsfristText": "laufend bis Dezember 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.ferryporschechallenge.de",
@@ -1797,12 +2022,22 @@
     "name": "Naturwissenschaften in der Schule",
     "foerdergeber": "Berdelle-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "3.000€ - 30.000€",
-    "kategorien": ["naturwissenschaft", "mint", "biologie", "chemie", "physik"],
+    "kategorien": [
+      "naturwissenschaft",
+      "mint",
+      "biologie",
+      "chemie",
+      "physik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.berdelle-stiftung.de/foerderung/schulen",
@@ -1818,12 +2053,21 @@
     "name": "Digitale Schule Sachsen - FIRST LEGO League",
     "foerdergeber": "Sächsische Aufbaubank",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SN"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SN"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 5000,
     "foerdersummeText": "Materialien + Robotik-Sets",
-    "kategorien": ["robotik", "mint", "digitalisierung", "technik"],
+    "kategorien": [
+      "robotik",
+      "mint",
+      "digitalisierung",
+      "technik"
+    ],
     "bewerbungsfristText": "bis 19.04.2026",
     "bewerbungsart": "online",
     "infoLink": "https://www.first-lego-league.org/de/foerdern",
@@ -1839,12 +2083,21 @@
     "name": "Makerspaces für Schulen",
     "foerdergeber": "Bildungspartner Deutschland",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "bis 10.000€",
-    "kategorien": ["makerspace", "technik", "digitalisierung", "gestaltung"],
+    "kategorien": [
+      "makerspace",
+      "technik",
+      "digitalisierung",
+      "gestaltung"
+    ],
     "bewerbungsfristText": "31.10.2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.bildungspartner.de/makerspaces",
@@ -1860,12 +2113,21 @@
     "name": "MINT-freundliche Schule Hessen",
     "foerdergeber": "Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["mint", "digitalisierung", "auszeichnung", "technik"],
+    "kategorien": [
+      "mint",
+      "digitalisierung",
+      "auszeichnung",
+      "technik"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/schule-aktuell",
@@ -1881,12 +2143,22 @@
     "name": "Nachhilfeprogramm Überholspur",
     "foerdergeber": "Sparkassenstiftung Lübeck",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "10.000€ - 30.000€ pro Schuljahr",
-    "kategorien": ["nachhilfe", "lernrueckstand", "foerderung", "mathematik", "deutsch"],
+    "kategorien": [
+      "nachhilfe",
+      "lernrueckstand",
+      "foerderung",
+      "mathematik",
+      "deutsch"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de",
@@ -1902,12 +2174,21 @@
     "name": "Schulische Auslandsstipendien",
     "foerdergeber": "Sparkassenstiftung Elbe-Elster",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BB"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BB"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 2000,
     "foerdersummeText": "500€ - 2.000€ pro Stipendium",
-    "kategorien": ["austausch", "international", "sprachen", "kultur"],
+    "kategorien": [
+      "austausch",
+      "international",
+      "sprachen",
+      "kultur"
+    ],
     "bewerbungsfristText": "31.05.2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.spk-elbe-elster.de/stiftung",
@@ -1923,12 +2204,21 @@
     "name": "Preise für exzellente Schüler",
     "foerdergeber": "Sparkassenstiftung Erfurt",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-TH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-TH"
+    ],
     "foerdersummeMin": 300,
     "foerdersummeMax": 300,
     "foerdersummeText": "300€ pro Preis",
-    "kategorien": ["begabung", "exzellenz", "foerderung", "bildung"],
+    "kategorien": [
+      "begabung",
+      "exzellenz",
+      "foerderung",
+      "bildung"
+    ],
     "bewerbungsfristText": "April 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.sparkasse-mittelthueringen.de/stiftung",
@@ -1944,12 +2234,21 @@
     "name": "Finanzielle Bildung - SchulService",
     "foerdergeber": "Deutsche Sparkassenstiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Kostenlose Materialien",
-    "kategorien": ["finanzbildung", "wirtschaft", "medienkompetenz", "bildung"],
+    "kategorien": [
+      "finanzbildung",
+      "wirtschaft",
+      "medienkompetenz",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.sparkassenstiftung.de/finanzielle-bildung",
@@ -1965,12 +2264,21 @@
     "name": "ESF-Praxis-Schule-Projekte",
     "foerdergeber": "ESF Hessen",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "10.000€ - 50.000€",
-    "kategorien": ["praxis", "berufsorientierung", "uebergang", "bildung"],
+    "kategorien": [
+      "praxis",
+      "berufsorientierung",
+      "uebergang",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.esf-hessen.de/projektaufrufe",
@@ -1986,12 +2294,21 @@
     "name": "Weiterbildungspakt Hessen",
     "foerdergeber": "Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["weiterbildung", "lehrerfortbildung", "qualitaet", "schulentwicklung"],
+    "kategorien": [
+      "weiterbildung",
+      "lehrerfortbildung",
+      "qualitaet",
+      "schulentwicklung"
+    ],
     "bewerbungsfristText": "laufend bis 2025",
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/weiterbildungspakt",
@@ -2007,12 +2324,21 @@
     "name": "DigitalTruck Hessen",
     "foerdergeber": "Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Kostenlose Workshops",
-    "kategorien": ["robotik", "ki", "digitalisierung", "technik"],
+    "kategorien": [
+      "robotik",
+      "ki",
+      "digitalisierung",
+      "technik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/digitaltruck",
@@ -2028,12 +2354,21 @@
     "name": "Ganztägige Bildung Hessen",
     "foerdergeber": "Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["ganztag", "betreuung", "foerderung", "soziales"],
+    "kategorien": [
+      "ganztag",
+      "betreuung",
+      "foerderung",
+      "soziales"
+    ],
     "bewerbungsfristText": "laufend bis 2026",
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/ganztag",
@@ -2049,12 +2384,21 @@
     "name": "Inklusion und sonderpädagogische Förderung",
     "foerdergeber": "Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HE"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["inklusion", "sonderpaedagogik", "barrierefreiheit", "teilhabe"],
+    "kategorien": [
+      "inklusion",
+      "sonderpaedagogik",
+      "barrierefreiheit",
+      "teilhabe"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/inklusion",
@@ -2070,12 +2414,21 @@
     "name": "Schulgartenprojekt",
     "foerdergeber": "BayWa Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 2000,
     "foerdersummeText": "Komplettes Garten-Set",
-    "kategorien": ["umwelt", "ernaehrung", "biologie", "gartengestaltung"],
+    "kategorien": [
+      "umwelt",
+      "ernaehrung",
+      "biologie",
+      "gartengestaltung"
+    ],
     "bewerbungsfristText": "jährlich (Januar)",
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/schulgarten",
@@ -2091,12 +2444,21 @@
     "name": "O'pflanzt is!",
     "foerdergeber": "BayWa Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Bäume und Pflanzen",
-    "kategorien": ["klimaschutz", "umwelt", "biologie", "nachhaltigkeit"],
+    "kategorien": [
+      "klimaschutz",
+      "umwelt",
+      "biologie",
+      "nachhaltigkeit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/opflanzt-is",
@@ -2112,12 +2474,22 @@
     "name": "Kultur & Schule Projektfonds",
     "foerdergeber": "Behörde für Kultur und Medien Hamburg",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HH"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "1.000€ - 15.000€ (bis 45.000€ für 3 Jahre)",
-    "kategorien": ["kultur", "kunst", "musik", "theater", "tanz"],
+    "kategorien": [
+      "kultur",
+      "kunst",
+      "musik",
+      "theater",
+      "tanz"
+    ],
     "bewerbungsfristText": "17.02. - 31.03.2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.hamburg.de/kultur-schule-foerderung",
@@ -2133,12 +2505,21 @@
     "name": "Kulturelle Bildung und Partizipation",
     "foerdergeber": "Ministerium für Bildung, Jugend und Sport Brandenburg",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BB"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BB"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 20000,
     "foerdersummeText": "2.000€ - 20.000€",
-    "kategorien": ["kultur", "bildung", "partizipation", "jugend"],
+    "kategorien": [
+      "kultur",
+      "bildung",
+      "partizipation",
+      "jugend"
+    ],
     "bewerbungsfristText": "bis 15.05.2025",
     "bewerbungsart": "online",
     "infoLink": "https://service.brandenburg.de/kulturelle-bildung",
@@ -2154,12 +2535,21 @@
     "name": "Startchancen-Programm Berlin",
     "foerdergeber": "Senatsverwaltung für Bildung, Jugend und Familie Berlin",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BE"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BE"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "10.000€ - 500.000€",
-    "kategorien": ["bildungsgerechtigkeit", "investition", "sanierung", "ausstattung"],
+    "kategorien": [
+      "bildungsgerechtigkeit",
+      "investition",
+      "sanierung",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "ab November 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.berlin.de/sen/bjf/startchancen",
@@ -2175,12 +2565,21 @@
     "name": "Schulbauoffensive Hamburg",
     "foerdergeber": "Behörde für Schule und Berufsbildung Hamburg",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HH"
+    ],
     "foerdersummeMin": 100000,
     "foerdersummeMax": 10000000,
     "foerdersummeText": "100.000€ - 10 Mio.€ (Gesamt: 4 Mrd. bis 2030)",
-    "kategorien": ["schulbau", "neubau", "sanierung", "ausstattung"],
+    "kategorien": [
+      "schulbau",
+      "neubau",
+      "sanierung",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.hamburg.de/schulbauoffensive",
@@ -2196,12 +2595,21 @@
     "name": "Investitionsprogramm Ganztagsausbau",
     "foerdergeber": "Bundesministerium für Familie",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "50.000€ - 500.000€ (3 Mrd. Gesamt)",
-    "kategorien": ["ganztag", "neubau", "umbau", "ausstattung"],
+    "kategorien": [
+      "ganztag",
+      "neubau",
+      "umbau",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "bis 2027",
     "bewerbungsart": "online",
     "infoLink": "https://www.ganztagsschulen.org/investitionsprogramm",
@@ -2217,12 +2625,21 @@
     "name": "Kulturelle Bildung in Schulen",
     "foerdergeber": "Alfred Toepfer Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "2.000€ - 15.000€",
-    "kategorien": ["kultur", "kunst", "bildung", "nachwuchs"],
+    "kategorien": [
+      "kultur",
+      "kunst",
+      "bildung",
+      "nachwuchs"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.toepfer-stiftung.de",
@@ -2238,12 +2655,21 @@
     "name": "Waldschulprojekt",
     "foerdergeber": "BayWa Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 5000,
     "foerdersummeText": "1.000€ - 5.000€",
-    "kategorien": ["wald", "natur", "umwelt", "biologie"],
+    "kategorien": [
+      "wald",
+      "natur",
+      "umwelt",
+      "biologie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/waldschule",
@@ -2259,12 +2685,21 @@
     "name": "Laufen für den Wald",
     "foerdergeber": "BayWa Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Sponsorenlauf",
-    "kategorien": ["sport", "wald", "klimaschutz", "gesundheit"],
+    "kategorien": [
+      "sport",
+      "wald",
+      "klimaschutz",
+      "gesundheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/laufen-fuer-den-wald",
@@ -2280,12 +2715,21 @@
     "name": "Bildungskommunen",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 200000,
     "foerdersummeText": "50.000€ - 200.000€",
-    "kategorien": ["kooperation", "ganztag", "kommune", "bildung"],
+    "kategorien": [
+      "kooperation",
+      "ganztag",
+      "kommune",
+      "bildung"
+    ],
     "bewerbungsfristText": "15.12.2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bildungskommunen",
@@ -2301,12 +2745,20 @@
     "name": "Wübben Stiftung für Bildung",
     "foerdergeber": "Wübben Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["bildung", "chancengleichheit", "foerderung"],
+    "kategorien": [
+      "bildung",
+      "chancengleichheit",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://wuebben-stiftung-bildung.org",
@@ -2322,12 +2774,21 @@
     "name": "RAG-Stiftung Schulprojekte",
     "foerdergeber": "RAG-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "3.000€ - 25.000€",
-    "kategorien": ["bildung", "region", "strukturwandel", "nachhaltigkeit"],
+    "kategorien": [
+      "bildung",
+      "region",
+      "strukturwandel",
+      "nachhaltigkeit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.rag-stiftung.de/foerderung/bildung/schulprojekte",
@@ -2343,12 +2804,20 @@
     "name": "ArbeiterKind.de Schulkooperation",
     "foerdergeber": "ArbeiterKind.de",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Beratung & Materialien",
-    "kategorien": ["studienberatung", "bildungsaufstieg", "chancengleichheit"],
+    "kategorien": [
+      "studienberatung",
+      "bildungsaufstieg",
+      "chancengleichheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.arbeiterkind.de/schulen",
@@ -2364,12 +2833,21 @@
     "name": "Förderpreis 'Verein(t) für gute Kita und Schule'",
     "foerdergeber": "Stiftung Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2500,
     "foerdersummeMax": 5000,
     "foerdersummeText": "2.500€ - 5.000€",
-    "kategorien": ["zukunft", "demokratie", "partizipation", "innovation"],
+    "kategorien": [
+      "zukunft",
+      "demokratie",
+      "partizipation",
+      "innovation"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderpreis",
@@ -2385,12 +2863,21 @@
     "name": "ENSA - Schulpartnerschaften weltweit",
     "foerdergeber": "BMZ",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "2.000€ - 10.000€",
-    "kategorien": ["austausch", "global", "entwicklung", "interkulturell"],
+    "kategorien": [
+      "austausch",
+      "global",
+      "entwicklung",
+      "interkulturell"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.ensa.de",
@@ -2406,12 +2893,21 @@
     "name": "BNE - Bildung für nachhaltige Entwicklung",
     "foerdergeber": "BMZ / BNE-Portal",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "1.000€ - 15.000€",
-    "kategorien": ["nachhaltigkeit", "sdg", "umwelt", "global"],
+    "kategorien": [
+      "nachhaltigkeit",
+      "sdg",
+      "umwelt",
+      "global"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.bne-portal.de/foerdermoeglichkeiten",
@@ -2427,12 +2923,21 @@
     "name": "Kompass Bildungsförderung",
     "foerdergeber": "Stifterverband / McKinsey",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Beratung & Matching",
-    "kategorien": ["matching", "beratung", "bildung", "ueberblick"],
+    "kategorien": [
+      "matching",
+      "beratung",
+      "bildung",
+      "ueberblick"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.stifterverband.org/kompass-bildungsfoerderung",
@@ -2448,12 +2953,21 @@
     "name": "KMK-Förderprogramme Übersicht",
     "foerdergeber": "Kultusministerkonferenz (KMK)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Information & Beratung",
-    "kategorien": ["information", "uebersicht", "laender", "bildung"],
+    "kategorien": [
+      "information",
+      "uebersicht",
+      "laender",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.kmk-pad.org/foerderprogramme",
@@ -2469,12 +2983,21 @@
     "name": "MINT-freundliche Schule",
     "foerdergeber": "MINT Zukunft schaffen e.V.",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Auszeichnung & Netzwerk",
-    "kategorien": ["mint", "auszeichnung", "netzwerk", "qualitaet"],
+    "kategorien": [
+      "mint",
+      "auszeichnung",
+      "netzwerk",
+      "qualitaet"
+    ],
     "bewerbungsfristText": "17.03. - 31.05.2025",
     "bewerbungsart": "online",
     "infoLink": "https://mintzukunftschaffen.de/mint-freundliche-schule",
@@ -2490,12 +3013,21 @@
     "name": "Digitale Schule",
     "foerdergeber": "MINT Zukunft schaffen e.V.",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Auszeichnung & Netzwerk",
-    "kategorien": ["digitalisierung", "auszeichnung", "innovation", "zukunft"],
+    "kategorien": [
+      "digitalisierung",
+      "auszeichnung",
+      "innovation",
+      "zukunft"
+    ],
     "bewerbungsfristText": "17.03. - 31.05.2025",
     "bewerbungsart": "online",
     "infoLink": "https://mintzukunftschaffen.de/digitale-schule",
@@ -2511,12 +3043,21 @@
     "name": "DigitalPakt Schule 2.0",
     "foerdergeber": "Bundesministerium für Bildung",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "10.000€ - 500.000€ (5 Mrd. Gesamt)",
-    "kategorien": ["digitalisierung", "infrastruktur", "hardware", "fortbildung"],
+    "kategorien": [
+      "digitalisierung",
+      "infrastruktur",
+      "hardware",
+      "fortbildung"
+    ],
     "bewerbungsfristText": "ab 2026",
     "bewerbungsart": "online",
     "infoLink": "https://www.digitalpaktschule.de",
@@ -2532,12 +3073,21 @@
     "name": "Berufsorientierungsprogramm (BOP)",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 20,
     "foerdersummeMax": 40,
     "foerdersummeText": "20€ - 40€ pro Schüler",
-    "kategorien": ["berufsorientierung", "praxis", "wirtschaft", "bildung"],
+    "kategorien": [
+      "berufsorientierung",
+      "praxis",
+      "wirtschaft",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.foerderdatenbank.de/bmbf-bop",
@@ -2553,12 +3103,20 @@
     "name": "Bildungschancen für alle",
     "foerdergeber": "Wübben Stiftung Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["bildungsgerechtigkeit", "chancengleichheit", "beratung"],
+    "kategorien": [
+      "bildungsgerechtigkeit",
+      "chancengleichheit",
+      "beratung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://wuebben-stiftung-bildung.org",
@@ -2574,12 +3132,21 @@
     "name": "Förderpreis youstartN",
     "foerdergeber": "Stiftung Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 12000,
     "foerdersummeText": "1.000€ - 12.000€",
-    "kategorien": ["schuelerfirma", "nachhaltigkeit", "innovation", "wirtschaft"],
+    "kategorien": [
+      "schuelerfirma",
+      "nachhaltigkeit",
+      "innovation",
+      "wirtschaft"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderpreis-youstartn",
@@ -2595,12 +3162,21 @@
     "name": "Internationale Bildungsprojekte",
     "foerdergeber": "Strahlemann Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["international", "bildung", "chancen", "entwicklung"],
+    "kategorien": [
+      "international",
+      "bildung",
+      "chancen",
+      "entwicklung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.strahlemann-stiftung.de",
@@ -2616,12 +3192,21 @@
     "name": "Bildung und Gesellschaft",
     "foerdergeber": "Bertelsmann Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["bildung", "gesellschaft", "studien", "reform"],
+    "kategorien": [
+      "bildung",
+      "gesellschaft",
+      "studien",
+      "reform"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.bertelsmann-stiftung.de",
@@ -2637,12 +3222,21 @@
     "name": "Schulbaukonferenz & Förderung",
     "foerdergeber": "Montag Stiftung Jugend und Gesellschaft",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["schulbau", "innovation", "lernraum", "architektur"],
+    "kategorien": [
+      "schulbau",
+      "innovation",
+      "lernraum",
+      "architektur"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.montag-stiftungen.de",
@@ -2658,12 +3252,21 @@
     "name": "Generation BD - Schule der Zukunft",
     "foerdergeber": "Vodafone Stiftung Deutschland",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["digitalisierung", "zukunft", "bildung", "strategie"],
+    "kategorien": [
+      "digitalisierung",
+      "zukunft",
+      "bildung",
+      "strategie"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.forumbd.de/generation-bd",
@@ -2679,12 +3282,21 @@
     "name": "Arbeitskreis Bildung - Jahrestagung",
     "foerdergeber": "Bundesverband Deutscher Stiftungen",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Vernetzung & Know-how",
-    "kategorien": ["vernetzung", "ki", "bildung", "stiftungen"],
+    "kategorien": [
+      "vernetzung",
+      "ki",
+      "bildung",
+      "stiftungen"
+    ],
     "bewerbungsfristText": "jährlich (März)",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungen.org/arbeitskreis-bildung",
@@ -2700,12 +3312,21 @@
     "name": "Netzwerk Stiftungen und Bildung",
     "foerdergeber": "Netzwerk Stiftungen und Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Vernetzung & Kooperation",
-    "kategorien": ["vernetzung", "kooperation", "bildung", "stiftungen"],
+    "kategorien": [
+      "vernetzung",
+      "kooperation",
+      "bildung",
+      "stiftungen"
+    ],
     "bewerbungsfristText": "Jahrestreffen (September)",
     "bewerbungsart": "online",
     "infoLink": "https://www.netzwerk-stiftungen-bildung.de",
@@ -2721,12 +3342,21 @@
     "name": "Konferenz Bildung Digitalisierung 2025",
     "foerdergeber": "Forum Bildung Digitalisierung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Teilnahme & Vernetzung",
-    "kategorien": ["digitalisierung", "oer", "strategie", "bildung"],
+    "kategorien": [
+      "digitalisierung",
+      "oer",
+      "strategie",
+      "bildung"
+    ],
     "bewerbungsfristText": "24.-25. September 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.forumbd.de/konfbd25",
@@ -2742,12 +3372,20 @@
     "name": "Startchancen-Programm Saarland",
     "foerdergeber": "Ministerium für Bildung und Kultur Saarland",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SL"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SL"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["bildungsgerechtigkeit", "chancen", "foerderung"],
+    "kategorien": [
+      "bildungsgerechtigkeit",
+      "chancen",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.saarland.de/bildung",
@@ -2763,12 +3401,20 @@
     "name": "Digitale Endgeräte Sachsen-Anhalt",
     "foerdergeber": "Kultusministerium Sachsen-Anhalt",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-ST"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-ST"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 1000,
     "foerdersummeText": "Laptops, Tablets",
-    "kategorien": ["digitalisierung", "hardware", "unterricht"],
+    "kategorien": [
+      "digitalisierung",
+      "hardware",
+      "unterricht"
+    ],
     "bewerbungsfristText": "ab 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.kultusministerium.sachsen-anhalt.de",
@@ -2784,12 +3430,21 @@
     "name": "PAD-Austauschprogramme",
     "foerdergeber": "Kultusministerium Rheinland-Pfalz",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-RP"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-RP"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "1.000€ - 10.000€",
-    "kategorien": ["austausch", "international", "partnerschaft", "kultur"],
+    "kategorien": [
+      "austausch",
+      "international",
+      "partnerschaft",
+      "kultur"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.km.rlp.de",
@@ -2805,12 +3460,21 @@
     "name": "Bildungs- und Teilhabepaket MV",
     "foerdergeber": "Ministerium für Soziales MV",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-MV"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-MV"
+    ],
     "foerdersummeMin": 130,
     "foerdersummeMax": 130,
     "foerdersummeText": "130€ Schulstart + 15€/Monat",
-    "kategorien": ["soziales", "teilhabe", "schulbedarf", "foerderung"],
+    "kategorien": [
+      "soziales",
+      "teilhabe",
+      "schulbedarf",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.regierung-mv.de/soziales/bildungspaket",
@@ -2826,12 +3490,21 @@
     "name": "Ganztagsausbau Schleswig-Holstein",
     "foerdergeber": "Ministerium für Schule und Berufsbildung SH",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["ganztag", "ausbau", "betreuung", "bildung"],
+    "kategorien": [
+      "ganztag",
+      "ausbau",
+      "betreuung",
+      "bildung"
+    ],
     "bewerbungsfristText": "bis 2027",
     "bewerbungsart": "online",
     "infoLink": "https://www.schleswig-holstein.de/schule",
@@ -2847,12 +3520,21 @@
     "name": "Bildungsförderung Bremen",
     "foerdergeber": "Senatorin für Bildung Bremen",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-HB"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-HB"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["bildung", "foerderung", "integration", "qualitaet"],
+    "kategorien": [
+      "bildung",
+      "foerderung",
+      "integration",
+      "qualitaet"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.bildung.bremen.de",
@@ -2868,12 +3550,21 @@
     "name": "MINT-Initiative Thüringen",
     "foerdergeber": "Thüringer Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-TH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-TH"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "3.000€ - 30.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://bildung.thueringen.de",
@@ -2889,12 +3580,21 @@
     "name": "Digitale Schule Niedersachsen",
     "foerdergeber": "Niedersächsisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NI"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NI"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["digitalisierung", "ipad", "ausstattung", "unterricht"],
+    "kategorien": [
+      "digitalisierung",
+      "ipad",
+      "ausstattung",
+      "unterricht"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.kultus.niedersachsen.de",
@@ -2910,12 +3610,21 @@
     "name": "Jugend forscht-Schulpreis",
     "foerdergeber": "Jugend forscht e.V.",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 1000,
     "foerdersummeText": "Auszeichnung & Material",
-    "kategorien": ["forschung", "mint", "wettbewerb", "auszeichnung"],
+    "kategorien": [
+      "forschung",
+      "mint",
+      "wettbewerb",
+      "auszeichnung"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht.de/netzwerk/informationen-fuer-schulen.html",
@@ -2931,12 +3640,21 @@
     "name": "Jugend forscht Sponsorpool",
     "foerdergeber": "Jugend forscht e.V.",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 100,
     "foerdersummeMax": 2500,
     "foerdersummeText": "Materialien & Geräte",
-    "kategorien": ["forschung", "mint", "material", "experiment"],
+    "kategorien": [
+      "forschung",
+      "mint",
+      "material",
+      "experiment"
+    ],
     "bewerbungsfristText": "nach Anmeldung",
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht.de/teilnahme/wichtige-infos/finanzielle-unterstuetzung.html",
@@ -2952,12 +3670,21 @@
     "name": "MINTSPACE-Schulpreis",
     "foerdergeber": "HOHENLOHER Spezial-Möbelwerk",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 2000,
     "foerdersummeText": "Experimentiertableaus",
-    "kategorien": ["mint", "experiment", "naturwissenschaft", "praxis"],
+    "kategorien": [
+      "mint",
+      "experiment",
+      "naturwissenschaft",
+      "praxis"
+    ],
     "bewerbungsfristText": "jährlich (Landeswettbewerbe)",
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht.de/netzwerk/informationen-fuer-schulen.html",
@@ -2973,12 +3700,21 @@
     "name": "Mikro makro mint",
     "foerdergeber": "Ferry-Porsche-Stiftung (Baden-Württemberg)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 2500,
     "foerdersummeText": "1.000€ - 2.500€",
-    "kategorien": ["forschung", "mint", "projekt", "experiment"],
+    "kategorien": [
+      "forschung",
+      "mint",
+      "projekt",
+      "experiment"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht-bw.de/teilnahme/",
@@ -2994,12 +3730,23 @@
     "name": "HOPP-Foundation-Schulpreis",
     "foerdergeber": "HOPP-Foundation",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW", "DE-HE", "DE-RP"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW",
+      "DE-HE",
+      "DE-RP"
+    ],
     "foerdersummeMin": 2500,
     "foerdersummeMax": 2500,
     "foerdersummeText": "2.500€ für Sachmittel",
-    "kategorien": ["technik", "sachmittel", "mint", "foerderung"],
+    "kategorien": [
+      "technik",
+      "sachmittel",
+      "mint",
+      "foerderung"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht-bw.de/teilnahme/",
@@ -3015,12 +3762,21 @@
     "name": "Bundeswettbewerb Mathematik",
     "foerdergeber": "Bundeswettbewerb Mathematik",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Preise & Stipendien",
-    "kategorien": ["mathematik", "wettbewerb", "begabung", "logik"],
+    "kategorien": [
+      "mathematik",
+      "wettbewerb",
+      "begabung",
+      "logik"
+    ],
     "bewerbungsfristText": "ab Dezember 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.mathe-wettbewerbe.de/bundeswettbewerb-mathematik",
@@ -3036,12 +3792,21 @@
     "name": "Mathematik-Olympiade",
     "foerdergeber": "Deutsche Mathematiker-Vereinigung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Preise & Urkunden",
-    "kategorien": ["mathematik", "olympiade", "wettbewerb", "begabung"],
+    "kategorien": [
+      "mathematik",
+      "olympiade",
+      "wettbewerb",
+      "begabung"
+    ],
     "bewerbungsfristText": "Aug/Sept 2025 (Runde 1)",
     "bewerbungsart": "online",
     "infoLink": "https://www.mathematikolympiade.de",
@@ -3057,12 +3822,21 @@
     "name": "Känguru der Mathematik",
     "foerdergeber": "Känguru-Schulwettbewerb",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Teilnahme & Urkunden",
-    "kategorien": ["mathematik", "wettbewerb", "logik", "raumvorstellung"],
+    "kategorien": [
+      "mathematik",
+      "wettbewerb",
+      "logik",
+      "raumvorstellung"
+    ],
     "bewerbungsfristText": "20. März 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.mathe-kaenguru.de",
@@ -3078,12 +3852,21 @@
     "name": "Mathematikwettbewerb NRW",
     "foerdergeber": "Schulministerium NRW",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NW"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Urkunden & Preise",
-    "kategorien": ["mathematik", "wettbewerb", "logik", "grundschule"],
+    "kategorien": [
+      "mathematik",
+      "wettbewerb",
+      "logik",
+      "grundschule"
+    ],
     "bewerbungsfristText": "3 Runden (ab sofort)",
     "bewerbungsart": "online",
     "infoLink": "https://www.schulministerium.nrw/mathematikwettbewerb",
@@ -3099,12 +3882,21 @@
     "name": "Tag der Mathematik",
     "foerdergeber": "Universitäten (Saarland, Kaiserslautern)",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Teilnahme & Preise",
-    "kategorien": ["mathematik", "event", "team", "wettbewerb"],
+    "kategorien": [
+      "mathematik",
+      "event",
+      "team",
+      "wettbewerb"
+    ],
     "bewerbungsfristText": "11. März 2025 (Anmeldeschluss)",
     "bewerbungsart": "online",
     "infoLink": "https://www.uni-saarland.de/tag-der-mathematik",
@@ -3120,12 +3912,21 @@
     "name": "Mathe im Advent",
     "foerdergeber": "Deutsche Mathematiker-Vereinigung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Preise & Urkunden",
-    "kategorien": ["mathematik", "advent", "wettbewerb", "raetsel"],
+    "kategorien": [
+      "mathematik",
+      "advent",
+      "wettbewerb",
+      "raetsel"
+    ],
     "bewerbungsfristText": "1. Dezember 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.mathematik.de/schuelerwettbewerbe",
@@ -3141,12 +3942,22 @@
     "name": "Ferry Porsche Challenge 2025",
     "foerdergeber": "Ferry-Porsche-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW", "DE-SN"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW",
+      "DE-SN"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 75000,
     "foerdersummeText": "10.000€ - 75.000€",
-    "kategorien": ["bildung", "chancen", "soziales", "mentoring"],
+    "kategorien": [
+      "bildung",
+      "chancen",
+      "soziales",
+      "mentoring"
+    ],
     "bewerbungsfristText": "jährlich (Jan-Apr)",
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-challenge.de",
@@ -3162,12 +3973,21 @@
     "name": "PerspektivKita Schleswig-Holstein",
     "foerdergeber": "MBWFK Schleswig-Holstein",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 20000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "20.000€ - 50.000€",
-    "kategorien": ["fruehfoerderung", "sprache", "mathematik", "kooperation"],
+    "kategorien": [
+      "fruehfoerderung",
+      "sprache",
+      "mathematik",
+      "kooperation"
+    ],
     "bewerbungsfristText": "ab Januar 2025",
     "bewerbungsart": "online",
     "infoLink": "https://www.schleswig-holstein.de/perspektivkita",
@@ -3183,12 +4003,21 @@
     "name": "Investitionsprogramm Ganztag SH",
     "foerdergeber": "MBWFK Schleswig-Holstein",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "50.000€ - 500.000€ (196 Mio. Gesamt)",
-    "kategorien": ["ganztag", "neubau", "sanierung", "ausstattung"],
+    "kategorien": [
+      "ganztag",
+      "neubau",
+      "sanierung",
+      "ausstattung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.ganztagsschulen.org/sh-foerderrichtlinie",
@@ -3204,12 +4033,21 @@
     "name": "Schule trifft Kultur – Kultur trifft Schule",
     "foerdergeber": "MBWFK Schleswig-Holstein",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "2.000€ - 15.000€",
-    "kategorien": ["kultur", "kunst", "ueberoertlich", "projekt"],
+    "kategorien": [
+      "kultur",
+      "kunst",
+      "ueberoertlich",
+      "projekt"
+    ],
     "bewerbungsfristText": "15. Februar 2025",
     "bewerbungsart": "online",
     "infoLink": "https://kulturellebildung-sh.de",
@@ -3225,12 +4063,20 @@
     "name": "PerspektivSchulen Schleswig-Holstein",
     "foerdergeber": "MBWFK Schleswig-Holstein",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€ (10 Jahre)",
-    "kategorien": ["bildungsgerechtigkeit", "zusatzfoerderung", "chancen"],
+    "kategorien": [
+      "bildungsgerechtigkeit",
+      "zusatzfoerderung",
+      "chancen"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.schleswig-holstein.de/perspektivschulen",
@@ -3246,12 +4092,22 @@
     "name": "Ganztagsförderung ab 2026 SH",
     "foerdergeber": "MBWFK Schleswig-Holstein",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SH"
+    ],
     "foerdersummeMin": 100,
     "foerdersummeMax": 300,
     "foerdersummeText": "bis 300€ pro Platz/Jahr",
-    "kategorien": ["ganztag", "kooperation", "verein", "sport", "kultur"],
+    "kategorien": [
+      "ganztag",
+      "kooperation",
+      "verein",
+      "sport",
+      "kultur"
+    ],
     "bewerbungsfristText": "ab 2026",
     "bewerbungsart": "online",
     "infoLink": "https://www.staedteverband-sh.de/gaft",
@@ -3267,12 +4123,21 @@
     "name": "MINT- und Digital-Schulen Thüringen",
     "foerdergeber": "Thüringer Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-TH"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-TH"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://bildung.thueringen.de/schule/medien/news",
@@ -3288,12 +4153,21 @@
     "name": "37 MINT- und Digital-Schulen Sachsen",
     "foerdergeber": "Sächsisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-SN"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-SN"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "5.000€ - 25.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.mintzukunftschaffen.de",
@@ -3309,12 +4183,21 @@
     "name": "134 MINT- und Digital-Schulen Bayern",
     "foerdergeber": "Bayerisches Kultusministerium",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BY"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BY"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.vbw-bayern.de/mint-talentfoerderung",
@@ -3330,12 +4213,21 @@
     "name": "236 MINT- und Digital-Schulen NRW",
     "foerdergeber": "Schulministerium NRW",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NW"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.mintzukunftschaffen.de",
@@ -3351,12 +4243,21 @@
     "name": "MINT- und Digital-Schulen Baden-Württemberg",
     "foerdergeber": "Kultusministerium BW",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["mint", "digital", "auszeichnung", "foerderung"],
+    "kategorien": [
+      "mint",
+      "digital",
+      "auszeichnung",
+      "foerderung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://km.baden-wuerttemberg.de/programme",
@@ -3372,12 +4273,21 @@
     "name": "Z-LAB MINT-Kurse",
     "foerdergeber": "Auerbach Stiftung / Ferry-Porsche-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 75000,
     "foerdersummeMax": 75000,
     "foerdersummeText": "75.000€ (1. Platz)",
-    "kategorien": ["mint", "praxis", "kurse", "technik"],
+    "kategorien": [
+      "mint",
+      "praxis",
+      "kurse",
+      "technik"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-stiftung.de/news",
@@ -3393,12 +4303,21 @@
     "name": "Sprungbrett Bildung",
     "foerdergeber": "Ferry-Porsche-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 75000,
     "foerdersummeMax": 75000,
     "foerdersummeText": "75.000€ (1. Platz)",
-    "kategorien": ["mentoring", "bildung", "soziales", "jugend"],
+    "kategorien": [
+      "mentoring",
+      "bildung",
+      "soziales",
+      "jugend"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-stiftung.de/news",
@@ -3414,12 +4333,21 @@
     "name": "HECTA Kinderakademien",
     "foerdergeber": "HECTOR Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BW"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BW"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "10.000€ - 50.000€",
-    "kategorien": ["begabung", "hochbegabung", "forschung", "mint"],
+    "kategorien": [
+      "begabung",
+      "hochbegabung",
+      "forschung",
+      "mint"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.hector-stiftung.de/kinderakademien",
@@ -3435,12 +4363,21 @@
     "name": "TRIO.NEXT Schulen",
     "foerdergeber": "TRIO.NEXT / Wirtschaft",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["wirtschaft", "berufsorientierung", "mint", "praxis"],
+    "kategorien": [
+      "wirtschaft",
+      "berufsorientierung",
+      "mint",
+      "praxis"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.trionext.de",
@@ -3456,12 +4393,21 @@
     "name": "Respect Magarete",
     "foerdergeber": "Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "5.000€ - 25.000€",
-    "kategorien": ["respekt", "zusammenleben", "demokratie", "bildung"],
+    "kategorien": [
+      "respekt",
+      "zusammenleben",
+      "demokratie",
+      "bildung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/respect-magarete",
@@ -3477,12 +4423,21 @@
     "name": "Kultur macht stark",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": ["kultur", "bildung", "chancengleichheit", "teilhabe"],
+    "kategorien": [
+      "kultur",
+      "bildung",
+      "chancengleichheit",
+      "teilhabe"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.kultur-macht-stark.de",
@@ -3498,12 +4453,21 @@
     "name": "Lesen macht stark",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "5.000€ - 25.000€",
-    "kategorien": ["lesen", "sprache", "bildung", "chancengleichheit"],
+    "kategorien": [
+      "lesen",
+      "sprache",
+      "bildung",
+      "chancengleichheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.lesen-macht-stark.de",
@@ -3519,12 +4483,21 @@
     "name": "Sprache macht stark",
     "foerdergeber": "BMBF",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "5.000€ - 25.000€",
-    "kategorien": ["sprache", "integration", "bildung", "chancengleichheit"],
+    "kategorien": [
+      "sprache",
+      "integration",
+      "bildung",
+      "chancengleichheit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.sprache-macht-stark.de",
@@ -3540,12 +4513,21 @@
     "name": "Technik Scouts",
     "foerdergeber": "Deutsche Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 5000,
     "foerdersummeText": "Bis zu 5.000€",
-    "kategorien": ["mint", "technik", "digitalisierung", "peer-learning"],
+    "kategorien": [
+      "mint",
+      "technik",
+      "digitalisierung",
+      "peer-learning"
+    ],
     "bewerbungsfristText": "16. Januar 2026",
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de",
@@ -3561,12 +4543,21 @@
     "name": "MINT-Berufsorientierung",
     "foerdergeber": "Deutsche Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 6000,
     "foerdersummeText": "Bis zu 6.000€ pro Schule",
-    "kategorien": ["mint", "berufsorientierung", "praxis", "kooperation"],
+    "kategorien": [
+      "mint",
+      "berufsorientierung",
+      "praxis",
+      "kooperation"
+    ],
     "bewerbungsfristText": "laufend (Pilotphase)",
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de",
@@ -3582,12 +4573,21 @@
     "name": "Junior-Ingenieur-Akademie (JIA)",
     "foerdergeber": "Deutsche Telekom Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "Bis zu 10.000€ für Aufbau",
-    "kategorien": ["mint", "ingenieur", "technik", "berufsorientierung"],
+    "kategorien": [
+      "mint",
+      "ingenieur",
+      "technik",
+      "berufsorientierung"
+    ],
     "bewerbungsfristText": "Jährlich (Frist prüfen)",
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de",
@@ -3603,12 +4603,21 @@
     "name": "Medienportal OER",
     "foerdergeber": "Siemens Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Kostenlose Materialien",
-    "kategorien": ["mint", "digitalisierung", "oer", "unterrichtsmaterialien"],
+    "kategorien": [
+      "mint",
+      "digitalisierung",
+      "oer",
+      "unterrichtsmaterialien"
+    ],
     "bewerbungsfristText": "Keine Anmeldung nötig",
     "bewerbungsart": "keine",
     "infoLink": "https://www.siemens-stiftung.org",
@@ -3624,12 +4633,22 @@
     "name": "MINT-Hub & Maker Education",
     "foerdergeber": "Siemens Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 8000,
     "foerdersummeText": "Materialien & Fortbildungen",
-    "kategorien": ["mint", "robotik", "vr", "ki", "programmierung"],
+    "kategorien": [
+      "mint",
+      "robotik",
+      "vr",
+      "ki",
+      "programmierung"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.siemens-stiftung.org",
@@ -3645,12 +4664,21 @@
     "name": "MINT-Netz Bayern",
     "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BY"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BY"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "Bis zu 50.000€",
-    "kategorien": ["mint", "netzwerk", "regional", "schuelerlabor"],
+    "kategorien": [
+      "mint",
+      "netzwerk",
+      "regional",
+      "schuelerlabor"
+    ],
     "bewerbungsfristText": "nach Ausschreibung",
     "bewerbungsart": "online",
     "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint",
@@ -3666,12 +4694,21 @@
     "name": "MINT-freundliche Schulen Bayern",
     "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BY"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BY"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 10000,
     "foerdersummeText": "Bis zu 10.000€",
-    "kategorien": ["mint", "auszeichnung", "wettbewerbe", "projekte"],
+    "kategorien": [
+      "mint",
+      "auszeichnung",
+      "wettbewerbe",
+      "projekte"
+    ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint",
@@ -3687,12 +4724,21 @@
     "name": "MINT21 Initiative",
     "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
     "foerdergeberTyp": "land",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-BY"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BY"
+    ],
     "foerdersummeMin": 3000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "3.000€ - 15.000€",
-    "kategorien": ["mint", "realschule", "profil", "wirtschaft"],
+    "kategorien": [
+      "mint",
+      "realschule",
+      "profil",
+      "wirtschaft"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint",
@@ -3708,12 +4754,21 @@
     "name": "Startchancen-Programm",
     "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 500000,
     "foerdersummeText": "Bis zu 500.000€ über 10 Jahre",
-    "kategorien": ["bildung", "chancengleichheit", "infrastruktur", "personal"],
+    "kategorien": [
+      "bildung",
+      "chancengleichheit",
+      "infrastruktur",
+      "personal"
+    ],
     "bewerbungsfristText": "Keine Bewerbung nötig - Auswahl über Sozialindex",
     "bewerbungsart": "passiv",
     "infoLink": "https://www.startchancen-programm.de",
@@ -3729,12 +4784,20 @@
     "name": "Förderfonds der Stiftung Bildung",
     "foerdergeber": "Stiftung Bildung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 5000,
     "foerdersummeText": "Bis zu 5.000€",
-    "kategorien": ["bildung", "nachhaltigkeit", "partizipation"],
+    "kategorien": [
+      "bildung",
+      "nachhaltigkeit",
+      "partizipation"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderfonds",
@@ -3750,12 +4813,21 @@
     "name": "Stiftung Kinder forschen",
     "foerdergeber": "Stiftung Kinder forschen",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 10000,
     "foerdersummeText": "Materialien & Fortbildungen",
-    "kategorien": ["mint", "naturwissenschaften", "technik", "nachhaltigkeit"],
+    "kategorien": [
+      "mint",
+      "naturwissenschaften",
+      "technik",
+      "nachhaltigkeit"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftung-kinder-forschen.de",
@@ -3771,12 +4843,22 @@
     "name": "100-Prozent-Schulen",
     "foerdergeber": "Robert Bosch Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 50000,
     "foerdersummeMax": 200000,
     "foerdersummeText": "50.000€ - 200.000€ pro Cluster",
-    "kategorien": ["bildung", "basiskompetenzen", "lesen", "rechnen", "schreiben"],
+    "kategorien": [
+      "bildung",
+      "basiskompetenzen",
+      "lesen",
+      "rechnen",
+      "schreiben"
+    ],
     "bewerbungsfristText": "nach Ausschreibung",
     "bewerbungsart": "online",
     "infoLink": "https://www.bosch-stiftung.de/de/projekt/100-prozent-schulen",
@@ -3792,12 +4874,21 @@
     "name": "Erasmus+ Schulbildung",
     "foerdergeber": "Europäische Union",
     "foerdergeberTyp": "eu",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "Bis zu 50.000€ pro Projekt",
-    "kategorien": ["international", "austausch", "digitalisierung", "inklusion"],
+    "kategorien": [
+      "international",
+      "austausch",
+      "digitalisierung",
+      "inklusion"
+    ],
     "bewerbungsfristText": "Jährlich (Fristen bei Nationaler Agentur prüfen)",
     "bewerbungsart": "online",
     "infoLink": "https://erasmusplus.schule",
@@ -3813,12 +4904,22 @@
     "name": "RAG-Stiftung Schulprojekte",
     "foerdergeber": "RAG-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["DE-NW", "DE-SL"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-NW",
+      "DE-SL"
+    ],
     "foerdersummeMin": 2000,
     "foerdersummeMax": 15000,
     "foerdersummeText": "2.000€ - 15.000€",
-    "kategorien": ["bildung", "chancengleichheit", "mentoring", "praevention"],
+    "kategorien": [
+      "bildung",
+      "chancengleichheit",
+      "mentoring",
+      "praevention"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.rag-stiftung.de/foerderung/bildung/schulprojekte",
@@ -3834,12 +4935,22 @@
     "name": "Klaus Tschira Stiftung MINT-Förderung",
     "foerdergeber": "Klaus Tschira Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 1000,
     "foerdersummeMax": 25000,
     "foerdersummeText": "Bis zu 25.000€",
-    "kategorien": ["mint", "mathematik", "informatik", "naturwissenschaften", "technik"],
+    "kategorien": [
+      "mint",
+      "mathematik",
+      "informatik",
+      "naturwissenschaften",
+      "technik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.klaus-tschira-stiftung.de",
@@ -3855,12 +4966,22 @@
     "name": "RÜTGERS Stiftung MINT-Projekte",
     "foerdergeber": "RÜTGERS Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 10000,
     "foerdersummeText": "500€ - 10.000€",
-    "kategorien": ["mint", "chemie", "physik", "biologie", "technik"],
+    "kategorien": [
+      "mint",
+      "chemie",
+      "physik",
+      "biologie",
+      "technik"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://foerdermittel-wissenswert.de/foerdermittel-fuer-schulen",
@@ -3876,12 +4997,21 @@
     "name": "denkmal aktiv",
     "foerdergeber": "Deutsche Stiftung Denkmalschutz",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 500,
     "foerdersummeMax": 3000,
     "foerdersummeText": "500€ - 3.000€",
-    "kategorien": ["kultur", "geschichte", "denkmalschutz", "projekte"],
+    "kategorien": [
+      "kultur",
+      "geschichte",
+      "denkmalschutz",
+      "projekte"
+    ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.denkmalschutz.de/denkmal-aktiv",
@@ -3897,12 +5027,21 @@
     "name": "Forum Bildung Digitalisierung",
     "foerdergeber": "Bertelsmann Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 5000,
     "foerdersummeMax": 50000,
     "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": ["digitalisierung", "bildung", "schulentwicklung", "beratung"],
+    "kategorien": [
+      "digitalisierung",
+      "bildung",
+      "schulentwicklung",
+      "beratung"
+    ],
     "bewerbungsfristText": "nach Ausschreibung",
     "bewerbungsart": "online",
     "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/in-vielfalt-besser-lernen/projektthemen/digitalisierung",
@@ -3918,12 +5057,22 @@
     "name": "IBM SkillsBuild",
     "foerdergeber": "IBM Deutschland",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Kostenlose Kurse & Zertifikate",
-    "kategorien": ["digitalisierung", "ki", "cybersicherheit", "cloud", "weiterbildung"],
+    "kategorien": [
+      "digitalisierung",
+      "ki",
+      "cybersicherheit",
+      "cloud",
+      "weiterbildung"
+    ],
     "bewerbungsfristText": "Jederzeit verfügbar",
     "bewerbungsart": "online",
     "infoLink": "https://skillsbuild.org",
@@ -3939,12 +5088,21 @@
     "name": "SchulLabor",
     "foerdergeber": "Robert Bosch Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": ["bildung", "innovation", "unterrichtsentwicklung", "inklusion"],
+    "kategorien": [
+      "bildung",
+      "innovation",
+      "unterrichtsentwicklung",
+      "inklusion"
+    ],
     "bewerbungsfristText": "Jährlich",
     "bewerbungsart": "online",
     "infoLink": "https://www.bosch-stiftung.de/de/foerdergebiet/bildung",
@@ -3960,12 +5118,21 @@
     "name": "Deutscher Schulpreis",
     "foerdergeber": "Robert Bosch Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 100000,
     "foerdersummeText": "Bis zu 100.000€ Preisgeld",
-    "kategorien": ["bildung", "auszeichnung", "unterrichtsqualitaet", "lernbegeisterung"],
+    "kategorien": [
+      "bildung",
+      "auszeichnung",
+      "unterrichtsqualitaet",
+      "lernbegeisterung"
+    ],
     "bewerbungsfristText": "Jährlich (Bewerbung 2025 läuft)",
     "bewerbungsart": "online",
     "infoLink": "https://www.deutscher-schulpreis.de",
@@ -3981,12 +5148,21 @@
     "name": "MINT-Regionen",
     "foerdergeber": "Körber-Stiftung",
     "foerdergeberTyp": "stiftung",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 10000,
     "foerdersummeMax": 30000,
     "foerdersummeText": "Bis zu 30.000€ pro Region",
-    "kategorien": ["mint", "regional", "netzwerk", "bildungskette"],
+    "kategorien": [
+      "mint",
+      "regional",
+      "netzwerk",
+      "bildungskette"
+    ],
     "bewerbungsfristText": "nach Ausschreibung",
     "bewerbungsart": "online",
     "infoLink": "https://koerber-stiftung.de/projekte/bereich-bildung",
@@ -4002,12 +5178,21 @@
     "name": "Netzwerk Schülerlabore",
     "foerdergeber": "Helmholtz-Gemeinschaft",
     "foerdergeberTyp": "bund",
-    "schulformen": ["grundschule"],
-    "bundeslaender": ["alle"],
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
     "foerdersummeMin": 0,
     "foerdersummeMax": 0,
     "foerdersummeText": "Kostenlose Labore & Materialien",
-    "kategorien": ["mint", "forschung", "experimente", "unterrichtsmaterialien"],
+    "kategorien": [
+      "mint",
+      "forschung",
+      "experimente",
+      "unterrichtsmaterialien"
+    ],
     "bewerbungsfristText": "Laufend",
     "bewerbungsart": "online",
     "infoLink": "https://www.helmholtz.de/transfer/schuelerlabore",

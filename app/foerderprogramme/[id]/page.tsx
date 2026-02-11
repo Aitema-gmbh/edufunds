@@ -30,6 +30,7 @@ import foerderprogrammeData from '@/data/foerderprogramme.json';
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 import { useEffect, useState } from "react";
 import { KIAntragAssistent } from "@/components/KIAntragAssistent";
+import { useAuth } from "@/hooks/useAuth";
 import {
   Dialog,
   DialogContent,
@@ -223,11 +224,23 @@ export default function FoerderprogrammDetailPage() {
               <div className="flex flex-wrap gap-4">
                 {programm.kiAntragGeeignet && (
                   <button
-                    onClick={() => setShowKIAssistent(true)}
+                    onClick={() => {
+                      // Prüfe auf aktives Abonnement
+                      const hasSubscription = localStorage.getItem('edufunds_subscription') === 'active';
+                      const hasEinzelantrag = localStorage.getItem('edufunds_einzelantrag') === 'valid';
+                      
+                      if (!hasSubscription && !hasEinzelantrag) {
+                        // Zeige Paywall statt KI-Assistent
+                        window.location.href = '/preise?reason=ki_feature';
+                        return;
+                      }
+                      setShowKIAssistent(true);
+                    }}
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white text-base font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg shadow-orange-500/25"
                   >
                     <Wand2 className="h-5 w-5" />
                     KI-Antrag generieren
+                    <span className="ml-2 text-xs bg-white/20 px-2 py-0.5 rounded">Pro</span>
                   </button>
                 )}
                 {programm.antragsLink && (
