@@ -203,7 +203,7 @@ export default function CheckoutEinzelPage() {
               <div className="mt-8 text-center">
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#c9a227] text-slate-900 font-semibold hover:bg-[#b8941f] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary"
                 >
                   Zurück zur Startseite
                 </Link>
@@ -550,7 +550,7 @@ export default function CheckoutEinzelPage() {
                     <button
                       onClick={handlePayment}
                       disabled={isProcessing || !customerData.name || !customerData.email || !customerData.school}
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#c9a227] text-slate-900 font-semibold hover:bg-[#b8941f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isProcessing ? (
                         <>
@@ -566,7 +566,7 @@ export default function CheckoutEinzelPage() {
                     </button>
                     <Link
                       href="/kontakt"
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#1e3a61] text-[#94a3b8] hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#c9a227]/50 text-[#94a3b8] hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
                     >
                       Fragen? Kontaktieren Sie uns
                     </Link>

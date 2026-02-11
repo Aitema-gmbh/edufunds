@@ -318,7 +318,7 @@ export default function FoerderprogrammePage() {
                 </p>
                 <button
                   onClick={resetFilter}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-sm font-medium"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-sm"
                 >
                   <X className="h-4 w-4" />
                   Filter zurücksetzen

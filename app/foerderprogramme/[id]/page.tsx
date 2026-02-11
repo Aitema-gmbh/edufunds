@@ -30,7 +30,6 @@ import foerderprogrammeData from '@/data/foerderprogramme.json';
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 import { useEffect, useState } from "react";
 import { KIAntragAssistent } from "@/components/KIAntragAssistent";
-import { useAuth } from "@/hooks/useAuth";
 import {
   Dialog,
   DialogContent,
@@ -236,7 +235,7 @@ export default function FoerderprogrammDetailPage() {
                       }
                       setShowKIAssistent(true);
                     }}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white text-base font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg shadow-orange-500/25"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base"
                   >
                     <Wand2 className="h-5 w-5" />
                     KI-Antrag generieren
@@ -248,7 +247,7 @@ export default function FoerderprogrammDetailPage() {
                     href={programm.antragsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base font-semibold"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base"
                   >
                     <FileText className="h-5 w-5" />
                     Antrag starten
@@ -259,7 +258,7 @@ export default function FoerderprogrammDetailPage() {
                     href={programm.infoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base font-medium"
+                    className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base"
                   >
                     <ExternalLink className="h-5 w-5" />
                     Offizielle Seite
@@ -267,7 +266,7 @@ export default function FoerderprogrammDetailPage() {
                 )}
                 <button
                   onClick={() => shareProgram(programm)}
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base font-medium"
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base"
                 >
                   <Share2 className="h-5 w-5" />
                   Teilen

@@ -114,7 +114,7 @@ export function Header() {
             </Link>
             <Link
               href="/foerderprogramme"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-primary text-sm font-semibold"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-primary btn-primary-sm"
             >
               <Sparkles className="w-4 h-4" />
               Programme entdecken
@@ -191,14 +191,14 @@ export function Header() {
                 <Link
                   href="/kontakt"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center p-4 rounded-xl border border-slate-600 text-slate-300 hover:border-orange-500 hover:text-orange-400 transition-colors"
+                  className="block w-full text-center px-6 py-3 rounded-xl border-2 border-[#c9a227]/50 text-[#c9a227] font-semibold hover:bg-[#c9a227] hover:text-[#050d18] transition-all"
                 >
                   Kontakt
                 </Link>
                 <Link
                   href="/foerderprogramme"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center p-4 rounded-xl btn-primary"
+                  className="block w-full text-center px-6 py-3 rounded-xl btn-primary"
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Sparkles className="w-4 h-4" />

@@ -136,19 +136,13 @@ export function HeroSection() {
               <Search className="w-5 h-5" />
               <span className="font-semibold">Förderfinder öffnen</span>
               <ArrowRight 
-                className="w-5 h-5 transition-transform duration-300" 
-                style={{ transform: 'translateX(0)' }}
+                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
               />
-              <style jsx>{`
-                a:hover svg:last-child {
-                  transform: translateX(4px);
-                }
-              `}</style>
             </Link>
 
             <Link
               href="/foerderprogramme"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg transition-all duration-300 hover:bg-[#0a1628]/5"
               style={{ 
                 border: '2px solid #0a1628',
                 color: '#0a1628',

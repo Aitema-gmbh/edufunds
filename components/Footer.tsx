@@ -79,7 +79,7 @@ export function Footer() {
                 <div className="text-3xl md:text-4xl font-bold text-gradient group-hover:scale-105 transition-transform">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
+                <div className="text-sm text-[#94a3b8] mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -87,7 +87,7 @@ export function Footer() {
       </div>
 
       <div className="container mx-auto px-4 pt-16 pb-8 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,24 +102,24 @@ export function Footer() {
                   <span className="text-xl font-bold text-white">€</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-xl text-slate-100">EduFunds</span>
-                  <span className="text-xs text-slate-400 -mt-1">Schulförderung</span>
+                  <span className="font-bold text-xl text-[#f8f5f0]">EduFunds</span>
+                  <span className="text-xs text-[#94a3b8] -mt-1">Schulförderung</span>
                 </div>
               </div>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[#94a3b8] text-sm leading-relaxed mb-6 max-w-xs">
               Die intelligente Plattform für Schulförderung. Finden Sie passende Programme und erstellen Sie erfolgreiche Anträge mit KI-Unterstützung.
             </p>
             <div className="space-y-3 mb-6">
-              <a href="mailto:office@aitema.de" className="flex items-center gap-3 text-sm text-slate-400 hover:text-orange-400 transition-colors group">
-                <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
-                  <Mail className="h-4 w-4" />
+              <a href="mailto:office@aitema.de" className="flex items-center gap-3 text-sm text-[#94a3b8] hover:text-[#c9a227] transition-colors group">
+                <div className="w-8 h-8 rounded-lg bg-[#0f1f38] flex items-center justify-center group-hover:bg-[#c9a227]/20 transition-colors">
+                  <Mail className="h-4 w-4 text-[#c9a227]" />
                 </div>
                 office@aitema.de
               </a>
-              <div className="flex items-center gap-3 text-sm text-slate-400">
-                <div className="w-8 h-8 rounded-lg bg-slate-800/50 flex items-center justify-center">
-                  <MapPin className="h-4 w-4" />
+              <div className="flex items-center gap-3 text-sm text-[#94a3b8]">
+                <div className="w-8 h-8 rounded-lg bg-[#0f1f38] flex items-center justify-center">
+                  <MapPin className="h-4 w-4 text-[#c9a227]" />
                 </div>
                 Berlin, Deutschland
               </div>
@@ -130,49 +130,53 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="w-10 h-10 rounded-xl glass hover:bg-orange-500/20 hover:border-orange-500/30 border border-slate-700/50 flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 rounded-xl glass hover:bg-[#c9a227]/20 hover:border-[#c9a227]/30 border border-[#1e3a5f]/50 flex items-center justify-center transition-all duration-300"
               >
-                <span className="text-slate-400 hover:text-orange-400 text-xs font-bold uppercase">T</span>
+                <span className="text-[#94a3b8] hover:text-[#c9a227] text-xs font-bold uppercase">T</span>
               </a>
               <a
                 href="https://linkedin.com/company/aitema"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-10 h-10 rounded-xl glass hover:bg-orange-500/20 hover:border-orange-500/30 border border-slate-700/50 flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 rounded-xl glass hover:bg-[#c9a227]/20 hover:border-[#c9a227]/30 border border-[#1e3a5f]/50 flex items-center justify-center transition-all duration-300"
               >
-                <span className="text-slate-400 hover:text-orange-400 text-xs font-bold uppercase">L</span>
+                <span className="text-[#94a3b8] hover:text-[#c9a227] text-xs font-bold uppercase">L</span>
               </a>
             </div>
           </motion.div>
 
-          {/* Link Columns */}
-          {Object.values(footerLinks).map((section, sectionIndex) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 + sectionIndex * 0.1 }}
-            >
-              <h3 className="font-semibold text-slate-200 mb-4 flex items-center gap-2">
-                {section.title}
-              </h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-1 group"
-                    >
-                      <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          {/* Link Columns - Mobile: 3 Spalten nebeneinander */}
+          <div className="col-span-1 sm:col-span-1 md:col-span-3">
+            <div className="grid grid-cols-3 gap-4">
+              {Object.values(footerLinks).map((section, sectionIndex) => (
+                <motion.div
+                  key={section.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 + sectionIndex * 0.1 }}
+                >
+                  <h3 className="font-semibold text-[#f8f5f0] mb-4 flex items-center gap-2 text-sm md:text-base">
+                    {section.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {section.links.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-sm text-[#94a3b8] hover:text-[#c9a227] transition-colors flex items-center gap-1 group"
+                        >
+                          <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Newsletter */}
@@ -196,28 +200,28 @@ export function Footer() {
               <span className="text-sm font-medium text-orange-400">Bleiben Sie informiert</span>
             </motion.div>
             <h3 className="text-2xl font-bold text-slate-100 mb-3">Newsletter abonnieren</h3>
-            <p className="text-slate-400 mb-6">Erhalten Sie wöchentlich Updates zu neuen Förderprogrammen, Tipps für erfolgreiche Anträge und exklusive Einblicke.</p>
+            <p className="text-[#94a3b8] mb-6">Erhalten Sie wöchentlich Updates zu neuen Förderprogrammen, Tipps für erfolgreiche Anträge und exklusive Einblicke.</p>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
               <div className="relative flex-1">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-500" />
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[#94a3b8]" />
                 <input
                   type="email"
                   placeholder="ihre@email.de"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                  className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-[#0f1f38] border border-[#1e3a5f] text-[#f8f5f0] placeholder:text-[#94a3b8] focus:outline-none focus:border-[#c9a227] focus:ring-2 focus:ring-[#c9a227]/20 transition-all"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="px-8 py-3.5 rounded-xl btn-primary flex items-center justify-center gap-2 hover:scale-105 transition-transform"
+                className="px-8 py-3.5 rounded-xl btn-primary flex items-center justify-center gap-2"
               >
                 <Send className="h-4 w-4" />
                 {subscribed ? "Abonniert!" : "Abonnieren"}
               </button>
             </form>
-            <p className="text-xs text-slate-500 mt-4">Kein Spam, jederzeit abmeldbar. Wir respektieren Ihre Privatsphäre.</p>
+            <p className="text-xs text-[#94a3b8] mt-4">Kein Spam, jederzeit abmeldbar. Wir respektieren Ihre Privatsphäre.</p>
           </div>
         </motion.div>
 

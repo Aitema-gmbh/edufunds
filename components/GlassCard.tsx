@@ -166,7 +166,7 @@ export function GlassCard({ programm }: GlassCardProps) {
         <div className="flex flex-col gap-3 md:items-end">
           <Link
             href={`/foerderprogramme/${programm.id}`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-medium whitespace-nowrap hover:from-orange-600 hover:to-orange-700 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-sm whitespace-nowrap"
           >
             Details ansehen
             <ArrowRight className="h-4 w-4" />
@@ -174,7 +174,7 @@ export function GlassCard({ programm }: GlassCardProps) {
           {programm.antragsLink && (
             <Link
               href={`/antrag/${programm.id}`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-orange-500/30 text-orange-400 text-sm font-medium whitespace-nowrap hover:bg-orange-500/10 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-outline text-sm whitespace-nowrap"
             >
               Antrag starten
             </Link>

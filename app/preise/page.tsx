@@ -444,14 +444,14 @@ export default function PricingPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/registrieren"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-gold text-lg font-semibold"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary btn-primary-lg"
                 >
                   <Sparkles className="w-5 h-5" />
                   Kostenlos starten
                 </Link>
                 <Link
                   href="/foerderprogramme"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-[#c9a227]/50 text-[#c9a227] font-semibold hover:bg-[#c9a227] hover:text-[#050d18] transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-outline btn-primary-lg"
                 >
                   Programme erkunden
                 </Link>
