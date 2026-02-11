@@ -126,7 +126,7 @@ const faqs = [
       "Für das Jahresabo und das Schulträger-Abo beträgt die Mindestlaufzeit 12 Monate. Die Kündigung ist mit einer Frist von 30 Tagen zum Ende der Laufzeit möglich. Der Einzelantrag ist einmalig und unbefristet gültig.",
   },
   {
-    question: "Ist meine Daten sicher?",
+    question: "Sind meine Daten sicher?",
     answer:
       "Ja, Datenschutz hat für uns höchste Priorität. Alle Daten werden ausschließlich in deutschen Rechenzentren gespeichert, sind DSGVO-konform und verschlüsselt. Wir geben keine Daten an Dritte weiter und verwenden Ihre Informationen nur für die Antragserstellung.",
   },
@@ -145,8 +145,8 @@ const benefits = [
   },
   {
     icon: Check,
-    title: "14 Tage Geld-zurück",
-    description: "Zufriedenheitsgarantie",
+    title: "Sichere Zahlung",
+    description: "SSL-verschlüsselt",
   },
 ];
 
@@ -325,7 +325,7 @@ export default function PricingPage() {
                 className="text-sm"
                 style={{ color: "#64748b" }}
               >
-                Alle Preise verstehen sich zzgl. MwSt. | Rechnungsstellung auf Wunsch
+                Alle Preise verstehen sich inkl. MwSt.
               </p>
             </motion.div>
           </div>

@@ -213,7 +213,7 @@ export function CTASection() {
             className="flex flex-wrap items-center justify-center gap-6 pt-8 border-t"
             style={{ borderColor: 'rgba(10, 22, 40, 0.08)' }}
           >
-            {["Keine Kreditkarte nötig", "14 Tage kostenlos", "Jederzeit kündbar"].map((text) => (
+            {["Jederzeit kündbar", "DSGVO-konform", "Sichere Zahlung"].map((text) => (
               <span key={text} className="flex items-center gap-2">
                 <CheckCircle2 
                   className="w-4 h-4" 

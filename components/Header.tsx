@@ -17,7 +17,7 @@ const navItems = [
   {
     href: "/foerderprogramme",
     label: "Förderprogramme",
-    badge: "20+",
+    badge: "174",
     icon: Search,
   },
   {
@@ -60,9 +60,9 @@ export function Header() {
       {/* Skip to main content */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-orange-500 focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-[#0f1f38] focus:text-[#c9a227] focus:px-3 focus:py-1.5 focus:rounded-md focus:outline-none focus:ring-1 focus:ring-[#c9a227]/50 text-xs"
       >
-        Zum Hauptinhalt springen
+        Inhalt überspringen
       </a>
 
       <header
@@ -106,12 +106,6 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:gap-3">
-            <Link
-              href="/kontakt"
-              className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-slate-100 transition-colors"
-            >
-              Kontakt
-            </Link>
             <Link
               href="/foerderprogramme"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-primary btn-primary-sm"
@@ -188,13 +182,6 @@ export function Header() {
                 transition={{ duration: 0.3, delay: 0.3 }}
                 className="mt-6 space-y-3"
               >
-                <Link
-                  href="/kontakt"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center px-6 py-3 rounded-xl border-2 border-[#c9a227]/50 text-[#c9a227] font-semibold hover:bg-[#c9a227] hover:text-[#050d18] transition-all"
-                >
-                  Kontakt
-                </Link>
                 <Link
                   href="/foerderprogramme"
                   onClick={() => setIsOpen(false)}

@@ -239,7 +239,7 @@ export default function RegistrierenPage() {
             >
               {[
                 "Kostenlos für immer",
-                "Keine Kreditkarte nötig",
+                "174 Programme",
                 "Sofortiger Zugriff",
                 "DSGVO-konform",
               ].map((benefit, i) => (
