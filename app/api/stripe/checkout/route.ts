@@ -1,24 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2025-01-27.acacia",
-});
+// Stripe nur laden wenn Key vorhanden
+const getStripe = async () => {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    throw new Error("STRIPE_SECRET_KEY fehlt");
+  }
+  const Stripe = (await import("stripe")).default;
+  return new Stripe(process.env.STRIPE_SECRET_KEY, {
+    apiVersion: "2024-12-18.acacia" as any,
+  });
+};
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { 
-      productType, // 'einzel' | 'jahresabo'
+      productType,
       customerData,
       successUrl,
       cancelUrl
     } = body;
 
-    // Produkt-Preise (in Cent)
     const prices = {
-      einzel: 2900, // 29 €
-      jahresabo: 14900, // 149 €
+      einzel: 2900,
+      jahresabo: 14900,
     };
 
     const productNames = {
@@ -26,9 +31,11 @@ export async function POST(request: NextRequest) {
       jahresabo: "EduFunds Jahresabo",
     };
 
-    // Stripe Checkout Session erstellen
+    const stripe = await getStripe();
+
+    // Stripe Checkout Session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card", "apple_pay", "google_pay"],
+      payment_method_types: ["card"],
       line_items: [
         {
           price_data: {
@@ -53,7 +60,7 @@ export async function POST(request: NextRequest) {
         customerName: customerData.name,
         school: customerData.school,
       },
-    });
+    } as any);
 
     return NextResponse.json({
       success: true,
@@ -62,50 +69,10 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error("Stripe Checkout Error:", error);
+    console.error("Stripe Error:", error);
     return NextResponse.json(
-      { error: "Fehler bei der Stripe-Integration", details: String(error) },
+      { error: "Stripe-Integration fehlgeschlagen", details: String(error) },
       { status: 500 }
-    );
-  }
-}
-
-// Stripe Webhook für Zahlungsbestätigungen
-export async function PUT(request: NextRequest) {
-  const sig = request.headers.get("stripe-signature");
-  const body = await request.text();
-
-  if (!sig) {
-    return NextResponse.json({ error: "Kein Signature" }, { status: 400 });
-  }
-
-  try {
-    const event = stripe.webhooks.constructEvent(
-      body,
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET || ""
-    );
-
-    // Event verarbeiten
-    switch (event.type) {
-      case "checkout.session.completed": {
-        const session = event.data.object;
-        console.log("Zahlung erfolgreich:", session.id);
-        // TODO: Bestellung in Datenbank aktualisieren
-        break;
-      }
-      case "checkout.session.expired": {
-        console.log("Session abgelaufen");
-        break;
-      }
-    }
-
-    return NextResponse.json({ received: true });
-  } catch (error) {
-    console.error("Webhook Error:", error);
-    return NextResponse.json(
-      { error: "Webhook Fehler" },
-      { status: 400 }
     );
   }
 }
