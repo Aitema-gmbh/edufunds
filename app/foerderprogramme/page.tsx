@@ -2,8 +2,8 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Search, Filter, Building2, Euro, Calendar, MapPin, ArrowRight, School, X, Landmark, MapPinned, HeartHandshake, Globe } from "lucide-react";
-import Link from "next/link";
+import { Search, Filter, School, X, Landmark, MapPinned, HeartHandshake, Globe } from "lucide-react";
+import { GlassCard } from "@/components/GlassCard";
 import type { Foerderprogramm } from '@/lib/foerderSchema';
 import foerderprogrammeData from '@/data/foerderprogramme.json';
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
@@ -324,107 +324,7 @@ export default function FoerderprogrammePage() {
               </div>
             ) : (
               paginatedProgramme.map((programm) => (
-                <article 
-                  key={programm.id}
-                  className="glass rounded-2xl p-6 md:p-8 hover:border-orange-500/30 transition-all group"
-                >
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                    <div className="flex-1">
-                      {/* Header */}
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className={`
-                          px-2 py-1 rounded-full text-xs font-medium
-                          ${programm.foerdergeberTyp === 'bund' ? 'bg-cyan-500/20 text-cyan-400' : ''}
-                          ${programm.foerdergeberTyp === 'land' ? 'bg-purple-500/20 text-purple-400' : ''}
-                          ${programm.foerdergeberTyp === 'stiftung' ? 'bg-green-500/20 text-green-400' : ''}
-                          ${programm.foerdergeberTyp === 'eu' ? 'bg-blue-500/20 text-blue-400' : ''}
-                        `}>
-                          {programm.foerdergeberTyp.toUpperCase()}
-                        </span>
-                        {programm.kiAntragGeeignet && (
-                          <span className="px-2 py-1 rounded-full text-xs font-medium bg-orange-500/20 text-orange-400">
-                            KI-geeignet
-                          </span>
-                        )}
-                        {programm.status === 'aktiv' && (
-                          <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
-                            Aktiv
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Titel */}
-                      <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-orange-400 transition-colors">
-                        {programm.name}
-                      </h3>
-
-                      {/* Fördergeber */}
-                      <p className="text-slate-400 text-sm mb-3 flex items-center gap-2">
-                        <Building2 className="h-4 w-4" />
-                        {programm.foerdergeber}
-                      </p>
-
-                      {/* Beschreibung */}
-                      <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                        {programm.kurzbeschreibung}
-                      </p>
-
-                      {/* Details */}
-                      <div className="flex flex-wrap gap-4 text-sm text-slate-400 mb-4">
-                        {programm.foerdersummeText && (
-                          <span className="flex items-center gap-1">
-                            <Euro className="h-4 w-4 text-slate-500" />
-                            {programm.foerdersummeText}
-                          </span>
-                        )}
-                        {programm.bewerbungsfristText && (
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4 text-slate-500" />
-                            {programm.bewerbungsfristText}
-                          </span>
-                        )}
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4 text-slate-500" />
-                          {programm.bundeslaender.includes('alle') 
-                            ? 'Alle Bundesländer' 
-                            : `${programm.bundeslaender.length} Bundesländer`
-                          }
-                        </span>
-                      </div>
-
-                      {/* Kategorien */}
-                      <div className="flex flex-wrap gap-2">
-                        {programm.kategorien.slice(0, 5).map(kat => (
-                          <span 
-                            key={kat}
-                            className="px-2 py-1 rounded-md text-xs bg-slate-800 text-slate-400"
-                          >
-                            {kat}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="flex flex-col gap-3 md:items-end">
-                      <Link
-                        href={`/foerderprogramme/${programm.id}`}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-sm font-medium whitespace-nowrap"
-                      >
-                        Details ansehen
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                      {programm.antragsLink && (
-                        <Link
-                          href={`/antrag/${programm.id}`}
-                          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-outline text-sm font-medium whitespace-nowrap"
-                        >
-                          Antrag starten
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </article>
+                <GlassCard key={programm.id} programm={programm} />
               ))
             )}
           </div>
