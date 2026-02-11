@@ -7,7 +7,7 @@ import foerderprogramme from "@/data/foerderprogramme.json";
 
 export function HeroSection() {
   const stats = {
-    total: foerderprogramme.length,
+    total: "160+",
     bund: foerderprogramme.filter(p => p.foerdergeberTyp === 'bund').length,
     land: foerderprogramme.filter(p => p.foerdergeberTyp === 'land').length,
     stiftung: foerderprogramme.filter(p => p.foerdergeberTyp === 'stiftung').length,
