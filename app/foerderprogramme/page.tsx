@@ -2,20 +2,13 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Search, Filter, Building2, Euro, Calendar, MapPin, ArrowRight, School, X } from "lucide-react";
+import { Search, Filter, Building2, Euro, Calendar, MapPin, ArrowRight, School, X, Landmark, MapPinned, HeartHandshake, Globe } from "lucide-react";
 import Link from "next/link";
 import type { Foerderprogramm } from '@/lib/foerderSchema';
 import foerderprogrammeData from '@/data/foerderprogramme.json';
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 
-// Schulform Typ
- type Schulform = "grundschule" | "hauptschule" | "realschule" | "gymnasium" | "gesamtschule" | "foerderschule" | "berufsschule";
 import { useState, useMemo } from "react";
-
-// Schulformen-Optionen (nur Grundschule für EduFunds)
-const SCHULFORMEN = [
-  { value: "grundschule", label: "Grundschule" },
-];
 
 // Bundesländer-Optionen
 const BUNDESLAENDER = [
@@ -66,7 +59,6 @@ const stats = {
 export default function FoerderprogrammePage() {
   // Filter-States
   const [suchbegriff, setSuchbegriff] = useState("");
-  const [schulform, setSchulform] = useState<"" | Schulform>("");
   const [bundesland, setBundesland] = useState("");
   const [foerdergeberTyp, setFoerdergeberTyp] = useState("");
   const [kategorie, setKategorie] = useState("");
@@ -83,11 +75,6 @@ export default function FoerderprogrammePage() {
         if (!nameMatch && !beschreibungMatch && !foerdergeberMatch) {
           return false;
         }
-      }
-
-      // Schulform-Filter
-      if (schulform && !programm.schulformen.includes(schulform as Schulform)) {
-        return false;
       }
 
       // Bundesland-Filter
@@ -110,22 +97,21 @@ export default function FoerderprogrammePage() {
 
       return true;
     });
-  }, [suchbegriff, schulform, bundesland, foerdergeberTyp, kategorie]);
+  }, [suchbegriff, bundesland, foerdergeberTyp, kategorie]);
 
   // Reset-Funktion
   const resetFilter = () => {
     setSuchbegriff("");
-    setSchulform("");
     setBundesland("");
     setFoerdergeberTyp("");
     setKategorie("");
   };
 
   // Prüfen ob Filter aktiv sind
-  const hatAktiveFilter = suchbegriff || schulform || bundesland || foerdergeberTyp || kategorie;
+  const hatAktiveFilter = suchbegriff || bundesland || foerdergeberTyp || kategorie;
 
   // Anzahl aktiver Filter
-  const aktiveFilterCount = [suchbegriff, schulform, bundesland, foerdergeberTyp, kategorie].filter(Boolean).length;
+  const aktiveFilterCount = [suchbegriff, bundesland, foerdergeberTyp, kategorie].filter(Boolean).length;
 
   return (
     <>
@@ -150,24 +136,39 @@ export default function FoerderprogrammePage() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
             <div className="glass rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center mx-auto mb-2">
+                <School className="w-5 h-5 text-orange-400" />
+              </div>
               <div className="text-2xl font-bold text-orange-400">{stats.total}</div>
-              <div className="text-xs text-slate-500">Programme</div>
+              <div className="text-xs text-slate-500">Grundschul-Programme</div>
             </div>
             <div className="glass rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mx-auto mb-2">
+                <Landmark className="w-5 h-5 text-cyan-400" />
+              </div>
               <div className="text-2xl font-bold text-cyan-400">{stats.bund}</div>
-              <div className="text-xs text-slate-500">Bund</div>
+              <div className="text-xs text-slate-500">Bundesmittel</div>
             </div>
             <div className="glass rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mx-auto mb-2">
+                <MapPinned className="w-5 h-5 text-purple-400" />
+              </div>
               <div className="text-2xl font-bold text-purple-400">{stats.land}</div>
-              <div className="text-xs text-slate-500">Länder</div>
+              <div className="text-xs text-slate-500">Landesmittel</div>
             </div>
             <div className="glass rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mx-auto mb-2">
+                <HeartHandshake className="w-5 h-5 text-green-400" />
+              </div>
               <div className="text-2xl font-bold text-green-400">{stats.stiftung}</div>
               <div className="text-xs text-slate-500">Stiftungen</div>
             </div>
             <div className="glass rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mx-auto mb-2">
+                <Globe className="w-5 h-5 text-blue-400" />
+              </div>
               <div className="text-2xl font-bold text-blue-400">{stats.eu}</div>
-              <div className="text-xs text-slate-500">EU</div>
+              <div className="text-xs text-slate-500">EU-Programme</div>
             </div>
           </div>
 
@@ -217,23 +218,6 @@ export default function FoerderprogrammePage() {
                     </button>
                   )}
                 </div>
-              </div>
-
-              {/* Schulform-Dropdown */}
-              <div>
-                <label className="block text-xs text-slate-500 mb-1.5">Schulform</label>
-                <select
-                  value={schulform}
-                  onChange={(e) => setSchulform(e.target.value as "" | Schulform)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                >
-                  {SCHULFORMEN.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
               </div>
 
               {/* Bundesland-Dropdown */}

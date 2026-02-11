@@ -19,6 +19,7 @@
     "health:check": "curl http://localhost:3101/api/health"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@types/node": "^20.0.0",
     "@types/pg": "^8.16.0",
     "@types/react": "^18.0.0",

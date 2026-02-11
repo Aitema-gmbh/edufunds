@@ -56,9 +56,9 @@ const pricingPlans = [
   {
     name: "Jahresabo",
     description: "Für aktive Schulen",
-    price: "5 Anträge",
+    price: "149 €",
     period: "/ Jahr",
-    priceSubtext: "Weitere Anträge: 14,90 €",
+    priceSubtext: "5 Anträge inkl. | Weitere: 14,90 €",
     icon: Building2,
     features: [
       { text: "5 Anträge pro Jahr inklusive", included: true },

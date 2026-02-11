@@ -118,13 +118,20 @@
 - [x] Glasscard Labels korrigiert (✅ Done - "Bundesmittel", "Landesmittel" etc.)
 - [x] Registrierungs- und Checkout-Seiten erstellt (✅ Done)
 
+### ✅ Abgeschlossen (2026-02-11)
+- [x] **KI-Antragsassistent komplett** - 5-Schritte-Wizard mit API + Fallback
+- [x] **Rate-Limiting** - 10 Requests/Minute pro IP (DDoS-Schutz)
+- [x] **Förderprogramm-Links** - Alle 43 Programme haben direkte Ausschreibungs-Links
+- [x] **Antrags-Route** - `/antrag/[programmId]` live und funktionsfähig
+- [x] **Security Review** - Dokumentiert, MEDIUM RISK (akzeptabel für MVP)
+
 ### 🔄 In Arbeit (Priorität Hoch)
+- [ ] **Gemini API-Key** - Brauche Key von Kolja für echte KI statt Fallback
 - [ ] **Icons in Glasscards** - Werden nicht angezeigt trotz Code-Änderung
-- [ ] **Förderprogramm-Links korrigieren** - Alle 43 Programme brauchen direkte Links zu Ausschreibungen, nicht nur Hauptseiten (z.B. bkm.de/foerderprogramm/xyz statt bkm.de)
 - [ ] **"Für alle Schulformen" Texte entfernen** - Aus allen Beschreibungen streichen
 
-### 📋 Offen (Priorität Mittel)
-- [ ] 57 zusätzliche Förderprogramme recherchieren (Ziel: 100 Programme)
+### 📋 Offen (Priorität Mittel - Blockiert)
+- [ ] 57 zusätzliche Förderprogramme recherchieren - **BLOCKIERT:** Web-Suche nicht verfügbar (Brave API Key fehlt)
 - [ ] www.edufunds.org DNS anpassen (Cloudflare Proxy deaktivieren)
 - [ ] Zahlungssystem (Stripe/PayPal) integrieren
 - [ ] GitHub Secrets einrichten für Auto-Deployment

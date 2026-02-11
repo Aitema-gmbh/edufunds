@@ -10,21 +10,16 @@ const footerLinks = {
     title: "Produkt",
     links: [
       { label: "Förderprogramme", href: "/foerderprogramme" },
-      { label: "Preise", href: "/preise" }
-    ]
-  },
-  resources: {
-    title: "Ressourcen",
-    links: [
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Kontakt", href: "/kontakt" }
+      { label: "Preise", href: "/preise" },
+      { label: "KI-Antragsassistent", href: "/#ki-assistent" }
     ]
   },
   company: {
     title: "Unternehmen",
     links: [
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Kontakt", href: "/kontakt" }
+      { label: "Kontakt", href: "/kontakt" },
+      { label: "Blog", href: "/blog" }
     ]
   },
   legal: {
