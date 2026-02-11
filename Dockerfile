@@ -85,9 +85,6 @@ COPY --from=builder --chown=nextjs:nodejs /app/package.json ./
 # Kopiere node_modules (nur Production-Dependencies)
 COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
 
-# Rechte setzen
-RUN chown -R nextjs:nodejs /app
-
 # Wechsle zu nicht-root User
 USER nextjs
 
