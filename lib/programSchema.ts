@@ -196,6 +196,11 @@ export interface GenerierterAntrag {
     tokens_used: number;
     revision_iterations: number;
   };
+  
+  // Kosten für die Generierung
+  kosten?: {
+    estimated_cost_usd: number | string;
+  };
 }
 
 // Export-Formate

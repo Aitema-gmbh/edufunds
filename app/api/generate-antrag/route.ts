@@ -8,7 +8,7 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { createAntragPipeline, AntragPipeline } from "@/lib/antrag-pipeline";
+import { createAntragPipeline, AntragPipeline, AntragError, AntragErrorCode } from "@/lib/antrag-pipeline";
 import { GenerierterAntrag, PipelineStatus } from "@/lib/programSchema";
 
 // Prüfe API-Key beim Start (nur Status, nicht den Key loggen!)
@@ -101,8 +101,59 @@ export async function POST(request: NextRequest) {
       antrag = await pipeline.generateAntrag(keywords);
     } catch (error: any) {
       console.error("[API] Generierungsfehler:", error);
+      
+      // Nutzerfreundliche Fehlermeldungen basierend auf Fehler-Typ
+      if (error instanceof AntragError) {
+        let userMessage: string;
+        let statusCode: number;
+        
+        switch (error.code) {
+          case AntragErrorCode.API_KEY_MISSING:
+            userMessage = "KI-Service ist nicht konfiguriert. Der Fallback-Modus (Template-basiert) wird verwendet.";
+            statusCode = 503;
+            break;
+          case AntragErrorCode.API_RATE_LIMIT:
+            userMessage = "Zu viele Anfragen an den KI-Service. Bitte warte einen Moment und versuche es erneut.";
+            statusCode = 429;
+            break;
+          case AntragErrorCode.API_UNAVAILABLE:
+            userMessage = "Der KI-Service ist temporär nicht verfügbar. Bitte versuche es in einigen Minuten erneut.";
+            statusCode = 503;
+            break;
+          case AntragErrorCode.API_TIMEOUT:
+            userMessage = "Die Anfrage hat zu lange gedauert. Bitte versuche es mit weniger Stichworten erneut.";
+            statusCode = 504;
+            break;
+          case AntragErrorCode.SCHEMA_NOT_FOUND:
+            userMessage = `Das Programm-Schema '${programmId}' wurde nicht gefunden.`;
+            statusCode = 404;
+            break;
+          case AntragErrorCode.VALIDATION_ERROR:
+            userMessage = "Die Anfrage enthält ungültige Daten. Bitte überprüfe deine Eingaben.";
+            statusCode = 400;
+            break;
+          default:
+            userMessage = "Ein Fehler ist bei der Antragsgenerierung aufgetreten. Bitte versuche es erneut.";
+            statusCode = 500;
+        }
+        
+        return NextResponse.json(
+          { 
+            error: userMessage,
+            code: error.code,
+            details: error.details,
+            suggestion: "Du kannst es mit weniger Stichworten oder einem anderen Programm versuchen."
+          },
+          { status: statusCode, headers: corsHeaders }
+        );
+      }
+      
+      // Allgemeiner Fehler
       return NextResponse.json(
-        { error: `Fehler bei der Generierung: ${error.message}` },
+        { 
+          error: "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut.",
+          message: error.message
+        },
         { status: 500, headers: corsHeaders }
       );
     }

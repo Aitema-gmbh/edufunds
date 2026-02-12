@@ -131,7 +131,7 @@ export function AntragGenerator({ programmId, programmName }: AntragGeneratorPro
               disabled={isGenerating}
               className="min-h-[100px]"
             />
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-xs text-[#94a3b8] mt-1">
               Je spezifischer die Stichworte, desto besser der generierte Antrag.
             </p>
           </div>
@@ -193,29 +193,34 @@ export function AntragGenerator({ programmId, programmName }: AntragGeneratorPro
           <CardContent className="space-y-6 pt-6">
             {/* Qualitätsmetriken */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-muted p-3 rounded-lg text-center">
+              <div className="bg-[#0f1f38] p-3 rounded-lg text-center">
                 <div className="text-2xl font-bold text-blue-600">
                   {antrag.metadata.api_calls}
                 </div>
-                <div className="text-xs text-muted-foreground">API-Calls</div>
+                <div className="text-xs text-[#94a3b8]">API-Calls</div>
               </div>
-              <div className="bg-muted p-3 rounded-lg text-center">
+              <div className="bg-[#0f1f38] p-3 rounded-lg text-center">
                 <div className="text-2xl font-bold text-green-600">
                   {Math.round(antrag.metadata.generation_time_ms / 1000)}s
                 </div>
-                <div className="text-xs text-muted-foreground">Dauer</div>
+                <div className="text-xs text-[#94a3b8]">Dauer</div>
               </div>
-              <div className="bg-muted p-3 rounded-lg text-center">
+              <div className="bg-[#0f1f38] p-3 rounded-lg text-center">
                 <div className="text-2xl font-bold text-purple-600">
                   {antrag.metadata.revision_iterations}
                 </div>
-                <div className="text-xs text-muted-foreground">Revisionen</div>
+                <div className="text-xs text-[#94a3b8]">Revisionen</div>
               </div>
-              <div className="bg-muted p-3 rounded-lg text-center">
+              <div className="bg-[#0f1f38] p-3 rounded-lg text-center">
                 <div className="text-2xl font-bold text-orange-600">
-                  ${Number(antrag.kosten?.estimated_cost_usd || 0).toFixed(3)}
+                  ${(() => {
+                    const cost = antrag.kosten?.estimated_cost_usd;
+                    if (typeof cost === 'number') return cost.toFixed(3);
+                    if (typeof cost === 'string') return Number(cost).toFixed(3);
+                    return "0.000";
+                  })()}
                 </div>
-                <div className="text-xs text-muted-foreground">Kosten</div>
+                <div className="text-xs text-[#94a3b8]">Kosten</div>
               </div>
             </div>
 
@@ -236,10 +241,10 @@ export function AntragGenerator({ programmId, programmName }: AntragGeneratorPro
                         {section.quality_score}/100
                       </Badge>
                     </div>
-                    <div className="text-sm text-muted-foreground line-clamp-3">
+                    <div className="text-sm text-[#94a3b8] line-clamp-3">
                       {section.content.substring(0, 200)}...
                     </div>
-                    <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-4 mt-2 text-xs text-[#94a3b8]">
                       <span>{section.word_count} Wörter</span>
                       <span>{section.char_count} Zeichen</span>
                     </div>
@@ -249,24 +254,24 @@ export function AntragGenerator({ programmId, programmName }: AntragGeneratorPro
             </div>
 
             {/* Finanzplan */}
-            <Card className="bg-muted">
+            <Card className="bg-[#0f1f38]">
               <CardContent className="p-4">
                 <h4 className="font-medium mb-3">Finanzübersicht</h4>
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div>
-                    <div className="text-muted-foreground">Gesamtkosten</div>
+                    <div className="text-[#94a3b8]">Gesamtkosten</div>
                     <div className="font-medium">
                       {antrag.financials.gesamtkosten.toLocaleString("de-DE")} €
                     </div>
                   </div>
                   <div>
-                    <div className="text-muted-foreground">Förderung</div>
+                    <div className="text-[#94a3b8]">Förderung</div>
                     <div className="font-medium text-green-600">
                       {antrag.financials.foerderbetrag.toLocaleString("de-DE")} €
                     </div>
                   </div>
                   <div>
-                    <div className="text-muted-foreground">Eigenanteil</div>
+                    <div className="text-[#94a3b8]">Eigenanteil</div>
                     <div className="font-medium">
                       {antrag.financials.eigenanteil.toLocaleString("de-DE")} €
                     </div>

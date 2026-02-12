@@ -20,12 +20,42 @@ import {
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
 
+// Retry-Konfiguration
+const MAX_RETRIES = 3;
+const INITIAL_RETRY_DELAY_MS = 1000;
+const MAX_RETRY_DELAY_MS = 10000;
+
 // Kosten-Tracking
 interface KostenTracker {
   apiCalls: number;
   tokensUsed: number;
   estimatedCost: number;
   startTime: number;
+}
+
+// Fehler-Typen
+export enum AntragErrorCode {
+  API_KEY_MISSING = "API_KEY_MISSING",
+  API_RATE_LIMIT = "API_RATE_LIMIT",
+  API_UNAVAILABLE = "API_UNAVAILABLE",
+  API_TIMEOUT = "API_TIMEOUT",
+  INVALID_RESPONSE = "INVALID_RESPONSE",
+  SCHEMA_NOT_FOUND = "SCHEMA_NOT_FOUND",
+  VALIDATION_ERROR = "VALIDATION_ERROR",
+  PIPELINE_ERROR = "PIPELINE_ERROR",
+  UNKNOWN_ERROR = "UNKNOWN_ERROR"
+}
+
+export class AntragError extends Error {
+  constructor(
+    public code: AntragErrorCode,
+    message: string,
+    public retryable: boolean = false,
+    public details?: any
+  ) {
+    super(message);
+    this.name = "AntragError";
+  }
 }
 
 export class AntragPipeline {
@@ -261,44 +291,131 @@ export class AntragPipeline {
   }
 
   /**
-   * Gemini API Call
+   * Gemini API Call mit Retry-Logik
    */
   private async callGeminiAPI(prompt: string, expectJson: boolean): Promise<string> {
     if (!GEMINI_API_KEY) {
-      throw new Error("GEMINI_API_KEY nicht konfiguriert");
+      throw new AntragError(
+        AntragErrorCode.API_KEY_MISSING,
+        "GEMINI_API_KEY nicht konfiguriert. Bitte Umgebungsvariable setzen.",
+        false
+      );
     }
-    
-    this.kostenTracker.apiCalls++;
-    
-    const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{
-          parts: [{ text: prompt }]
-        }],
-        generationConfig: {
-          temperature: expectJson ? 0.3 : 0.5,
-          maxOutputTokens: 8192,
-          responseMimeType: expectJson ? "application/json" : "text/plain"
+
+    let lastError: Error | null = null;
+
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+      try {
+        this.kostenTracker.apiCalls++;
+
+        const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{
+              parts: [{ text: prompt }]
+            }],
+            generationConfig: {
+              temperature: expectJson ? 0.3 : 0.5,
+              maxOutputTokens: 8192,
+              responseMimeType: expectJson ? "application/json" : "text/plain"
+            }
+          })
+        });
+
+        // Fehlerbehandlung mit spezifischen Codes
+        if (!response.ok) {
+          const errorBody = await response.text();
+          
+          if (response.status === 429) {
+            throw new AntragError(
+              AntragErrorCode.API_RATE_LIMIT,
+              "API-Rate-Limit erreicht. Bitte warte einen Moment.",
+              true,
+              { status: response.status, body: errorBody }
+            );
+          }
+          
+          if (response.status === 503 || response.status === 502) {
+            throw new AntragError(
+              AntragErrorCode.API_UNAVAILABLE,
+              `KI-Service temporär nicht verfügbar (Status ${response.status}).`,
+              true,
+              { status: response.status, body: errorBody }
+            );
+          }
+
+          if (response.status === 400) {
+            throw new AntragError(
+              AntragErrorCode.VALIDATION_ERROR,
+              `Ungültige Anfrage: ${errorBody}`,
+              false,
+              { status: response.status, body: errorBody }
+            );
+          }
+
+          throw new AntragError(
+            AntragErrorCode.API_UNAVAILABLE,
+            `API-Fehler: ${response.status} - ${errorBody}`,
+            response.status >= 500,
+            { status: response.status, body: errorBody }
+          );
         }
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Gemini API Fehler: ${response.status}`);
+
+        const data = await response.json();
+
+        // Prüfe auf leere oder ungültige Antwort
+        const outputText = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+        
+        if (!outputText || outputText.trim().length === 0) {
+          throw new AntragError(
+            AntragErrorCode.INVALID_RESPONSE,
+            "Leere Antwort von der API erhalten.",
+            true
+          );
+        }
+
+        // Schätze Tokens (ca. 4 Zeichen pro Token)
+        this.kostenTracker.tokensUsed += Math.ceil((prompt.length + outputText.length) / 4);
+        
+        // Gemini Flash: ca. $0.075 pro 1M Tokens
+        this.kostenTracker.estimatedCost = (this.kostenTracker.tokensUsed / 1000000) * 0.075;
+
+        return outputText;
+
+      } catch (error) {
+        lastError = error as Error;
+        
+        // Bestimme ob Retry sinnvoll ist
+        const isRetryable = error instanceof AntragError 
+          ? error.retryable 
+          : error instanceof Error && 
+            (error.message.includes("fetch") || 
+             error.message.includes("timeout") ||
+             error.message.includes("network"));
+
+        if (!isRetryable || attempt === MAX_RETRIES - 1) {
+          break;
+        }
+
+        // Exponentieller Backoff mit Jitter
+        const delay = Math.min(
+          INITIAL_RETRY_DELAY_MS * Math.pow(2, attempt) + Math.random() * 1000,
+          MAX_RETRY_DELAY_MS
+        );
+
+        console.log(`[Pipeline] Retry ${attempt + 1}/${MAX_RETRIES} nach ${Math.round(delay)}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
     }
-    
-    const data = await response.json();
-    
-    // Schätze Tokens (ca. 4 Zeichen pro Token)
-    const outputText = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-    this.kostenTracker.tokensUsed += Math.ceil((prompt.length + outputText.length) / 4);
-    
-    // Gemini Flash: ca. $0.075 pro 1M Tokens
-    this.kostenTracker.estimatedCost = (this.kostenTracker.tokensUsed / 1000000) * 0.075;
-    
-    return outputText;
+
+    // Alle Retries aufgebraucht
+    throw new AntragError(
+      AntragErrorCode.PIPELINE_ERROR,
+      `API-Aufruf nach ${MAX_RETRIES} Versuchen fehlgeschlagen: ${lastError?.message}`,
+      false,
+      { originalError: lastError?.message }
+    );
   }
 
   /**

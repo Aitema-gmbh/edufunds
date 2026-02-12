@@ -12,6 +12,7 @@ Deine Spezialgebiete:
 - Öffentliche Bildungsförderung (Bund, Länder, EU)
 - Stiftungsprogramme
 - Digitale Bildung und MINT-Förderung
+- Inklusion und Chancengerechtigkeit
 
 Dein Stil:
 - Sachlich, präzise, überzeugend
@@ -19,14 +20,80 @@ Dein Stil:
 - Aktive Sprache, keine Konjunktive
 - Konkrete Daten statt vager Adjektive
 - These → Beleg → Nutzen (Struktur pro Absatz)
+- Maximal 1 Adjektiv pro Satz
+- Keine Worthülsen ("zukunftsweisend", "innovativ" ohne Begründung)
+
+Qualitätsstandards:
+- Jede Zielgruppe ist quantifiziert (Anzahl, Alter, Merkmale)
+- Jedes Ziel ist SMART formuliert
+- Jeder Output hat einen messbaren Indikator
+- Jede Methode hat eine wissenschaftliche/evidenzbasierte Begründung
+- Jeder Budgetposten ist begründet
+- Jede Aussage adressiert implizit: Was hat der Fördergeber davon?
 
 Du schreibst Anträge, die:
 - Bei Gutachtern auf professionelle Beratung schließen lassen
 - Alle Bewertungskriterien des Programms adressieren
 - SMARTe Ziele mit messbaren Indikatoren enthalten
 - Innovation klar vom Status quo abgrenzen
-- Nachhaltigkeit konkret belegen
+- Nachhaltigkeit konkret belegen (nicht behaupten)
 - Den Fördergeber überzeugen, dass das Geld gut investiert ist`;
+
+// Verbesserte Prompts mit Examples
+type PromptExample = {
+  input: string;
+  output: string;
+  explanation?: string;
+};
+
+type QualityCriteria = {
+  name: string;
+  weight: number;
+  description: string;
+  keywords: string[];
+};
+
+// Beispiele für gute und schlechte Antragsformulierungen
+export const ANTRAGS_BEISPIELE: Record<string, PromptExample[]> = {
+  "projektbeschreibung": [
+    {
+      input: "Wir wollen ein digitales Leseprojekt für Grundschulkinder machen.",
+      output: "Das Projekt 'LeseWelt Digital' etabliert ein KI-gestütztes, individualisiertes Lese-Förderprogramm für 120 Risikokinder der Klassen 1-4. Kerninnovation ist die adaptive Schwierigkeitsanpassung, die bisherige Ansätze um den Faktor 3 effizienter macht (Vergleichsstudie: Müller et al. 2023).",
+      explanation: "Konkret, quantifiziert, Innovation belegt"
+    },
+    {
+      input: "Wir kaufen Tablets für die Schule.",
+      output: "Wir entwickeln ein Konzept zur integration von Tablets in den differenzierten Unterricht, das 180 Kindern individualisierte Lernpfade ermöglicht und die Lehrkräfte durch automatisierbare Fortschrittsanalysen entlastet.",
+      explanation: "Technologie als Mittel zum Zweck, pädagogischer Mehrwert klar"
+    }
+  ],
+  "ziele": [
+    {
+      input: "Die Kinder sollen besser lesen können.",
+      output: "Bis Juni 2026 erreichen 85% der 120 teilnehmenden Risikokinder (Defizit >1 SD im ELFE II-Vortest) eine Lesegeschwindigkeitssteigerung um mindestens 20 Wörter/Minute (messbar durch standardisierten Würzburger Lesetest).",
+      explanation: "SMART: Spezifisch, Messbar, Attraktiv, Realistisch, Terminiert"
+    },
+    {
+      input: "Wir wollen die digitale Kompetenz fördern.",
+      output: "Wir qualifizieren bis Juli 2026 alle 18 Lehrkräfte (Klasse 1-4) in mediendidaktischer Grundkompetenz (Standard: DigCompEdu Level B1), wovon 80% die Kompetenz in unterrichtspraktischen Beobachtungen nachweisen.",
+      explanation: "Konkrete Zielgruppe, messbares Ergebnis, klarer Zeitrahmen"
+    }
+  ],
+  "budget": [
+    {
+      input: "Wir brauchen 30.000€ für Technik.",
+      output: "Die beantragten 28.500€ für Hardware setzen sich zusammen aus: 15 Tablet-Arbeitsplätze (12.000€), interaktives Display (4.500€), Ladeschrank mit Sicherheitssystem (3.500€), Zubehör/Styluses (2.500€), Wartungspaket 3 Jahre (6.000€). Vergleichspreise: 3 Angebote liegen bei (siehe Anlage).",
+      explanation: "Detaillierte Aufschlüsselung, Referenzwerte, Nachweisbarkeit"
+    }
+  ],
+  "nachhaltigkeit": [
+    {
+      input: "Das Projekt wird nachhaltig sein.",
+      output: "Die Nachhaltigkeit sichern wir durch: (1) Verankerung im Schulprogramm mit jährlicher Budgetposition (ab 2027: 3.000€/Jahr aus Schulumlage), (2) Open-Source-Veröffentlichung aller Materialien unter CC-BY-Lizenz, (3) Multiplikatoren-Fortbildung von 5 Kolleginnen, (4) Kooperationsvertrag mit Universität für wissenschaftliche Begleitung über 2026 hinaus.",
+      explanation: "Konkrete Maßnahmen, Finanzierung, Verankerung dokumentiert"
+    }
+  ]
+};
 
 // Prompt für Schritt 1: Stichwort-Analyse
 export function generateAnalysePrompt(
