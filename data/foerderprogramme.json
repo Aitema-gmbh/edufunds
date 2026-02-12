@@ -96,8 +96,8 @@
   },
   {
     "id": "niedersachsen-sport",
-    "name": "Sportförderung Niedersachsen Grundschulen",
-    "foerdergeber": "Niedersächsisches Kultusministerium",
+    "name": "Sportförderung Niedersachsen Grundschulen (Sport Vernetzt)",
+    "foerdergeber": "Niedersächsisches Kultusministerium / LandesSportBund Niedersachsen",
     "foerdergeberTyp": "land",
     "schulformen": [
       "grundschule"
@@ -105,24 +105,26 @@
     "bundeslaender": [
       "DE-NI"
     ],
-    "foerdersummeMin": 3000,
-    "foerdersummeMax": 40000,
-    "foerdersummeText": "3.000€ - 40.000€",
+    "foerdersummeMin": 400,
+    "foerdersummeMax": 1000,
+    "foerdersummeText": "5€ pro Bewegungseinheit (45 Min.), max. 80 BE = 400€/Jahr; Fördervereine max. 1.000€",
     "kategorien": [
       "sport",
       "bewegung",
       "gesundheit"
     ],
-    "bewerbungsfristText": "laufend",
+    "bewerbungsfristText": "laufend (vor Projektbeginn)",
     "bewerbungsart": "online",
-    "infoLink": "https://www.mk.niedersachsen.de/startseite/bildung/schule/sportfoerderung.html",
-    "kurzbeschreibung": "Förderung für Sportstätten und Bewegungsangebote an Grundschulen.",
-    "status": "unverifiziert",
+    "infoLink": "https://www.sportjugend-nds.de/schule-kita-verein/schule-sportverein",
+    "kurzbeschreibung": "Förderung von Kooperationen zwischen Schule, Kita und Sportverein. 5€ pro Bewegungseinheit (max. 80 BE = 400€/Jahr). Leitervergütung max. 20€/BE. Voraussetzung: DOSB-Übungsleiter-Lizenz.",
+    "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135368",
-    "quelle": "mk.niedersachsen.de",
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://www.sportjugend-nds.de/schule-kita-verein/schule-sportverein",
     "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche LSB Niedersachsen",
+    "bemerkung": "Förderrichtlinie 2.6.5 'Sport Vernetzt'. Antrag per E-Mail an lmende@lsb-niedersachsen.de. Fördervereine von Schulen/Kitas: max. 1.000€ (50% Eigenanteil)."
   },
   {
     "id": "bmbf-kultur-macht-stark",
@@ -293,24 +295,27 @@
     "bundeslaender": [
       "alle"
     ],
-    "foerdersummeMin": 8000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "8.000€ - 50.000€",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine direkte Förderung für Einzelschulen (Forschung & Politikberatung)",
     "kategorien": [
       "nachhaltigkeit",
       "oekologie",
       "demokratie"
     ],
-    "bewerbungsfristText": "laufend",
+    "bewerbungsfristText": "keine Ausschreibungen für Schulen",
     "bewerbungsart": "online",
-    "infoLink": "https://www.boell.de/de/foerderung",
-    "kurzbeschreibung": "Förderung ökologischer Bildung und nachhaltigen Handelns in der Grundschule.",
-    "status": "unverifiziert",
+    "infoLink": "https://www.boell.de/de/themen/bildung",
+    "kurzbeschreibung": "Die Heinrich-Böll-Stiftung betreibt Forschung und Politikberatung zu Bildungsthemen. Keine direkte Finanzierung von Schulprojekten. Fokus auf Bildungsgerechtigkeit, Inklusion und nachhaltige Bildung.",
+    "status": "review_needed",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135413",
-    "quelle": "boell.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://www.boell.de/de/themen/bildung",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Heinrich-Böll-Stiftung",
+    "bemerkung": "Stiftung führt keine direkte Projektförderung für Schulen durch. Arbeitet über politische Advocacy, Studien und Rechtsgutachten. Keine Antragsmöglichkeit für Einzelschulen.",
+"reviewNotiz": "Ursprüngliche Einträge mit Fördersummen waren nicht korrekt - Stiftung fördert keine Einzelschulen direkt."
   },
   {
     "id": "stifterverband-bildung",
@@ -476,8 +481,8 @@
   },
   {
     "id": "wissenschaft-im-dialog",
-    "name": "Wissenschaft im Dialog",
-    "foerdergeber": "Wissenschaft im Dialog (WiD)",
+    "name": "Wissenschaft im Dialog (WiD)",
+    "foerdergeber": "Wissenschaft im Dialog (WiD) - gefördert durch VW-Stiftung, BMBF",
     "foerdergeberTyp": "stiftung",
     "schulformen": [
       "grundschule"
@@ -485,25 +490,28 @@
     "bundeslaender": [
       "alle"
     ],
-    "foerdersummeMin": 3000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "3.000€ - 30.000€",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine direkte Förderung für Schulen (kostenlose Teilnahme an Programmen)",
     "kategorien": [
       "wissenschaft",
       "mint",
       "forschung",
       "bildung"
     ],
-    "bewerbungsfristText": "laufend",
+    "bewerbungsfristText": "laufend (nach Angebot)",
     "bewerbungsart": "online",
-    "infoLink": "https://www.wissenschaft-im-dialog.de/foerderung/",
-    "kurzbeschreibung": "Förderung von Projekten zur Wissenschaftskommunikation und MINT-Bildung.",
-    "status": "unverifiziert",
+    "infoLink": "https://wissenschaft-im-dialog.de/projekte/",
+    "kurzbeschreibung": "WiD bietet kostenlose Programme wie 'I'm a Scientist' (Live-Chats mit Forschenden) und 'Jugend präsentiert' an. Schulen können teilnehmen, erhalten aber keine finanzielle Förderung. Finanzierung durch VolkswagenStiftung, BMBF, Klaus Tschira Stiftung.",
+    "status": "review_needed",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135433",
-    "quelle": "wissenschaft-im-dialog.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://wissenschaft-im-dialog.de/projekte/",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Wissenschaft im Dialog",
+    "bemerkung": "WiD ist selbst ein gefördertes Programm, bietet aber keine eigenen Fördermittel für Schulen. Teilnahme an 'I'm a Scientist' etc. ist kostenlos.",
+"reviewNotiz": "Ursprüngliche Annahme von Fördersummen war falsch - WiD finanziert keine Schulprojekte, sondern bietet eigene Programme an."
   },
   {
     "id": "chemie-fonds",
@@ -888,39 +896,8 @@
   },
   {
     "id": "ferry-porsche-challenge",
-    "name": "Ferry Porsche Challenge",
-    "foerdergeber": "Porsche AG",
-    "foerdergeberTyp": "sonstige",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 1000,
-    "foerdersummeMax": 5000,
-    "foerdersummeText": "1.000€ - 5.000€",
-    "kategorien": [
-      "bildung",
-      "freizeit",
-      "benachteiligung",
-      "jugend"
-    ],
-    "bewerbungsfristText": "laufend bis Dezember 2025",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.ferryporschechallenge.de/ueber-den-wettbewerb.html",
-    "kurzbeschreibung": "Projekte für benachteiligte Kinder und Jugendliche, initiiert von Jugendlichen.",
-    "status": "unverifiziert",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135478",
-    "quelle": "ferryporschechallenge.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
-  },
-  {
-    "id": "berdelle-naturwissenschaft",
-    "name": "Naturwissenschaften in der Schule",
-    "foerdergeber": "Berdelle-Stiftung",
+    "name": "Ferry Porsche Challenge 2025",
+    "foerdergeber": "Ferry-Porsche-Stiftung",
     "foerdergeberTyp": "stiftung",
     "schulformen": [
       "grundschule"
@@ -928,9 +905,44 @@
     "bundeslaender": [
       "alle"
     ],
-    "foerdersummeMin": 3000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "3.000€ - 30.000€",
+    "foerdersummeMin": 2500,
+    "foerdersummeMax": 75000,
+    "foerdersummeText": "Gesamt: 1 Mio. € - 1. Platz: 75.000€, 2. Platz: 50.000€, 3. Platz: 25.000€, Finalist: 10.000€, Anschubpreis: 2.500€",
+    "kategorien": [
+      "bildung",
+      "freizeit",
+      "benachteiligung",
+      "jugend"
+    ],
+    "bewerbungsfristStart": "2025-01-15",
+    "bewerbungsfristEnde": "2025-04-11",
+    "bewerbungsfristText": "Bewerbungsphase endete 11.04.2025 (jährlicher Wettbewerb)",
+    "bewerbungsart": "online",
+    "infoLink": "https://ferry-porsche-challenge.de",
+    "kurzbeschreibung": "Wettbewerb für Projekte zugunsten benachteiligter Kinder und Jugendliche. Jugendliche zwischen 14-21 Jahren können ihre Projektideen einreichen. Motto 2025: 'Chancen zu wachsen'.",
+    "status": "aktiv",
+    "createdAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://www.stiftungen.org/aktuelles/news-aus-stiftungen/detail/ferry-porsche-challenge-2025-1-million-euro-fuer-chancengerechtes-aufwachsen-14570.html",
+    "kiAntragGeeignet": true,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Ferry-Porsche-Stiftung",
+    "bemerkung": "Gesamtfördervolumen 1 Mio. € jährlich. 3x 75.000€, 6x 50.000€, 9x 25.000€, 2x Sonderpreis 50.000€, Finalisten 10.000€, 20 Anschubpreise 2.500€. Antragstellung durch Jugendliche, nicht direkt durch Schulen."
+  },
+  {
+    "id": "berdelle-naturwissenschaft",
+    "name": "Naturwissenschaften in der Schule",
+    "foerdergeber": "Berdelle-Stiftung für Wissenschaft, Kultur und Technik",
+    "foerdergeberTyp": "stiftung",
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine festen Fördersummen (projektbezogen, diskretionär)",
     "kategorien": [
       "naturwissenschaft",
       "mint",
@@ -940,14 +952,16 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.berdelle-stiftung.de/foerderung/schulen",
-    "kurzbeschreibung": "Förderung naturwissenschaftlicher Bildung und Experimentierräume an Schulen.",
-    "status": "unverifiziert",
+    "infoLink": "https://berdelle-stiftung.de/foerderung/schueler/",
+    "kurzbeschreibung": "Förderung von Schulprojekten in Naturwissenschaften und Technik, insbesondere Jugend forscht, Experimentierräume, Sachförderung (Materialien, Geräte). Keine festen Fördersummen - individuelle Prüfung.",
+    "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135480",
-    "quelle": "berdelle-stiftung.de",
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://berdelle-stiftung.de/foerderung/",
     "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Berdelle-Stiftung",
+    "bemerkung": "Förderung erfolgt diskretionär ohne öffentlich festgelegte Summen. Priorität für Rheinland-Pfalz. Studentenstipendien: bis 812€/Monat als Referenz."
   },
   {
     "id": "first-lego-league",
@@ -1013,8 +1027,8 @@
   },
   {
     "id": "hessen-mint-freundlich",
-    "name": "MINT-freundliche Schule Hessen",
-    "foerdergeber": "Hessisches Kultusministerium",
+    "name": "MINT-freundliche Schule Hessen (Auszeichnung)",
+    "foerdergeber": "Initiative 'MINT Zukunft schaffen!' / Hessisches Kultusministerium",
     "foerdergeberTyp": "land",
     "schulformen": [
       "grundschule"
@@ -1022,9 +1036,9 @@
     "bundeslaender": [
       "DE-HE"
     ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "5.000€ - 30.000€",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine Fördersumme (reine Auszeichnung/Titel)",
     "kategorien": [
       "mint",
       "digitalisierung",
@@ -1033,14 +1047,16 @@
     ],
     "bewerbungsfristText": "jährlich",
     "bewerbungsart": "online",
-    "infoLink": "https://kultus.hessen.de/schule-aktuell",
-    "kurzbeschreibung": "Auszeichnung und Förderung für Schulen mit besonderem Engagement in MINT-Fächern.",
-    "status": "unverifiziert",
+    "infoLink": "https://mintzukunftschaffen.de",
+    "kurzbeschreibung": "Auszeichnung 'MINT-freundliche Schule' durch Initiative 'MINT Zukunft schaffen!' unter Schirmherrschaft KMK. Schulen müssen 10 von 14 Kriterien erfüllen. Gültigkeit 3 Jahre. KEINE finanzielle Förderung - reiner Titel.",
+    "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135489",
-    "quelle": "kultus.hessen.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "updatedAt": "2026-02-13T10:00:00.000Z",
+    "quelle": "https://mintzukunftschaffen.de",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche MINT Zukunft schaffen!",
+    "bemerkung": "2025: 63 Schulen als 'MINT-freundliche Schule' ausgezeichnet. Keine finanzielle Unterstützung verbunden. Separat: ESF-Förderung für MINT-Berufsorientierung (Klassen 7-10)."
   },
   {
     "id": "sparkassen-luebeck-nachhilfe",
