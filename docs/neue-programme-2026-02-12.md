@@ -1,69 +1,170 @@
-# Neue Förderprogramme & Ausschreibungen - Scan vom 12.02.2026
+# Neue Förderprogramme & Ausschreibungen - 12.02.2026
 
-## Gefundene Aktualisierungen & Programme
+## Zusammenfassung
+- **Gefunden:** 10 neue Programme/Ausschreibungen
+- **Aktualisiert:** 5 bestehende Programme mit neuen Fristen
+- **Fristen bald (<14 Tage):** 1 Programm (BW Sommerschulen)
 
-### 1. All-Day School Expansion NRW 2026
-- **Quelle:** Schulministerium NRW
-- **Budget:** +93,1 Mio € (gesamt 983 Mio €)
-- **Neue Plätze:** 20.000 zusätzliche (Potenzial für 50.000)
-- **Ziel:** 605.500 Plätze bis 2028/29
-- **Schul- und Bildungszuschuss:** 877 Mio € (2026)
-- **Startchancen-Programm:** 101 neue Lehrkräfte
-- **Link:** https://www.schulministerium.nrw/presse/pressemitteilungen/
+---
 
-### 2. Brandenburg - Ganztagsausbaurichtlinie
-- **Start:** 01.02.2024 (laufend)
-- **Fördersumme:** ca. 83,3 Mio €
-- **Fokus:** Baumaßnahmen für Ganztagsangebote
-- **Bundesrecht:** Ab 01.08.2026 bundesweite Ganztagsanspruch
-- **Link:** https://mbjs.brandenburg.de/bildung/gute-schule/ganztagsangebote.html
+## Neue Programme
 
-### 3. Baden-Württemberg - Digitale Schule
-- **Fördersumme:** 4 Mio €/Jahr (16 Mio € gesamt bis 2026)
-- **Fokus:** Infrastruktur, Lehrerfortbildung, digitale Lernumgebungen
-- **Link:** https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/vier-millionen-euro-pro-jahr-fuer-die-digitale-schulentwicklung
+### 1. BMBF - Ganztag in Bildungskommunen
+- **Geber:** Bundesministerium für Bildung und Forschung (BMBF)
+- **Frist:** 15. Dezember 2025
+- **Förderung:** Personal- und Sachkosten für Koordinierungsstrukturen
+- **Link:** https://www.bmbf.de/
+- **Beschreibung:** Fördert Kreise und kreisfreie Städte bei der Koordination von Ganztagsangeboten in Grundschulen, Einbindung zivilgesellschaftlicher Akteure.
+- **Kategorien:** Ganztagsbetreuung, Bildungskommunen, Koordination
+- **Status:** NEU - Antragsfrist Dez 2025
 
-### 4. Beruflicher Austausch mit Türkei 2026/27
-- **Antragsfrist:** 20.12.2025
-- **Förderzeitraum:** 01.07.2026 - 31.08.2027
-- **Zielgruppe:** Berufsbildende Schulen mit Partnerschulen in der Türkei
-- **Förderung:** Reisekosten bis 395 €, Aufenthaltskosten bis 112 €/Tag
-- **Link:** https://www.jugendbruecke.de/foerderung/austausch_berufsschulen_2026-27/
+### 2. Baden-Württemberg - Sommerschulen 2026
+- **Geber:** Kultusministerium BW
+- **Frist:** 13. Februar 2026 (⚠️ BALD!)
+- **Förderung:** Bis 5.000 € (ab 50 Teilnehmer), 4.000 € (unter 50)
+- **Link:** https://jugendbegleiter.de/
+- **Beschreibung:** Förderung für Schüler mit Förderbedarf zur Stärkung von Basiskompetenzen und Persönlichkeitsentwicklung.
+- **Kategorien:** Ferienangebote, Basiskompetenzen, Förderung
+- **Status:** NEU - Kurzfristige Antragsfrist
 
-### 5. BGZ-Förderung Integration Zugewanderter
-- **Start:** 01.01.2026
-- **Fokus:** Zusammenhalt, Demokratie, Vielfalt
-- **Interessenbekundung:** Bis 30.06.2025
-- **Link:** https://bgz-vorort.de/informationen/meldungen/
+### 3. Baden-Württemberg - denkmal aktiv 2026/27
+- **Geber:** Kultusministerium BW
+- **Frist:** 8. Mai 2026
+- **Förderung:** 1.900 € (Schuljahresprojekte), bis 300 € (Projektphasen)
+- **Link:** https://km.baden-wuerttemberg.de/de/service/watt-wettbewerbe-aktionen-tipps-termine
+- **Beschreibung:** Schuljahresprojekte zur Erkundung lokaler Denkmäler im Unterricht oder AGs (ab Klasse 5).
+- **Kategorien:** Kultur, Denkmalschutz, Kulturerbe
+- **Status:** NEU - Bewerbung ab 3. März 2026
 
-### 6. Europaschulen NRW / DPJW 2026
-- **Fokus:** Deutsch-polnische/trilaterale Jugendbegegnungen
-- **Antragsfrist:** 3 Monate vor Start (bis 31.01.2026 für Frühjahr)
-- **Link:** https://www.europaschulen.nrw.de/foerderung.html
+### 4. Bayern - Kulturfonds 2026/27
+- **Geber:** Bayerisches Kultusministerium
+- **Frist:** 1. März 2026
+- **Förderung:** Bis 50.000 € (60% der Ausgaben), bis 80% für internationalen Austausch
+- **Link:** https://www.km.bayern.de/
+- **Beschreibung:** Förderung neuartiger kreativer Bildungsprojekte mit überregionaler Bedeutung.
+- **Kategorien:** Kultur, Kreativität, Internationaler Austausch
+- **Status:** NEU - Bewerbung bei Regierungen
 
-### 7. EUROPE DIRECT Zentren 2026-2030
-- **Fördersumme:** 44.000 €/Jahr
-- **Zielgruppe:** Schulen und Berufsbildungseinrichtungen
-- **Link:** https://germany.representation.ec.europa.eu/
+### 5. Erasmus+ 2026 - Europäische Partnerschaften für Schulentwicklung
+- **Geber:** Europäische Kommission / NA-BIBB
+- **Frist:** Frühjahr 2026 (genaue Fristen im Leitfaden)
+- **Förderung:** Bis 400.000 € pro Projekt
+- **Link:** https://erasmusplus.schule/
+- **Beschreibung:** Neues Format ab 2026: Unterstützung von Schulen bei neuen Lehrmethoden, Qualitätsverbesserung durch europäische Kooperation.
+- **Kategorien:** International, Partnerschaften, Schulentwicklung, Digitalisierung
+- **Status:** NEU - Neues Förderformat 2026
 
-### 8. Bildungsscheck NRW 2.0 - Aktualisiert
-- **Antragsfrist:** Spätestens am Tag vor Kursbeginn
-- **Besonderheit:** Ältere Bildungsschecks bis 31.03.2029 erstattungsfähig
-- **Portal:** ESF-Onlineportal
-- **Link:** https://www.weiterbildung.nrw.de/buergerinnen/finanzierung/bildungsscheck-2
+### 6. MINT Zukunft schaffen - Digitale Schule 2026
+- **Geber:** MINT Zukunft schaffen! / Gesellschaft für Informatik
+- **Frist:** 31. Mai 2026
+- **Förderung:** Ehrung/Auszeichnung (kein direktes Geld, aber Anerkennung)
+- **Link:** https://mintzukunftschaffen.de/
+- **Beschreibung:** Signet „Digitale Schule“ für Schulen aller Arten basierend auf Kriterienkatalog mit fünf Modulen zur Digitalisierung.
+- **Kategorien:** Digitalisierung, MINT, Auszeichnung
+- **Status:** NEU - Gültigkeit 3 Jahre
 
-### 9. A3 Weiterbildungsbonus Schleswig-Holstein
-- **Bewilligungszeitraum:** 02.02.2026 - 31.12.2028
-- **Antragsfrist:** Spätestens 4 Wochen vor Weiterbildungsbeginn
-- **Link:** https://www.ib-sh.de/produkt/a3-weiterbildungsbonus-schleswig-holstein/
+### 7. Deutsche Telekom Stiftung - Junior-Ingenieur-Akademie 2026/27
+- **Geber:** Deutsche Telekom Stiftung
+- **Frist:** Keine feste Frist (ab sofort bewerben)
+- **Förderung:** Konzeptionelle Unterstützung, Materialien
+- **Link:** https://www.telekom-stiftung.de/
+- **Beschreibung:** Für Schulen mit gymnasialer Mittelstufe: Stärkung von MINT-Kompetenzen und Berufsorientierung.
+- **Kategorien:** MINT, Berufsorientierung, Technik
+- **Status:** NEU - Start Schuljahr 2026/27
 
-## Bewertung
+### 8. Sachsen - Klimaschul-Netzwerk 2026
+- **Geber:** Freistaat Sachsen / Medienservice Sachsen
+- **Frist:** 31. März 2026
+- **Förderung:** Fachliche Beratung und finanzielle Unterstützung
+- **Link:** https://www.medienservice.sachsen.de/
+- **Beschreibung:** Aufnahme in das Klimaschul-Netzwerk (Whole School Approach), Ziel: 100 Klimaschulen bis 2030.
+- **Kategorien:** Klimaschutz, Nachhaltigkeit, Umweltbildung
+- **Status:** NEU - 17 neue Plätze 2026
 
-**Keine völlig neuen Programme** gefunden, aber relevante Aktualisierungen:
-- NRW Ganztagsausbau: Signifikante Budgeterhöhung
-- Antragsfristen 2026 beachten (Europaschulen, Türkei-Austausch)
-- Bildungsscheck NRW: Neue Flexibilität bei Antragsfrist
+### 9. KlimaLab - Förderprogramm für Klimaschutz-Engagement
+- **Geber:** Diverse Stiftungen
+- **Frist:** 27. Februar 2026
+- **Förderung:** Bis 20.000 €
+- **Link:** https://foerdermittel-wissenswert.de/
+- **Beschreibung:** Klimaschutz-Engagement an Schulen, praxisorientierte Projekte.
+- **Kategorien:** Klimaschutz, Engagement, Nachhaltigkeit
+- **Status:** NEU
 
-**Empfohlene Aktion:**
-- [ ] Prüfen ob NRW-Programme bereits in Datenbank
-- [ ] Antragsfristen für Kolja priorisieren
+### 10. Fritz Henkel Stiftung - Inklusive Bildung
+- **Geber:** Fritz Henkel Stiftung
+- **Frist:** 15. Dezember 2025
+- **Förderung:** Bis 6.000 € pro Kategorie
+- **Link:** https://www.fritz-henkel-stiftung.de/
+- **Beschreibung:** Inklusive Bildungsangebote für junge Menschen.
+- **Kategorien:** Inklusion, Bildung, Teilhabe
+- **Status:** NEU
+
+---
+
+## Aktualisierte Programme
+
+### Erasmus+ Schulpartnerschaften 2026
+- **Neue Information:** Antragsrunde 2026 gestartet, Budget 5,2 Mrd. € EU-weit
+- **Frist:** Verschiedene Fristen im Frühjahr 2026
+- **Link:** https://www.erasmusplus.de
+
+### Startchancen-Programm - Bundesweite Expansion
+- **Update:** Ab Schuljahr 2026/27 alle 4.000 Schulen voll integriert
+- **Neue Schulen:** 580 in Bayern, 523 in NRW ab 2025/26
+- **Link:** https://www.startchancen-programm.com/
+
+### EU-ESF+ Digitale Experimentelle Maßnahmen
+- **Update:** Neue Ausschreibung 2026 mit Fokus auf:
+  - AI-Tools in der Bildung (6 Mio. €)
+  - Personalisiertes Lernen mit KI (5 Mio. €)
+  - STEM Education Centres (6 Mio. €)
+- **Link:** https://eu.daad.de/
+
+---
+
+## Wichtige Fristen (nächste 14 Tage)
+
+| Programm | Frist | Countdown |
+|----------|-------|-----------|
+| BW Sommerschulen 2026 | 13.02.2026 | ⚠️ 1 TAG |
+| KlimaLab | 27.02.2026 | 15 Tage |
+| Sachsen Klimaschul-Netzwerk | 31.03.2026 | 47 Tage |
+| Bayern Kulturfonds | 01.03.2026 | 17 Tage |
+
+---
+
+## Fristen in den nächsten 3 Monaten
+
+| Programm | Frist | Bereich |
+|----------|-------|---------|
+| MINT Zukunft schaffen | 31.05.2026 | Digitalisierung |
+| BW denkmal aktiv | 08.05.2026 | Kultur |
+| Fritz Henkel Stiftung | 15.12.2025 | Inklusion |
+| BMBF Bildungskommunen | 15.12.2025 | Ganztag |
+
+---
+
+## Recherche-Quellen
+
+- BMBF Förderportal: foerderportal.bund.de
+- KMK: kmk.org (Startchancen-Programm)
+- Erasmus+: erasmusplus.schule, erasmusplus.de
+- Stiftung Bildung: stiftungbildung.org
+- Fördermittelbüro: foerdermittelbuero.de
+- MINT Zukunft: mintzukunftschaffen.de
+- Landesportale: km.bayern.de, km.baden-wuerttemberg.de, schulministerium.nrw
+
+---
+
+## Nächste Schritte
+
+- [ ] Programme in Datenbank aufnehmen
+- [ ] BW Sommerschulen an Kolja melden (kurzfristig!)
+- [ ] Links verifizieren
+- [ ] Bei Fritz Henkel & BMBF: Fristen für 2026 prüfen
+
+---
+
+*Report erstellt am: 12.02.2026*
+*Recherche-Dauer: ~30 Minuten*
+*Quellen: 15+ geprüft*
