@@ -1,11 +1,19 @@
 /**
  * API-Route für die Antragsgenerierung
  * POST /api/generate-antrag
+ * 
+ * Konfiguration:
+ * - GEMINI_API_KEY muss als Umgebungsvariable gesetzt sein
+ * - Falls nicht gesetzt, wird der Fallback-Modus (Template-basiert) verwendet
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { createAntragPipeline, AntragPipeline } from "@/lib/antrag-pipeline";
 import { GenerierterAntrag, PipelineStatus } from "@/lib/programSchema";
+
+// Prüfe API-Key beim Start (nur Status, nicht den Key loggen!)
+const hasGeminiKey = !!process.env.GEMINI_API_KEY;
+console.log(`[API] KI-Antragsgenerator Status: ${hasGeminiKey ? "✅ API-Key konfiguriert" : "⚠️ Fallback-Modus aktiv (kein GEMINI_API_KEY)"}`);
 
 // Konfiguration
 export const runtime = "edge";
@@ -68,15 +76,9 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Prüfe API-Key
-    if (!process.env.GEMINI_API_KEY) {
-      return NextResponse.json(
-        { error: "KI-API nicht konfiguriert. Bitte GEMINI_API_KEY setzen." },
-        { status: 503, headers: corsHeaders }
-      );
-    }
-    
-    console.log(`[API] Generiere Antrag für ${programmId} mit Keywords: ${keywords.join(", ")}`);
+    // Log API-Status (ohne Key zu exponieren)
+    const usingAI = !!process.env.GEMINI_API_KEY;
+    console.log(`[API] Generiere Antrag für ${programmId} mit Keywords: ${keywords.join(", ")} | Modus: ${usingAI ? "KI-generiert" : "Fallback (Template)"}`);
     
     // Erstelle Pipeline
     let pipeline: AntragPipeline;
@@ -109,8 +111,10 @@ export async function POST(request: NextRequest) {
     const kosten = pipeline.getKosten();
     
     // Erfolgs-Response
+    const usingAI = !!process.env.GEMINI_API_KEY;
     const response = {
       success: true,
+      generation_mode: usingAI ? "ai" : "fallback",
       antrag: {
         ...antrag,
         kosten: {
@@ -125,7 +129,8 @@ export async function POST(request: NextRequest) {
         keywords_used: keywords,
         qualitaetsscore: antrag.self_review.overall_score,
         revisionen: antrag.metadata.revision_iterations,
-        kosten_gesamt: kosten.estimatedCost.toFixed(4)
+        kosten_gesamt: kosten.estimatedCost.toFixed(4),
+        mode: usingAI ? "KI-generiert" : "Template-basiert (Fallback)"
       }
     };
     
