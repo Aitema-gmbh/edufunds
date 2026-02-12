@@ -3,634 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta name="color-scheme" content="light dark">
-    <meta name="supported-color-schemes" content="light dark">
     <title>{{newsletter_title}}</title>
-    <!--[if mso]>
-    <noscript>
-        <xml>
-            <o:OfficeDocumentSettings>
-                <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
-        </xml>
-    </noscript>
-    <![endif]-->
     <style>
-        /* Reset styles */
-        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-        
-        /* Base styles */
-        body {
-            margin: 0 !important;
-            padding: 0 !important;
-            background-color: #0a1628;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        /* Container */
-        .email-wrapper {
-            width: 100%;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #0a1628;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
-        /* Header */
         .header {
-            background: linear-gradient(135deg, #0f1f38 0%, #1e3a5f 100%);
-            padding: 30px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
             text-align: center;
-            border-bottom: 2px solid #c9a227;
         }
         
-        .logo-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        
-        .logo-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            border-radius: 10px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
-        }
-        
-        .logo-text {
-            text-align: left;
-        }
-        
-        .logo-title {
-            font-size: 22px;
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
             font-weight: 700;
-            color: #f8f5f0;
-            margin: 0;
-            letter-spacing: -0.5px;
         }
         
-        .logo-subtitle {
-            font-size: 11px;
-            color: #94a3b8;
-            margin: 0;
-            margin-top: -2px;
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 15px;
         }
         
-        .issue-info {
-            font-size: 13px;
-            color: #94a3b8;
-            margin-top: 12px;
-        }
-        
-        .issue-badge {
+        .header .ausgabe {
             display: inline-block;
-            background: rgba(201, 162, 39, 0.15);
-            color: #c9a227;
-            padding: 4px 12px;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
-            margin-right: 8px;
-            border: 1px solid rgba(201, 162, 39, 0.3);
         }
         
-        /* Content sections */
         .content {
-            padding: 0;
+            padding: 30px;
         }
         
-        .section {
-            padding: 32px 24px;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
-        }
-        
-        .section:last-of-type {
-            border-bottom: none;
-        }
-        
-        .section-alt {
-            background-color: #0f1f38;
-        }
-        
-        /* Headlines */
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #f8f5f0;
-            margin: 0 0 16px 0;
-            line-height: 1.3;
-        }
-        
-        h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #f8f5f0;
-            margin: 0 0 16px 0;
-            line-height: 1.3;
-        }
-        
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #f8f5f0;
-            margin: 0 0 12px 0;
-            line-height: 1.4;
-        }
-        
-        /* Text */
-        p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #94a3b8;
-            margin: 0 0 16px 0;
-        }
-        
-        p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* Lead paragraph */
-        .lead {
-            font-size: 17px;
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-        
-        /* Program cards */
-        .program-card {
-            background: linear-gradient(135deg, rgba(15, 31, 56, 0.8) 0%, rgba(30, 58, 95, 0.4) 100%);
-            border: 1px solid rgba(201, 162, 39, 0.2);
-            border-radius: 12px;
+        /* Einleitung */
+        .intro {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
             padding: 20px;
-            margin-bottom: 16px;
-            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
         }
         
-        .program-card:last-child {
-            margin-bottom: 0;
-        }
-        
-        .program-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-        
-        .program-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #f8f5f0;
-            margin: 0;
-            flex: 1;
-        }
-        
-        .program-deadline {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(239, 68, 68, 0.15);
-            color: #f87171;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-            margin-left: 12px;
-        }
-        
-        .program-deadline::before {
-            content: "⏰";
-        }
-        
-        .program-funder {
-            font-size: 13px;
-            color: #c9a227;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .program-target {
-            font-size: 13px;
-            color: #64748b;
-            margin-bottom: 12px;
-        }
-        
-        .program-description {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        
-        .program-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            color: #0a1628 !important;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        
-        /* Tip box */
-        .tip-box {
-            background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
-            border-left: 4px solid #c9a227;
-            border-radius: 0 12px 12px 0;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .tip-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-        
-        .tip-icon {
-            font-size: 20px;
-        }
-        
-        .tip-label {
-            font-size: 12px;
-            font-weight: 700;
-            color: #c9a227;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .tip-title {
+        .intro h2 {
+            color: #667eea;
             font-size: 18px;
-            font-weight: 600;
-            color: #f8f5f0;
-            margin: 0 0 12px 0;
+            margin-bottom: 10px;
         }
         
-        .tip-content {
+        .intro p {
+            color: #4a5568;
             font-size: 15px;
-            color: #cbd5e1;
-            line-height: 1.7;
         }
         
-        /* Insight section */
-        .insight-box {
-            background: rgba(30, 58, 95, 0.3);
+        /* Top Programm */
+        .top-programm {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             border-radius: 12px;
-            padding: 24px;
-            margin-top: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
         }
         
-        .insight-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-        
-        .insight-category {
+        .top-programm .badge {
             display: inline-block;
-            background: rgba(14, 165, 233, 0.15);
-            color: #38bdf8;
+            background: #e53e3e;
+            color: white;
             padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .read-time {
+            border-radius: 12px;
             font-size: 12px;
-            color: #64748b;
-        }
-        
-        /* News items */
-        .news-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .news-item {
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(30, 58, 95, 0.5);
-        }
-        
-        .news-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .news-item:first-child {
-            padding-top: 0;
-        }
-        
-        .news-bullet {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            border-radius: 50%;
-            font-size: 10px;
-            color: #0a1628;
             font-weight: 700;
-            margin-right: 10px;
-            vertical-align: middle;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
         
-        .news-text {
+        .top-programm h2 {
+            color: #744210;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .top-programm .betrag {
+            color: #c05621;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .top-programm p {
+            color: #744210;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        
+        .top-programm .steps {
+            background: rgba(255,255,255,0.6);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .top-programm .steps h3 {
+            color: #744210;
             font-size: 14px;
-            color: #cbd5e1;
-            line-height: 1.6;
-            vertical-align: middle;
+            margin-bottom: 10px;
         }
         
-        .news-link {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 500;
+        .top-programm .steps ol {
+            margin-left: 20px;
+            color: #744210;
+            font-size: 14px;
         }
         
-        .news-link:hover {
-            text-decoration: underline;
+        .top-programm .steps li {
+            margin-bottom: 8px;
         }
         
-        /* CTA Button */
+        .kI-tipp {
+            background: #1a202c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .kI-tipp strong {
+            color: #48bb78;
+        }
+        
+        /* Weitere Programme */
+        .weitere {
+            margin-bottom: 30px;
+        }
+        
+        .weitere h2 {
+            color: #2d3748;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .programm-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .programm-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .programm-card h3 {
+            color: #2d3748;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .programm-card .betrag {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .programm-card p {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .programm-card .frist {
+            color: #e53e3e;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        /* Tipp der Woche */
+        .tipp {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .tipp h2 {
+            color: #234e52;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .tipp h3 {
+            color: #234e52;
+            font-size: 15px;
+            margin: 15px 0 8px 0;
+        }
+        
+        .tipp p {
+            color: #2c5282;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .tipp .example {
+            background: rgba(255,255,255,0.7);
+            padding: 12px;
+            border-radius: 6px;
+            font-style: italic;
+            color: #2d3748;
+            border-left: 3px solid #38b2ac;
+        }
+        
+        /* Ausblick */
+        .ausblick {
+            background: #edf2f7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .ausblick h2 {
+            color: #2d3748;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .ausblick p {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            color: #0a1628 !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
             text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-size: 15px;
             font-weight: 600;
-            margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+            font-size: 14px;
+            transition: transform 0.2s;
         }
         
-        /* Divider */
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.3), transparent);
-            margin: 32px 0;
+        .cta-button:hover {
+            transform: scale(1.05);
         }
         
         /* Footer */
         .footer {
-            background: #070d17;
-            padding: 32px 24px;
+            background: #2d3748;
+            color: #a0aec0;
+            padding: 25px 30px;
             text-align: center;
-        }
-        
-        .footer-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-        
-        .footer-logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: #0a1628;
-        }
-        
-        .footer-logo-text {
-            font-size: 16px;
-            font-weight: 600;
-            color: #f8f5f0;
-        }
-        
-        .footer-text {
             font-size: 13px;
-            color: #64748b;
-            margin-bottom: 20px;
-            line-height: 1.6;
         }
         
-        .footer-links {
-            margin-bottom: 20px;
+        .footer p {
+            margin-bottom: 8px;
         }
         
-        .footer-link {
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer .social {
+            margin-top: 15px;
+        }
+        
+        .footer .social a {
             display: inline-block;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 13px;
             margin: 0 10px;
-        }
-        
-        .footer-link:hover {
-            color: #c9a227;
-        }
-        
-        .social-links {
-            margin-bottom: 20px;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: rgba(30, 58, 95, 0.5);
-            border-radius: 8px;
-            margin: 0 6px;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        
-        .social-link:hover {
-            background: rgba(201, 162, 39, 0.2);
-            color: #c9a227;
-        }
-        
-        .copyright {
-            font-size: 12px;
-            color: #475569;
-        }
-        
-        /* Dark mode support */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #0a1628 !important;
-            }
-            .email-wrapper {
-                background-color: #0a1628 !important;
-            }
-        }
-        
-        /* Mobile styles */
-        @media screen and (max-width: 600px) {
-            .section {
-                padding: 24px 16px !important;
-            }
-            
-            h1 {
-                font-size: 22px !important;
-            }
-            
-            h2 {
-                font-size: 18px !important;
-            }
-            
-            .program-header {
-                flex-direction: column;
-            }
-            
-            .program-deadline {
-                margin-left: 0;
-                margin-top: 8px;
-            }
-            
-            .footer-link {
-                display: block;
-                margin: 8px 0;
-            }
+            color: white;
+            background: #4a5568;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 50%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!--[if mso]>
-    <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="600" align="center" style="width:600px;">
-    <tr>
-    <td>
-    <![endif]-->
-    
-    <div class="email-wrapper">
+    <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="logo-container">
-                <div class="logo-icon">€</div>
-                <div class="logo-text">
-                    <div class="logo-title">EduFunds</div>
-                    <div class="logo-subtitle">Intelligente Schulförderung</div>
-                </div>
-            </div>
-            <div class="issue-info">
-                <span class="issue-badge">{{issue_number}}</span>
-                {{issue_date}}
-            </div>
+            <h1>🎓 EduFunds</h1>
+            <p class="subtitle">Der Newsletter für Förderungen & Schulen</p>
+            <span class="ausgabe">{{ausgabe}}</span>
         </div>
         
         <!-- Content -->
         <div class="content">
-            
-            <!-- Lead Article / Editorial -->
-            <div class="section">
-                <h1>{{lead_title}}</h1>
-                <p class="lead">{{lead_content}}</p>
+            <!-- Einleitung -->
+            <div class="intro">
+                <h2>👋 {{intro_titel}}</h2>
+                <p>{{intro_text}}</p>
             </div>
             
-            <!-- New Programs Section -->
-            <div class="section section-alt">
-                <h2>🎯 Neue Förderprogramme</h2>
-                <p>Die aktuellsten Fördermöglichkeiten für Schulen – entdeckt und kuratiert vom EduFunds-Team.</p>
+            <!-- Top Programm -->
+            <div class="top-programm">
+                <span class="badge">Top Programm</span>
+                <h2>{{top_titel}}</h2>
+                <div class="betrag">{{top_betrag}}</div>
+                <p><strong>Warum das wichtig ist:</strong> {{top_relevanz}}</p>
                 
-                {{programs}}
+                <div class="steps">
+                    <h3>📝 So beantragen Sie das Programm:</h3>
+                    <ol>
+                        {{top_schritte}}
+                    </ol>
+                </div>
                 
-            </div>
-            
-            <!-- Weekly Tip -->
-            <div class="section">
-                <div class="tip-box">
-                    <div class="tip-header">
-                        <span class="tip-icon">💡</span>
-                        <span class="tip-label">Antragstipp der Woche</span>
-                    </div>
-                    <h3 class="tip-title">{{tip_title}}</h3>
-                    <div class="tip-content">{{tip_content}}</div>
+                <p><strong>Frist:</strong> {{top_frist}}</p>
+                <p><strong>Förderfähig:</strong> {{top_foerderfaehig}}</p>
+                
+                <div class="kI-tipp">
+                    <strong>💡 KI-Tipp:</strong> {{top_ki_tipp}}
                 </div>
             </div>
             
-            <!-- Background Article -->
-            <div class="section section-alt">
-                <div class="insight-meta">
-                    <span class="insight-category">{{insight_category}}</span>
-                    <span class="read-time">{{insight_read_time}} Min. Lesezeit</span>
+            <!-- Weitere Programme -->
+            <div class="weitere">
+                <h2>📋 Weitere Top-Programme</h2>
+                
+                <div class="programm-card">
+                    <h3>{{prog2_titel}}</h3>
+                    <div class="betrag">{{prog2_betrag}}</div>
+                    <p>{{prog2_beschreibung}}</p>
+                    <div class="frist">⏰ {{prog2_frist}}</div>
                 </div>
-                <h2>{{insight_title}}</h2>
-                <div class="insight-box">
-                    {{insight_content}}
+                
+                <div class="programm-card">
+                    <h3>{{prog3_titel}}</h3>
+                    <div class="betrag">{{prog3_betrag}}</div>
+                    <p>{{prog3_beschreibung}}</p>
+                    <div class="frist">⏰ {{prog3_frist}}</div>
                 </div>
-                {{#if insight_cta_url}}
-                <a href="{{insight_cta_url}}" class="cta-button">{{insight_cta_text}}</a>
-                {{/if}}
+                
+                <div class="programm-card">
+                    <h3>{{prog4_titel}}</h3>
+                    <div class="betrag">{{prog4_betrag}}</div>
+                    <p>{{prog4_beschreibung}}</p>
+                    <div class="frist">⏰ {{prog4_frist}}</div>
+                </div>
             </div>
             
-            <!-- Short News -->
-            <div class="section">
-                <h2>📰 Kurzmeldungen</h2>
-                <ul class="news-list">
-                    {{news_items}}
-                </ul>
+            <!-- Tipp der Woche -->
+            <div class="tipp">
+                <h2>💡 {{tipp_titel}}</h2>
+                <p>{{tipp_einleitung}}</p>
+                
+                <h3>{{tipp_fehler1_titel}}</h3>
+                <p>{{tipp_fehler1_text}}</p>
+                
+                <h3>{{tipp_fehler2_titel}}</h3>
+                <p>{{tipp_fehler2_text}}</p>
+                
+                <h3>{{tipp_fehler3_titel}}</h3>
+                <p>{{tipp_fehler3_text}}</p>
+                
+                <div class="example">
+                    <strong>Beispiel:</strong> {{tipp_beispiel}}
+                </div>
             </div>
             
+            <!-- Ausblick -->
+            <div class="ausblick">
+                <h2>🔮 {{ausblick_titel}}</h2>
+                <p>{{ausblick_text}}</p>
+                <a href="{{cta_url}}" class="cta-button">{{cta_text}}</a>
+            </div>
         </div>
         
         <!-- Footer -->
         <div class="footer">
-            <div class="footer-logo">
-                <div class="footer-logo-icon">€</div>
-                <span class="footer-logo-text">EduFunds</span>
-            </div>
-            
-            <p class="footer-text">
-                Sie erhalten diesen Newsletter, weil Sie sich auf edufunds.org angemeldet haben.<br>
-                Die intelligente Plattform für Schulförderung in Deutschland.
-            </p>
-            
-            <div class="footer-links">
-                <a href="{{unsubscribe_url}}" class="footer-link">Newsletter abbestellen</a>
-                <a href="https://edufunds.org/impressum" class="footer-link">Impressum</a>
-                <a href="https://edufunds.org/datenschutz" class="footer-link">Datenschutz</a>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://twitter.com/aitema_de" class="social-link" title="Twitter">T</a>
-                <a href="https://linkedin.com/company/aitema" class="social-link" title="LinkedIn">L</a>
-            </div>
-            
-            <p class="copyright">
-                © {{year}} EduFunds – Ein Projekt der AITEMA GmbH<br>
-                Berlin, Deutschland
-            </p>
+            <p><strong>EduFunds</strong> – Förderungen finden leicht gemacht</p>
+            <p>Sie erhalten diesen Newsletter, weil Sie sich für Bildungsförderung interessieren.</p>
+            <p><a href="{{unsubscribe_url}}">Newsletter abbestellen</a> | <a href="{{impressum_url}}">Impressum</a></p>
+            <p style="margin-top: 15px; font-size: 12px;">{{footer_copyright}}</p>
         </div>
     </div>
-    
-    <!--[if mso]>
-    </td>
-    </tr>
-    </table>
-    <![endif]-->
 </body>
 </html>
