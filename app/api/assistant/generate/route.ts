@@ -183,7 +183,7 @@ Erstelle einen professionellen, überzeugenden Förderantrag im Markdown-Format.
 - Fördergeber-Typ: ${programm.foerdergeberTyp}
 - Fördersumme: ${programm.foerdersummeText}
 - Bewerbungsfrist: ${programm.bewerbungsfristText}
-- Kategorien: ${programm.kategorien.join(", ")}
+- Kategorien: ${programm.kategorien?.join(", ") || "Allgemein"}
 - Kurzbeschreibung Programm: ${programm.kurzbeschreibung}
 
 ## SCHULE UND PROJEKT
