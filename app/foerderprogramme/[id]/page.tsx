@@ -5,6 +5,9 @@ import FoerderprogrammDetailClient from "./FoerderprogrammDetailClient";
 
 const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
 
+// Erlaube dynamische Rendering als Fallback
+export const dynamicParams = true;
+
 // Statische Generierung für alle Förderprogramme
 export function generateStaticParams() {
   return foerderprogramme.map((programm) => ({
