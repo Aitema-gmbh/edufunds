@@ -16,7 +16,8 @@ const hasGeminiKey = !!process.env.GEMINI_API_KEY;
 console.log(`[API] KI-Antragsgenerator Status: ${hasGeminiKey ? "✅ API-Key konfiguriert" : "⚠️ Fallback-Modus aktiv (kein GEMINI_API_KEY)"}`);
 
 // Konfiguration
-export const runtime = "edge";
+// Force Node.js runtime (not Edge) to avoid EvalError with Gemini API
+export const runtime = "nodejs";
 export const maxDuration = 300; // 5 Minuten Timeout
 
 interface GenerateRequest {

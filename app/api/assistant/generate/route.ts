@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// Force Node.js runtime (not Edge) to avoid EvalError
+export const runtime = 'nodejs';
+
 const genAI = process.env.GEMINI_API_KEY 
   ? new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
   : null;
