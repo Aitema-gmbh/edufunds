@@ -898,25 +898,28 @@
     "bundeslaender": [
       "alle"
     ],
-    "foerdersummeMin": 2000,
-    "foerdersummeMax": 20000,
-    "foerdersummeText": "2.000€ - 20.000€",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine feste Obergrenze (Einzelfallentscheidung, ca. 250 Projekte/Jahr mit 14+ Mio. €)",
     "kategorien": [
       "erziehung",
       "bildung",
       "jugendarbeit",
       "soziales"
     ],
-    "bewerbungsfristText": "laufend",
+    "bewerbungsfristText": "laufend (kein Stichtag)",
     "bewerbungsart": "online",
     "infoLink": "https://www.reinhold-beitlich-stiftung.de/foerderung.html",
-    "kurzbeschreibung": "Bundesweite Förderung von Projekten in Erziehung, Bildung und Jugendarbeit.",
-    "status": "unverifiziert",
+    "kurzbeschreibung": "Bundesweite Förderung von Projekten in Erziehung, Bildung und Jugendarbeit. Jährlich ca. 250 Projekte mit insgesamt über 14 Mio. € gefördert. Ausschluss: laufende Personalkosten, bauliche Maßnahmen, Fahrzeugkäufe.",
+    "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135475",
-    "quelle": "reinhold-beitlich-stiftung.de",
+    "updatedAt": "2026-02-13T15:00:00.000Z",
+    "quelle": "https://www.reinhold-beitlich-stiftung.de/foerderrichtlinien/",
+    "quelleUrl": "https://www.reinhold-beitlich-stiftung.de/foerderrichtlinien/",
     "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Reinhold-Beitlich-Stiftung",
+    "bemerkung": "Keine festen Obergrenzen für Einzelprojekte. Anträge von gemeinnützigen Organisationen (Vereine, Genossenschaften, Stiftungen) möglich. Keine Privatpersonen oder Auslandsprojekte."
   },
   {
     "id": "ferry-porsche-challenge",
@@ -990,7 +993,7 @@
   {
     "id": "first-lego-league",
     "name": "Digitale Schule Sachsen - FIRST LEGO League",
-    "foerdergeber": "Sächsische Aufbaubank",
+    "foerdergeber": "Sächsische Aufbaubank (SAB)",
     "foerdergeberTyp": "land",
     "schulformen": [
       "grundschule"
@@ -998,25 +1001,30 @@
     "bundeslaender": [
       "DE-SN"
     ],
-    "foerdersummeMin": 1000,
-    "foerdersummeMax": 5000,
-    "foerdersummeText": "Materialien + Robotik-Sets",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Challenge-Sets + Robotik-Materialien (LEGO SPIKE Prime/Essential)",
     "kategorien": [
       "robotik",
       "mint",
       "digitalisierung",
       "technik"
     ],
+    "bewerbungsfristStart": "2025-09-01",
+    "bewerbungsfristEnde": "2026-04-19",
     "bewerbungsfristText": "bis 19.04.2026",
     "bewerbungsart": "online",
     "infoLink": "https://www.first-lego-league.org/de/foerdern",
-    "kurzbeschreibung": "Förderung von 25 Challenge- und 45 Explore-Klassen mit Robotik-Materialien.",
-    "status": "unverifiziert",
+    "kurzbeschreibung": "Förderung von 25 Challenge-Klassen (je 1 Challenge-Set + 20 Klassen je 3 SPIKE Prime) und 45 Explore-Klassen (je 4 Explore-Sets + 20 Klassen je 4 SPIKE Essential). Finale in Leipzig am 19.04.2026.",
+    "status": "aktiv",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135483",
-    "quelle": "first-lego-league.org",
+    "updatedAt": "2026-02-13T15:00:00.000Z",
+    "quelle": "https://www.first-lego-league.org/files/Dateiverwaltung%20NEU/Fotos/F%C3%B6rderprogramme/F%C3%B6rderrichtlinien_SAB_2025-26_Website.pdf",
+    "quelleUrl": "https://www.first-lego-league.org/files/Dateiverwaltung%20NEU/Fotos/F%C3%B6rderprogramme/F%C3%B6rderrichtlinien_SAB_2025-26_Website.pdf",
     "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Sächsische Aufbaubank",
+    "bemerkung": "Vorrang für Schulen aus dem Netzwerk 'Digitale Schule Sachsen'. Mindestens 30% Mädchenanteil erforderlich. Nach Zusage durch HANDS on TECHNOLOGY e.V. erfolgt Anmeldung mit Fördercode."
   },
   {
     "id": "makerspaces-schulen",
@@ -1029,25 +1037,29 @@
     "bundeslaender": [
       "alle"
     ],
-    "foerdersummeMin": 2000,
-    "foerdersummeMax": 10000,
-    "foerdersummeText": "bis 10.000€",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Quelle nicht verifizierbar (alternative: Zukunft Mitgemacht 10.000€, BildungsChancen bis 20.000€)",
     "kategorien": [
       "makerspace",
       "technik",
       "digitalisierung",
       "gestaltung"
     ],
-    "bewerbungsfristText": "31.10.2025",
+    "bewerbungsfristText": "unbekannt",
     "bewerbungsart": "online",
     "infoLink": "https://www.bildungspartner.de/makerspaces/foerderung.html",
-    "kurzbeschreibung": "Förderung von Makerspaces für kreative Technik- und Gestaltungsprojekte an Schulen.",
-    "status": "unverifiziert",
+    "kurzbeschreibung": "Die Organisation 'Bildungspartner Deutschland' mit diesem spezifischen Programm konnte nicht verifiziert werden. Alternativen: 'Zukunft Mitgemacht' (DKHW/ROSSMANN/P&G) mit 10.000€ oder BildungsChancen mit bis 20.000€.",
+    "status": "review_needed",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135486",
+    "updatedAt": "2026-02-13T15:00:00.000Z",
     "quelle": "bildungspartner.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "quelleUrl": "https://foerdermittel-wissenswert.de/foerdermittel-fuer-einen-makerspace/",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche",
+    "bemerkung": "Organisation 'Bildungspartner Deutschland' mit diesem Förderprogramm nicht auffindbar. Alternative Makerspace-Förderer: Zukunft Mitgemacht (10.000€), BildungsChancen (bis 20.000€), Stiftung Bildung (bis 5.000€).",
+    "reviewNotiz": "Ursprüngliche Quelle bildungspartner.de nicht verifizierbar. Programm möglicherweise nicht existent oder unter falschem Namen erfasst."
   },
   {
     "id": "hessen-mint-freundlich",
@@ -1085,7 +1097,7 @@
   {
     "id": "sparkassen-luebeck-nachhilfe",
     "name": "Nachhilfeprogramm Überholspur",
-    "foerdergeber": "Sparkassenstiftung Lübeck",
+    "foerdergeber": "Gemeinnützige Sparkassenstiftung zu Lübeck",
     "foerdergeberTyp": "stiftung",
     "schulformen": [
       "grundschule"
@@ -1093,9 +1105,9 @@
     "bundeslaender": [
       "DE-SH"
     ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "10.000€ - 30.000€ pro Schuljahr",
+    "foerdersummeMin": null,
+    "foerdersummeMax": null,
+    "foerdersummeText": "Keine direkte Förderung für Schulen (Schüler-Nachhilfeprogramm, Kostenlos für Teilnehmer)",
     "kategorien": [
       "nachhilfe",
       "lernrueckstand",
@@ -1103,16 +1115,20 @@
       "mathematik",
       "deutsch"
     ],
-    "bewerbungsfristText": "laufend",
+    "bewerbungsfristText": "keine Antragsmöglichkeit für Schulen",
     "bewerbungsart": "online",
-    "infoLink": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de/foerderung.html",
-    "kurzbeschreibung": "Aufholen nach Corona: Lernrückstände in Mathe und Deutsch für Klassen 1-6.",
-    "status": "unverifiziert",
+    "infoLink": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de/initiativen-preise-verborgen/nachhilfeprojekt-ueberholspur",
+    "kurzbeschreibung": "Nachhilfeprogramm für Schüler:innen der 9. und 10. Klassen (nicht Grundschule!) an Lübecker Gemeinschaftsschulen. Kostenlose Lernbegleitung in Deutsch, Englisch und Mathe. Keine direkte Förderung für Schulen, sondern Kooperation zwischen Stiftung und Schulen.",
+    "status": "review_needed",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T11:21:11.135492",
-    "quelle": "sparkassenstiftung-luebeck.de",
-    "kiAntragGeeignet": true,
-    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
+    "updatedAt": "2026-02-13T15:00:00.000Z",
+    "quelle": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de/initiativen-preise-verborgen/nachhilfeprojekt-ueberholspur",
+    "quelleUrl": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de/initiativen-preise-verborgen/nachhilfeprojekt-ueberholspur",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "Web-Recherche Sparkassenstiftung Lübeck",
+    "bemerkung": "Programm richtet sich an Schüler:innen (nicht an Schulen zur Einreichung). Nur für Lübecker Gemeinschaftsschulen, nicht Grundschulen. 100% Abschlussquote bei regelmäßigen Teilnehmer:innen.",
+    "reviewNotiz": "Grundlegende Fehler im Eintrag: Zielgruppe ist Sekundarstufe (Klassen 9-10), nicht Grundschule. Keine direkte Förderung für Schulen, sondern Schüler-Nachhilfeprogramm."
   },
   {
     "id": "sparkasse-elbe-elster-ausland",
