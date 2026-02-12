@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
 
     // Gemini Model initialisieren
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash",
       generationConfig: {
         temperature: 0.3,
         maxOutputTokens: 4000,
@@ -133,9 +133,9 @@ export async function POST(request: NextRequest) {
     const response = result.response;
     const text = response.text();
 
-    return NextResponse.json({ 
+    return NextResponse.json({
       antrag: text,
-      model: "gemini-1.5-flash",
+      model: "gemini-2.0-flash",
       timestamp: new Date().toISOString()
     }, {
       headers: {
