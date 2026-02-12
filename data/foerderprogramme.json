@@ -1,35 +1,5 @@
 [
   {
-    "id": "bkm-kultur-digital",
-    "name": "BKM – Digitale Kultur (Strategie)",
-    "foerdergeber": "Bundesministerium für Kultur und Medien (BKM)",
-    "foerdergeberTyp": "bund",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "digitalisierung",
-      "kultur",
-      "oeffentlichkeitsarbeit"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://kulturstaatsminister.de/",
-    "kurzbeschreibung": "Das Bundesministerium für Kultur und Medien (BKM) fördert digitale Projekte im Kultursektor. Über die Förderdatenbank sind aktuelle Ausschreibungen einsehbar.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330034",
-    "quelle": "bkm.bund.de",
-    "kiAntragGeeignet": true,
-    "antragsLink": "https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BKM/"
-  },
-  {
     "id": "bmbf-digital",
     "name": "Digitalisierung in Schulen",
     "foerdergeber": "BMBF",
@@ -54,11 +24,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/digitalisierung-bildung/digitalisierung-bildung.html",
     "kurzbeschreibung": "Modellprojekte zur Digitalisierung des Unterrichts an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330056",
+    "updatedAt": "2026-02-12T11:21:11.135315",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmi-sicherheit",
@@ -83,11 +54,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmi.bund.de/DE/themen/sicherheit/forschung-fuer-ihre-sicherheit/forschung-fuer-ihre-sicherheit-node.html",
     "kurzbeschreibung": "Förderung für Brandschutz, Evakuierungskonzepte und Notfalltraining an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-06-10T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135336",
     "quelle": "bmi.bund.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmuv-klima",
@@ -112,11 +84,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmuv.de/themen/energie-klima/nationale-klimaschutzinitiative",
     "kurzbeschreibung": "Förderung für klimafreundliche Grundschulen und Umweltbildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-06-10T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135341",
     "quelle": "bmuv.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmas-inklusion",
@@ -141,11 +114,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmas.de/DE/Soziales/Teilhabe-und-Inklusion/teilhabe-und-inklusion.html",
     "kurzbeschreibung": "Förderung für inklusive Bildungsprojekte und Barrierefreiheit in Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-06-10T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135345",
     "quelle": "bmas.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmg-gesundheit",
@@ -170,40 +144,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bundesgesundheitsministerium.de/themen/praevention/kindergesundheit/kindergesundheit.html",
     "kurzbeschreibung": "Förderung für Gesundheitsförderung und Prävention an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-06-10T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135348",
     "quelle": "bmg.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bmfsfj-demokratie",
-    "name": "Demokratie leben! Grundschule",
-    "foerdergeber": "BMFSFJ",
-    "foerdergeberTyp": "bund",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "demokratie",
-      "partizipation",
-      "toleranz"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.demokratie-leben.de/programm/foerderung/",
-    "kurzbeschreibung": "Förderung für Demokratiebildung und Engagement an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179405",
-    "quelle": "demokratie-leben.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "telekom-mint",
@@ -262,69 +208,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.deutsche-bank-stiftung.de/themen/bildung-und-kultur",
     "kurzbeschreibung": "Leseförderung und Literaturprojekte an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330072",
+    "updatedAt": "2026-02-12T11:21:11.135352",
     "quelle": "deutsche-bank-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bertelsmann-bildung",
-    "name": "Bildungsinnovation Grundschule",
-    "foerdergeber": "Bertelsmann Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "innovation",
-      "digitalisierung",
-      "schulentwicklung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/schule",
-    "kurzbeschreibung": "Innovation und Reform in der Grundschulbildung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330076",
-    "quelle": "bertelsmann-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bosch-umwelt",
-    "name": "Umweltbildung Grundschule",
-    "foerdergeber": "Robert Bosch Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "umwelt",
-      "nachhaltigkeit",
-      "klimaschutz"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bosch-stiftung.de/de/foerderung/themen-und-programme/nachhaltigkeit-und-klima",
-    "kurzbeschreibung": "Umweltbildung und Nachhaltigkeitsprojekte an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330080",
-    "quelle": "bosch-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "tschira-stiftung",
@@ -349,69 +238,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.klaus-tschira-stiftung.de/foerderung/naturwissenschaften-mathematik-informatik",
     "kurzbeschreibung": "Naturwissenschaftliche Bildung und MINT-Förderung in der Grundschule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330086",
+    "updatedAt": "2026-02-12T11:21:11.135355",
     "quelle": "klaus-tschira-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "postcode-lotterie",
-    "name": "Soziales Engagement Grundschule",
-    "foerdergeber": "Deutsche Postcode Lotterie",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "soziales",
-      "engagement",
-      "inklusion"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.postcode-lotterie.de/projekte/foerdergebiete.html",
-    "kurzbeschreibung": "Soziales Engagement und gemeinnützige Projekte an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:55:35.934282",
-    "quelle": "postcode-lotterie.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "aktion-mensch",
-    "name": "Inklusion an Grundschulen",
-    "foerdergeber": "Aktion Mensch",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 60000,
-    "foerdersummeText": "10.000€ - 60.000€",
-    "kategorien": [
-      "inklusion",
-      "barrierefreiheit",
-      "teilhabe"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.aktion-mensch.de/foerderung/projektfoerderung.html",
-    "kurzbeschreibung": "Inklusion und Teilhabe für Menschen mit Behinderung an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:55:35.934305",
-    "quelle": "aktion-mensch.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "eu-erasmus-schulen",
@@ -467,11 +299,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.horizon-europe.de/de/foerderung",
     "kurzbeschreibung": "Forschungsprojekte und Innovation an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179430",
+    "updatedAt": "2026-02-12T11:21:11.135358",
     "quelle": "europa.eu",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bayern-digital",
@@ -496,11 +329,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.km.bayern.de/schule/digitalisierung/digitaler-bildungsraum.html",
     "kurzbeschreibung": "Digitale Infrastruktur und Ausstattung für bayerische Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330100",
+    "updatedAt": "2026-02-12T11:21:11.135361",
     "quelle": "km.bayern.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "berlin-schulbau",
@@ -554,11 +388,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.schulministerium.nrw.de/docs/bildung/Digitalisierung/schulen-digital.html",
     "kurzbeschreibung": "Digitale Transformation und Medienbildung in NRW-Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784514",
+    "updatedAt": "2026-02-12T11:21:11.135365",
     "quelle": "schulministerium.nrw.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "niedersachsen-sport",
@@ -583,11 +418,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.mk.niedersachsen.de/startseite/bildung/schule/sportfoerderung.html",
     "kurzbeschreibung": "Förderung für Sportstätten und Bewegungsangebote an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784538",
+    "updatedAt": "2026-02-12T11:21:11.135368",
     "quelle": "mk.niedersachsen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "siemens-energie",
@@ -612,11 +448,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.siemens-stiftung.org/de/projekte/bildung/",
     "kurzbeschreibung": "Energiebildung und naturwissenschaftliche Projekte an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330113",
+    "updatedAt": "2026-02-12T11:21:11.135370",
     "quelle": "siemens-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sap-informatik",
@@ -641,11 +478,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.sap-stiftung.de/foerdergebiete/",
     "kurzbeschreibung": "Informatikbildung und Programmierkurse für Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330117",
+    "updatedAt": "2026-02-12T11:21:11.135373",
     "quelle": "sap-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-kultur-macht-stark",
@@ -701,41 +539,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/grundschule/grundschule.html",
     "kurzbeschreibung": "Innovative Projekte zum Lernen durch Spielen in der Grundschule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330125",
+    "updatedAt": "2026-02-12T11:21:11.135377",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bmbf-mint-zukunft-schaffen",
-    "name": "MINT Zukunft schaffen",
-    "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
-    "foerdergeberTyp": "bund",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 25000,
-    "foerdersummeMax": 200000,
-    "foerdersummeText": "25.000€ - 200.000€",
-    "kategorien": [
-      "mint",
-      "mathematik",
-      "informatik",
-      "naturwissenschaften"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/forschung/mint-forschung/mint-forschung-node.html",
-    "kurzbeschreibung": "Nachhaltige MINT-Förderung und frühe Begeisterung für Naturwissenschaften.",
-    "status": "aktiv",
-    "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330129",
-    "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-sprache-und-integration",
@@ -762,41 +571,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/schulisches-bildung/sprachbildung/sprachbildung.html",
     "kurzbeschreibung": "Förderung von Sprachkompetenz und Integration für Kinder mit Migrationshintergrund.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330133",
+    "updatedAt": "2026-02-12T11:21:11.135379",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bmbf-zukunftslabor",
-    "name": "Zukunftslabor Grundschule",
-    "foerdergeber": "Bundesministerium für Bildung und Forschung (BMBF)",
-    "foerdergeberTyp": "bund",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 30000,
-    "foerdersummeMax": 250000,
-    "foerdersummeText": "30.000€ - 250.000€",
-    "kategorien": [
-      "innovation",
-      "zukunft",
-      "digitalisierung",
-      "mint"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bmbf.de/bmbf/de/forschung/forschung-an-schulen/forschung-an-schulen.html",
-    "kurzbeschreibung": "Schaffung von Zukunftslaboren für experimentelles Lernen an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330137",
-    "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-ki-schule",
@@ -822,11 +602,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/forschung/ki/ki.html",
     "kurzbeschreibung": "Pilotprojekte für den Einsatz von KI in der Grundschulbildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330141",
+    "updatedAt": "2026-02-12T11:21:11.135382",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-lesen-schreiben",
@@ -852,11 +633,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/grundschule/grundschule.html",
     "kurzbeschreibung": "Förderung von Leseförderprogrammen und Schreibkompetenz in der Grundschule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330146",
+    "updatedAt": "2026-02-12T11:21:11.135385",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-naturwissenschaftliche-grundbildung",
@@ -881,11 +663,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/forschung/mint-forschung/mint-forschung-node.html",
     "kurzbeschreibung": "Förderung naturwissenschaftlicher Grundbildung und experimentellen Lernens.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330150",
+    "updatedAt": "2026-02-12T11:21:11.135388",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-digitalpakt-2",
@@ -939,11 +722,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/inklusion/inklusion.html",
     "kurzbeschreibung": "Förderung inklusiver Unterrichtskonzepte und barrierefreier Lernumgebungen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330159",
+    "updatedAt": "2026-02-12T11:21:11.135391",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "volkswagen-mobilitaet",
@@ -969,11 +753,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.volkswagenstiftung.de/de/foerderung",
     "kurzbeschreibung": "Bildungsprojekte zu Mobilität, Verkehr und nachhaltiger Fortbewegung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330163",
+    "updatedAt": "2026-02-12T11:21:11.135394",
     "quelle": "volkswagenstiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "volkswagen-klima",
@@ -999,11 +784,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.volkswagenstiftung.de/de/foerderung?filter%5BareaOfFunding%5D%5B%5D=245",
     "kurzbeschreibung": "Förderung von Bildungsprojekten zum Klimawandel und nachhaltiger Entwicklung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330167",
+    "updatedAt": "2026-02-12T11:21:11.135397",
     "quelle": "volkswagenstiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "zeiss-stiftung-mint",
@@ -1029,11 +815,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/",
     "kurzbeschreibung": "MINT-Förderung mit Fokus auf Optik, Photonik und technische Bildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179442",
+    "updatedAt": "2026-02-12T11:21:11.135399",
     "quelle": "carl-zeiss-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "zeiss-wissenschaft",
@@ -1058,11 +845,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.carl-zeiss-stiftung.de/foerderung/",
     "kurzbeschreibung": "Frühe naturwissenschaftliche Bildung und Experimentierangebote.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179448",
+    "updatedAt": "2026-02-12T11:21:11.135402",
     "quelle": "carl-zeiss-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "mercator-digitalisierung",
@@ -1087,11 +875,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftung-mercator.de/de/projekte/bildung-und-wissenschaft/",
     "kurzbeschreibung": "Förderung digitaler Bildung und Medienkompetenz in der Grundschule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179452",
+    "updatedAt": "2026-02-12T11:21:11.135405",
     "quelle": "stiftung-mercator.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "mercator-integration",
@@ -1116,11 +905,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftung-mercator.de/de/projekte/bildung-und-wissenschaft/",
     "kurzbeschreibung": "Bildungsgerechtigkeit und Integration durch innovative Bildungsangebote.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179455",
+    "updatedAt": "2026-02-12T11:21:11.135407",
     "quelle": "stiftung-mercator.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmw-stiftung-demokratie",
@@ -1145,40 +935,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmw-stiftung.de/foerderung/",
     "kurzbeschreibung": "Förderung demokratischer Kultur und aktiver Partizipation in der Schule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179458",
+    "updatedAt": "2026-02-12T11:21:11.135410",
     "quelle": "bmw-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bmw-nachhaltigkeit",
-    "name": "Nachhaltige Zukunft gestalten",
-    "foerdergeber": "BMW Stiftung Herbert Quandt",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 20000,
-    "foerdersummeMax": 120000,
-    "foerdersummeText": "20.000€ - 120.000€",
-    "kategorien": [
-      "nachhaltigkeit",
-      "klimaschutz",
-      "umweltbildung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bmw-stiftung.de/foerderung/",
-    "kurzbeschreibung": "Bildung für nachhaltige Entwicklung und globale Verantwortung.",
-    "status": "aktiv",
-    "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179461",
-    "quelle": "bmw-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "heinrich-boell-bildung",
@@ -1203,11 +965,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.boell.de/de/foerderung",
     "kurzbeschreibung": "Förderung ökologischer Bildung und nachhaltigen Handelns in der Grundschule.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179464",
+    "updatedAt": "2026-02-12T11:21:11.135413",
     "quelle": "boell.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "stifterverband-bildung",
@@ -1233,11 +996,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stifterverband.org/was-wir-tun/foerderung",
     "kurzbeschreibung": "Förderung innovativer Bildungsprojekte und wissenschaftlicher Grundbildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179467",
+    "updatedAt": "2026-02-12T11:21:11.135419",
     "quelle": "stifterverband.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "dkjs-sport",
@@ -1262,11 +1026,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.dkjs.de/foerderung/sport-und-bewegung.html",
     "kurzbeschreibung": "Förderung von Bewegung, Sport und gesunder Lebensführung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179470",
+    "updatedAt": "2026-02-12T11:21:11.135422",
     "quelle": "dkjs.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "nabu-schulen",
@@ -1292,11 +1057,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.nabu.de/umwelt-und-bildung/schulen/",
     "kurzbeschreibung": "Förderung von Natur- und Umweltbildungsprojekten an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179474",
+    "updatedAt": "2026-02-12T11:21:11.135425",
     "quelle": "nabu.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bfn-artenvielfalt",
@@ -1322,41 +1088,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bfn.de/foerderung.html",
     "kurzbeschreibung": "Förderung von Schulprojekten zum Schutz der biologischen Vielfalt.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179477",
+    "updatedAt": "2026-02-12T11:21:11.135427",
     "quelle": "bfn.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "dosb-schulsport",
-    "name": "DOSB Schul- und Jugendsport",
-    "foerdergeber": "Deutscher Olympischer Sportbund (DOSB)",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "sport",
-      "bewegung",
-      "gesundheit",
-      "integration"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.dosb.de/foerderung/schul-sport/",
-    "kurzbeschreibung": "Förderung von Bewegungs- und Sportprojekten an Grundschulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179480",
-    "quelle": "dosb.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "aok-gesundheit",
@@ -1382,11 +1119,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.aok.de/pk/gesundheit/gesundheit-in-der-schule/",
     "kurzbeschreibung": "Förderung gesundheitsfördernder Maßnahmen und Präventionsprojekte an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179483",
+    "updatedAt": "2026-02-12T11:21:11.135430",
     "quelle": "aok.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "wissenschaft-im-dialog",
@@ -1412,11 +1150,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.wissenschaft-im-dialog.de/foerderung/",
     "kurzbeschreibung": "Förderung von Projekten zur Wissenschaftskommunikation und MINT-Bildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179486",
+    "updatedAt": "2026-02-12T11:21:11.135433",
     "quelle": "wissenschaft-im-dialog.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "chemie-fonds",
@@ -1442,71 +1181,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.fondsderchemischenindustrie.de/foerderung/schulen/",
     "kurzbeschreibung": "Förderung chemischer Experimentierräume und MINT-Projekte an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179489",
+    "updatedAt": "2026-02-12T11:21:11.135436",
     "quelle": "fondsderchemischenindustrie.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "vw-stiftung",
-    "name": "Science Talents - Volkswagen Stiftung",
-    "foerdergeber": "VolkswagenStiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "mint",
-      "wissenschaft",
-      "talentfoerderung",
-      "bildung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.volkswagenstiftung.de/de/foerderung",
-    "kurzbeschreibung": "Förderung wissenschaftlicher Bildung und Talentförderung in MINT-Bereichen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179492",
-    "quelle": "volkswagenstiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "telekom-stiftung",
-    "name": "Digitale Bildung - Telekom Stiftung",
-    "foerdergeber": "Telekom Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "digitalisierung",
-      "ki",
-      "informatik",
-      "bildung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.telekom-stiftung.de/themen/digitale-bildung",
-    "kurzbeschreibung": "Förderung digitaler Bildungsprojekte und Informatik-Initiativen an Schulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179495",
-    "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "kulturstiftung-bund",
@@ -1532,11 +1212,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.kulturstiftung.de/foerderung/bildung",
     "kurzbeschreibung": "Förderung kultureller Bildung und künstlerischer Projekte an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135439",
     "quelle": "kulturstiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "dkjs-inklusion",
@@ -1562,41 +1243,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.dkjs.de/foerderung/inklusion.html",
     "kurzbeschreibung": "Förderung inklusiver Bildungsprojekte und barrierefreier Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179499",
+    "updatedAt": "2026-02-12T11:21:11.135441",
     "quelle": "dkjs.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "aktion-mensch",
-    "name": "Inklusion gewinnt - Aktion Mensch",
-    "foerdergeber": "Aktion Mensch",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "inklusion",
-      "behinderung",
-      "teilhabe",
-      "integration"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.aktion-mensch.de/foerderung/projektfoerderung.html",
-    "kurzbeschreibung": "Förderung inklusiver Projekte zur Teilhabe von Menschen mit Behinderung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:55:35.934319",
-    "quelle": "aktion-mensch.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "deutsche-kinderschutz",
@@ -1622,11 +1274,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.kinderschutzbund.de/foerderung/",
     "kurzbeschreibung": "Förderung von Kinderschutzprojekten und Gewaltprävention an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179503",
+    "updatedAt": "2026-02-12T11:21:11.135444",
     "quelle": "kinderschutzbund.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bosch-schulpreis",
@@ -1652,71 +1305,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bosch-stiftung.de/de/foerdergebiet/bildung",
     "kurzbeschreibung": "Deutschlands renommiertester Schulpreis für innovative Lernkonzepte und Bildungsqualität.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135447",
     "quelle": "bosch-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "siemens-partnerschulen",
-    "name": "Siemens Partnerschulprogramm",
-    "foerdergeber": "Siemens Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "mint",
-      "technik",
-      "berufsorientierung",
-      "innovation"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.siemens-stiftung.org/de/projekte/bildung/",
-    "kurzbeschreibung": "Partnerschaftliches Netzwerk zur Förderung von MINT-Kompetenzen und technischer Bildung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179506",
-    "quelle": "siemens-stiftung.org",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "mercator-schulen-im-team",
-    "name": "Schulen im Team",
-    "foerdergeber": "Stiftung Mercator",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "kooperation",
-      "uebergang",
-      "bildungsgerechtigkeit",
-      "netzwerk"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.stiftung-mercator.de/de/projekte/schulen-im-team/",
-    "kurzbeschreibung": "Großes Schulentwicklungsprogramm für Kooperation von Schulen im lokalen Netzwerk.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179508",
-    "quelle": "stiftung-mercator.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "deutsche-post-schule",
@@ -1742,11 +1336,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.deutschepost.de/de/p/post-und-schule.html",
     "kurzbeschreibung": "Kostenlose Unterrichtsmaterialien und Leseförderung für Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135449",
     "quelle": "deutschepost.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "town-country-stiftungspreis",
@@ -1772,11 +1367,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.town-country.de/stiftung/stiftungspreis",
     "kurzbeschreibung": "Stiftungspreis für Projekte zugunsten benachteiligter Kinder und Jugendlicher.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135452",
     "quelle": "town-country.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "playmobil-hobpreis",
@@ -1802,11 +1398,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.foerdermittelbuero.de/foerderung/hob-preis/",
     "kurzbeschreibung": "Förderpreis für kreative und inklusive Schulprojekte in Regel- und Sonderschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784558",
+    "updatedAt": "2026-02-12T11:21:11.135455",
     "quelle": "playmobil.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "l-bank-startchancen",
@@ -1832,71 +1429,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.l-bank.de/produkte/finanzhilfen/startchancen.html",
     "kurzbeschreibung": "Bundes-Länder-Förderung für Schulen mit hohem Anteil benachteiligter Schüler in BW.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135467",
     "quelle": "l-bank.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bw-lernen-mit-rueckenwind",
-    "name": "Lernen mit Rückenwind",
-    "foerdergeber": "Kultusministerium Baden-Württemberg",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-BW"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "nachhilfe",
-      "foerderung",
-      "deutsch",
-      "mathematik",
-      "englisch"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://km.baden-wuerttemberg.de/de/schule/programme-und-foerderprogramme",
-    "kurzbeschreibung": "Aufholen nach Corona: Förderung von Lernrückständen in Deutsch, Mathe und Englisch.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "km-bw.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "gls-startchancen",
-    "name": "Startchancenprogramm GLS",
-    "foerdergeber": "GLS Zukunftsstiftung Bildung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "bildungsgerechtigkeit",
-      "schulentwicklung",
-      "begleitung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://zukunftsstiftung-bildung.de/startchancenprogramm",
-    "kurzbeschreibung": "Unterstützung für über 900 Schulen in herausfordernder Lage mit prozessorientierter Begleitung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "zukunftsstiftung-bildung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "schott-nachhaltigkeit",
@@ -1922,11 +1460,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.schott.com/de-de/news-and-media/pressemitteilungen",
     "kurzbeschreibung": "Praxisorientierte Projekte zu Klimaschutz, Geschlechtergerechtigkeit und nachhaltigem Konsum.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135470",
     "quelle": "schott.com",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "fritz-henkel-inklusion",
@@ -1952,11 +1491,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.fritz-henkel-stiftung.de/foerderung/inklusion.html",
     "kurzbeschreibung": "Förderung inklusiver Bildungsprojekte und Abbau von Barrieren für benachteiligte Kinder.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660410",
+    "updatedAt": "2026-02-12T11:21:11.135473",
     "quelle": "fritz-henkel-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "reinhold-beitlich",
@@ -1982,11 +1522,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.reinhold-beitlich-stiftung.de/foerderung.html",
     "kurzbeschreibung": "Bundesweite Förderung von Projekten in Erziehung, Bildung und Jugendarbeit.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660416",
+    "updatedAt": "2026-02-12T11:21:11.135475",
     "quelle": "reinhold-beitlich-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "ferry-porsche-challenge",
@@ -2012,11 +1553,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.ferryporschechallenge.de/ueber-den-wettbewerb.html",
     "kurzbeschreibung": "Projekte für benachteiligte Kinder und Jugendliche, initiiert von Jugendlichen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660420",
+    "updatedAt": "2026-02-12T11:21:11.135478",
     "quelle": "ferryporschechallenge.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "berdelle-naturwissenschaft",
@@ -2043,11 +1585,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.berdelle-stiftung.de/foerderung/schulen",
     "kurzbeschreibung": "Förderung naturwissenschaftlicher Bildung und Experimentierräume an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135480",
     "quelle": "berdelle-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "first-lego-league",
@@ -2073,11 +1616,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.first-lego-league.org/de/foerdern",
     "kurzbeschreibung": "Förderung von 25 Challenge- und 45 Explore-Klassen mit Robotik-Materialien.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135483",
     "quelle": "first-lego-league.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "makerspaces-schulen",
@@ -2103,11 +1647,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bildungspartner.de/makerspaces/foerderung.html",
     "kurzbeschreibung": "Förderung von Makerspaces für kreative Technik- und Gestaltungsprojekte an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660424",
+    "updatedAt": "2026-02-12T11:21:11.135486",
     "quelle": "bildungspartner.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "hessen-mint-freundlich",
@@ -2133,11 +1678,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://kultus.hessen.de/schule-aktuell",
     "kurzbeschreibung": "Auszeichnung und Förderung für Schulen mit besonderem Engagement in MINT-Fächern.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135489",
     "quelle": "kultus.hessen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sparkassen-luebeck-nachhilfe",
@@ -2164,11 +1710,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.gemeinnuetzige-sparkassenstiftung-luebeck.de/foerderung.html",
     "kurzbeschreibung": "Aufholen nach Corona: Lernrückstände in Mathe und Deutsch für Klassen 1-6.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660430",
+    "updatedAt": "2026-02-12T11:21:11.135492",
     "quelle": "sparkassenstiftung-luebeck.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sparkasse-elbe-elster-ausland",
@@ -2194,11 +1741,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.spk-elbe-elster.de/stiftung/foerderung.html",
     "kurzbeschreibung": "Stipendien für Schüleraustausch und internationale Begegnungen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660434",
+    "updatedAt": "2026-02-12T11:21:11.135494",
     "quelle": "spk-elbe-elster.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sparkasse-erfurt-exzellenz",
@@ -2284,41 +1832,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.esf-hessen.de/projektaufrufe",
     "kurzbeschreibung": "Förderung von Projekten zur Verzahnung von Schule und beruflicher Praxis.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135498",
     "quelle": "esf-hessen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "hessen-weiterbildungspakt",
-    "name": "Weiterbildungspakt Hessen",
-    "foerdergeber": "Hessisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-HE"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "weiterbildung",
-      "lehrerfortbildung",
-      "qualitaet",
-      "schulentwicklung"
-    ],
-    "bewerbungsfristText": "laufend bis 2025",
-    "bewerbungsart": "online",
-    "infoLink": "https://kultus.hessen.de/weiterbildungspakt",
-    "kurzbeschreibung": "Förderung von Lehrerfortbildung und schulischer Weiterbildung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "kultus.hessen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "hessen-digitaltruck",
@@ -2351,66 +1870,6 @@
     "kiAntragGeeignet": true
   },
   {
-    "id": "hessen-ganztag",
-    "name": "Ganztägige Bildung Hessen",
-    "foerdergeber": "Hessisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-HE"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "ganztag",
-      "betreuung",
-      "foerderung",
-      "soziales"
-    ],
-    "bewerbungsfristText": "laufend bis 2026",
-    "bewerbungsart": "online",
-    "infoLink": "https://kultus.hessen.de/schule/ganztag/ganztagsschulen.html",
-    "kurzbeschreibung": "Ausbau ganztägiger Angebote mit Rechtsanspruch ab 2026/27.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660444",
-    "quelle": "kultus.hessen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "hessen-inklusion",
-    "name": "Inklusion und sonderpädagogische Förderung",
-    "foerdergeber": "Hessisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-HE"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "inklusion",
-      "sonderpaedagogik",
-      "barrierefreiheit",
-      "teilhabe"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://kultus.hessen.de/schule/inklusion/inklusive-schule.html",
-    "kurzbeschreibung": "Förderung inklusiver Bildung und sonderpädagogischer Unterstützung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660447",
-    "quelle": "kultus.hessen.de",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "baywa-schulgarten",
     "name": "Schulgartenprojekt",
     "foerdergeber": "BayWa Stiftung",
@@ -2434,11 +1893,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/schulgarten",
     "kurzbeschreibung": "Hochbeete und Materialien für praktische Ernährungsbildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135501",
     "quelle": "baywastiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "baywa-opflanzt",
@@ -2495,11 +1955,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.hamburg.de/kultur-schule-foerderung",
     "kurzbeschreibung": "Kulturelle Projekte an Schulen in allen künstlerischen Sparten.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135504",
     "quelle": "hamburg.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "brandenburg-kulturelle-bildung",
@@ -2525,11 +1986,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://service.brandenburg.de/kulturelle-bildung",
     "kurzbeschreibung": "Förderung kultureller Bildungsprojekte und partizipativer Jugendarbeit.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135506",
     "quelle": "brandenburg.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "berlin-startchancen",
@@ -2555,11 +2017,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.berlin.de/sen/bjf/startchancen",
     "kurzbeschreibung": "Investitionen in Schulen mit hohem Anteil benachteiligter Schüler.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135509",
     "quelle": "berlin.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "hamburg-schulbau",
@@ -2615,11 +2078,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.ganztagsschulen.org/investitionsprogramm",
     "kurzbeschreibung": "Bundeshilfen für Ganztagsausbau mit Rechtsanspruch ab 2026/27.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135512",
     "quelle": "ganztagsschulen.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "alfred-toepfer-kultur",
@@ -2645,11 +2109,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.toepfer-stiftung.de/foerderung.html",
     "kurzbeschreibung": "Förderung kultureller Projekte und künstlerischer Bildung an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660451",
+    "updatedAt": "2026-02-12T11:21:11.135515",
     "quelle": "toepfer-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "baywa-waldschule",
@@ -2675,11 +2140,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.baywastiftung.de/projekte/waldschule",
     "kurzbeschreibung": "UN-ausgezeichnetes Projekt für Waldbildung und Naturerfahrung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135520",
     "quelle": "baywastiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "baywa-laufen-wald",
@@ -2735,40 +2201,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bildungskommunen",
     "kurzbeschreibung": "Koordination von Ganztagsangeboten in kommunaler Verantwortung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135525",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "wuebben-stiftung",
-    "name": "Wübben Stiftung für Bildung",
-    "foerdergeber": "Wübben Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "bildung",
-      "chancengleichheit",
-      "foerderung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://wuebben-stiftung-bildung.org/foerderung.html",
-    "kurzbeschreibung": "Förderung bildungsbenachteiligter Kinder und Chancengleichheit.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660456",
-    "quelle": "wuebben-stiftung-bildung.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "rag-stiftung-schulen",
@@ -2794,11 +2232,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.rag-stiftung.de/foerderung/bildung/schulprojekte",
     "kurzbeschreibung": "Förderung von Schulprojekten in ehemaligen Bergbauregionen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135528",
     "quelle": "rag-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "arbeiterkind-schulen",
@@ -2853,11 +2292,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderpreis",
     "kurzbeschreibung": "Auszeichnung innovativer Schulprojekte zum Thema 'Zukunft mitgestalten'.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135530",
     "quelle": "stiftungbildung.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "ensam-bmz",
@@ -2883,11 +2323,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.ensa.de/foerderung.html",
     "kurzbeschreibung": "Förderung von Schulpartnerschaften mit Ländern des Globalen Südens.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660463",
+    "updatedAt": "2026-02-12T11:21:11.135534",
     "quelle": "ensa.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bne-portal-foerderung",
@@ -2913,11 +2354,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bne-portal.de/foerdermoeglichkeiten",
     "kurzbeschreibung": "Förderung von Projekten zur Bildung für nachhaltige Entwicklung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135536",
     "quelle": "bne-portal.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "stifterverband-kompass",
@@ -3063,11 +2505,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.digitalpaktschule.de/de/dp2-1816.html",
     "kurzbeschreibung": "5 Milliarden Euro für digitale Infrastruktur, Hardware und Lehrerfortbildung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660467",
+    "updatedAt": "2026-02-12T11:21:11.135541",
     "quelle": "digitalpaktschule.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bmbf-bop",
@@ -3100,35 +2543,6 @@
     "kiAntragGeeignet": true
   },
   {
-    "id": "wuebben-stiftung-detail",
-    "name": "Bildungschancen für alle",
-    "foerdergeber": "Wübben Stiftung Bildung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "bildungsgerechtigkeit",
-      "chancengleichheit",
-      "beratung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://wuebben-stiftung-bildung.org/foerderung.html",
-    "kurzbeschreibung": "Unterstützung von Schulen im Brennpunkt für gerechte Bildungschancen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382124",
-    "quelle": "wuebben-stiftung-bildung.org",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "stiftung-bildung-youstartn",
     "name": "Förderpreis youstartN",
     "foerdergeber": "Stiftung Bildung",
@@ -3152,131 +2566,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderpreis-youstartn",
     "kurzbeschreibung": "Förderpreis für innovative Schülerfirmen aus allen Bundesländern.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135544",
     "quelle": "stiftungbildung.org",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "strahlemann-stiftung",
-    "name": "Internationale Bildungsprojekte",
-    "foerdergeber": "Strahlemann Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "international",
-      "bildung",
-      "chancen",
-      "entwicklung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.strahlemann-stiftung.de/foerderung.html",
-    "kurzbeschreibung": "Initiierung und Betrieb von Bildungsprojekten national und international.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660473",
-    "quelle": "strahlemann-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bertelsmann-bildung",
-    "name": "Bildung und Gesellschaft",
-    "foerdergeber": "Bertelsmann Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "bildung",
-      "gesellschaft",
-      "studien",
-      "reform"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/schule",
-    "kurzbeschreibung": "Förderung von Projekten, Studien und Debatten zu gesellschaftlichen Veränderungen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330192",
-    "quelle": "bertelsmann-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "montag-schulbau",
-    "name": "Schulbaukonferenz & Förderung",
-    "foerdergeber": "Montag Stiftung Jugend und Gesellschaft",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "schulbau",
-      "innovation",
-      "lernraum",
-      "architektur"
-    ],
-    "bewerbungsfristText": "jährlich",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.montag-stiftungen.de/foerderung.html",
-    "kurzbeschreibung": "Förderung innovativer Lernräume und Schulbaukongresse.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660476",
-    "quelle": "montag-stiftungen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "vodafone-generation-bd",
-    "name": "Generation BD - Schule der Zukunft",
-    "foerdergeber": "Vodafone Stiftung Deutschland",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "digitalisierung",
-      "zukunft",
-      "bildung",
-      "strategie"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.forumbd.de/generation-bd/foerderung.html",
-    "kurzbeschreibung": "Handlungsempfehlungen zur Schule der Zukunft mit Digitalisierungsprojekten.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660479",
-    "quelle": "forumbd.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "arbeitskreis-bildung",
@@ -3369,35 +2664,6 @@
     "kiAntragGeeignet": true
   },
   {
-    "id": "saarland-startchancen",
-    "name": "Startchancen-Programm Saarland",
-    "foerdergeber": "Ministerium für Bildung und Kultur Saarland",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-SL"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "bildungsgerechtigkeit",
-      "chancen",
-      "foerderung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.saarland.de/bildung/foerderprogramme.html",
-    "kurzbeschreibung": "Förderung von Schulen mit hohem Anteil benachteiligter Schüler im Saarland.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660489",
-    "quelle": "saarland.de",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "sachsen-anhalt-digital",
     "name": "Digitale Endgeräte Sachsen-Anhalt",
     "foerdergeber": "Kultusministerium Sachsen-Anhalt",
@@ -3420,11 +2686,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.kultusministerium.sachsen-anhalt.de/schule/digitalisierung.html",
     "kurzbeschreibung": "Neue Förderrichtlinie für digitale Endgeräte zur Teilnahme am digitalen Unterricht.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660491",
+    "updatedAt": "2026-02-12T11:21:11.135547",
     "quelle": "kultusministerium.sachsen-anhalt.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "rheinland-pfalz-pad",
@@ -3450,11 +2717,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.km.rlp.de/schule/foerderung.html",
     "kurzbeschreibung": "Partnerschaften, Austausch und Dialog (PAD) für internationale Schulkooperationen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660494",
+    "updatedAt": "2026-02-12T11:21:11.135550",
     "quelle": "km.rlp.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "mecklenburg-vorpommern-bildung",
@@ -3487,126 +2755,6 @@
     "kiAntragGeeignet": false
   },
   {
-    "id": "schleswig-holstein-ganztag",
-    "name": "Ganztagsausbau Schleswig-Holstein",
-    "foerdergeber": "Ministerium für Schule und Berufsbildung SH",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-SH"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "ganztag",
-      "ausbau",
-      "betreuung",
-      "bildung"
-    ],
-    "bewerbungsfristText": "bis 2027",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.schleswig-holstein.de/schule/foerderung.html",
-    "kurzbeschreibung": "Förderung des Ganztagsausbaus mit Rechtsanspruch ab 2026/27.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660499",
-    "quelle": "schleswig-holstein.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bremen-bildung",
-    "name": "Bildungsförderung Bremen",
-    "foerdergeber": "Senatorin für Bildung Bremen",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-HB"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "bildung",
-      "foerderung",
-      "integration",
-      "qualitaet"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bildung.bremen.de/schule/foerderung.html",
-    "kurzbeschreibung": "Förderung von Bildungsprojekten und Qualitätsentwicklung an Bremer Schulen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660502",
-    "quelle": "bildung.bremen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "thueringen-mint",
-    "name": "MINT-Initiative Thüringen",
-    "foerdergeber": "Thüringer Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-TH"
-    ],
-    "foerdersummeMin": 3000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "3.000€ - 30.000€",
-    "kategorien": [
-      "mint",
-      "digital",
-      "auszeichnung",
-      "foerderung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://bildung.thueringen.de/schule/mint-foerderung.html",
-    "kurzbeschreibung": "Auszeichnung und Förderung von MINT- und Digital-Schulen in Thüringen.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660505",
-    "quelle": "bildung.thueringen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "niedersachsen-digital",
-    "name": "Digitale Schule Niedersachsen",
-    "foerdergeber": "Niedersächsisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-NI"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "digitalisierung",
-      "ipad",
-      "ausstattung",
-      "unterricht"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.kultus.niedersachsen.de/schule/digitalisierung.html",
-    "kurzbeschreibung": "Investitionen in Digitalisierung, iPad-Klassen und Inklusion.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660508",
-    "quelle": "kultus.niedersachsen.de",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "jugend-forscht-schulpreis",
     "name": "Jugend forscht-Schulpreis",
     "foerdergeber": "Jugend forscht e.V.",
@@ -3630,11 +2778,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht.de/netzwerk/informationen-fuer-schulen.html",
     "kurzbeschreibung": "Würdigung von Schulen mit nachhaltigen MINT-Strukturen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135553",
     "quelle": "jugend-forscht.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "jugend-forscht-sponsorpool",
@@ -3690,11 +2839,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht.de/netzwerk/informationen-fuer-schulen.html",
     "kurzbeschreibung": "16 Gewinnerschulen erhalten Experimentiertableaus.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135557",
     "quelle": "jugend-forscht.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bw-mikro-makro-mint",
@@ -3720,11 +2870,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.jugend-forscht-bw.de/mikro-makro-mint/",
     "kurzbeschreibung": "Förderung von MINT-Projekten ab Klasse 5.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784583",
+    "updatedAt": "2026-02-12T11:21:11.135567",
     "quelle": "jugend-forscht-bw.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "hopp-foundation-schulpreis",
@@ -3963,11 +3114,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-challenge.de/ueber-den-wettbewerb.html",
     "kurzbeschreibung": "1 Mio. € für 50 Projekte in BW und Sachsen für Bildungs- und Teilhabechancen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382159",
+    "updatedAt": "2026-02-12T11:21:11.135576",
     "quelle": "ferry-porsche-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sh-perspektivkita",
@@ -3993,11 +3145,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.schleswig-holstein.de/perspektivkita",
     "kurzbeschreibung": "40 Standorte: Sprach- und Mathematikförderung für Kinder in schwierigen Lagen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135581",
     "quelle": "schleswig-holstein.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sh-ganztag-196mio",
@@ -4023,11 +3176,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.ganztagsschulen.org/sh-foerderrichtlinie",
     "kurzbeschreibung": "Bundes- und Landesmittel für Ganztagsausbau an Grundschulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135589",
     "quelle": "ganztagsschulen.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sh-schule-trifft-kultur",
@@ -4053,71 +3207,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://kulturellebildung-sh.de/foerderung.html",
     "kurzbeschreibung": "Förderung kultureller Projekte mit überörtlicher Wirkung an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382165",
+    "updatedAt": "2026-02-12T11:21:11.135600",
     "quelle": "kulturellebildung-sh.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "sh-perspektivschulen",
-    "name": "PerspektivSchulen Schleswig-Holstein",
-    "foerdergeber": "MBWFK Schleswig-Holstein",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-SH"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€ (10 Jahre)",
-    "kategorien": [
-      "bildungsgerechtigkeit",
-      "zusatzfoerderung",
-      "chancen"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.schleswig-holstein.de/perspektivschulen",
-    "kurzbeschreibung": "Zusatzfördermittel für bis zu 135 Schulen über 10 Jahre.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "schleswig-holstein.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "sh-ganztagsfoerderung-2026",
-    "name": "Ganztagsförderung ab 2026 SH",
-    "foerdergeber": "MBWFK Schleswig-Holstein",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-SH"
-    ],
-    "foerdersummeMin": 100,
-    "foerdersummeMax": 300,
-    "foerdersummeText": "bis 300€ pro Platz/Jahr",
-    "kategorien": [
-      "ganztag",
-      "kooperation",
-      "verein",
-      "sport",
-      "kultur"
-    ],
-    "bewerbungsfristText": "ab 2026",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.staedteverband-sh.de/gaft.html",
-    "kurzbeschreibung": "Vorbereitung auf Rechtsanspruch mit Kooperationsförderung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784603",
-    "quelle": "staedteverband-sh.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "th-mint-digital",
@@ -4143,11 +3238,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://bildung.thueringen.de/schule/medien/mint-foerderung",
     "kurzbeschreibung": "Auszeichnung und Förderung für MINT- und Digital-Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784608",
+    "updatedAt": "2026-02-12T11:21:11.135607",
     "quelle": "bildung.thueringen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sn-mint-digital-37",
@@ -4173,41 +3269,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.mintzukunftschaffen.de/foerderung.html",
     "kurzbeschreibung": "Würdigung von 37 Schulen für Spitzenleistungen in MINT und Digitalisierung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382170",
+    "updatedAt": "2026-02-12T11:21:11.135614",
     "quelle": "mintzukunftschaffen.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bayern-mint-134",
-    "name": "134 MINT- und Digital-Schulen Bayern",
-    "foerdergeber": "Bayerisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-BY"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "mint",
-      "digital",
-      "auszeichnung",
-      "foerderung"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.vbw-bayern.de/mint-talentfoerderung",
-    "kurzbeschreibung": "Ehrung von 134 Spitzenschulen für MINT und Digitalisierung bei Google München.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "vbw-bayern.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "nrw-mint-236",
@@ -4233,11 +3300,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.mintzukunftschaffen.de/foerderung.html",
     "kurzbeschreibung": "Würdigung von 236 herausragenden Schulen in MINT und Digitalisierung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382174",
+    "updatedAt": "2026-02-12T11:21:11.135619",
     "quelle": "mintzukunftschaffen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bw-mint-digital",
@@ -4263,11 +3331,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://km.baden-wuerttemberg.de/programme",
     "kurzbeschreibung": "Auszeichnung für Engagement in MINT-Fächern und Digitalisierung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135624",
     "quelle": "km.baden-wuerttemberg.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "z-lab-bruchsal",
@@ -4293,11 +3362,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-stiftung.de/projekte/z-lab/",
     "kurzbeschreibung": "Praxisnahe MINT-Kurse für Schüler*innen in Bruchsal.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784614",
+    "updatedAt": "2026-02-12T11:21:11.135654",
     "quelle": "ferry-porsche-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "sprungbrett-bildung-karlsruhe",
@@ -4323,11 +3393,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://ferry-porsche-stiftung.de/projekte/sprungbrett-bildung/",
     "kurzbeschreibung": "Mentoring für Jugendliche mit sozialen Hürden in Karlsruhe.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784620",
+    "updatedAt": "2026-02-12T11:21:11.135662",
     "quelle": "ferry-porsche-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "hector-kinderakademie",
@@ -4353,11 +3424,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.hector-stiftung.de/kinderakademien",
     "kurzbeschreibung": "Förderung hochbegabter Kinder in Forschungswerkstätten.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135668",
     "quelle": "hector-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "trionext-schulen",
@@ -4383,11 +3455,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.trionext.de/foerderung.html",
     "kurzbeschreibung": "Wirtschaftsförderung und Berufsorientierung an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382178",
+    "updatedAt": "2026-02-12T11:21:11.135674",
     "quelle": "trionext.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "telekom-stiftung-respect",
@@ -4413,11 +3486,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/respect-magarete",
     "kurzbeschreibung": "Förderung respektvollen Zusammenlebens und demokratischer Kultur an Schulen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135678",
     "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "kultur-macht-stark",
@@ -4533,11 +3607,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/themen/technik-scouts.html",
     "kurzbeschreibung": "Fördert technikaffine Schüler als 'Technik Scouts' für IT-Geräte-Wartung, Wissenstransfer und Peer-Teaching. Inklusive Netzwerkzugang, jährlicher Tagung und finanzieller Unterstützung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382190",
+    "updatedAt": "2026-02-12T11:21:11.135682",
     "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "telekom-stiftung-mint-berufsorientierung",
@@ -4563,11 +3638,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/themen/mint-berufsorientierung.html",
     "kurzbeschreibung": "Für ausbildungsorientierende Schulen zur Entwicklung praxisnaher Projekte (Repair Café, KI-Gewächshaus) mit Betrieben und Partnern.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382194",
+    "updatedAt": "2026-02-12T11:21:11.135685",
     "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "telekom-stiftung-jia",
@@ -4593,11 +3669,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/projekte/junior-ingenieur-akademie.html",
     "kurzbeschreibung": "Wahlpflichtfach für Klassen 9/10 mit ingenieurwissenschaftlichen Themen und Kooperationen zu Unternehmen/Hochschulen. Bundesweit >120 Schulen etabliert.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382197",
+    "updatedAt": "2026-02-12T11:21:11.135688",
     "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "siemens-stiftung-medienportal",
@@ -4654,41 +3731,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.siemens-stiftung.org/de/projekte/bildung/mint-hub.html",
     "kurzbeschreibung": "Praxisnahe Fortbildungen für Lehrkräfte zu Robotik, Virtueller Realität, Künstlicher Intelligenz und Programmierung. Fördert kreatives Problemlösen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382203",
+    "updatedAt": "2026-02-12T11:21:11.135692",
     "quelle": "siemens-stiftung.org",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bayern-mint-netzwerk",
-    "name": "MINT-Netz Bayern",
-    "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-BY"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "Bis zu 50.000€",
-    "kategorien": [
-      "mint",
-      "netzwerk",
-      "regional",
-      "schuelerlabor"
-    ],
-    "bewerbungsfristText": "nach Ausschreibung",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint/mint-netzwerk.html",
-    "kurzbeschreibung": "Regionale MINT-Netzwerke in Bayern. Fördert Schülerlabore, MINT-Häuser und Projekte zur Stärkung der MINT-Bildungskette vom Kindergarten bis zum Studium.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784628",
-    "quelle": "km.bayern.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bayern-mint-freundliche-schulen",
@@ -4714,41 +3762,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint/mint-freundliche-schulen.html",
     "kurzbeschreibung": "Auszeichnung für Schulen mit hervorragendem MINT-Profil. Mindestens 10 von 14 Kriterien nötig (Wettbewerbe, Projekte, Hochschulkooperationen). 3 Jahre gültig.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784658",
+    "updatedAt": "2026-02-12T11:21:11.135695",
     "quelle": "km.bayern.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bayern-mint21",
-    "name": "MINT21 Initiative",
-    "foerdergeber": "Bayerisches Staatsministerium für Unterricht und Kultus",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "DE-BY"
-    ],
-    "foerdersummeMin": 3000,
-    "foerdersummeMax": 15000,
-    "foerdersummeText": "3.000€ - 15.000€",
-    "kategorien": [
-      "mint",
-      "realschule",
-      "profil",
-      "wirtschaft"
-    ],
-    "bewerbungsfristText": "laufend",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.km.bayern.de/lernen/inhalte/mint/mint21.html",
-    "kurzbeschreibung": "Programm zur Profilschärfung bayerischer Realschulen in Kooperation mit Wirtschaftsverbänden. Fokus auf MINT-Kompetenzen und praxisnahe Bildung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784665",
-    "quelle": "km.bayern.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "startchancen-programm",
@@ -4803,11 +3822,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftungbildung.org/foerderfonds",
     "kurzbeschreibung": "Niedrigschwellige Förderung für Projektideen von Kita- und Schulfördervereinen. Gefördert werden Initiativen, die Schulen lebendiger, vielfältiger und nachhaltiger machen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135705",
     "quelle": "stiftungbildung.org",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "stiftung-kinder-forschen",
@@ -4833,11 +3853,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.stiftung-kinder-forschen.de/foerderung.html",
     "kurzbeschreibung": "Fördert MINT-Bildung und Nachhaltigkeit an Grundschulen durch Fortbildungen, Materialien und Zertifikate. Über 38.300 Einrichtungen sind bereits beteiligt.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382210",
+    "updatedAt": "2026-02-12T11:21:11.135708",
     "quelle": "stiftung-kinder-forschen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bosch-100-prozent-schulen",
@@ -4864,41 +3885,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bosch-stiftung.de/de/projekt/100-prozent-schulen",
     "kurzbeschreibung": "Unterstützt regionale Cluster von mindestens fünf Grundschulen zur Erreichung von Mindeststandards in Lesen, Schreiben und Rechnen mittels evidenzbasierter Diagnostik und adaptiver Förderung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135710",
     "quelle": "bosch-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "erasmus-schulbildung",
-    "name": "Erasmus+ Schulbildung",
-    "foerdergeber": "Europäische Union",
-    "foerdergeberTyp": "eu",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "Bis zu 50.000€ pro Projekt",
-    "kategorien": [
-      "international",
-      "austausch",
-      "digitalisierung",
-      "inklusion"
-    ],
-    "bewerbungsfristText": "Jährlich (Fristen bei Nationaler Agentur prüfen)",
-    "bewerbungsart": "online",
-    "infoLink": "https://erasmusplus.schule/de/foerderung.html",
-    "kurzbeschreibung": "Das zentrale EU-Förderprogramm für Schulen mit 4,3 Milliarden Euro Budget. Fördert Schüleraustausch, Lehrkräfte-Fortbildungen und gemeinsame Projekte mit Fokus auf Inklusion, Nachhaltigkeit und digitale Bildung.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382213",
-    "quelle": "erasmusplus.schule",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "rag-stiftung-schulprojekte",
@@ -4925,11 +3917,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.rag-stiftung.de/foerderung/bildung/schulprojekte",
     "kurzbeschreibung": "Fördert Schulprojekte für Kinder aus nichtakademischen Familien in NRW und Saarland. Schwerpunkte: Mentoring, Nachhilfe und Präventionsketten wie 'ZUSi geht in die Grundschule'.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135714",
     "quelle": "rag-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "klaus-tschira-mint",
@@ -4987,11 +3980,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://foerdermittel-wissenswert.de/foerdermittel-fuer-schulen",
     "kurzbeschreibung": "Gewährt Fördermittel für interdisziplinäre MINT-Projekte (Chemie, Physik, Biologie, Technik) an Grundschulen, inklusive Wettbewerbsteilnahmen.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135717",
     "quelle": "ruetgers-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "denkmalschutz-denkmal-aktiv",
@@ -5017,41 +4011,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.denkmalschutz.de/denkmal-aktiv/foerderung.html",
     "kurzbeschreibung": "Programm für Geschichts- und Kulturprojekte an Grundschulen (ab Jahrgangsstufe 5/6). Fördert die Auseinandersetzung mit kulturellem Erbe und Denkmalschutz.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382220",
+    "updatedAt": "2026-02-12T11:21:11.135720",
     "quelle": "denkmalschutz.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bertelsmann-forum-bildung-digitalisierung",
-    "name": "Forum Bildung Digitalisierung",
-    "foerdergeber": "Bertelsmann Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "5.000€ - 50.000€",
-    "kategorien": [
-      "digitalisierung",
-      "bildung",
-      "schulentwicklung",
-      "beratung"
-    ],
-    "bewerbungsfristText": "nach Ausschreibung",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bertelsmann-stiftung.de/de/unsere-projekte/in-vielfalt-besser-lernen/projektthemen/digitalisierung",
-    "kurzbeschreibung": "Plattform für den digitalen Wandel in Schulen mit Empfehlungen, praktischen Lösungen und Austausch. Unterstützt 114 Schulen und 18 Träger mit Beratung und dem Zentrum für digitale Schule.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "bertelsmann-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "ibm-skillsbuild",
@@ -5085,66 +4050,6 @@
     "kiAntragGeeignet": false
   },
   {
-    "id": "bosch-schullabor",
-    "name": "SchulLabor",
-    "foerdergeber": "Robert Bosch Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "10.000€ - 100.000€",
-    "kategorien": [
-      "bildung",
-      "innovation",
-      "unterrichtsentwicklung",
-      "inklusion"
-    ],
-    "bewerbungsfristText": "Jährlich",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.bosch-stiftung.de/de/foerdergebiet/bildung",
-    "kurzbeschreibung": "Schulen im Verbund entwickeln eigenverantwortlich innovative Konzepte zur Unterrichtsverbesserung in Lerngemeinschaften über bis zu drei Jahre. Fokus auf Qualitätsbereiche des Deutschen Schulpreises.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
-    "quelle": "bosch-stiftung.de",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "bosch-deutscher-schulpreis",
-    "name": "Deutscher Schulpreis",
-    "foerdergeber": "Robert Bosch Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 10000,
-    "foerdersummeMax": 100000,
-    "foerdersummeText": "Bis zu 100.000€ Preisgeld",
-    "kategorien": [
-      "bildung",
-      "auszeichnung",
-      "unterrichtsqualitaet",
-      "lernbegeisterung"
-    ],
-    "bewerbungsfristText": "Jährlich (Bewerbung 2025 läuft)",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.deutscher-schulpreis.de/foerderung.html",
-    "kurzbeschreibung": "Auszeichnung für Schulen mit Fokus auf Unterrichtsqualität und Lernbegeisterung. Preisgelder bis 100.000€, plus Hospitationsprogramm und Netzwerk für alle Bewerber. Themenpreis 'Demokratiebildung'.",
-    "status": "aktiv",
-    "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-12T10:59:46.382226",
-    "quelle": "deutscher-schulpreis.de",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "koerber-mint-regionen",
     "name": "MINT-Regionen",
     "foerdergeber": "Körber-Stiftung",
@@ -5168,11 +4073,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://koerber-stiftung.de/projekte/bereich-bildung",
     "kurzbeschreibung": "Regionale Netzwerke zur Stärkung der MINT-Bildung vor Ort entlang der Bildungskette (Kita bis Berufsausbildung). Unterstützung durch Schulungen, Webinare, Zertifikatslehrgänge und Beratung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-02-11T00:00:00Z",
+    "updatedAt": "2026-02-12T11:21:11.135724",
     "quelle": "koerber-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "helmholtz-schuelerlabore",
@@ -5234,11 +4140,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmbf.de/bmbf/de/bildung/ganztagsschule/ganztagsschule.html",
     "kurzbeschreibung": "Fördert Kreise und kreisfreie Städte bei der Koordination von Ganztagsangeboten in Grundschulen, inklusive Personal- und Sachkosten.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784675",
+    "updatedAt": "2026-02-12T11:21:11.135727",
     "quelle": "bmbf.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bw-sommerschulen-2026",
@@ -5268,11 +4175,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://jugendbegleiter.de/foerderung/sommerschulen/",
     "kurzbeschreibung": "Förderung für Schüler mit Förderbedarf zur Stärkung von Basiskompetenzen und Persönlichkeitsentwicklung während der Sommerferien.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784680",
+    "updatedAt": "2026-02-12T11:21:11.135730",
     "quelle": "km-bw.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "bw-denkmal-aktiv-2026",
@@ -5311,42 +4219,6 @@
     "kiAntragGeeignet": true
   },
   {
-    "id": "bayern-kulturfonds-2026",
-    "name": "Kulturfonds Bayern 2026/27",
-    "foerdergeber": "Bayerisches Kultusministerium",
-    "foerdergeberTyp": "land",
-    "schulformen": [
-      "grundschule",
-      "hauptschule",
-      "realschule",
-      "gymnasium",
-      "gesamtschule"
-    ],
-    "bundeslaender": [
-      "DE-BY"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 50000,
-    "foerdersummeText": "Bis zu 50.000€ (60% Förderquote)",
-    "kategorien": [
-      "kultur",
-      "kreativitaet",
-      "international",
-      "kunst"
-    ],
-    "bewerbungsfristStart": "2026-01-01",
-    "bewerbungsfristEnde": "2026-03-01",
-    "bewerbungsfristText": "bis 01.03.2026",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.km.bayern.de/kunst-und-kultur/foerderung/",
-    "kurzbeschreibung": "Förderung neuartiger kreativer Bildungsprojekte mit überregionaler Bedeutung. Bis 80% Förderquote für internationalen Austausch.",
-    "status": "aktiv",
-    "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179535",
-    "quelle": "km.bayern.de",
-    "kiAntragGeeignet": true
-  },
-  {
     "id": "erasmus-schulentwicklung-2026",
     "name": "Europäische Partnerschaften für Schulentwicklung",
     "foerdergeber": "Europäische Kommission / Erasmus+",
@@ -5377,47 +4249,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://erasmusplus.schule/de/foerderung.html",
     "kurzbeschreibung": "Neues Format ab 2026: Unterstützung von Schulen bei neuen Lehrmethoden und Qualitätsverbesserung durch europäische Kooperation.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179539",
+    "updatedAt": "2026-02-12T11:21:11.135734",
     "quelle": "erasmusplus.schule",
-    "kiAntragGeeignet": true
-  },
-  {
-    "id": "mint-digitale-schule-2026",
-    "name": "Digitale Schule - MINT Zukunft schaffen",
-    "foerdergeber": "MINT Zukunft schaffen! / Gesellschaft für Informatik",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule",
-      "hauptschule",
-      "realschule",
-      "gymnasium",
-      "gesamtschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 0,
-    "foerdersummeMax": 0,
-    "foerdersummeText": "Auszeichnung (Anerkennung)",
-    "kategorien": [
-      "digitalisierung",
-      "mint",
-      "auszeichnung",
-      "medienkompetenz"
-    ],
-    "bewerbungsfristStart": "2026-01-01",
-    "bewerbungsfristEnde": "2026-05-31",
-    "bewerbungsfristText": "bis 31.05.2026",
-    "bewerbungsart": "online",
-    "infoLink": "https://mintzukunftschaffen.de/foerderung/",
-    "kurzbeschreibung": "Signet 'Digitale Schule' für Schulen aller Arten basierend auf Kriterienkatalog mit fünf Modulen zur Digitalisierung. Gültigkeit 3 Jahre.",
-    "status": "aktiv",
-    "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:56:28.179542",
-    "quelle": "mintzukunftschaffen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "telekom-junior-ingenieur-2026",
@@ -5482,11 +4319,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.medienservice.sachsen.de/foerderung/klimaschulen.html",
     "kurzbeschreibung": "Aufnahme in das Klimaschul-Netzwerk (Whole School Approach). 17 neue Plätze 2026, Ziel: 100 Klimaschulen bis 2030.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784690",
+    "updatedAt": "2026-02-12T11:21:11.135737",
     "quelle": "medienservice.sachsen.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "klimalab-2026",
@@ -5518,11 +4356,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://foerdermittel-wissenswert.de/programm/klimalab/",
     "kurzbeschreibung": "Klimaschutz-Engagement an Schulen, praxisorientierte Projekte für nachhaltige Entwicklung.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784695",
+    "updatedAt": "2026-02-12T11:21:11.135740",
     "quelle": "foerdermittel-wissenswert.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   },
   {
     "id": "fritz-henkel-inklusion-2026",
@@ -5554,10 +4393,11 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.fritz-henkel-stiftung.de/foerderung/inklusion.html",
     "kurzbeschreibung": "Inklusive Bildungsangebote für junge Menschen, Förderung von Teilhabe und Barrierenabbau.",
-    "status": "aktiv",
+    "status": "unverifiziert",
     "createdAt": "2026-02-12T00:00:00Z",
-    "updatedAt": "2026-02-12T10:57:14.784701",
+    "updatedAt": "2026-02-12T11:21:11.135744",
     "quelle": "fritz-henkel-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "verificationWarning": "Dieses Programm hat nicht verifizierte Fördersummen. Bitte prüfen Sie die Daten vor einer Antragstellung."
   }
 ]
