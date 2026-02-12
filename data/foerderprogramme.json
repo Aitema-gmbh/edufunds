@@ -1,7 +1,7 @@
 [
   {
     "id": "bkm-kultur-digital",
-    "name": "Kultur und Digitale Kommunikation",
+    "name": "BKM – Digitale Kultur (Strategie)",
     "foerdergeber": "Bundesministerium für Kultur und Medien (BKM)",
     "foerdergeberTyp": "bund",
     "schulformen": [
@@ -20,13 +20,14 @@
     ],
     "bewerbungsfristText": "laufend",
     "bewerbungsart": "online",
-    "infoLink": "https://www.kulturstaatsminister.de/DE/kultur-kreative-wirtschaft/digitale-kultur/digitale-kultur-node.html",
-    "kurzbeschreibung": "Förderung für digitale Kommunikations- und Vermittlungsangebote an Grundschulen.",
+    "infoLink": "https://kulturstaatsminister.de/",
+    "kurzbeschreibung": "Das Bundesministerium für Kultur und Medien (BKM) fördert digitale Projekte im Kultursektor. Über die Förderdatenbank sind aktuelle Ausschreibungen einsehbar.",
     "status": "aktiv",
     "createdAt": "2025-02-05T00:00:00Z",
     "updatedAt": "2026-02-12T10:54:54.330034",
     "quelle": "bkm.bund.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "antragsLink": "https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BKM/"
   },
   {
     "id": "bmbf-digital",
