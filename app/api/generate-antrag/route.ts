@@ -77,8 +77,7 @@ export async function POST(request: NextRequest) {
     }
     
     // Log API-Status (ohne Key zu exponieren)
-    const usingAI = !!process.env.GEMINI_API_KEY;
-    console.log(`[API] Generiere Antrag für ${programmId} mit Keywords: ${keywords.join(", ")} | Modus: ${usingAI ? "KI-generiert" : "Fallback (Template)"}`);
+    console.log(`[API] Generiere Antrag für ${programmId} mit Keywords: ${keywords.join(", ")} | Modus: ${hasGeminiKey ? "KI-generiert" : "Fallback (Template)"}`);
     
     // Erstelle Pipeline
     let pipeline: AntragPipeline;

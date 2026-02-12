@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Mail, MapPin, Heart, ArrowRight, Sparkles, Send } from "lucide-react";
+import { Mail, MapPin, Heart, ArrowRight, Sparkles } from "lucide-react";
+import { NewsletterForm } from "./NewsletterForm";
 
 const footerLinks = {
   product: {
@@ -40,17 +40,6 @@ const stats = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setTimeout(() => setSubscribed(false), 3000);
-      setEmail("");
-    }
-  };
 
   return (
     <footer className="relative overflow-hidden">
@@ -201,26 +190,7 @@ export function Footer() {
             </motion.div>
             <h3 className="text-2xl font-bold text-slate-100 mb-3">Newsletter abonnieren</h3>
             <p className="text-[#94a3b8] mb-6">Erhalten Sie wöchentlich Updates zu neuen Förderprogrammen, Tipps für erfolgreiche Anträge und exklusive Einblicke.</p>
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-              <div className="relative flex-1">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[#94a3b8]" />
-                <input
-                  type="email"
-                  placeholder="ihre@email.de"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-[#0f1f38] border border-[#1e3a5f] text-[#f8f5f0] placeholder:text-[#94a3b8] focus:outline-none focus:border-[#c9a227] focus:ring-2 focus:ring-[#c9a227]/20 transition-all"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="px-8 py-3.5 rounded-xl btn-primary flex items-center justify-center gap-2"
-              >
-                <Send className="h-4 w-4" />
-                {subscribed ? "Abonniert!" : "Abonnieren"}
-              </button>
-            </form>
+            <NewsletterForm />
             <p className="text-xs text-[#94a3b8] mt-4">Kein Spam, jederzeit abmeldbar. Wir respektieren Ihre Privatsphäre.</p>
           </div>
         </motion.div>
