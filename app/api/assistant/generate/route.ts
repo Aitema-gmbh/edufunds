@@ -103,128 +103,202 @@ export async function POST(request: NextRequest) {
 
     // Wenn Gemini nicht verfügbar, nutze Fallback
     if (!genAI) {
-      console.log("Gemini nicht verfügbar, nutze Fallback-Generator");
+      console.log("[KI-Generator] Gemini nicht verfügbar, nutze Fallback-Generator");
       const fallbackAntrag = generateFallbackAntrag(programm, projektDaten);
       return NextResponse.json({ 
         antrag: fallbackAntrag,
         model: "fallback-template",
         timestamp: new Date().toISOString(),
-        note: "KI-Modell temporär nicht verfügbar - qualitativ hochwertiger Template-basierter Antrag wurde generiert"
+        note: "KI-Service nicht konfiguriert - qualitativ hochwertiger Template-basierter Antrag wurde generiert",
+        isFallback: true,
+        config: {
+          maxRetries: 3,
+          maxOutputTokens: 2500
+        }
       }, {
         headers: {
           "X-RateLimit-Limit": String(RATE_LIMIT_MAX_REQUESTS),
           "X-RateLimit-Remaining": String(rateLimit.remaining),
-          "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000))
+          "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000)),
+          "X-KI-Status": "fallback-no-api-key"
         }
       });
     }
 
-    // Gemini Model initialisieren
+    // Gemini Model initialisieren (optimiert: 2500 Tokens statt 4000)
     const model = genAI.getGenerativeModel({ 
       model: "gemini-2.0-flash",
       generationConfig: {
         temperature: 0.3,
-        maxOutputTokens: 4000,
+        maxOutputTokens: 2500,  // Reduziert von 4000
       }
     });
 
     // Prompt bauen
     const prompt = buildPrompt(programm, projektDaten);
 
-    // Antrag generieren
-    const result = await model.generateContent(prompt);
-    const response = result.response;
-    const text = response.text();
+    // Antrag generieren mit Retry-Mechanismus (max 3 Versuche)
+    let lastError: Error | null = null;
+    let text = "";
+    const MAX_RETRIES = 3;
+    
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        console.log(`[KI-Generator] Versuch ${attempt}/${MAX_RETRIES}...`);
+        const result = await model.generateContent(prompt);
+        const response = result.response;
+        text = response.text();
+        
+        // Validierung: Antrag muss Mindestlänge haben
+        if (text.length < 500) {
+          throw new Error("Generierter Antrag zu kurz (< 500 Zeichen)");
+        }
+        
+        console.log(`[KI-Generator] Erfolg nach ${attempt} Versuch(en)`);
+        break; // Erfolg, Schleife beenden
+        
+      } catch (error) {
+        lastError = error as Error;
+        console.warn(`[KI-Generator] Versuch ${attempt} fehlgeschlagen:`, error);
+        
+        if (attempt < MAX_RETRIES) {
+          // Exponentieller Backoff: 1s, 2s, 4s
+          const delay = Math.pow(2, attempt - 1) * 1000;
+          console.log(`[KI-Generator] Warte ${delay}ms vor Retry...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
+      }
+    }
+    
+    // Wenn alle Versuche fehlgeschlagen sind
+    if (!text && lastError) {
+      throw new Error(`KI-Generierung nach ${MAX_RETRIES} Versuchen fehlgeschlagen: ${lastError.message}`);
+    }
 
+    // Erfolgreiche KI-Generierung
     return NextResponse.json({
       antrag: text,
       model: "gemini-2.0-flash",
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      isFallback: false,
+      stats: {
+        promptLength: prompt.length,
+        responseLength: text.length,
+        estimatedTokens: Math.ceil((prompt.length + text.length) / 4),
+        maxOutputTokens: 2500
+      },
+      config: {
+        maxRetries: 3,
+        temperature: 0.3
+      }
     }, {
       headers: {
         "X-RateLimit-Limit": String(RATE_LIMIT_MAX_REQUESTS),
         "X-RateLimit-Remaining": String(rateLimit.remaining),
-        "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000))
+        "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000)),
+        "X-KI-Status": "success"
       }
     });
 
   } catch (error) {
-    console.error("KI-Antrag Generierungsfehler:", error);
+    console.error("[KI-Generator] Fehler:", error);
     
-    // Bei Fehler: Fallback nutzen
+    // Nutzerfreundliche Fehlermeldungen basierend auf Fehlertyp
+    let errorMessage = "Die KI-Antragsgenerierung ist momentan nicht verfügbar.";
+    let errorCode = "KI_ERROR";
+    let suggestion = "Bitte versuche es in wenigen Minuten erneut.";
+    
+    const errorStr = String(error);
+    
+    if (errorStr.includes("429") || errorStr.includes("rate limit")) {
+      errorMessage = "Zu viele Anfragen an den KI-Service.";
+      errorCode = "RATE_LIMIT";
+      suggestion = "Bitte warte 1-2 Minuten und versuche es erneut.";
+    } else if (errorStr.includes("503") || errorStr.includes("unavailable") || errorStr.includes("429")) {
+      errorMessage = "Der KI-Service ist temporär nicht erreichbar.";
+      errorCode = "SERVICE_UNAVAILABLE";
+      suggestion = "Wir generieren einen qualitativ hochwertigen Antrag mit unserem Template-System.";
+    } else if (errorStr.includes("400") || errorStr.includes("validation")) {
+      errorMessage = "Die Anfrage konnte nicht verarbeitet werden.";
+      errorCode = "VALIDATION_ERROR";
+      suggestion = "Bitte überprüfe die eingegebenen Daten und versuche es erneut.";
+    } else if (errorStr.includes("timeout") || errorStr.includes("504")) {
+      errorMessage = "Die Anfrage hat zu lange gedauert.";
+      errorCode = "TIMEOUT";
+      suggestion = "Bitte versuche es mit kürzeren Projektdaten erneut.";
+    }
+    
+    // Bei Fehler: Fallback nutzen (Graceful Degradation)
     try {
       const body = await request.json();
       const fallbackAntrag = generateFallbackAntrag(body.programm, body.projektDaten);
+      
       return NextResponse.json({ 
         antrag: fallbackAntrag,
-        model: "fallback-error",
+        model: "fallback-template",
         timestamp: new Date().toISOString(),
-        note: "Fehler bei KI-Generierung - Fallback wurde erstellt"
+        error: {
+          code: errorCode,
+          message: errorMessage,
+          suggestion: suggestion
+        },
+        note: "KI-Service temporär nicht verfügbar - Template-basierter Antrag wurde erstellt",
+        isFallback: true
       }, {
+        status: 200, // 200 OK mit Fallback
         headers: {
           "X-RateLimit-Limit": String(RATE_LIMIT_MAX_REQUESTS),
           "X-RateLimit-Remaining": String(rateLimit.remaining),
-          "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000))
+          "X-RateLimit-Reset": String(Math.ceil(rateLimit.resetTime / 1000)),
+          "X-KI-Status": "fallback"
         }
       });
-    } catch {
+    } catch (parseError) {
+      // Wenn Fallback auch fehlschlägt
       return NextResponse.json(
-        { error: "Fehler bei der Antragsgenerierung", details: String(error) },
-        { status: 500 }
+        { 
+          error: errorMessage,
+          code: errorCode,
+          suggestion: suggestion,
+          details: String(error)
+        },
+        { status: 503 }
       );
     }
   }
 }
 
+// Optimierte Prompt-Templates (~1000-1200 Token statt ~2600)
+const SYSTEM_PROMPT_KURZ = `Antragsberater für Bildungsförderung. Stil: sachlich, präzise, aktiv. Regeln: 1 Adjektiv/Satz, konkrete Daten, These→Beleg→Nutzen.`;
+
 function buildPrompt(programm: any, projektDaten: any): string {
-  return `Du bist ein erfahrener Antragsberater für schulische Förderprogramme in Deutschland. 
-Erstelle einen professionellen, überzeugenden Förderantrag im Markdown-Format.
+  return `${SYSTEM_PROMPT_KURZ}
 
-## PROGRAMMDETAILS
-- Programm: ${programm.name}
-- Fördergeber: ${programm.foerdergeber}
-- Fördergeber-Typ: ${programm.foerdergeberTyp}
-- Fördersumme: ${programm.foerdersummeText}
-- Bewerbungsfrist: ${programm.bewerbungsfristText}
-- Kategorien: ${programm.kategorien?.join(", ") || "Allgemein"}
-- Kurzbeschreibung Programm: ${programm.kurzbeschreibung}
+PROGRAMM: ${programm.name} | ${programm.foerdergeber} (${programm.foerdergeberTyp})
+Frist: ${programm.bewerbungsfristText || 'laufend'} | Summe: ${programm.foerdersummeText}
+Kategorien: ${programm.kategorien?.join(", ") || "Allgemein"}
 
-## SCHULE UND PROJEKT
-- Schulname: ${projektDaten.schulname}
-- Projekttitel: ${projektDaten.projekttitel}
-- Beantragter Förderbetrag: ${projektDaten.foerderbetrag} €
-- Projektlaufzeit: ${projektDaten.zeitraum}
-- Zielgruppe: ${projektDaten.zielgruppe}
+PROJEKT: ${projektDaten.projekttitel} | ${projektDaten.schulname}
+Betrag: ${projektDaten.foerderbetrag}€ | Zeitraum: ${projektDaten.zeitraum}
+Zielgruppe: ${projektDaten.zielgruppe}
 
-## PROJEKTBESCHREIBUNG
-${projektDaten.kurzbeschreibung}
+Beschreibung: ${projektDaten.kurzbeschreibung}
+Ziele: ${projektDaten.ziele}
+Aktivitäten: ${projektDaten.hauptaktivitaeten}
+Ergebnisse: ${projektDaten.ergebnisse || 'Werden erwartet'}
+Nachhaltigkeit: ${projektDaten.nachhaltigkeit || 'Dauerhafte Verankerung geplant'}
 
-## PROJEKTZIELE
-${projektDaten.ziele}
+STRUKTUR (Markdown):
+1. Einleitung (150W)
+2. Projektbeschreibung (200W) 
+3. Umsetzung (200W)
+4. Zielgruppe (100W)
+5. Passung zum Programm (100W)
+6. Ergebnisse/Wirkung (150W)
+7. Budget (Tabelle)
+8. Abschluss (50W)
 
-## HAUPTAKTIVITÄTEN
-${projektDaten.hauptaktivitaeten}
-
-## ERWARTETE ERGEBNISSE
-${projektDaten.ergebnisse || "- Noch nicht spezifiziert"}
-
-## NACHHALTIGKEIT
-${projektDaten.nachhaltigkeit || "- Noch nicht spezifiziert"}
-
-## ANFORDERUNGEN AN DEN ANTRAG
-
-Erstelle einen vollständigen Förderantrag mit folgender Struktur:
-
-1. **EINLEITUNG UND PROJEKTÜBERSICHT** (150-200 Wörter)
-2. **PROJEKTBESCHREIBUNG** (200-250 Wörter)
-3. **PROJEKTUMSETZUNG** (200-250 Wörter)
-4. **ZIELGRUPPE UND TEILNEHMENDE** (100-150 Wörter)
-5. **PASSUNG ZUM FÖRDERPROGRAMM** (100-150 Wörter)
-6. **ERWARTETE ERGEBNISSE UND WIRKUNG** (150-200 Wörter)
-7. **BUDGETÜBERSICHT** (100-150 Wörter)
-8. **ABSCHLUSS** (50-100 Wörter)
-
-Zwischen 1200-1800 Wörter insgesamt. Professioneller Ton (Bildungssprache).`;
+ZIEL: 1200-1500 Wörter, professionell, überzeugend.`;
 }
 
 // Fallback-Generator wenn KI nicht verfügbar

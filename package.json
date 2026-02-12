@@ -16,7 +16,8 @@
     "docker:prod:start": "docker-compose -f docker-compose.prod.yml up -d",
     "docker:prod:stop": "docker-compose -f docker-compose.prod.yml down",
     "docker:prod:logs": "docker-compose -f docker-compose.prod.yml logs -f",
-    "health:check": "curl http://localhost:3101/api/health"
+    "health:check": "curl http://localhost:3101/api/health",
+    "test:smoke": "node scripts/smoke-test.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

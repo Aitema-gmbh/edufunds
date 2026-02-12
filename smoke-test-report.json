@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-02-12T14:43:52.252Z",
+  "total": 5,
+  "passed": 0,
+  "failed": 5,
+  "tests": [
+    {
+      "url": "https://edufunds.org/",
+      "status": 404,
+      "responseTime": 46,
+      "success": false,
+      "errors": []
+    },
+    {
+      "url": "https://edufunds.org/foerderprogramme",
+      "status": 404,
+      "responseTime": 29,
+      "success": false,
+      "errors": []
+    },
+    {
+      "url": "https://edufunds.org/foerderprogramme/bmbf-digitalpakt-2",
+      "status": 404,
+      "responseTime": 28,
+      "success": false,
+      "errors": []
+    },
+    {
+      "url": "https://edufunds.org/preise",
+      "status": 404,
+      "responseTime": 24,
+      "success": false,
+      "errors": []
+    },
+    {
+      "url": "https://edufunds.org/api/health",
+      "status": 404,
+      "responseTime": 20,
+      "success": false,
+      "errors": []
+    }
+  ]
+}
