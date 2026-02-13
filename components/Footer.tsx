@@ -11,7 +11,8 @@ const footerLinks = {
     links: [
       { label: "Förderprogramme", href: "/foerderprogramme" },
       { label: "Preise", href: "/preise" },
-      { label: "KI-Antragsassistent", href: "/#ki-assistent" }
+      { label: "KI-Antragsassistent", href: "/#ki-assistent" },
+      { label: "Archiv", href: "/archiv" }
     ]
   },
   company: {

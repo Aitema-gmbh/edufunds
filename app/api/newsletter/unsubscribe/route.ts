@@ -112,14 +112,14 @@ function getUnsubscribePageHtml(message: string, isSuccess: boolean): string {
         .logo-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+            background: linear-gradient(135deg, #c9a227 0%, #d4af37 100%);
             border-radius: 10px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: bold;
-            color: #ffffff;
+            color: #0a1628;
         }
         
         .logo-text {
@@ -170,7 +170,7 @@ function getUnsubscribePageHtml(message: string, isSuccess: boolean): string {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+            background: linear-gradient(135deg, #c9a227 0%, #b08d1f 100%);
             color: #0a1628;
             text-decoration: none;
             padding: 14px 28px;
@@ -184,7 +184,7 @@ function getUnsubscribePageHtml(message: string, isSuccess: boolean): string {
         
         .button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+            box-shadow: 0 8px 20px rgba(201, 162, 39, 0.4);
         }
         
         .footer {
