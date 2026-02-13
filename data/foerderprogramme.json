@@ -25,11 +25,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.telekom-stiftung.de/themen/mint-bildung",
     "kurzbeschreibung": "MINT-Bildung in der Grundschule: Experimentieren und Forschen.",
-    "status": "aktiv",
+    "status": "abgelaufen",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:54:54.330065",
+    "updatedAt": "2026-02-13T07:36:44.882Z",
     "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "bemerkung": "Frist abgelaufen am 2025-10-31. Nächste Ausschreibung prüfen."
   },
   {
     "id": "tschira-stiftung",
@@ -88,11 +89,12 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.erasmus-plus.de/schulbildung/foerderung.html",
     "kurzbeschreibung": "Schulpartnerschaften und Austauschprogramme für Grundschulen in Europa.",
-    "status": "aktiv",
+    "status": "abgelaufen",
     "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2026-02-12T10:58:53.660358",
+    "updatedAt": "2026-02-13T07:36:44.887Z",
     "quelle": "erasmus-plus.de",
-    "kiAntragGeeignet": true
+    "kiAntragGeeignet": true,
+    "bemerkung": "Frist abgelaufen am 2025-03-15. Nächste Ausschreibung prüfen."
   },
   {
     "id": "niedersachsen-sport",
@@ -320,7 +322,7 @@
     "verifiziertAm": "2026-02-13",
     "verifiziertVon": "Web-Recherche Heinrich-Böll-Stiftung",
     "bemerkung": "Stiftung führt keine direkte Projektförderung für Schulen durch. Arbeitet über politische Advocacy, Studien und Rechtsgutachten. Keine Antragsmöglichkeit für Einzelschulen.",
-"reviewNotiz": "Ursprüngliche Einträge mit Fördersummen waren nicht korrekt - Stiftung fördert keine Einzelschulen direkt."
+    "reviewNotiz": "Ursprüngliche Einträge mit Fördersummen waren nicht korrekt - Stiftung fördert keine Einzelschulen direkt."
   },
   {
     "id": "stifterverband-bildung",
@@ -521,7 +523,7 @@
     "verifiziertAm": "2026-02-13",
     "verifiziertVon": "Web-Recherche Wissenschaft im Dialog",
     "bemerkung": "WiD ist selbst ein gefördertes Programm, bietet aber keine eigenen Fördermittel für Schulen. Teilnahme an 'I'm a Scientist' etc. ist kostenlos.",
-"reviewNotiz": "Ursprüngliche Annahme von Fördersummen war falsch - WiD finanziert keine Schulprojekte, sondern bietet eigene Programme an."
+    "reviewNotiz": "Ursprüngliche Annahme von Fördersummen war falsch - WiD finanziert keine Schulprojekte, sondern bietet eigene Programme an."
   },
   {
     "id": "chemie-fonds",
@@ -760,14 +762,14 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.tc-stiftung.de/stiftungspreis/",
     "kurzbeschreibung": "Stiftungspreis für Projekte zugunsten benachteiligter Kinder und Jugendlicher. Ca. 300 Projekte werden jährlich gefördert.",
-    "status": "aktiv",
+    "status": "abgelaufen",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2026-02-13T15:10:00.000Z",
+    "updatedAt": "2026-02-13T07:36:44.887Z",
     "quelle": "https://www.tc-stiftung.de/stiftungspreis/",
     "kiAntragGeeignet": true,
     "verifiziertAm": "2026-02-13",
     "verifiziertVon": "Web-Recherche Town & Country Stiftung",
-    "bemerkung": "2025 erstmals Sonderpreis 'Jung trifft Alt'. Jede Bewerbung, die die Kriterien erfüllt, erhält mindestens 1.000€. 12-16 Regionalpreise à 5.000€.",
+    "bemerkung": "2025 erstmals Sonderpreis 'Jung trifft Alt'. Jede Bewerbung, die die Kriterien erfüllt, erhält mindestens 1.000€. 12-16 Regionalpreise à 5.000€. | Frist abgelaufen am 2025-10-31. Nächste Ausschreibung prüfen.",
     "quelleUrl": "https://www.tc-stiftung.de/stiftungspreis/"
   },
   {
