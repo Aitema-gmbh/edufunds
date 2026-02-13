@@ -4068,5 +4068,265 @@
     "verifiziertVon": "Web-Recherche VW Belegschaftsstiftung",
     "bemerkung": "Projektbeispiele: 1:1 Mentoring (61 Partner-Schulen), Höhrclubs (118.200€, 100 Schulen, 2.500 Schüler), Deutsches Schülerstipendium (66 Stipendien). Keine feste 545.000€ Förderung nachweisbar.",
     "reviewNotiz": "Angabe von 545.000€ Fördersumme nicht verifizierbar. Stiftung fördert strategisch über Partnerschaften, keine offenen Ausschreibungen."
+  },
+  {
+    "id": "jugendbruecke-beruflicher-austausch-2026-27",
+    "name": "Beruflicher Austausch 2026/27 (Deutsch-Türkische Jugendbrücke)",
+    "foerdergeber": "Deutsch-Türkische Jugendbrücke / Erasmus+",
+    "foerdergeberTyp": "programm",
+    "schulformen": [
+      "hauptschule",
+      "realschule",
+      "gymnasium",
+      "gesamtschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
+    "foerdersummeMin": 0,
+    "foerdersummeMax": 15000,
+    "foerdersummeText": "Reisekosten: bis 395€, Aufenthalt: bis 53€/Tag (Schüler), 112€/Tag (Lehrer), Inklusionszuschuss: 125€/Person",
+    "kategorien": [
+      "international",
+      "austausch",
+      "berufsbildung",
+      "tuerkei",
+      "inklusion"
+    ],
+    "bewerbungsfristText": "Ab sofort (laufend)",
+    "bewerbungsart": "online",
+    "infoLink": "https://www.jugendbruecke.de/foerderung/austausch_berufsschulen_2026-27/",
+    "kurzbeschreibung": "Austauschprojekte für berufsbildende Schulen mit Partnerschulen in der Türkei (Mesleki ve Teknik Anadolu Lisesi, ÇPAL, Mesleki Eğitim Merkezi, Meslek Yüksek Okulu). Mindestens 10 Schüler*innen pro Schule, 5 Tage Projektarbeit. Schwerpunkte: Inklusion, Medienkompetenz, Green Erasmus, Demokratie.",
+    "status": "aktiv",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://www.jugendbruecke.de/foerderung/austausch_berufsschulen_2026-27/",
+    "quelleUrl": "https://www.jugendbruecke.de/foerderung/austausch_berufsschulen_2026-27/",
+    "kiAntragGeeignet": true,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "Förderzeitraum: 01.07.2026 - 31.08.2027. Türkische Gegenbesuche nur anteilig (max. 50%). Drittmittel für türkische Seite sind vorteilhaft. Kontakt: koester@jugendbruecke.de"
+  },
+  {
+    "id": "erasmus-schule-2026",
+    "name": "Erasmus+ Schulbildung 2026",
+    "foerdergeber": "Europäische Kommission / Nationale Agentur BIBB",
+    "foerdergeberTyp": "eu",
+    "schulformen": [
+      "grundschule",
+      "hauptschule",
+      "realschule",
+      "gymnasium",
+      "gesamtschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
+    "foerdersummeMin": 5000,
+    "foerdersummeMax": 300000,
+    "foerdersummeText": "93 Mio. € Gesamtbudget für Deutschland (je nach Projektgröße)",
+    "kategorien": [
+      "international",
+      "austausch",
+      "partnerschaften",
+      "schulentwicklung",
+      "digitalisierung",
+      "inklusion"
+    ],
+    "bewerbungsfristStart": "2026-02-11",
+    "bewerbungsfristEnde": "2026-03-05",
+    "bewerbungsfristText": "Info-Veranstaltung: 11.02.2026 | Projektskizzen: 05.03.2026",
+    "bewerbungsart": "online",
+    "infoLink": "https://erasmusplus.schule/news/erasmus-foerderung-fuer-2026",
+    "kurzbeschreibung": "Erasmus+ Schulbildung mit 93 Mio. € für Deutschland. NEU 2026: 'Europäische Partnerschaften für die Schulentwicklung' (Antragstellung durch Schulbehörden/Koordinierungsstellen). Fokus: Union of Skills, Green Erasmus, Inklusion, Unterstützung geflüchteter Menschen aus Ukraine.",
+    "status": "aktiv",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://erasmusplus.schule/news/erasmus-foerderung-fuer-2026",
+    "quelleUrl": "https://erasmusplus.schule/news/erasmus-foerderung-fuer-2026",
+    "kiAntragGeeignet": true,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "Antragsformulare ab 19.11.2025 verfügbar. Gesamtbudget EU: 5,2 Mrd. €. Für Schulpartnerschaften (KA2) und neue Schulentwicklungspartnerschaften."
+  },
+  {
+    "id": "europaschulen-nrw-2026",
+    "name": "Landesinitiative Europa-Schecks NRW 2026",
+    "foerdergeber": "Ministerium für Bundes- und Europaangelegenheiten NRW",
+    "foerdergeberTyp": "land",
+    "schulformen": [
+      "grundschule",
+      "hauptschule",
+      "realschule",
+      "gymnasium",
+      "gesamtschule"
+    ],
+    "bundeslaender": [
+      "DE-NW"
+    ],
+    "foerdersummeMin": 1000,
+    "foerdersummeMax": 25000,
+    "foerdersummeText": "Bis zu 25.000 € pro Projekt",
+    "kategorien": [
+      "europa",
+      "international",
+      "projekte",
+      "bildung",
+      "kultur"
+    ],
+    "bewerbungsfristStart": "2026-04-01",
+    "bewerbungsfristEnde": "2026-08-01",
+    "bewerbungsfristText": "Stichtage: 01.04., 01.06., 01.08.2026 (gerade Monate)",
+    "bewerbungsart": "online",
+    "infoLink": "https://mbeim.nrw/europa-schecks",
+    "kurzbeschreibung": "Europa-Schecks fördern Schulen, Vereine, Kommunen und außerschulische Bildungseinrichtungen bei Europa-Projekten. 2026: 80 Jahre NRW, 80 Jahre Freundschaft NRW-Großbritannien, 25 Jahre Regionales Weimarer Dreieck. Neue Teilnahmebedingungen mit Pauschalen für Verpflegung/Übernachtung.",
+    "status": "aktiv",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://mbeim.nrw/europa-schecks",
+    "quelleUrl": "https://mbeim.nrw/europa-schecks",
+    "kiAntragGeeignet": true,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "Korrektur: Frist ist nicht 31.01.2026 sondern die geraden Monate! Antragstellung über Online-Portal. Kontakt: europa-scheck@bezreg-muenster.nrw.de"
+  },
+  {
+    "id": "brandenburg-ganztags-investition",
+    "name": "Investitionsprogramm Ganztagsausbau Brandenburg",
+    "foerdergeber": "Bund / MBJS Brandenburg (ILB)",
+    "foerdergeberTyp": "land",
+    "schulformen": [
+      "grundschule"
+    ],
+    "bundeslaender": [
+      "DE-BB"
+    ],
+    "foerdersummeMin": 10000,
+    "foerdersummeMax": 5000000,
+    "foerdersummeText": "83,3 Mio. € Bund + Eigenanteile = ca. 119 Mio. € (max. 70% Förderquote)",
+    "kategorien": [
+      "ganztag",
+      "infrastruktur",
+      "bau",
+      "sanierung"
+    ],
+    "bewerbungsfristText": "Laufend (Maßnahme-Abschluss bis 31.12.2026)",
+    "bewerbungsart": "online",
+    "infoLink": "https://www.ilb.de/de/infrastruktur/alle-infrastruktur-foerderprogramme/investitionsprogramm-ganztag/",
+    "kurzbeschreibung": "Investitionsprogramm für baulichen Ausbau der Ganztagsbetreuung an Grundschulen und Horten. Förderfähig: Neu-/Umbau, Erweiterungen, Grundstückserwerb, energetische Sanierung (über Instandhaltung hinaus). Flankiert den Rechtsanspruch auf Ganztagsbetreuung ab 01.08.2026.",
+    "status": "aktiv",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://bravors.brandenburg.de/verwaltungsvorschriften/rl_investitionsprogramm_ganztag",
+    "quelleUrl": "https://www.ilb.de/de/infrastruktur/alle-infrastruktur-foerderprogramme/investitionsprogramm-ganztag/",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "Antragsberechtigt: Öffentliche/freie Schulträger und Hortträger (NICHT Einzelschulen direkt). Mindestens 30% Eigenanteil (bei Finanzschwäche reduziert). Antrag über ILB-Kundenportal."
+  },
+  {
+    "id": "dt-schulaustausch-2026-27-abgelaufen",
+    "name": "Deutsch-türkischer Schulaustausch 2026/27 (ABGELAUFEN)",
+    "foerdergeber": "Deutsch-Türkische Jugendbrücke / Erasmus+",
+    "foerdergeberTyp": "programm",
+    "schulformen": [
+      "grundschule",
+      "hauptschule",
+      "realschule",
+      "gymnasium",
+      "gesamtschule"
+    ],
+    "bundeslaender": [
+      "alle"
+    ],
+    "foerdersummeMin": 0,
+    "foerdersummeMax": 15000,
+    "foerdersummeText": "Reise- und Aufenthaltskosten (ähnlich beruflicher Austausch)",
+    "kategorien": [
+      "international",
+      "austausch",
+      "tuerkei"
+    ],
+    "bewerbungsfristStart": "2025-09-26",
+    "bewerbungsfristEnde": "2025-12-15",
+    "bewerbungsfristText": "ABGELAUFEN: 15.12.2025",
+    "bewerbungsart": "online",
+    "infoLink": "https://www.jugendbruecke.de/foerderung/schulaustausch2026-27/",
+    "kurzbeschreibung": "Förderung von Austauschprojekten zwischen deutschen und türkischen Schulen. Die Bewerbungsfrist für 2026/27 war der 15.12.2025 und ist abgelaufen. Nächste Ausschreibung voraussichtlich Herbst 2026 für 2027/28.",
+    "status": "abgelaufen",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://www.austausch-macht-schule.org/nachricht/ausschreibung-202627-foerderung-deutsch-tuerkischer-schulaustausche-jetzt-beantragen",
+    "quelleUrl": "https://www.jugendbruecke.de/foerderung/schulaustausch2026-27/",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "VERIFIKATION: Frist 15.12.2025 war bereits abgelaufen als die Daten geprüft wurden (13.02.2026). Als abgelaufen markiert. Alternative: Beruflicher Austausch (noch offen)."
+  },
+  {
+    "id": "bw-innovative-projekte-hochschulen",
+    "name": "Innovative Projekte (BW) - NUR für Schools of Education",
+    "foerdergeber": "MWK Baden-Württemberg",
+    "foerdergeberTyp": "land",
+    "schulformen": [],
+    "bundeslaender": [
+      "DE-BW"
+    ],
+    "foerdersummeMin": 0,
+    "foerdersummeMax": 50000,
+    "foerdersummeText": "Bis 50.000 € (Einzelanträge bis 25.000 € oder Verbund bis 50.000 €)",
+    "kategorien": [
+      "inklusion",
+      "lehrerausbildung",
+      "hochschule"
+    ],
+    "bewerbungsfristText": "Förderzeitraum 01.01.-31.12.2026 (Antragsfrist prüfen)",
+    "bewerbungsart": "online",
+    "infoLink": "https://mwk.baden-wuerttemberg.de/fileadmin/redaktion/m-mwk/intern/dateien/Ausschreibungen/Innovative_Projekte/Ausschreibung_F%C3%B6rderprogramm.pdf",
+    "kurzbeschreibung": "Förderung innovativer Maßnahmen zur Förderung von Inklusion in der Lehre. WICHTIG: Nicht für allgemeine Schulen, sondern nur für Schools of Education, Universitäten und Pädagogische Hochschulen in BW. Einzelanträge bis 25.000 € oder Verbundanträge bis 50.000 €.",
+    "status": "review_needed",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://mwk.baden-wuerttemberg.de/fileadmin/redaktion/m-mwk/intern/dateien/Ausschreibungen/Innovative_Projekte/Ausschreibung_F%C3%B6rderprogramm.pdf",
+    "quelleUrl": "https://mwk.baden-wuerttemberg.de/fileadmin/redaktion/m-mwk/intern/dateien/Ausschreibungen/Innovative_Projekte/Ausschreibung_F%C3%B6rderprogramm.pdf",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "NICHT FÜR SCHULEN! Nur für Hochschulen mit Lehramtsausbildung. Zielgruppe: Schools of Education, Universitäten, PHs. Bei Interesse: Über Hochschulpartnerschaften teilnehmen.",
+    "reviewNotiz": "Vom Scan als Schulförderung erfasst, aber nur für Hochschulen zugänglich. Als nicht für Einzelschulen geeignet markiert."
+  },
+  {
+    "id": "hu-berlin-inklusion-intern",
+    "name": "HU Berlin: Förderung von Inklusion (NUR HU-intern)",
+    "foerdergeber": "Humboldt-Universität zu Berlin (PSE)",
+    "foerdergeberTyp": "uni",
+    "schulformen": [],
+    "bundeslaender": [
+      "DE-BE"
+    ],
+    "foerdersummeMin": 0,
+    "foerdersummeMax": 2000,
+    "foerdersummeText": "Bis 2.000 € pro Fachbereich/Fächergruppe",
+    "kategorien": [
+      "inklusion",
+      "heterogenitaet",
+      "lehrerausbildung"
+    ],
+    "bewerbungsfristStart": "2026-01-23",
+    "bewerbungsfristEnde": "2026-03-31",
+    "bewerbungsfristText": "Bis 31.03.2026",
+    "bewerbungsart": "email",
+    "infoLink": "https://pse.hu-berlin.de/de/aktuelles/nachrichten/ausschreibung-foerderung-von-inklusion-und-heterogenitaet-2026",
+    "kurzbeschreibung": "Mittel aus Sondertatbeständen des LBiG für inklusionsorientierte Projekte in der Lehrkräftebildung. WICHTIG: Nur für Fachdidaktiken und Fachbereiche der HU Berlin. Externe Schulen können nicht antragen.",
+    "status": "review_needed",
+    "createdAt": "2026-02-13T00:00:00Z",
+    "updatedAt": "2026-02-13T08:00:00.000Z",
+    "quelle": "https://pse.hu-berlin.de/de/aktuelles/nachrichten/ausschreibung-foerderung-von-inklusion-und-heterogenitaet-2026",
+    "quelleUrl": "https://pse.hu-berlin.de/de/aktuelles/nachrichten/ausschreibung-foerderung-von-inklusion-und-heterogenitaet-2026",
+    "kiAntragGeeignet": false,
+    "verifiziertAm": "2026-02-13",
+    "verifiziertVon": "COMPASS Verifikation",
+    "bemerkung": "NICHT FÜR EXTERNE SCHULEN! Nur HU-intern. Anträge an: pse.inklu@hu-berlin.de. Vom Scan fälschlicherweise als allgemeine Schulförderung erfasst.",
+    "reviewNotiz": "Nur für interne Fachdidaktiken der HU Berlin. Externe Schulen haben keine Antragsmöglichkeit."
   }
 ]
