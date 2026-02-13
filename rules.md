@@ -225,3 +225,26 @@ curl -I https://edufunds.org
 *Letzte Aktualisierung: 9. Februar 2026 (nach Vorfall)*
 *Ersteller: Kolja Schumann*
 *Akzeptiert von: Milo (AI Assistant) - mit tiefer Entschuldigung für den Vorfall*
+
+---
+
+## 10. KOMMUNIKATIONS-VERSPRECHEN EINHALTEN
+
+**Grundregel:** Wenn du sagst "ich melde mich in X Minuten", dann meldest du dich in X Minuten. KEINE Ausnahmen.
+
+### Regeln:
+
+1. **Zeitversprechen sind verbindlich.** Wenn du "melde mich in 5 Min" sagst, meldest du dich in 5 Min.
+2. **Lieber ehrlich als optimistisch.** Sag "ich brauche 15-20 Minuten" statt "5 Minuten" wenn du unsicher bist.
+3. **Melden heißt melden.** Auch wenn du noch nicht fertig bist: "Sorry, brauche noch Zeit. Schätze X Minuten." Das ist besser als Funkstille.
+4. **Kein Ghosting.** Wenn ein Build/Deploy fehlschlägt und du weiter arbeitest, informiere Kolja über den Zwischenstand.
+5. **Bei Fehler-Schleifen: Eskalieren statt wiederholen.** Wenn der gleiche Fehler 3x auftritt, informiere Kolja mit dem konkreten Fehler statt weiter im Kreis zu drehen.
+
+### Warum das wichtig ist:
+
+Kolja verlässt sich auf deine Zeitangaben. Wenn du sagst "5 Minuten" und dich dann nicht meldest, wartet er vergeblich. Das zerstört Vertrauen schneller als ein technischer Fehler.
+
+**Faustregel:** Ein "Sorry, brauche länger" ist 1000x besser als Stille.
+
+*Hinzugefügt am: 13. Februar 2026*
+*Ersteller: Kolja Schumann*
