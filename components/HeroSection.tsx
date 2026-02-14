@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, School, Building2, HeartHandshake, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import foerderprogramme from "@/data/foerderprogramme.json";
 
 export function HeroSection() {
@@ -125,32 +126,22 @@ export function HeroSection() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
           >
-            <Link
-              href="/foerderprogramme"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg overflow-hidden"
-              style={{ 
-                backgroundColor: '#0a1628',
-                color: '#f8f5f0',
-              }}
-            >
-              <Search className="w-5 h-5" />
-              <span className="font-semibold">Förderfinder öffnen</span>
-              <ArrowRight 
-                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
-              />
-            </Link>
+            <Button asChild size="lg" variant="secondary" className="group">
+              <Link href="/foerderprogramme">
+                <Search className="w-5 h-5" />
+                <span className="font-semibold">Förderfinder öffnen</span>
+                <ArrowRight 
+                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
+                />
+              </Link>
+            </Button>
 
-            <Link
-              href="/foerderprogramme"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg transition-all duration-300 hover:bg-[#0a1628]/5"
-              style={{ 
-                border: '2px solid #0a1628',
-                color: '#0a1628',
-              }}
-            >
-              <Sparkles className="w-5 h-5" style={{ color: '#c9a227' }} />
-              <span className="font-semibold">KI-Assistent testen</span>
-            </Link>
+            <Button asChild size="lg" variant="outline-navy" className="group">
+              <Link href="/foerderprogramme">
+                <Sparkles className="w-5 h-5 text-[#c9a227] group-hover:text-[#0a1628]" />
+                <span className="font-semibold">KI-Assistent testen</span>
+              </Link>
+            </Button>
           </motion.div>
 
           {/* Stats - Card Grid */}

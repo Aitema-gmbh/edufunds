@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Send, Loader2, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -70,23 +71,15 @@ export function NewsletterForm() {
           required
         />
       </div>
-      <button
+      <Button
         type="submit"
         disabled={status === "loading" || !email}
-        className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-slate-900 font-semibold flex items-center justify-center gap-2 hover:from-orange-400 hover:to-amber-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        isLoading={status === "loading"}
+        loadingText="Wird gesendet..."
       >
-        {status === "loading" ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" />
-            Wird gesendet...
-          </>
-        ) : (
-          <>
-            <Send className="h-4 w-4" />
-            Abonnieren
-          </>
-        )}
-      </button>
+        <Send className="h-4 w-4" />
+        Abonnieren
+      </Button>
       
       {status === "error" && (
         <p className="text-red-400 text-sm sm:absolute sm:-bottom-8 sm:left-0 sm:right-0">

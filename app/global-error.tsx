@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AlertTriangle, RefreshCw, Home, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function GlobalError({
   error,
@@ -63,29 +64,24 @@ export default function GlobalError({
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={reset}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
-                >
+                <Button onClick={reset}>
                   <RefreshCw className="w-5 h-5" />
                   Seite neu laden
-                </button>
+                </Button>
                 
-                <Link
-                  href="/"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:text-white transition-colors"
-                >
-                  <Home className="w-5 h-5" />
-                  Zur Startseite
-                </Link>
+                <Button asChild variant="outline">
+                  <Link href="/">
+                    <Home className="w-5 h-5" />
+                    Zur Startseite
+                  </Link>
+                </Button>
                 
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:text-white transition-colors"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Support kontaktieren
-                </Link>
+                <Button asChild variant="outline">
+                  <Link href="/kontakt">
+                    <MessageCircle className="w-5 h-5" />
+                    Support kontaktieren
+                  </Link>
+                </Button>
               </div>
 
               {/* Support Info */}

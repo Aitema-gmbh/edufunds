@@ -5,6 +5,7 @@ import { Sparkles, Mail, Lock, User, School, ArrowRight, CheckCircle } from "luc
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export default function RegistrierenPage() {
@@ -202,23 +203,16 @@ export default function RegistrierenPage() {
                 </div>
 
                 {/* Submit */}
-                <button
+                <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl btn-gold font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  isLoading={isSubmitting}
+                  loadingText="Wird erstellt..."
+                  className="w-full"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Wird erstellt...
-                    </>
-                  ) : (
-                    <>
-                      Kostenlos registrieren
-                      <ArrowRight className="w-5 h-5" />
-                    </>
-                  )}
-                </button>
+                  Kostenlos registrieren
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
               </form>
 
               {/* Login Link */}

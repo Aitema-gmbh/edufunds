@@ -5,6 +5,7 @@ import { Sparkles, CheckCircle, ArrowLeft, CreditCard, Shield, Clock, FileText, 
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const features = [
@@ -201,12 +202,11 @@ export default function CheckoutEinzelPage() {
               </motion.div>
 
               <div className="mt-8 text-center">
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary"
-                >
-                  Zurück zur Startseite
-                </Link>
+                <Button asChild>
+                  <Link href="/">
+                    Zurück zur Startseite
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -547,29 +547,21 @@ export default function CheckoutEinzelPage() {
 
                   {/* CTA */}
                   <div className="mt-auto space-y-3">
-                    <button
+                    <Button
                       onClick={handlePayment}
                       disabled={isProcessing || !customerData.name || !customerData.email || !customerData.school}
-                      className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                      isLoading={isProcessing}
+                      loadingText="Wird verarbeitet..."
+                      className="w-full"
                     >
-                      {isProcessing ? (
-                        <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
-                          Wird verarbeitet...
-                        </>
-                      ) : (
-                        <>
-                          Jetzt kaufen
-                          <Sparkles className="w-5 h-5" />
-                        </>
-                      )}
-                    </button>
-                    <Link
-                      href="/kontakt"
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#c9a227]/50 text-[#94a3b8] hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
-                    >
-                      Fragen? Kontaktieren Sie uns
-                    </Link>
+                      Jetzt kaufen
+                      <Sparkles className="w-5 h-5" />
+                    </Button>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/kontakt">
+                        Fragen? Kontaktieren Sie uns
+                      </Link>
+                    </Button>
                   </div>
 
                   <p className="mt-4 text-xs text-center" style={{ color: "#64748b" }}>

@@ -12,6 +12,7 @@ import {
   Info,
   CreditCard,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
   {
@@ -106,23 +107,24 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:gap-3">
-            <Link
-              href="/foerderprogramme"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-primary btn-primary-sm"
-            >
-              <Sparkles className="w-4 h-4" />
-              Programme entdecken
-            </Link>
+            <Button asChild size="sm">
+              <Link href="/foerderprogramme">
+                <Sparkles className="w-4 h-4" />
+                Programme entdecken
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-xl glass hover:bg-slate-800/50 transition-colors"
+            className="lg:hidden rounded-xl"
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           >
-            {isOpen ? <X className="w-5 h-5 text-slate-300" /> : <Menu className="w-5 h-5 text-slate-300" />}
-          </button>
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
         </div>
 
         {/* Scroll progress */}
@@ -182,16 +184,15 @@ export function Header() {
                 transition={{ duration: 0.3, delay: 0.3 }}
                 className="mt-6 space-y-3"
               >
-                <Link
-                  href="/foerderprogramme"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center px-6 py-3 rounded-xl btn-primary"
-                >
-                  <span className="flex items-center justify-center gap-2">
+                <Button asChild className="w-full">
+                  <Link
+                    href="/foerderprogramme"
+                    onClick={() => setIsOpen(false)}
+                  >
                     <Sparkles className="w-4 h-4" />
                     Programme entdecken
-                  </span>
-                </Link>
+                  </Link>
+                </Button>
               </motion.div>
             </motion.div>
           </motion.div>

@@ -226,10 +226,10 @@ export function KIAntragAssistent({ programm, onClose }: KIAntragAssistentProps)
                 Text
               </Button>
               <Button
-                variant="default"
+                variant="danger"
                 size="sm"
                 onClick={downloadAsPDF}
-                className="gap-2 bg-red-600 hover:bg-red-700"
+                className="gap-2"
               >
                 <FileDown className="h-4 w-4" />
                 PDF

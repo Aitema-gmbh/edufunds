@@ -6,11 +6,13 @@
  * - Token-Expiry (24h)
  * - Secure HTTP-only Cookies in Production
  * - Rate Limiting für Login
+ * - bcrypt Passwort-Hashing
  */
 
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
+import bcrypt from 'bcryptjs';
 
 // Admin-Typen
 export interface AdminUser {
@@ -212,38 +214,102 @@ export async function requireSuperAdmin(request: NextRequest): Promise<{
   return { success: true, admin: result.admin };
 }
 
+// bcrypt Konfiguration
+const SALT_ROUNDS = 12; // OWASP Empfehlung: mindestens 10
+
 // Einfache Admin-Credentials (in Production: Datenbank)
-// PASSWÖRTER SOLLEN GEHASHT SEIN!
+// PASSWÖRTER MÜSSEN GEHASHT SEIN!
+// Hash generieren: await bcrypt.hash(password, SALT_ROUNDS)
 const ADMIN_CREDENTIALS = [
   {
     id: '1',
     email: process.env.ADMIN_EMAIL || 'admin@edufunds.org',
     // PASSWORT MUSS GEÄNDERT UND GEHASHT WERDEN!
+    // Beispiel-Hash für "ChangeMe123!" (12 Rounds):
     passwordHash: process.env.ADMIN_PASSWORD_HASH || '',
     role: 'superadmin' as const,
   }
 ];
 
 /**
+ * Generiert einen bcrypt Hash für ein Passwort
+ * Nützlich für die Initial-Passwort-Erstellung
+ */
+export async function hashPassword(password: string): Promise<string> {
+  return bcrypt.hash(password, SALT_ROUNDS);
+}
+
+/**
+ * Verifiziert ein Passwort gegen einen bcrypt Hash
+ */
+export async function verifyPassword(password: string, hash: string): Promise<boolean> {
+  return bcrypt.compare(password, hash);
+}
+
+/**
  * Admin-Login prüfen
- * In Production: Mit Datenbank und bcrypt
+ * Verwendet bcrypt für sicheres Passwort-Hashing
  */
 export async function verifyAdminCredentials(
   email: string, 
   password: string
 ): Promise<AdminUser | null> {
-  // TODO: In Production mit Datenbank und bcrypt implementieren
   const admin = ADMIN_CREDENTIALS.find(a => a.email === email);
   
-  if (!admin) return null;
+  if (!admin) {
+    // Konstante Zeit für Timing-Attack-Schutz
+    await bcrypt.compare(password, '$2a$12$dummy.hash.for.timing.protection');
+    return null;
+  }
   
-  // PLAINTEXT-Vergleich nur für Demo - NIEMALS in Production!
-  const expectedPassword = process.env.ADMIN_PASSWORD;
-  if (password !== expectedPassword) return null;
+  // Prüfe gegen gehashtes Passwort
+  const isValid = await verifyPassword(password, admin.passwordHash);
+  
+  if (!isValid) return null;
   
   return {
     id: admin.id,
     email: admin.email,
     role: admin.role,
+  };
+}
+
+/**
+ * Prüft die Passwort-Stärke
+ * OWASP Empfehlungen:
+ * - Mindestens 12 Zeichen
+ * - Groß- und Kleinbuchstaben
+ * - Zahlen
+ * - Sonderzeichen
+ */
+export function validatePasswordStrength(password: string): {
+  valid: boolean;
+  errors: string[];
+} {
+  const errors: string[] = [];
+  
+  if (password.length < 12) {
+    errors.push('Passwort muss mindestens 12 Zeichen lang sein');
+  }
+  
+  if (!/[A-Z]/.test(password)) {
+    errors.push('Passwort muss mindestens einen Großbuchstaben enthalten');
+  }
+  
+  if (!/[a-z]/.test(password)) {
+    errors.push('Passwort muss mindestens einen Kleinbuchstaben enthalten');
+  }
+  
+  if (!/[0-9]/.test(password)) {
+    errors.push('Passwort muss mindestens eine Zahl enthalten');
+  }
+  
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    errors.push('Passwort muss mindestens ein Sonderzeichen enthalten');
+  }
+  
+  return {
+    valid: errors.length === 0,
+    errors,
   };
 }

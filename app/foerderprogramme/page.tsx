@@ -1,16 +1,26 @@
 "use client";
 
+import dynamic from "next/dynamic";
+import { Suspense, memo, useMemo, useCallback } from "react";
+import useSWR from "swr";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { ProgramCardSkeleton, ProgramCardSkeletonGrid } from "@/components/ProgramCardSkeleton";
 import { Search, Filter, School, X, Landmark, MapPinned, HeartHandshake, Globe } from "lucide-react";
-import { GlassCard } from "@/components/GlassCard";
 import type { Foerderprogramm } from '@/lib/foerderSchema';
-import foerderprogrammeData from '@/data/foerderprogramme.json';
-const foerderprogramme = foerderprogrammeData as Foerderprogramm[];
+import { foerderprogrammeFetcher, FOERDERPROGRAMME_CACHE_KEY, swrConfig } from "@/lib/swr-fetcher";
+import { useLocalStorage, useDebounce, usePagination } from "@/hooks/useLocalStorage";
 
-import { useState, useMemo } from "react";
+// Dynamic Import für GlassCard (Code-Splitting)
+const GlassCard = dynamic(() => import("@/components/GlassCardOptimized").then(mod => ({ 
+  default: mod.GlassCard 
+})), {
+  loading: () => <ProgramCardSkeleton />,
+  ssr: false
+});
 
-// Bundesländer-Optionen
+// Bundesländer-Optionen (außerhalb der Komponente für stabile Referenz)
 const BUNDESLAENDER = [
   { value: "", label: "Alle Bundesländer" },
   { value: "DE-BW", label: "Baden-Württemberg" },
@@ -31,7 +41,6 @@ const BUNDESLAENDER = [
   { value: "DE-TH", label: "Thüringen" },
 ];
 
-// Fördergeber-Typen
 const FOERDERGEBER_TYPEN = [
   { value: "", label: "Alle Typen" },
   { value: "bund", label: "Bund" },
@@ -40,100 +49,261 @@ const FOERDERGEBER_TYPEN = [
   { value: "eu", label: "EU" },
 ];
 
-// Kategorien aus den Daten sammeln
-const ALLE_KATEGORIEN = Array.from(new Set(foerderprogramme.flatMap(p => p.kategorien))).sort();
-const KATEGORIEN = [
-  { value: "", label: "Alle Kategorien" },
-  ...ALLE_KATEGORIEN.map(kat => ({ value: kat, label: kat.charAt(0).toUpperCase() + kat.slice(1).replace(/-/g, " ") }))
-];
+// Memoized Statistik-Komponente
+const StatsSection = memo(function StatsSection({ stats }: { stats: { total: number; bund: number; land: number; stiftung: number; eu: number } }) {
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+      <div className="glass rounded-xl p-4 text-center">
+        <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center mx-auto mb-2">
+          <School className="w-5 h-5 text-orange-400" />
+        </div>
+        <div className="text-2xl font-bold text-orange-400">{stats.total}</div>
+        <div className="text-xs text-slate-500">Grundschul-Programme</div>
+      </div>
+      <div className="glass rounded-xl p-4 text-center">
+        <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mx-auto mb-2">
+          <Landmark className="w-5 h-5 text-cyan-400" />
+        </div>
+        <div className="text-2xl font-bold text-cyan-400">{stats.bund}</div>
+        <div className="text-xs text-slate-500">Bundesmittel</div>
+      </div>
+      <div className="glass rounded-xl p-4 text-center">
+        <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mx-auto mb-2">
+          <MapPinned className="w-5 h-5 text-purple-400" />
+        </div>
+        <div className="text-2xl font-bold text-purple-400">{stats.land}</div>
+        <div className="text-xs text-slate-500">Landesmittel</div>
+      </div>
+      <div className="glass rounded-xl p-4 text-center">
+        <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mx-auto mb-2">
+          <HeartHandshake className="w-5 h-5 text-green-400" />
+        </div>
+        <div className="text-2xl font-bold text-green-400">{stats.stiftung}</div>
+        <div className="text-xs text-slate-500">Stiftungen</div>
+      </div>
+      <div className="glass rounded-xl p-4 text-center">
+        <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mx-auto mb-2">
+          <Globe className="w-5 h-5 text-blue-400" />
+        </div>
+        <div className="text-2xl font-bold text-blue-400">{stats.eu}</div>
+        <div className="text-xs text-slate-500">EU-Programme</div>
+      </div>
+    </div>
+  );
+});
 
-// Statistiken werden dynamisch in der Komponente berechnet
+// Pagination Komponente
+const Pagination = memo(function Pagination({ 
+  currentPage, 
+  totalPages, 
+  onPageChange 
+}: { 
+  currentPage: number; 
+  totalPages: number; 
+  onPageChange: (page: number) => void;
+}) {
+  if (totalPages <= 1) return null;
 
+  const getVisiblePages = () => {
+    const pages: (number | string)[] = [];
+    const showEllipsis = totalPages > 7;
+
+    if (!showEllipsis) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    // Erste Seite immer zeigen
+    pages.push(1);
+
+    // Bereich um aktuelle Seite
+    const start = Math.max(2, currentPage - 1);
+    const end = Math.min(totalPages - 1, currentPage + 1);
+
+    if (start > 2) pages.push('...');
+    for (let i = start; i <= end; i++) pages.push(i);
+    if (end < totalPages - 1) pages.push('...');
+
+    // Letzte Seite immer zeigen
+    pages.push(totalPages);
+
+    return pages;
+  };
+
+  return (
+    <div className="flex items-center justify-center gap-2 mt-8">
+      <Button
+        variant="secondary"
+        size="sm"
+        onClick={() => onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        ← Zurück
+      </Button>
+      
+      <div className="flex items-center gap-1">
+        {getVisiblePages().map((page, index) => (
+          <div key={index}>
+            {page === '...' ? (
+              <span className="px-2 text-slate-500">...</span>
+            ) : (
+              <Button
+                variant={currentPage === page ? "primary" : "secondary"}
+                size="icon-sm"
+                onClick={() => onPageChange(page as number)}
+                className="w-10 h-10"
+              >
+                {page}
+              </Button>
+            )}
+          </div>
+        ))}
+      </div>
+      
+      <Button
+        variant="secondary"
+        size="sm"
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        Weiter →
+      </Button>
+    </div>
+  );
+});
+
+// Hauptkomponente
 export default function FoerderprogrammePage() {
-  // Filter-States
-  const [suchbegriff, setSuchbegriff] = useState("");
-  const [bundesland, setBundesland] = useState("");
-  const [foerdergeberTyp, setFoerdergeberTyp] = useState("");
-  const [kategorie, setKategorie] = useState("");
-  
-  // Pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
+  // SWR für Daten-Fetching mit Caching
+  const { data: foerderprogramme, error, isLoading } = useSWR<Foerderprogramm[]>(
+    FOERDERPROGRAMME_CACHE_KEY,
+    foerderprogrammeFetcher,
+    swrConfig
+  );
 
-  // Gefilterte Programme berechnen - optimiert
+  // Persistierter Filter-State
+  const [filterState, setFilterState] = useLocalStorage('foerderprogramme-filters', {
+    suchbegriff: "",
+    bundesland: "",
+    foerdergeberTyp: "",
+    kategorie: ""
+  });
+
+  // Debounced Suchbegriff für bessere Performance
+  const debouncedSuchbegriff = useDebounce(filterState.suchbegriff, 300);
+
+  // Kategorien aus Daten generieren (memoized)
+  const kategorien = useMemo(() => {
+    if (!foerderprogramme) return [{ value: "", label: "Alle Kategorien" }];
+    const alleKategorien = Array.from(new Set(foerderprogramme.flatMap(p => p.kategorien))).sort();
+    return [
+      { value: "", label: "Alle Kategorien" },
+      ...alleKategorien.map(kat => ({ 
+        value: kat, 
+        label: kat.charAt(0).toUpperCase() + kat.slice(1).replace(/-/g, " ") 
+      }))
+    ];
+  }, [foerderprogramme]);
+
+  // Statistiken (memoized)
+  const stats = useMemo(() => {
+    if (!foerderprogramme) return { total: 0, bund: 0, land: 0, stiftung: 0, eu: 0 };
+    return {
+      total: foerderprogramme.length,
+      bund: foerderprogramme.filter(p => p.foerdergeberTyp === 'bund').length,
+      land: foerderprogramme.filter(p => p.foerdergeberTyp === 'land').length,
+      stiftung: foerderprogramme.filter(p => p.foerdergeberTyp === 'stiftung').length,
+      eu: foerderprogramme.filter(p => p.foerdergeberTyp === 'eu').length,
+    };
+  }, [foerderprogramme]);
+
+  // Filter-Logik (memoized)
   const gefilterteProgramme = useMemo(() => {
-    const suche = suchbegriff.toLowerCase().trim();
+    if (!foerderprogramme) return [];
+    
+    const suche = debouncedSuchbegriff.toLowerCase().trim();
     
     return foerderprogramme.filter((programm) => {
-      // Schnell-Check: Suchbegriff
+      // Suchbegriff
       if (suche) {
         const nameMatch = programm.name.toLowerCase().includes(suche);
-        if (nameMatch) return true; // Früher Return für Performance
+        if (nameMatch) return true;
         
-        const beschreibungMatch = programm.kurzbeschreibung.toLowerCase().includes(suche);
+        const beschreibungMatch = programm.kurzbeschreibung?.toLowerCase().includes(suche);
         if (beschreibungMatch) return true;
         
         const foerdergeberMatch = programm.foerdergeber.toLowerCase().includes(suche);
         if (!foerdergeberMatch) return false;
       }
 
-      // Schnell-Check: Bundesland
-      if (bundesland) {
-        const bundeslaenderArray = programm.bundeslaender;
-        if (!bundeslaenderArray.includes("alle") && !bundeslaenderArray.includes(bundesland)) {
+      // Bundesland
+      if (filterState.bundesland) {
+        if (!programm.bundeslaender.includes("alle") && 
+            !programm.bundeslaender.includes(filterState.bundesland)) {
           return false;
         }
       }
 
-      // Schnell-Check: Fördergeber-Typ
-      if (foerdergeberTyp && programm.foerdergeberTyp !== foerdergeberTyp) {
+      // Fördergeber-Typ
+      if (filterState.foerdergeberTyp && programm.foerdergeberTyp !== filterState.foerdergeberTyp) {
         return false;
       }
 
-      // Schnell-Check: Kategorie
-      if (kategorie && !programm.kategorien.includes(kategorie)) {
+      // Kategorie
+      if (filterState.kategorie && !programm.kategorien.includes(filterState.kategorie)) {
         return false;
       }
 
       return true;
     });
-  }, [suchbegriff, bundesland, foerdergeberTyp, kategorie]);
+  }, [foerderprogramme, debouncedSuchbegriff, filterState]);
 
-  // Reset-Funktion
-  const resetFilter = () => {
-    setSuchbegriff("");
-    setBundesland("");
-    setFoerdergeberTyp("");
-    setKategorie("");
-    setCurrentPage(1);
-  };
-  
-  // Pagination-Logik
-  const totalPages = Math.ceil(gefilterteProgramme.length / itemsPerPage);
-  const paginatedProgramme = useMemo(() => {
-    const start = (currentPage - 1) * itemsPerPage;
-    return gefilterteProgramme.slice(start, start + itemsPerPage);
-  }, [gefilterteProgramme, currentPage]);
-  
-  // Seite zurücksetzen bei Filter-Änderung
-  useMemo(() => {
-    setCurrentPage(1);
-  }, [suchbegriff, bundesland, foerdergeberTyp, kategorie]);
+  // Pagination (12 Items pro Seite für bessere Performance)
+  const { 
+    currentPage, 
+    totalPages, 
+    paginatedItems,
+    goToPage,
+    resetPage
+  } = usePagination({
+    items: gefilterteProgramme,
+    itemsPerPage: 12,
+  });
 
-  // Prüfen ob Filter aktiv sind
-  const hatAktiveFilter = suchbegriff || bundesland || foerdergeberTyp || kategorie;
+  // Filter zurücksetzen
+  const resetFilter = useCallback(() => {
+    setFilterState({
+      suchbegriff: "",
+      bundesland: "",
+      foerdergeberTyp: "",
+      kategorie: ""
+    });
+    resetPage();
+  }, [setFilterState, resetPage]);
 
-  // Anzahl aktiver Filter
-  const aktiveFilterCount = [suchbegriff, bundesland, foerdergeberTyp, kategorie].filter(Boolean).length;
+  // Aktive Filter zählen
+  const aktiveFilterCount = Object.values(filterState).filter(Boolean).length;
+  const hatAktiveFilter = aktiveFilterCount > 0;
 
-  // Statistiken dynamisch berechnen (CLIENT-SIDE)
-  const stats = useMemo(() => ({
-    total: foerderprogramme.length,
-    bund: foerderprogramme.filter(p => p.foerdergeberTyp === 'bund').length,
-    land: foerderprogramme.filter(p => p.foerdergeberTyp === 'land').length,
-    stiftung: foerderprogramme.filter(p => p.foerdergeberTyp === 'stiftung').length,
-    eu: foerderprogramme.filter(p => p.foerdergeberTyp === 'eu').length,
-  }), []);
+  // Handler für Filter-Änderungen
+  const handleFilterChange = useCallback((key: keyof typeof filterState, value: string) => {
+    setFilterState(prev => ({ ...prev, [key]: value }));
+    resetPage();
+  }, [setFilterState, resetPage]);
+
+  if (error) {
+    return (
+      <>
+        <Header />
+        <main id="main-content" className="min-h-screen pt-24 pb-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-2xl font-bold text-red-400 mb-4">Fehler beim Laden</h1>
+            <p className="text-slate-400">Die Programme konnten nicht geladen werden. Bitte versuchen Sie es später erneut.</p>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -151,48 +321,24 @@ export default function FoerderprogrammePage() {
             </h1>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
               Finden Sie passende Förderungen für Ihre Grundschule. 
-              Aktuell 160+ Programme im Überblick.
+              Aktuell {isLoading ? '...' : `${stats.total}+ Programme`} im Überblick.
             </p>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
-            <div className="glass rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center mx-auto mb-2">
-                <School className="w-5 h-5 text-orange-400" />
-              </div>
-              <div className="text-2xl font-bold text-orange-400">{stats.total}</div>
-              <div className="text-xs text-slate-500">Grundschul-Programme</div>
+          {isLoading ? (
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="glass rounded-xl p-4 animate-pulse">
+                  <div className="w-10 h-10 rounded-lg bg-slate-700 mx-auto mb-2" />
+                  <div className="h-8 w-12 bg-slate-700 mx-auto mb-1 rounded" />
+                  <div className="h-3 w-20 bg-slate-700 mx-auto rounded" />
+                </div>
+              ))}
             </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mx-auto mb-2">
-                <Landmark className="w-5 h-5 text-cyan-400" />
-              </div>
-              <div className="text-2xl font-bold text-cyan-400">{stats.bund}</div>
-              <div className="text-xs text-slate-500">Bundesmittel</div>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mx-auto mb-2">
-                <MapPinned className="w-5 h-5 text-purple-400" />
-              </div>
-              <div className="text-2xl font-bold text-purple-400">{stats.land}</div>
-              <div className="text-xs text-slate-500">Landesmittel</div>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mx-auto mb-2">
-                <HeartHandshake className="w-5 h-5 text-green-400" />
-              </div>
-              <div className="text-2xl font-bold text-green-400">{stats.stiftung}</div>
-              <div className="text-xs text-slate-500">Stiftungen</div>
-            </div>
-            <div className="glass rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mx-auto mb-2">
-                <Globe className="w-5 h-5 text-blue-400" />
-              </div>
-              <div className="text-2xl font-bold text-blue-400">{stats.eu}</div>
-              <div className="text-xs text-slate-500">EU-Programme</div>
-            </div>
-          </div>
+          ) : (
+            <StatsSection stats={stats} />
+          )}
 
           {/* Filter-Bereich */}
           <div className="glass rounded-2xl p-6 mb-8">
@@ -207,18 +353,20 @@ export default function FoerderprogrammePage() {
                 )}
               </div>
               {hatAktiveFilter && (
-                <button
+                <Button
+                  variant="ghost"
+                  size="sm"
                   onClick={resetFilter}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-slate-400 hover:text-orange-400 hover:bg-orange-500/10 transition-all"
+                  className="text-slate-400 hover:text-orange-400"
                 >
                   <X className="h-4 w-4" />
                   Filter zurücksetzen
-                </button>
+                </Button>
               )}
             </div>
 
             {/* Filter-Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Suchfeld */}
               <div className="relative">
                 <label className="block text-xs text-slate-500 mb-1.5">Suche</label>
@@ -227,17 +375,20 @@ export default function FoerderprogrammePage() {
                   <input
                     type="text"
                     placeholder="Name, Beschreibung..."
-                    value={suchbegriff}
-                    onChange={(e) => setSuchbegriff(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm placeholder:text-slate-500 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
+                    value={filterState.suchbegriff}
+                    onChange={(e) => handleFilterChange('suchbegriff', e.target.value)}
+                    className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm placeholder:text-slate-500 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
                   />
-                  {suchbegriff && (
-                    <button
-                      onClick={() => setSuchbegriff("")}
+                  {filterState.suchbegriff && (
+                    <Button
+                      variant="ghost"
+                      size="icon-sm"
+                      onClick={() => handleFilterChange('suchbegriff', '')}
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300"
+                      aria-label="Suche löschen"
                     >
                       <X className="h-4 w-4" />
-                    </button>
+                    </Button>
                   )}
                 </div>
               </div>
@@ -246,10 +397,14 @@ export default function FoerderprogrammePage() {
               <div>
                 <label className="block text-xs text-slate-500 mb-1.5">Bundesland</label>
                 <select
-                  value={bundesland}
-                  onChange={(e) => setBundesland(e.target.value)}
+                  value={filterState.bundesland}
+                  onChange={(e) => handleFilterChange('bundesland', e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                  style={{ 
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundPosition: 'right 12px center' 
+                  }}
                 >
                   {BUNDESLAENDER.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -263,10 +418,14 @@ export default function FoerderprogrammePage() {
               <div>
                 <label className="block text-xs text-slate-500 mb-1.5">Fördergeber</label>
                 <select
-                  value={foerdergeberTyp}
-                  onChange={(e) => setFoerdergeberTyp(e.target.value)}
+                  value={filterState.foerdergeberTyp}
+                  onChange={(e) => handleFilterChange('foerdergeberTyp', e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                  style={{ 
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundPosition: 'right 12px center' 
+                  }}
                 >
                   {FOERDERGEBER_TYPEN.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -280,12 +439,16 @@ export default function FoerderprogrammePage() {
               <div>
                 <label className="block text-xs text-slate-500 mb-1.5">Kategorie</label>
                 <select
-                  value={kategorie}
-                  onChange={(e) => setKategorie(e.target.value)}
+                  value={filterState.kategorie}
+                  onChange={(e) => handleFilterChange('kategorie', e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all cursor-pointer appearance-none"
-                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                  style={{ 
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundPosition: 'right 12px center' 
+                  }}
                 >
-                  {KATEGORIEN.map((option) => (
+                  {kategorien.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -298,84 +461,52 @@ export default function FoerderprogrammePage() {
           {/* Ergebnis-Anzeige */}
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-slate-100">
-              {gefilterteProgramme.length === stats.total 
-                ? `Alle Programme (${stats.total})`
-                : `${gefilterteProgramme.length} von ${stats.total} Programmen gefunden`
-              }
+              {isLoading ? (
+                <span className="inline-block w-48 h-8 bg-slate-700 rounded animate-pulse" />
+              ) : gefilterteProgramme.length === stats.total ? (
+                `Alle Programme (${stats.total})`
+              ) : (
+                `${gefilterteProgramme.length} von ${stats.total} Programmen gefunden`
+              )}
             </h2>
           </div>
 
           {/* Programm-Liste */}
-          <div className="space-y-6">
-            {gefilterteProgramme.length === 0 ? (
-              <div className="glass rounded-2xl p-12 text-center">
-                <Search className="h-16 w-16 text-slate-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-slate-300 mb-2">
-                  Keine Programme gefunden
-                </h3>
-                <p className="text-slate-500 max-w-md mx-auto mb-6">
-                  Versuchen Sie es mit anderen Filterkriterien oder setzen Sie die Filter zurück.
-                </p>
-                <button
-                  onClick={resetFilter}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-sm"
-                >
-                  <X className="h-4 w-4" />
-                  Filter zurücksetzen
-                </button>
-              </div>
-            ) : (
-              paginatedProgramme.map((programm) => (
-                <GlassCard key={programm.id} programm={programm} />
-              ))
-            )}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-8">
-              <button
-                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                disabled={currentPage === 1}
-                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          {isLoading ? (
+            <ProgramCardSkeletonGrid count={6} />
+          ) : gefilterteProgramme.length === 0 ? (
+            <div className="glass rounded-2xl p-12 text-center">
+              <Search className="h-16 w-16 text-slate-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-slate-300 mb-2">
+                Keine Programme gefunden
+              </h3>
+              <p className="text-slate-500 max-w-md mx-auto mb-6">
+                Versuchen Sie es mit anderen Filterkriterien oder setzen Sie die Filter zurück.
+              </p>
+              <Button
+                onClick={resetFilter}
               >
-                ← Zurück
-              </button>
-              
-              <div className="flex items-center gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1)
-                  .filter(page => 
-                    page === 1 || 
-                    page === totalPages || 
-                    (page >= currentPage - 1 && page <= currentPage + 1)
-                  )
-                  .map((page, index, array) => (
-                    <div key={page} className="flex items-center">
-                      {index > 0 && array[index - 1] !== page - 1 && (
-                        <span className="px-2 text-slate-500">...</span>
-                      )}
-                      <button
-                        onClick={() => setCurrentPage(page)}
-                        className={`w-10 h-10 rounded-lg font-medium transition-colors ${
-                          currentPage === page
-                            ? 'bg-orange-500 text-white'
-                            : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                        }`}
-                      >
-                        {page}
-                      </button>
-                    </div>
-                  ))}
-              </div>
-              
-              <button
-                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                disabled={currentPage === totalPages}
-                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                Weiter →
-              </button>
+                <X className="h-4 w-4" />
+                Filter zurücksetzen
+              </Button>
             </div>
+          ) : (
+            <>
+              <div className="space-y-6">
+                <Suspense fallback={<ProgramCardSkeleton />}>
+                  {paginatedItems.map((programm) => (
+                    <GlassCard key={programm.id} programm={programm} />
+                  ))}
+                </Suspense>
+              </div>
+
+              {/* Pagination */}
+              <Pagination 
+                currentPage={currentPage} 
+                totalPages={totalPages} 
+                onPageChange={goToPage}
+              />
+            </>
           )}
 
           {/* Hinweis */}

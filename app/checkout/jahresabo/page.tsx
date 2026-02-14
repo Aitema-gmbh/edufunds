@@ -5,6 +5,7 @@ import { Building2, CheckCircle, ArrowLeft, CreditCard, Shield, Clock, Star } fr
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const features = [
@@ -103,28 +104,22 @@ export default function CheckoutJahresaboPage() {
 
                   {/* Billing Toggle */}
                   <div className="flex p-1 rounded-xl mb-6" style={{ backgroundColor: "rgba(5, 13, 24, 0.5)" }}>
-                    <button
+                    <Button
+                      variant={billingCycle === "yearly" ? "primary" : "ghost"}
                       onClick={() => setBillingCycle("yearly")}
-                      className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all ${
-                        billingCycle === "yearly"
-                          ? "bg-[#c9a227] text-[#050d18]"
-                          : "text-[#94a3b8] hover:text-[#f8f5f0]"
-                      }`}
+                      className="flex-1 rounded-lg text-sm"
                     >
                       Jährlich
                       <span className="block text-xs opacity-80">Spare 20%</span>
-                    </button>
-                    <button
+                    </Button>
+                    <Button
+                      variant={billingCycle === "monthly" ? "primary" : "ghost"}
                       onClick={() => setBillingCycle("monthly")}
-                      className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-all ${
-                        billingCycle === "monthly"
-                          ? "bg-[#c9a227] text-[#050d18]"
-                          : "text-[#94a3b8] hover:text-[#f8f5f0]"
-                      }`}
+                      className="flex-1 rounded-lg text-sm"
                     >
                       Monatlich
                       <span className="block text-xs opacity-80">Flexibel</span>
-                    </button>
+                    </Button>
                   </div>
 
                   <div className="mb-8">
@@ -242,29 +237,21 @@ export default function CheckoutJahresaboPage() {
 
                   {/* CTA */}
                   <div className="mt-auto space-y-3">
-                    <button
+                    <Button
                       onClick={handlePayment}
                       disabled={isProcessing}
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl btn-gold font-semibold disabled:opacity-50"
+                      isLoading={isProcessing}
+                      loadingText="Wird verarbeitet..."
+                      className="w-full"
                     >
-                      {isProcessing ? (
-                        <>
-                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Wird verarbeitet...
-                        </>
-                      ) : (
-                        <>
-                          Abonnieren
-                          <Building2 className="w-5 h-5" />
-                        </>
-                      )}
-                    </button>
-                    <Link
-                      href="/kontakt"
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#1e3a61] text-[#94a3b8] hover:border-[#c9a227] hover:text-[#c9a227] transition-colors"
-                    >
-                      Fragen? Kontaktieren Sie uns
-                    </Link>
+                      Abonnieren
+                      <Building2 className="w-5 h-5" />
+                    </Button>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/kontakt">
+                        Fragen? Kontaktieren Sie uns
+                      </Link>
+                    </Button>
                   </div>
 
                   <p className="mt-4 text-xs text-center" style={{ color: "#64748b" }}>

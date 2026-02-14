@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { 
   ArrowLeft, 
@@ -211,7 +212,8 @@ export default function FoerderprogrammDetailClient({ programm }: Foerderprogram
 
               <div className="flex flex-wrap gap-4">
                 {programm.kiAntragGeeignet && (
-                  <button
+                  <Button
+                    size="lg"
                     onClick={() => {
                       const hasSubscription = localStorage.getItem('edufunds_subscription') === 'active';
                       const hasEinzelantrag = localStorage.getItem('edufunds_einzelantrag') === 'valid';
@@ -222,42 +224,44 @@ export default function FoerderprogrammDetailClient({ programm }: Foerderprogram
                       }
                       setShowKIAssistent(true);
                     }}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base"
                   >
                     <Wand2 className="h-5 w-5" />
                     KI-Antrag generieren
                     <span className="ml-2 text-xs bg-white/20 px-2 py-0.5 rounded">Pro</span>
-                  </button>
+                  </Button>
                 )}
                 {programm.antragsLink && (
-                  <a
-                    href={programm.antragsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl btn-primary text-base"
-                  >
-                    <FileText className="h-5 w-5" />
-                    Antrag starten
-                  </a>
+                  <Button asChild size="lg">
+                    <a
+                      href={programm.antragsLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FileText className="h-5 w-5" />
+                      Antrag starten
+                    </a>
+                  </Button>
                 )}
                 {programm.infoLink && (
-                  <a
-                    href={programm.infoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base"
-                  >
-                    <ExternalLink className="h-5 w-5" />
-                    Offizielle Seite
-                  </a>
+                  <Button asChild size="lg" variant="outline">
+                    <a
+                      href={programm.infoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                      Offizielle Seite
+                    </a>
+                  </Button>
                 )}
-                <button
+                <Button
+                  size="lg"
+                  variant="outline"
                   onClick={() => shareProgram(programm)}
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl btn-outline text-base"
                 >
                   <Share2 className="h-5 w-5" />
                   Teilen
-                </button>
+                </Button>
               </div>
             </div>
           </div>
