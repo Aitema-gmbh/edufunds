@@ -115,7 +115,7 @@ export function KIAntragAssistent({ programm, onClose }: KIAntragAssistentProps)
         format: 'a4', 
         orientation: 'portrait' 
       }
-    };
+    } as any;
 
     try {
       const html2pdf = await loadHtml2pdf();

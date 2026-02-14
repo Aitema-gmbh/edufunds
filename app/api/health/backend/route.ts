@@ -55,7 +55,6 @@ export async function GET(request: NextRequest) {
       : 'In-Memory fallback active',
     details: {
       redisAvailable: rateLimitStatus.redisAvailable,
-      inMemoryEntries: rateLimitStatus.inMemoryEntries,
     },
   });
 
