@@ -183,14 +183,14 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.bmw-foundation.org/de",
     "kurzbeschreibung": "BMW Foundation fördert über strategische Partnerschaften (JOBLINGE, Lehr:werkstatt, P-Seminar-Preis). Keine direkten Antragsprogramme für Einzelschulen.",
-    "status": "aktiv",
+    "status": "review_needed",
     "createdAt": "2025-06-15T00:00:00Z",
-    "updatedAt": "2026-02-13T10:06:05.871Z",
+    "updatedAt": "2026-02-15T19:56:35.699Z",
     "quelle": "https://www.bmw-foundation.org/de",
     "kiAntragGeeignet": false,
     "verifiziertAm": "2026-02-12",
     "verifiziertVon": "Web-Recherche BMW Foundation",
-    "bemerkung": "Stiftung bietet keine offenen Ausschreibungen für Schulen. Fokus auf JOBLINGE (Berufseinstieg), Lehr:werkstatt (Lehrerbildung), P-Seminar-Preis (Bayern)."
+    "bemerkung": "Stiftung bietet keine offenen Ausschreibungen für Schulen. Fokus auf JOBLINGE (Berufseinstieg), Lehr:werkstatt (Lehrerbildung), P-Seminar-Preis (Bayern). | NUR STARTSEITE - Kein direktes Förderprogramm für Einzelschulen. Strategische Partnerschaften nur."
   },
   {
     "id": "heinrich-boell-bildung",
@@ -314,15 +314,15 @@
     "bewerbungsart": "online",
     "infoLink": "https://www.nabu.de",
     "kurzbeschreibung": "Natur- und Umweltbildungsprojekte. Thüringen: bis 500€ über Thüringer Umweltschule. Bundesweit: kostenlose Materialien, Fortbildungen, Projekttage.",
-    "status": "aktiv",
+    "status": "review_needed",
     "createdAt": "2025-02-11T00:00:00Z",
-    "updatedAt": "2025-01-20T00:00:00.000Z",
+    "updatedAt": "2026-02-15T19:56:35.707Z",
     "quelle": "https://www.nabu.de/umwelt-und-bildung/schulen/",
     "quelleUrl": "https://www.nabu.de/umwelt-und-bildung/schulen/",
     "kiAntragGeeignet": false,
     "verifiziertAm": "2026-02-14",
     "verifiziertVon": "Web-Recherche NABU (Iter. 13)",
-    "bemerkung": "ITERATION 13 VERIFIZIERT: Kostenlose Materialien und Projekttage. Direkte Finanzförderung nur in NRW über BNE-Programm (bis 110.000€ für NABU-Einrichtungen, nicht für Einzelschulen). Thüringen: bis 500€ über Thüringer Umweltschule. Keine bundesweite Geldzuwendung."
+    "bemerkung": "ITERATION 13 VERIFIZIERT: Kostenlose Materialien und Projekttage. Direkte Finanzförderung nur in NRW über BNE-Programm (bis 110.000€ für NABU-Einrichtungen, nicht für Einzelschulen). Thüringen: bis 500€ über Thüringer Umweltschule. Keine bundesweite Geldzuwendung. | NUR STARTSEITE - Kein direktes Förderprogramm. Nur allgemeine Infos."
   },
   {
     "id": "bfn-artenvielfalt",
