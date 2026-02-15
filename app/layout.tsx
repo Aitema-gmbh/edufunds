@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "EduFunds - Intelligente Schulförderung für Schulen",
     template: "%s | EduFunds"
   },
-  description: "Finden Sie passende Förderprogramme für Ihre Schule und erstellen Sie erfolgreiche Anträge mit KI-Unterstützung. 160+ Programme im Überblick.",
+  description: "Finden Sie passende Förderprogramme für Ihre Schule und erstellen Sie erfolgreiche Anträge mit KI-Unterstützung. 129 Programme im Überblick.",
   keywords: ["Schulförderung", "Fördermittel", "Schule", "Anträge", "KI", "Bildung", "Grundschule", "Förderprogramme"],
   authors: [{ name: "EduFunds" }],
   creator: "EduFunds",

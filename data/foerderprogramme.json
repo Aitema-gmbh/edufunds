@@ -1,38 +1,5 @@
 [
   {
-    "id": "telekom-mint",
-    "name": "MINT-Förderung Grundschule",
-    "foerdergeber": "Telekom Stiftung",
-    "foerdergeberTyp": "stiftung",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 30000,
-    "foerdersummeText": "5.000€ - 30.000€",
-    "kategorien": [
-      "mint",
-      "mathematik",
-      "informatik",
-      "naturwissenschaften"
-    ],
-    "bewerbungsfristStart": "2025-09-01",
-    "bewerbungsfristEnde": "2025-10-31",
-    "bewerbungsfristText": "01.09. - 31.10.2025",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.telekom-stiftung.de",
-    "kurzbeschreibung": "MINT-Bildung in der Grundschule: Experimentieren und Forschen.",
-    "status": "abgelaufen",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-01-20T00:00:00.000Z",
-    "quelle": "telekom-stiftung.de",
-    "kiAntragGeeignet": true,
-    "bemerkung": "Frist abgelaufen am 2025-10-31. Nächste Ausschreibung prüfen. | Frist 31.10.2025 abgelaufen"
-  },
-  {
     "id": "tschira-stiftung",
     "name": "MINT und Naturwissenschaften Grundschule",
     "foerdergeber": "Klaus Tschira Stiftung",
@@ -63,38 +30,6 @@
     "verifiziertAm": "2026-02-12",
     "verifiziertVon": "Web-Recherche Klaus Tschira Stiftung",
     "bemerkung": "2026 keine reguläre Ausschreibung in der MINT-Bildungslinie; neue Förderlinie Komm MINT aufs Land: bis 13.04.2026"
-  },
-  {
-    "id": "eu-erasmus-schulen",
-    "name": "Erasmus+ Grundschulbildung",
-    "foerdergeber": "Europäische Kommission",
-    "foerdergeberTyp": "eu",
-    "schulformen": [
-      "grundschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 5000,
-    "foerdersummeMax": 300000,
-    "foerdersummeText": "5.000€ - 300.000€",
-    "kategorien": [
-      "international",
-      "austausch",
-      "sprachen"
-    ],
-    "bewerbungsfristStart": "2025-02-01",
-    "bewerbungsfristEnde": "2025-03-15",
-    "bewerbungsfristText": "01.02. - 15.03.2025",
-    "bewerbungsart": "online",
-    "infoLink": "https://erasmusplus.schule",
-    "kurzbeschreibung": "Schulpartnerschaften und Austauschprogramme für Grundschulen in Europa.",
-    "status": "abgelaufen",
-    "createdAt": "2025-02-05T00:00:00Z",
-    "updatedAt": "2025-01-20T00:00:00.000Z",
-    "quelle": "erasmus-plus.de",
-    "kiAntragGeeignet": true,
-    "bemerkung": "Frist abgelaufen am 2025-03-15. Nächste Ausschreibung prüfen."
   },
   {
     "id": "niedersachsen-sport",
@@ -4118,45 +4053,6 @@
     "verifiziertAm": "2026-02-13",
     "verifiziertVon": "COMPASS Verifikation",
     "bemerkung": "Antragsberechtigt: Öffentliche/freie Schulträger und Hortträger (NICHT Einzelschulen direkt). Mindestens 30% Eigenanteil (bei Finanzschwäche reduziert). Antrag über ILB-Kundenportal."
-  },
-  {
-    "id": "dt-schulaustausch-2026-27-abgelaufen",
-    "name": "Deutsch-türkischer Schulaustausch 2026/27 (ABGELAUFEN)",
-    "foerdergeber": "Deutsch-Türkische Jugendbrücke / Erasmus+",
-    "foerdergeberTyp": "programm",
-    "schulformen": [
-      "grundschule",
-      "hauptschule",
-      "realschule",
-      "gymnasium",
-      "gesamtschule"
-    ],
-    "bundeslaender": [
-      "alle"
-    ],
-    "foerdersummeMin": 0,
-    "foerdersummeMax": 15000,
-    "foerdersummeText": "Reise- und Aufenthaltskosten (ähnlich beruflicher Austausch)",
-    "kategorien": [
-      "international",
-      "austausch",
-      "tuerkei"
-    ],
-    "bewerbungsfristStart": "2025-09-26",
-    "bewerbungsfristEnde": "2025-12-15",
-    "bewerbungsfristText": "ABGELAUFEN: 15.12.2025",
-    "bewerbungsart": "online",
-    "infoLink": "https://www.jugendbruecke.de/foerderung/schulischer-austausch/",
-    "kurzbeschreibung": "Förderung von Austauschprojekten zwischen deutschen und türkischen Schulen. Die Bewerbungsfrist für 2026/27 war der 15.12.2025 und ist abgelaufen. Nächste Ausschreibung voraussichtlich Herbst 2026 für 2027/28.",
-    "status": "abgelaufen",
-    "createdAt": "2026-02-13T00:00:00Z",
-    "updatedAt": "2026-02-14T00:00:00.000Z",
-    "quelle": "https://www.austausch-macht-schule.org/nachricht/ausschreibung-202627-foerderung-deutsch-tuerkischer-schulaustausche-jetzt-beantragen",
-    "quelleUrl": "https://www.jugendbruecke.de/foerderung/schulischer-austausch/",
-    "kiAntragGeeignet": false,
-    "verifiziertAm": "2026-02-13",
-    "verifiziertVon": "COMPASS Verifikation",
-    "bemerkung": "VERIFIKATION: Frist 15.12.2025 war bereits abgelaufen als die Daten geprüft wurden (13.02.2026). Als abgelaufen markiert. Alternative: Beruflicher Austausch (noch offen)."
   },
   {
     "id": "bw-innovative-projekte-hochschulen",
